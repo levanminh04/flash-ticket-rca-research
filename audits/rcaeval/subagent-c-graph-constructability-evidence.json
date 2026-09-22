@@ -1,0 +1,2299 @@
+{
+  "audit_role": "Subagent C — graph constructability",
+  "scope": "RAW SAMPLE FINDING only; six cases named in raw-sample-plan.json",
+  "selected_cases": [
+    "re1ob_productcatalogservice_cpu_3",
+    "re2ob_productcatalogservice_loss_1",
+    "re2ss_orders_loss_2",
+    "re2tt_ts-auth-service_cpu_1",
+    "re3ss_carts_f1_1",
+    "re3tt_ts-route-service_f2_1"
+  ],
+  "selected_cases_without_traces_parquet": [
+    "re1ob_productcatalogservice_cpu_3",
+    "re2ss_orders_loss_2",
+    "re3ss_carts_f1_1"
+  ],
+  "trace_cases": {
+    "re2ob_productcatalogservice_loss_1": {
+      "case": "re2ob_productcatalogservice_loss_1",
+      "field_null_counts": {
+        "methodName": 12634,
+        "parentSpanID": 17108
+      },
+      "id_integrity": {
+        "composite_traceID_spanID_duplicate_rows": 0,
+        "id_length_counts": {
+          "parentSpanID": {
+            "16": 237781
+          },
+          "spanID": {
+            "16": 254889
+          },
+          "traceID": {
+            "32": 254889
+          }
+        },
+        "non_hex_id_value_counts": {},
+        "spanID_duplicate_rows_global_scope_only": 0
+      },
+      "method": {
+        "distinct_non_null": 16,
+        "top_by_span_count": [
+          [
+            "GetProduct",
+            103183
+          ],
+          [
+            "Convert",
+            54938
+          ],
+          [
+            "GetSupportedCurrencies",
+            20324
+          ],
+          [
+            "ListProducts",
+            18445
+          ],
+          [
+            "ListRecommendations",
+            17400
+          ],
+          [
+            "GetCart",
+            10156
+          ],
+          [
+            "GetAds",
+            7107
+          ],
+          [
+            "GetQuote",
+            3037
+          ],
+          [
+            "Check",
+            2144
+          ],
+          [
+            "AddItem",
+            1295
+          ],
+          [
+            "PlaceOrder",
+            852
+          ],
+          [
+            "Charge",
+            850
+          ],
+          [
+            "SendOrderConfirmation",
+            850
+          ],
+          [
+            "Export",
+            824
+          ],
+          [
+            "EmptyCart",
+            425
+          ],
+          [
+            "ShipOrder",
+            425
+          ]
+        ]
+      },
+      "operation": {
+        "distinct_non_null": 25,
+        "distinct_service_operation_pairs": 37,
+        "operation_names_observed_in_multiple_services": {
+          "/grpc.health.v1.Health/Check": [
+            "emailservice",
+            "recommendationservice"
+          ],
+          "grpc.grpc.health.v1.Health/Check": [
+            "currencyservice",
+            "paymentservice"
+          ],
+          "grpc.health.v1.Health/Check": [
+            "checkoutservice",
+            "productcatalogservice"
+          ],
+          "hipstershop.CartService/GetCart": [
+            "checkoutservice",
+            "frontendservice"
+          ],
+          "hipstershop.CheckoutService/PlaceOrder": [
+            "checkoutservice",
+            "frontendservice"
+          ],
+          "hipstershop.CurrencyService/Convert": [
+            "checkoutservice",
+            "frontendservice"
+          ],
+          "hipstershop.ProductCatalogService/GetProduct": [
+            "checkoutservice",
+            "frontendservice",
+            "productcatalogservice"
+          ],
+          "hipstershop.ProductCatalogService/ListProducts": [
+            "frontendservice",
+            "productcatalogservice"
+          ],
+          "hipstershop.ShippingService/GetQuote": [
+            "checkoutservice",
+            "frontendservice"
+          ],
+          "opentelemetry.proto.collector.trace.v1.TraceService/Export": [
+            "checkoutservice",
+            "frontendservice",
+            "productcatalogservice"
+          ]
+        },
+        "per_service_distinct_operation_count": {
+          "checkoutservice": 11,
+          "currencyservice": 3,
+          "emailservice": 2,
+          "frontendservice": 12,
+          "paymentservice": 2,
+          "productcatalogservice": 4,
+          "recommendationservice": 3
+        },
+        "protocol_or_resource_word_occurrence_in_raw_operation_labels": {
+          "amqp": 0,
+          "grpc": 40202,
+          "http": 0,
+          "jdbc": 0,
+          "kafka": 0,
+          "messag": 0,
+          "mongo": 0,
+          "mysql": 0,
+          "postgres": 0,
+          "queue": 0,
+          "rabbit": 0,
+          "redis": 0,
+          "sql": 0,
+          "topic": 0
+        },
+        "top_by_span_count": [
+          [
+            "hipstershop.ProductCatalogService/GetProduct",
+            103183
+          ],
+          [
+            "grpc.hipstershop.CurrencyService/Convert",
+            27470
+          ],
+          [
+            "hipstershop.CurrencyService/Convert",
+            27468
+          ],
+          [
+            "frontend",
+            12634
+          ],
+          [
+            "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            10163
+          ],
+          [
+            "hipstershop.CurrencyService/GetSupportedCurrencies",
+            10161
+          ],
+          [
+            "hipstershop.CartService/GetCart",
+            10156
+          ],
+          [
+            "hipstershop.ProductCatalogService/ListProducts",
+            9843
+          ],
+          [
+            "hipstershop.RecommendationService/ListRecommendations",
+            8798
+          ],
+          [
+            "/hipstershop.ProductCatalogService/ListProducts",
+            8602
+          ],
+          [
+            "/hipstershop.RecommendationService/ListRecommendations",
+            8602
+          ],
+          [
+            "hipstershop.AdService/GetAds",
+            7107
+          ],
+          [
+            "hipstershop.ShippingService/GetQuote",
+            3037
+          ],
+          [
+            "hipstershop.CartService/AddItem",
+            1295
+          ],
+          [
+            "/grpc.health.v1.Health/Check",
+            1092
+          ],
+          [
+            "hipstershop.CheckoutService/PlaceOrder",
+            852
+          ],
+          [
+            "opentelemetry.proto.collector.trace.v1.TraceService/Export",
+            824
+          ],
+          [
+            "grpc.grpc.health.v1.Health/Check",
+            576
+          ],
+          [
+            "grpc.health.v1.Health/Check",
+            476
+          ],
+          [
+            "/hipstershop.EmailService/SendOrderConfirmation",
+            425
+          ]
+        ]
+      },
+      "parent_reference_integrity": {
+        "candidate_cross_service_call_edges": [
+          {
+            "child_service": "productcatalogservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 47402,
+            "parent_service": "frontendservice"
+          },
+          {
+            "child_service": "currencyservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 36123,
+            "parent_service": "frontendservice"
+          },
+          {
+            "child_service": "recommendationservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 8602,
+            "parent_service": "frontendservice"
+          },
+          {
+            "child_service": "productcatalogservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 7272,
+            "parent_service": "recommendationservice"
+          },
+          {
+            "child_service": "currencyservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 1506,
+            "parent_service": "checkoutservice"
+          },
+          {
+            "child_service": "productcatalogservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 878,
+            "parent_service": "checkoutservice"
+          },
+          {
+            "child_service": "checkoutservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 426,
+            "parent_service": "frontendservice"
+          },
+          {
+            "child_service": "emailservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 425,
+            "parent_service": "checkoutservice"
+          },
+          {
+            "child_service": "paymentservice",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 425,
+            "parent_service": "checkoutservice"
+          }
+        ],
+        "cross_service_examples": [
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "productcatalogservice",
+            "childSpanID": "8e70e825c3a13567",
+            "parentOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "parentService": "frontendservice",
+            "parentSpanID": "cc357b989f186803",
+            "traceID": "0a510c088fdc87b382bc0ea1c008708a"
+          },
+          {
+            "childOperation": "/hipstershop.RecommendationService/ListRecommendations",
+            "childService": "recommendationservice",
+            "childSpanID": "cf0df1230a843a4e",
+            "parentOperation": "hipstershop.RecommendationService/ListRecommendations",
+            "parentService": "frontendservice",
+            "parentSpanID": "22260dad0cc26a75",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/ListProducts",
+            "childService": "productcatalogservice",
+            "childSpanID": "1a59847f8ba052b2",
+            "parentOperation": "/hipstershop.ProductCatalogService/ListProducts",
+            "parentService": "recommendationservice",
+            "parentSpanID": "875842cf83e244dd",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "productcatalogservice",
+            "childSpanID": "0690c06a7a303363",
+            "parentOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "parentService": "frontendservice",
+            "parentSpanID": "6fd0fb11354c14f0",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "productcatalogservice",
+            "childSpanID": "4c003ce9f8e1ec63",
+            "parentOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "parentService": "frontendservice",
+            "parentSpanID": "1dff7e7efee606e6",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "/hipstershop.RecommendationService/ListRecommendations",
+            "childService": "recommendationservice",
+            "childSpanID": "72a2ee1e5a4ed44f",
+            "parentOperation": "hipstershop.RecommendationService/ListRecommendations",
+            "parentService": "frontendservice",
+            "parentSpanID": "54be373458f9fb0c",
+            "traceID": "4d4657c43ab8a44aa1cbe7aa71d1e671"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "productcatalogservice",
+            "childSpanID": "05694c4848b20488",
+            "parentOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "parentService": "frontendservice",
+            "parentSpanID": "243f35a74cf2654b",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "productcatalogservice",
+            "childSpanID": "737b7441b2de2a4d",
+            "parentOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "parentService": "frontendservice",
+            "parentSpanID": "583d6883c68302b1",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          }
+        ],
+        "cross_service_parent_child": 103059,
+        "numeric_time_containment": 237492,
+        "numeric_time_noncontainment": 0,
+        "numeric_time_uncheckable": 0,
+        "parentSpanID_present": 237781,
+        "parent_found_with_same_traceID": 237492,
+        "parent_not_found_with_same_traceID": 289,
+        "same_service_parent_child": 134433,
+        "self_references": 0,
+        "temporal_noncontainment_examples": [],
+        "unknown_service_parent_child": 0,
+        "unresolved_parent_examples": [
+          {
+            "childOperation": "grpc.hipstershop.CurrencyService/Convert",
+            "childService": "currencyservice",
+            "childSpanID": "df88c8f81f5a1c6c",
+            "parentSpanID": "1d1010cc97fbcc24",
+            "traceID": "c632e00fa6d2efc4cbae2422733a74e8"
+          },
+          {
+            "childOperation": "hipstershop.ProductCatalogService/GetProduct",
+            "childService": "frontendservice",
+            "childSpanID": "cc357b989f186803",
+            "parentSpanID": "861682640466998d",
+            "traceID": "0a510c088fdc87b382bc0ea1c008708a"
+          },
+          {
+            "childOperation": "hipstershop.CartService/GetCart",
+            "childService": "frontendservice",
+            "childSpanID": "99ec102f1fdfd6fe",
+            "parentSpanID": "76cca1e5cc0949b9",
+            "traceID": "be0e33d26165f8f3876fb5ea5a985829"
+          },
+          {
+            "childOperation": "hipstershop.RecommendationService/ListRecommendations",
+            "childService": "frontendservice",
+            "childSpanID": "22260dad0cc26a75",
+            "parentSpanID": "53903740141b0493",
+            "traceID": "5e467ca796d4f137a2694e78f3b584f8"
+          },
+          {
+            "childOperation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            "childService": "currencyservice",
+            "childSpanID": "63d4ab567903415e",
+            "parentSpanID": "e72ab9b999d67432",
+            "traceID": "b3c70a224e5e7e29a7ebe68f605d983b"
+          },
+          {
+            "childOperation": "grpc.hipstershop.CurrencyService/Convert",
+            "childService": "currencyservice",
+            "childSpanID": "7d01c37bb59bc7af",
+            "parentSpanID": "e4ffb4e773868a56",
+            "traceID": "480e99c25346a07a4ee8881bff16e833"
+          },
+          {
+            "childOperation": "hipstershop.CurrencyService/Convert",
+            "childService": "frontendservice",
+            "childSpanID": "4d48c897ece44df5",
+            "parentSpanID": "861682640466998d",
+            "traceID": "0a510c088fdc87b382bc0ea1c008708a"
+          },
+          {
+            "childOperation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            "childService": "currencyservice",
+            "childSpanID": "ba24dd41d54f322c",
+            "parentSpanID": "34e9f21815b9a22a",
+            "traceID": "d3b42e4f2ada653078e87cc2b6fb2561"
+          }
+        ]
+      },
+      "rows": 254889,
+      "schema": [
+        {
+          "name": "time",
+          "type": "large_string"
+        },
+        {
+          "name": "traceID",
+          "type": "large_string"
+        },
+        {
+          "name": "spanID",
+          "type": "large_string"
+        },
+        {
+          "name": "serviceName",
+          "type": "large_string"
+        },
+        {
+          "name": "methodName",
+          "type": "large_string"
+        },
+        {
+          "name": "operationName",
+          "type": "large_string"
+        },
+        {
+          "name": "parentSpanID",
+          "type": "large_string"
+        },
+        {
+          "name": "startTimeMillis",
+          "type": "int64"
+        },
+        {
+          "name": "startTime",
+          "type": "int64"
+        },
+        {
+          "name": "duration",
+          "type": "int64"
+        },
+        {
+          "name": "statusCode",
+          "type": "int64"
+        }
+      ],
+      "service": {
+        "distinct_non_null": 7,
+        "top_by_span_count": [
+          [
+            "frontendservice",
+            135363
+          ],
+          [
+            "productcatalogservice",
+            56030
+          ],
+          [
+            "currencyservice",
+            37921
+          ],
+          [
+            "recommendationservice",
+            17720
+          ],
+          [
+            "checkoutservice",
+            6141
+          ],
+          [
+            "emailservice",
+            1001
+          ],
+          [
+            "paymentservice",
+            713
+          ]
+        ]
+      },
+      "trace_file": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2ob_productcatalogservice_loss_1\\traces.parquet"
+    },
+    "re2tt_ts-auth-service_cpu_1": {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "field_null_counts": {
+        "methodName": 1143435,
+        "parentSpanID": 6704
+      },
+      "id_integrity": {
+        "composite_traceID_spanID_duplicate_rows": 0,
+        "id_length_counts": {
+          "parentSpanID": {
+            "16": 1136731
+          },
+          "spanID": {
+            "16": 1143435
+          },
+          "traceID": {
+            "32": 1143435
+          }
+        },
+        "non_hex_id_value_counts": {},
+        "spanID_duplicate_rows_global_scope_only": 0
+      },
+      "method": {
+        "distinct_non_null": 0,
+        "top_by_span_count": []
+      },
+      "operation": {
+        "distinct_non_null": 122,
+        "distinct_service_operation_pairs": 152,
+        "operation_names_observed_in_multiple_services": {
+          "GET": [
+            "ts-admin-basic-info-service",
+            "ts-admin-travel-service",
+            "ts-basic-service",
+            "ts-consign-service",
+            "ts-food-service",
+            "ts-inside-payment-service",
+            "ts-preserve-other-service",
+            "ts-preserve-service",
+            "ts-seat-service",
+            "ts-security-service",
+            "ts-ticketinfo-service",
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "POST": [
+            "ts-food-service",
+            "ts-inside-payment-service",
+            "ts-order-other-service",
+            "ts-order-service",
+            "ts-preserve-other-service",
+            "ts-preserve-service",
+            "ts-seat-service",
+            "ts-ticketinfo-service",
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "PaymentRepository.save": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ],
+          "TripRepository.findAll": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "TripRepository.findByTripId": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "find ts.orders": [
+            "ts-order-other-service",
+            "ts-order-service"
+          ],
+          "find ts.payment": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ],
+          "find ts.trip": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "getMore ts.orders": [
+            "ts-order-other-service",
+            "ts-order-service"
+          ],
+          "update ts.orders": [
+            "ts-order-other-service",
+            "ts-order-service"
+          ],
+          "update ts.payment": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ]
+        },
+        "per_service_distinct_operation_count": {
+          "ts-admin-basic-info-service": 3,
+          "ts-admin-travel-service": 2,
+          "ts-assurance-service": 6,
+          "ts-auth-service": 3,
+          "ts-basic-service": 3,
+          "ts-config-service": 5,
+          "ts-consign-price-service": 3,
+          "ts-consign-service": 6,
+          "ts-contacts-service": 5,
+          "ts-food-map-service": 6,
+          "ts-food-service": 8,
+          "ts-inside-payment-service": 10,
+          "ts-order-other-service": 15,
+          "ts-order-service": 15,
+          "ts-payment-service": 5,
+          "ts-preserve-other-service": 3,
+          "ts-preserve-service": 3,
+          "ts-price-service": 5,
+          "ts-route-service": 3,
+          "ts-seat-service": 4,
+          "ts-security-service": 4,
+          "ts-station-service": 5,
+          "ts-ticketinfo-service": 4,
+          "ts-train-service": 3,
+          "ts-travel-service": 10,
+          "ts-travel2-service": 10,
+          "ts-user-service": 3
+        },
+        "protocol_or_resource_word_occurrence_in_raw_operation_labels": {
+          "amqp": 0,
+          "grpc": 0,
+          "http": 0,
+          "jdbc": 0,
+          "kafka": 0,
+          "messag": 0,
+          "mongo": 4160,
+          "mysql": 0,
+          "postgres": 0,
+          "queue": 0,
+          "rabbit": 0,
+          "redis": 0,
+          "sql": 0,
+          "topic": 0
+        },
+        "top_by_span_count": [
+          [
+            "find ts.station",
+            299833
+          ],
+          [
+            "StationRepository.findById",
+            264653
+          ],
+          [
+            "GET",
+            145306
+          ],
+          [
+            "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+            35180
+          ],
+          [
+            "StationRepository.findByName",
+            35180
+          ],
+          [
+            "TrainTypeRepository.findById",
+            30558
+          ],
+          [
+            "find ts.trainType",
+            30558
+          ],
+          [
+            "GET /api/v1/routeservice/routes/{routeId}",
+            24752
+          ],
+          [
+            "RouteRepository.findById",
+            24752
+          ],
+          [
+            "find ts.routes",
+            24752
+          ],
+          [
+            "POST",
+            20827
+          ],
+          [
+            "GET /api/v1/basicservice/basic/{stationName}",
+            20591
+          ],
+          [
+            "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+            20591
+          ],
+          [
+            "find ts.trip",
+            16610
+          ],
+          [
+            "GET /api/v1/trainservice/trains/{id}",
+            15279
+          ],
+          [
+            "TripRepository.findByTripId",
+            13749
+          ],
+          [
+            "find ts.orders",
+            10616
+          ],
+          [
+            "find ts.config",
+            6543
+          ],
+          [
+            "POST /api/v1/seatservice/seats/left_tickets",
+            6305
+          ],
+          [
+            "ConfigRepository.findByName",
+            6304
+          ]
+        ]
+      },
+      "parent_reference_integrity": {
+        "candidate_cross_service_call_edges": [
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 3975,
+            "parent_child_span_pairs": 33802,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-basic-service",
+            "numeric_time_noncontainment": 3594,
+            "parent_child_span_pairs": 23894,
+            "parent_service": "ts-ticketinfo-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 1216,
+            "parent_child_span_pairs": 16137,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 1016,
+            "parent_child_span_pairs": 14234,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 903,
+            "parent_child_span_pairs": 7682,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 571,
+            "parent_child_span_pairs": 7607,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 522,
+            "parent_child_span_pairs": 7215,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 518,
+            "parent_child_span_pairs": 6916,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-config-service",
+            "numeric_time_noncontainment": 842,
+            "parent_child_span_pairs": 6304,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 595,
+            "parent_child_span_pairs": 5228,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 403,
+            "parent_child_span_pairs": 5060,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 291,
+            "parent_child_span_pairs": 3841,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 565,
+            "parent_child_span_pairs": 3779,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-price-service",
+            "numeric_time_noncontainment": 537,
+            "parent_child_span_pairs": 3303,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 359,
+            "parent_child_span_pairs": 3303,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 459,
+            "parent_child_span_pairs": 3303,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 306,
+            "parent_child_span_pairs": 2614,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 384,
+            "parent_child_span_pairs": 2525,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 161,
+            "parent_child_span_pairs": 1890,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 134,
+            "parent_child_span_pairs": 1263,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-food-map-service",
+            "numeric_time_noncontainment": 177,
+            "parent_child_span_pairs": 1078,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 95,
+            "parent_child_span_pairs": 1078,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 45,
+            "parent_child_span_pairs": 539,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-config-service",
+            "numeric_time_noncontainment": 17,
+            "parent_child_span_pairs": 239,
+            "parent_service": "ts-admin-basic-info-service"
+          },
+          {
+            "child_service": "ts-price-service",
+            "numeric_time_noncontainment": 12,
+            "parent_child_span_pairs": 238,
+            "parent_service": "ts-admin-basic-info-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 19,
+            "parent_child_span_pairs": 237,
+            "parent_service": "ts-admin-travel-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 23,
+            "parent_child_span_pairs": 237,
+            "parent_service": "ts-admin-travel-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 191,
+            "parent_service": "ts-order-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 17,
+            "parent_child_span_pairs": 178,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 15,
+            "parent_child_span_pairs": 162,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 12,
+            "parent_child_span_pairs": 150,
+            "parent_service": "ts-security-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 19,
+            "parent_child_span_pairs": 150,
+            "parent_service": "ts-security-service"
+          },
+          {
+            "child_service": "ts-consign-price-service",
+            "numeric_time_noncontainment": 49,
+            "parent_child_span_pairs": 141,
+            "parent_service": "ts-consign-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 7,
+            "parent_child_span_pairs": 122,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 6,
+            "parent_child_span_pairs": 113,
+            "parent_service": "ts-order-other-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 11,
+            "parent_child_span_pairs": 92,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-payment-service",
+            "numeric_time_noncontainment": 38,
+            "parent_child_span_pairs": 90,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-contacts-service",
+            "numeric_time_noncontainment": 25,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 8,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 9,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-security-service",
+            "numeric_time_noncontainment": 31,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 14,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 11,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-user-service",
+            "numeric_time_noncontainment": 33,
+            "parent_child_span_pairs": 89,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-contacts-service",
+            "numeric_time_noncontainment": 10,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 6,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-security-service",
+            "numeric_time_noncontainment": 12,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 7,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-user-service",
+            "numeric_time_noncontainment": 15,
+            "parent_child_span_pairs": 61,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-food-service",
+            "numeric_time_noncontainment": 4,
+            "parent_child_span_pairs": 45,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-assurance-service",
+            "numeric_time_noncontainment": 10,
+            "parent_child_span_pairs": 43,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-food-service",
+            "numeric_time_noncontainment": 4,
+            "parent_child_span_pairs": 34,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-assurance-service",
+            "numeric_time_noncontainment": 6,
+            "parent_child_span_pairs": 25,
+            "parent_service": "ts-preserve-other-service"
+          }
+        ],
+        "cross_service_examples": [
+          {
+            "childOperation": "GET /api/v1/travel2service/routes/{tripId}",
+            "childService": "ts-travel2-service",
+            "childSpanID": "859fa77d3ca3cb3d",
+            "parentOperation": "GET",
+            "parentService": "ts-seat-service",
+            "parentSpanID": "f6c13ad28634a4b6",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/routeservice/routes/{routeId}",
+            "childService": "ts-route-service",
+            "childSpanID": "46a5f1080718fd53",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "7580e31f901e6e80",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "POST /api/v1/orderOtherService/orderOther/tickets",
+            "childService": "ts-order-other-service",
+            "childSpanID": "3882c474bc8494d3",
+            "parentOperation": "POST",
+            "parentService": "ts-seat-service",
+            "parentSpanID": "2ed75dd754abdce4",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/travel2service/train_types/{tripId}",
+            "childService": "ts-travel2-service",
+            "childSpanID": "73d02da167176da4",
+            "parentOperation": "GET",
+            "parentService": "ts-seat-service",
+            "parentSpanID": "204121e89110fce1",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/trainservice/trains/{id}",
+            "childService": "ts-train-service",
+            "childSpanID": "581ea254b46bf8f2",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "77066850f54e7cf2",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/configservice/configs/{configName}",
+            "childService": "ts-config-service",
+            "childSpanID": "d15cfbc22528a5d5",
+            "parentOperation": "GET",
+            "parentService": "ts-seat-service",
+            "parentSpanID": "38a517de976fb1b9",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+            "childService": "ts-ticketinfo-service",
+            "childSpanID": "b15a74d9d7dae4f0",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "0e3071297d0c2cbd",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "GET /api/v1/basicservice/basic/{stationName}",
+            "childService": "ts-basic-service",
+            "childSpanID": "d32a00d242b22bde",
+            "parentOperation": "GET",
+            "parentService": "ts-ticketinfo-service",
+            "parentSpanID": "7c6a7dcaec2c06d4",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          }
+        ],
+        "cross_service_parent_child": 166132,
+        "numeric_time_containment": 1118430,
+        "numeric_time_noncontainment": 18122,
+        "numeric_time_uncheckable": 0,
+        "parentSpanID_present": 1136731,
+        "parent_found_with_same_traceID": 1136552,
+        "parent_not_found_with_same_traceID": 179,
+        "same_service_parent_child": 970420,
+        "self_references": 0,
+        "temporal_noncontainment_examples": [
+          {
+            "childDuration": 9225,
+            "childSpanID": "3d250f3030df04ec",
+            "childStart": 1705917385104000,
+            "parentDuration": 11030,
+            "parentSpanID": "cda96ec059807c68",
+            "parentStart": 1705917385102174,
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childDuration": 10969,
+            "childSpanID": "3e4a559974329af2",
+            "childStart": 1705917385117000,
+            "parentDuration": 14130,
+            "parentSpanID": "2a11fdd508c8f30b",
+            "parentStart": 1705917385113724,
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childDuration": 10462,
+            "childSpanID": "e6e42aecf9468ebe",
+            "childStart": 1705917385139000,
+            "parentDuration": 12135,
+            "parentSpanID": "c3948c27b6f9b8a9",
+            "parentStart": 1705917385137173,
+            "traceID": "d53567bf439458be7cdf8e6ae1061744"
+          },
+          {
+            "childDuration": 3182,
+            "childSpanID": "e35c9f4324382101",
+            "childStart": 1705917385145000,
+            "parentDuration": 5116,
+            "parentSpanID": "9466d26782b93c16",
+            "parentStart": 1705917385143003,
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childDuration": 2577,
+            "childSpanID": "dc45695bc395637e",
+            "childStart": 1705917385181000,
+            "parentDuration": 4403,
+            "parentSpanID": "a2b513b0c22045ce",
+            "parentStart": 1705917385178911,
+            "traceID": "d53567bf439458be7cdf8e6ae1061744"
+          },
+          {
+            "childDuration": 11549,
+            "childSpanID": "7a7777cb43a3dd90",
+            "childStart": 1705917385253000,
+            "parentDuration": 13193,
+            "parentSpanID": "8a7f63b19eb7736a",
+            "parentStart": 1705917385251303,
+            "traceID": "d53567bf439458be7cdf8e6ae1061744"
+          },
+          {
+            "childDuration": 10837,
+            "childSpanID": "a40aa2f406a53b18",
+            "childStart": 1705917385280000,
+            "parentDuration": 12710,
+            "parentSpanID": "848b3729a54ae59a",
+            "parentStart": 1705917385277956,
+            "traceID": "d53567bf439458be7cdf8e6ae1061744"
+          },
+          {
+            "childDuration": 3215,
+            "childSpanID": "8c67e57c772af325",
+            "childStart": 1705917385302000,
+            "parentDuration": 5041,
+            "parentSpanID": "d661d79d703f0494",
+            "parentStart": 1705917385300149,
+            "traceID": "d53567bf439458be7cdf8e6ae1061744"
+          }
+        ],
+        "unknown_service_parent_child": 0,
+        "unresolved_parent_examples": [
+          {
+            "childOperation": "POST /api/v1/seatservice/seats/left_tickets",
+            "childService": "ts-seat-service",
+            "childSpanID": "378e25fd09b4e844",
+            "parentSpanID": "7aa9c7ef52138eb5",
+            "traceID": "0ae0bf10d01a337390e1f4a843ce37fb"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "6be01aa9726a18c5",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "f8ef0a55c67cedc0",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "e35f3c57ec0d281a",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "03090284d2e5a4b4",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "d286377ad0f61bff",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          },
+          {
+            "childOperation": "ConsignRepository.save",
+            "childService": "ts-consign-service",
+            "childSpanID": "21b30226e0da7755",
+            "parentSpanID": "7388b214e588b1a1",
+            "traceID": "f725a72a72a1d79e75af476b96fed5e2"
+          },
+          {
+            "childOperation": "StationRepository.findById",
+            "childService": "ts-station-service",
+            "childSpanID": "0c13e53e4d9c36c7",
+            "parentSpanID": "f746a7db4595fe99",
+            "traceID": "2f98ea7ce43b5635e96be2babfd1e684"
+          }
+        ]
+      },
+      "rows": 1143435,
+      "schema": [
+        {
+          "name": "time",
+          "type": "large_string"
+        },
+        {
+          "name": "traceID",
+          "type": "large_string"
+        },
+        {
+          "name": "spanID",
+          "type": "large_string"
+        },
+        {
+          "name": "serviceName",
+          "type": "large_string"
+        },
+        {
+          "name": "methodName",
+          "type": "large_string"
+        },
+        {
+          "name": "operationName",
+          "type": "large_string"
+        },
+        {
+          "name": "parentSpanID",
+          "type": "large_string"
+        },
+        {
+          "name": "startTimeMillis",
+          "type": "int64"
+        },
+        {
+          "name": "startTime",
+          "type": "int64"
+        },
+        {
+          "name": "duration",
+          "type": "int64"
+        },
+        {
+          "name": "statusCode",
+          "type": "int64"
+        }
+      ],
+      "service": {
+        "distinct_non_null": 27,
+        "top_by_span_count": [
+          [
+            "ts-station-service",
+            635150
+          ],
+          [
+            "ts-train-service",
+            76395
+          ],
+          [
+            "ts-route-service",
+            74256
+          ],
+          [
+            "ts-travel2-service",
+            72505
+          ],
+          [
+            "ts-basic-service",
+            67606
+          ],
+          [
+            "ts-ticketinfo-service",
+            47788
+          ],
+          [
+            "ts-travel-service",
+            43801
+          ],
+          [
+            "ts-seat-service",
+            32124
+          ],
+          [
+            "ts-order-other-service",
+            22175
+          ],
+          [
+            "ts-config-service",
+            19629
+          ],
+          [
+            "ts-order-service",
+            15434
+          ],
+          [
+            "ts-price-service",
+            10623
+          ],
+          [
+            "ts-auth-service",
+            10025
+          ],
+          [
+            "ts-food-service",
+            3629
+          ],
+          [
+            "ts-food-map-service",
+            3234
+          ],
+          [
+            "ts-inside-payment-service",
+            1138
+          ],
+          [
+            "ts-security-service",
+            1050
+          ],
+          [
+            "ts-preserve-service",
+            978
+          ],
+          [
+            "ts-admin-basic-info-service",
+            954
+          ],
+          [
+            "ts-contacts-service",
+            900
+          ]
+        ]
+      },
+      "trace_file": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_1\\traces.parquet"
+    },
+    "re3tt_ts-route-service_f2_1": {
+      "case": "re3tt_ts-route-service_f2_1",
+      "field_null_counts": {
+        "methodName": 183623,
+        "parentSpanID": 2623
+      },
+      "id_integrity": {
+        "composite_traceID_spanID_duplicate_rows": 0,
+        "id_length_counts": {
+          "parentSpanID": {
+            "16": 181000
+          },
+          "spanID": {
+            "16": 183623
+          },
+          "traceID": {
+            "32": 183623
+          }
+        },
+        "non_hex_id_value_counts": {},
+        "spanID_duplicate_rows_global_scope_only": 0
+      },
+      "method": {
+        "distinct_non_null": 0,
+        "top_by_span_count": []
+      },
+      "operation": {
+        "distinct_non_null": 122,
+        "distinct_service_operation_pairs": 151,
+        "operation_names_observed_in_multiple_services": {
+          "GET": [
+            "ts-admin-basic-info-service",
+            "ts-admin-travel-service",
+            "ts-basic-service",
+            "ts-consign-service",
+            "ts-food-service",
+            "ts-inside-payment-service",
+            "ts-preserve-other-service",
+            "ts-preserve-service",
+            "ts-seat-service",
+            "ts-security-service",
+            "ts-ticketinfo-service",
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "POST": [
+            "ts-food-service",
+            "ts-inside-payment-service",
+            "ts-order-other-service",
+            "ts-order-service",
+            "ts-preserve-other-service",
+            "ts-preserve-service",
+            "ts-seat-service",
+            "ts-ticketinfo-service",
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "PaymentRepository.save": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ],
+          "TripRepository.findAll": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "TripRepository.findByTripId": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "find ts.orders": [
+            "ts-order-other-service",
+            "ts-order-service"
+          ],
+          "find ts.payment": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ],
+          "find ts.trip": [
+            "ts-travel-service",
+            "ts-travel2-service"
+          ],
+          "update ts.orders": [
+            "ts-order-other-service",
+            "ts-order-service"
+          ],
+          "update ts.payment": [
+            "ts-inside-payment-service",
+            "ts-payment-service"
+          ]
+        },
+        "per_service_distinct_operation_count": {
+          "ts-admin-basic-info-service": 3,
+          "ts-admin-travel-service": 2,
+          "ts-assurance-service": 6,
+          "ts-auth-service": 3,
+          "ts-basic-service": 3,
+          "ts-config-service": 5,
+          "ts-consign-price-service": 3,
+          "ts-consign-service": 6,
+          "ts-contacts-service": 5,
+          "ts-food-map-service": 6,
+          "ts-food-service": 8,
+          "ts-inside-payment-service": 9,
+          "ts-order-other-service": 14,
+          "ts-order-service": 14,
+          "ts-payment-service": 5,
+          "ts-preserve-other-service": 3,
+          "ts-preserve-service": 3,
+          "ts-price-service": 5,
+          "ts-route-service": 5,
+          "ts-seat-service": 4,
+          "ts-security-service": 4,
+          "ts-station-service": 5,
+          "ts-ticketinfo-service": 4,
+          "ts-train-service": 3,
+          "ts-travel-service": 10,
+          "ts-travel2-service": 10,
+          "ts-user-service": 3
+        },
+        "protocol_or_resource_word_occurrence_in_raw_operation_labels": {
+          "amqp": 0,
+          "grpc": 0,
+          "http": 0,
+          "jdbc": 0,
+          "kafka": 0,
+          "messag": 0,
+          "mongo": 1462,
+          "mysql": 0,
+          "postgres": 0,
+          "queue": 0,
+          "rabbit": 0,
+          "redis": 0,
+          "sql": 0,
+          "topic": 0
+        },
+        "top_by_span_count": [
+          [
+            "GET",
+            37629
+          ],
+          [
+            "find ts.station",
+            17069
+          ],
+          [
+            "TrainTypeRepository.findById",
+            12128
+          ],
+          [
+            "find ts.trainType",
+            12128
+          ],
+          [
+            "StationRepository.findById",
+            9596
+          ],
+          [
+            "RouteRepository.findById",
+            7983
+          ],
+          [
+            "find ts.routes",
+            7983
+          ],
+          [
+            "GET /api/v1/routeservice/routes/{routeId}",
+            7973
+          ],
+          [
+            "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+            7473
+          ],
+          [
+            "StationRepository.findByName",
+            7473
+          ],
+          [
+            "GET /api/v1/trainservice/trains/{id}",
+            6064
+          ],
+          [
+            "POST",
+            4453
+          ],
+          [
+            "GET /api/v1/basicservice/basic/{stationName}",
+            4367
+          ],
+          [
+            "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+            4367
+          ],
+          [
+            "find ts.trip",
+            4118
+          ],
+          [
+            "TripRepository.findByTripId",
+            2936
+          ],
+          [
+            "find ts.orders",
+            2281
+          ],
+          [
+            "find ts.config",
+            1699
+          ],
+          [
+            "UserRepository.findByUsername",
+            1430
+          ],
+          [
+            "find ts-auth-mongo.user",
+            1430
+          ]
+        ]
+      },
+      "parent_reference_integrity": {
+        "candidate_cross_service_call_edges": [
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 2922,
+            "parent_child_span_pairs": 7195,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-basic-service",
+            "numeric_time_noncontainment": 265,
+            "parent_child_span_pairs": 5074,
+            "parent_service": "ts-ticketinfo-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 459,
+            "parent_child_span_pairs": 4304,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 1096,
+            "parent_child_span_pairs": 3323,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 459,
+            "parent_child_span_pairs": 2962,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 157,
+            "parent_child_span_pairs": 2824,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 35,
+            "parent_child_span_pairs": 2533,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 113,
+            "parent_child_span_pairs": 1719,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 112,
+            "parent_child_span_pairs": 1576,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-config-service",
+            "numeric_time_noncontainment": 474,
+            "parent_child_span_pairs": 1350,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 432,
+            "parent_child_span_pairs": 1188,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 34,
+            "parent_child_span_pairs": 788,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 135,
+            "parent_child_span_pairs": 772,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-price-service",
+            "numeric_time_noncontainment": 200,
+            "parent_child_span_pairs": 707,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-route-service",
+            "numeric_time_noncontainment": 59,
+            "parent_child_span_pairs": 707,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-train-service",
+            "numeric_time_noncontainment": 300,
+            "parent_child_span_pairs": 707,
+            "parent_service": "ts-basic-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 267,
+            "parent_child_span_pairs": 594,
+            "parent_service": "ts-seat-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 250,
+            "parent_child_span_pairs": 578,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 49,
+            "parent_child_span_pairs": 386,
+            "parent_service": "ts-travel2-service"
+          },
+          {
+            "child_service": "ts-config-service",
+            "numeric_time_noncontainment": 9,
+            "parent_child_span_pairs": 349,
+            "parent_service": "ts-admin-basic-info-service"
+          },
+          {
+            "child_service": "ts-price-service",
+            "numeric_time_noncontainment": 39,
+            "parent_child_span_pairs": 349,
+            "parent_service": "ts-admin-basic-info-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 20,
+            "parent_child_span_pairs": 348,
+            "parent_service": "ts-admin-travel-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 125,
+            "parent_child_span_pairs": 330,
+            "parent_service": "ts-admin-travel-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 131,
+            "parent_child_span_pairs": 289,
+            "parent_service": "ts-travel-service"
+          },
+          {
+            "child_service": "ts-food-map-service",
+            "numeric_time_noncontainment": 61,
+            "parent_child_span_pairs": 215,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 10,
+            "parent_child_span_pairs": 214,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 13,
+            "parent_child_span_pairs": 108,
+            "parent_service": "ts-food-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 43,
+            "parent_service": "ts-order-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 1,
+            "parent_child_span_pairs": 39,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 11,
+            "parent_child_span_pairs": 32,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 32,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 5,
+            "parent_child_span_pairs": 32,
+            "parent_service": "ts-security-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 4,
+            "parent_child_span_pairs": 32,
+            "parent_service": "ts-security-service"
+          },
+          {
+            "child_service": "ts-consign-price-service",
+            "numeric_time_noncontainment": 15,
+            "parent_child_span_pairs": 26,
+            "parent_service": "ts-consign-service"
+          },
+          {
+            "child_service": "ts-station-service",
+            "numeric_time_noncontainment": 5,
+            "parent_child_span_pairs": 24,
+            "parent_service": "ts-order-other-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 22,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-payment-service",
+            "numeric_time_noncontainment": 17,
+            "parent_child_span_pairs": 20,
+            "parent_service": "ts-inside-payment-service"
+          },
+          {
+            "child_service": "ts-contacts-service",
+            "numeric_time_noncontainment": 14,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "numeric_time_noncontainment": 9,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 1,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-security-service",
+            "numeric_time_noncontainment": 12,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-user-service",
+            "numeric_time_noncontainment": 14,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-contacts-service",
+            "numeric_time_noncontainment": 8,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-order-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-seat-service",
+            "numeric_time_noncontainment": 0,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-security-service",
+            "numeric_time_noncontainment": 15,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "numeric_time_noncontainment": 3,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-travel-service",
+            "numeric_time_noncontainment": 1,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-user-service",
+            "numeric_time_noncontainment": 9,
+            "parent_child_span_pairs": 16,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-assurance-service",
+            "numeric_time_noncontainment": 8,
+            "parent_child_span_pairs": 12,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-food-service",
+            "numeric_time_noncontainment": 7,
+            "parent_child_span_pairs": 10,
+            "parent_service": "ts-preserve-service"
+          },
+          {
+            "child_service": "ts-food-service",
+            "numeric_time_noncontainment": 5,
+            "parent_child_span_pairs": 7,
+            "parent_service": "ts-preserve-other-service"
+          },
+          {
+            "child_service": "ts-assurance-service",
+            "numeric_time_noncontainment": 2,
+            "parent_child_span_pairs": 4,
+            "parent_service": "ts-preserve-other-service"
+          }
+        ],
+        "cross_service_examples": [
+          {
+            "childOperation": "GET /api/v1/priceservice/prices",
+            "childService": "ts-price-service",
+            "childSpanID": "4e4e5173913def27",
+            "parentOperation": "GET",
+            "parentService": "ts-admin-basic-info-service",
+            "parentSpanID": "49306af4cd10258b",
+            "traceID": "6dbd91194d8ac3b8a3abd305bcb0eb90"
+          },
+          {
+            "childOperation": "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+            "childService": "ts-ticketinfo-service",
+            "childSpanID": "e5f20ccf86b73aaf",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "68fec650c4842565",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/basicservice/basic/{stationName}",
+            "childService": "ts-basic-service",
+            "childSpanID": "405afdcc0b884722",
+            "parentOperation": "GET",
+            "parentService": "ts-ticketinfo-service",
+            "parentSpanID": "93cbee466f2ce902",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+            "childService": "ts-station-service",
+            "childSpanID": "c950bdf1218f9561",
+            "parentOperation": "GET",
+            "parentService": "ts-basic-service",
+            "parentSpanID": "aaba16b99fd9fb31",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+            "childService": "ts-ticketinfo-service",
+            "childSpanID": "4e7cd1c6dd4240cf",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "5a3c68179ed146fd",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/basicservice/basic/{stationName}",
+            "childService": "ts-basic-service",
+            "childSpanID": "1fefd89c140d55fb",
+            "parentOperation": "GET",
+            "parentService": "ts-ticketinfo-service",
+            "parentSpanID": "82c57d778d94351c",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+            "childService": "ts-station-service",
+            "childSpanID": "0f23d9f3260b28cc",
+            "parentOperation": "GET",
+            "parentService": "ts-basic-service",
+            "parentSpanID": "c5dc944f603b4af8",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childOperation": "GET /api/v1/routeservice/routes/{routeId}",
+            "childService": "ts-route-service",
+            "childSpanID": "c74d8caa41dd13da",
+            "parentOperation": "GET",
+            "parentService": "ts-travel2-service",
+            "parentSpanID": "1493b53d3ceae854",
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          }
+        ],
+        "cross_service_parent_child": 42048,
+        "numeric_time_containment": 172602,
+        "numeric_time_noncontainment": 8398,
+        "numeric_time_uncheckable": 0,
+        "parentSpanID_present": 181000,
+        "parent_found_with_same_traceID": 181000,
+        "parent_not_found_with_same_traceID": 0,
+        "same_service_parent_child": 138952,
+        "self_references": 0,
+        "temporal_noncontainment_examples": [
+          {
+            "childDuration": 23869,
+            "childSpanID": "e5f20ccf86b73aaf",
+            "childStart": 1733601696389000,
+            "parentDuration": 27250,
+            "parentSpanID": "68fec650c4842565",
+            "parentStart": 1733601696385018,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 19261,
+            "childSpanID": "4e7cd1c6dd4240cf",
+            "childStart": 1733601696416000,
+            "parentDuration": 21801,
+            "parentSpanID": "5a3c68179ed146fd",
+            "parentStart": 1733601696412703,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 12419,
+            "childSpanID": "1fefd89c140d55fb",
+            "childStart": 1733601696421000,
+            "parentDuration": 14898,
+            "parentSpanID": "82c57d778d94351c",
+            "parentStart": 1733601696418497,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 5157,
+            "childSpanID": "40de8161387876b7",
+            "childStart": 1733601696452000,
+            "parentDuration": 6148,
+            "parentSpanID": "9315d04c6bea564b",
+            "parentStart": 1733601696450669,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 4944,
+            "childSpanID": "1a04baf54cdd91d9",
+            "childStart": 1733601696463000,
+            "parentDuration": 9511,
+            "parentSpanID": "3be9453913c125e6",
+            "parentStart": 1733601696458227,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 79807,
+            "childSpanID": "3fc8166ceb45bb4d",
+            "childStart": 1733601696472000,
+            "parentDuration": 81626,
+            "parentSpanID": "87cbef789a3d0f1d",
+            "parentStart": 1733601696469175,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 6427,
+            "childSpanID": "ae257183e1aeaf8e",
+            "childStart": 1733601696481000,
+            "parentDuration": 8694,
+            "parentSpanID": "8b2eed09b02b98ec",
+            "parentStart": 1733601696478516,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          },
+          {
+            "childDuration": 4529,
+            "childSpanID": "947087e94ef34636",
+            "childStart": 1733601696490000,
+            "parentDuration": 6482,
+            "parentSpanID": "3c5ea04a4224358b",
+            "parentStart": 1733601696487854,
+            "traceID": "211596ca9299e327d9a7e83fd9d3dbbe"
+          }
+        ],
+        "unknown_service_parent_child": 0,
+        "unresolved_parent_examples": []
+      },
+      "rows": 183623,
+      "schema": [
+        {
+          "name": "time",
+          "type": "large_string"
+        },
+        {
+          "name": "traceID",
+          "type": "large_string"
+        },
+        {
+          "name": "spanID",
+          "type": "large_string"
+        },
+        {
+          "name": "serviceName",
+          "type": "large_string"
+        },
+        {
+          "name": "methodName",
+          "type": "large_string"
+        },
+        {
+          "name": "operationName",
+          "type": "large_string"
+        },
+        {
+          "name": "parentSpanID",
+          "type": "large_string"
+        },
+        {
+          "name": "startTimeMillis",
+          "type": "int64"
+        },
+        {
+          "name": "startTime",
+          "type": "int64"
+        },
+        {
+          "name": "duration",
+          "type": "int64"
+        },
+        {
+          "name": "statusCode",
+          "type": "int64"
+        }
+      ],
+      "service": {
+        "distinct_non_null": 27,
+        "top_by_span_count": [
+          [
+            "ts-station-service",
+            41678
+          ],
+          [
+            "ts-train-service",
+            30320
+          ],
+          [
+            "ts-route-service",
+            23959
+          ],
+          [
+            "ts-travel2-service",
+            18569
+          ],
+          [
+            "ts-basic-service",
+            14390
+          ],
+          [
+            "ts-travel-service",
+            13477
+          ],
+          [
+            "ts-ticketinfo-service",
+            10148
+          ],
+          [
+            "ts-seat-service",
+            6878
+          ],
+          [
+            "ts-config-service",
+            5097
+          ],
+          [
+            "ts-order-other-service",
+            3876
+          ],
+          [
+            "ts-auth-service",
+            3575
+          ],
+          [
+            "ts-price-service",
+            3168
+          ],
+          [
+            "ts-order-service",
+            3138
+          ],
+          [
+            "ts-admin-basic-info-service",
+            1396
+          ],
+          [
+            "ts-admin-travel-service",
+            1026
+          ],
+          [
+            "ts-food-service",
+            730
+          ],
+          [
+            "ts-food-map-service",
+            645
+          ],
+          [
+            "ts-inside-payment-service",
+            242
+          ],
+          [
+            "ts-security-service",
+            224
+          ],
+          [
+            "ts-contacts-service",
+            192
+          ]
+        ]
+      },
+      "trace_file": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re3tt_ts-route-service_f2_1\\traces.parquet"
+    }
+  }
+}

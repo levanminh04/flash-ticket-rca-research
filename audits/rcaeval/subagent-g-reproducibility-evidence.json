@@ -1,0 +1,204 @@
+{
+  "scope": "DATASET-WIDE METADATA FACT — cases.parquet only; no raw telemetry inspected",
+  "generated_at_utc": "2026-09-20T02:16:47.017766+00:00",
+  "interpreter": {
+    "executable": "D:\\Project\\flash-ticket-rca-research\\.venv\\Scripts\\python.exe",
+    "version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.22631-SP0"
+  },
+  "required_package_versions": {
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "huggingface_hub": "1.32.0",
+    "fsspec": "2026.9.0"
+  },
+  "audit_script_sha256": {
+    "fetch_metadata.py": "1f6794c2e04c19f55a5f035804c003249706e7359928fb60c3a45638ca0da382",
+    "profile_metadata.py": "e554f9372ac8d15b0ca501cbb6daae0cb0a0e6839b0bfdc0e7452d3db0cd41aa",
+    "audit_reproducibility.py": "bcb3e9efb0785019ce3fa617d4e20064ce0e611056b0458c428bf482763c3745"
+  },
+  "manifest": {
+    "scope": "METADATA ONLY — no raw case telemetry downloaded",
+    "source": {
+      "repository": "phamquiluan/RCAEval",
+      "repository_type": "dataset",
+      "url": "https://huggingface.co/datasets/phamquiluan/RCAEval",
+      "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+      "file": "cases.parquet"
+    },
+    "local_file": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\metadata\\cases.parquet",
+    "bytes": 29500,
+    "sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "downloaded_at_utc": "2026-09-20T02:10:08.349561+00:00",
+    "runtime": {
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "platform": "Windows-11-10.0.22631-SP0"
+    }
+  },
+  "local_integrity": {
+    "manifest_recorded_bytes": 29500,
+    "actual_bytes": 29500,
+    "bytes_match_manifest": true,
+    "manifest_recorded_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "actual_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "sha256_matches_manifest": true,
+    "manifest_local_path_matches": true,
+    "parquet_rows": 735,
+    "pandas_rows": 735,
+    "row_count_matches": true,
+    "parquet_row_groups": 1,
+    "parquet_created_by": "parquet-cpp-arrow version 25.0.0"
+  },
+  "parquet_schema": "case: large_string\ndataset: large_string\nsuite: large_string\nsystem: large_string\nsystem_name: large_string\nroot_cause_service: large_string\nfault: large_string\nfault_description: large_string\nrepetition: int64\ninject_time: int64\nn_metrics: int64\nn_timesteps: int64\ntime_start: int64\ntime_end: int64\nduration_minutes: double\nnormal_timesteps: int64\nfaulty_timesteps: int64\nhas_logs: bool\nn_logs: int64\nhas_traces: bool\nn_traces: int64\nhas_root_cause_file: bool\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 2679",
+  "metadata_quality": {
+    "row_count": 735,
+    "column_count": 22,
+    "dtypes": {
+      "case": "str",
+      "dataset": "str",
+      "suite": "str",
+      "system": "str",
+      "system_name": "str",
+      "root_cause_service": "str",
+      "fault": "str",
+      "fault_description": "str",
+      "repetition": "int64",
+      "inject_time": "int64",
+      "n_metrics": "int64",
+      "n_timesteps": "int64",
+      "time_start": "int64",
+      "time_end": "int64",
+      "duration_minutes": "float64",
+      "normal_timesteps": "int64",
+      "faulty_timesteps": "int64",
+      "has_logs": "bool",
+      "n_logs": "int64",
+      "has_traces": "bool",
+      "n_traces": "int64",
+      "has_root_cause_file": "bool"
+    },
+    "null_counts": {
+      "case": 0,
+      "dataset": 0,
+      "suite": 0,
+      "system": 0,
+      "system_name": 0,
+      "root_cause_service": 0,
+      "fault": 0,
+      "fault_description": 0,
+      "repetition": 0,
+      "inject_time": 0,
+      "n_metrics": 0,
+      "n_timesteps": 0,
+      "time_start": 0,
+      "time_end": 0,
+      "duration_minutes": 0,
+      "normal_timesteps": 0,
+      "faulty_timesteps": 0,
+      "has_logs": 0,
+      "n_logs": 0,
+      "has_traces": 0,
+      "n_traces": 0,
+      "has_root_cause_file": 0
+    },
+    "duplicate_case_ids": 0,
+    "duplicate_full_rows": 0,
+    "case_identifier_checks": {
+      "case_not_matching_suite_system_prefix": 0,
+      "case_not_matching_fault_repetition_suffix": 0
+    },
+    "string_quality": {
+      "case": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      },
+      "dataset": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      },
+      "suite": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      },
+      "system": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      },
+      "fault": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      },
+      "root_cause_service": {
+        "null": 0,
+        "empty": 0,
+        "whitespace_only": 0,
+        "leading_or_trailing_whitespace": 0
+      }
+    },
+    "time_checks": {
+      "time_start_not_before_time_end": 0,
+      "inject_time_before_time_start": 1,
+      "inject_time_after_time_end": 1,
+      "n_timesteps_nonpositive": 0,
+      "normal_timesteps_negative": 0,
+      "faulty_timesteps_negative": 0,
+      "normal_plus_faulty_not_n_timesteps": 0,
+      "time_span_plus_one_not_n_timesteps": 0,
+      "inject_minus_start_not_normal_timesteps": 2,
+      "anomaly_case_rows": [
+        {
+          "case": "re1ob_currencyservice_loss_1",
+          "dataset": "RE1-OB",
+          "fault": "loss",
+          "inject_time": 16933142,
+          "time_start": 1693313863,
+          "time_end": 1693314583,
+          "normal_timesteps": 0,
+          "faulty_timesteps": 721
+        },
+        {
+          "case": "re1ob_productcatalogservice_cpu_3",
+          "dataset": "RE1-OB",
+          "fault": "cpu",
+          "inject_time": 1685373255,
+          "time_start": 1685371737,
+          "time_end": 1685371799,
+          "normal_timesteps": 63,
+          "faulty_timesteps": 0
+        }
+      ]
+    },
+    "count_checks": {
+      "n_metrics_nonpositive": 0,
+      "n_logs_negative": 0,
+      "n_traces_negative": 0,
+      "has_logs_does_not_equal_n_logs_gt_0": 0,
+      "has_traces_does_not_equal_n_traces_gt_0": 0
+    }
+  },
+  "remote_revision_check": {
+    "status": "VERIFIED",
+    "repository": "phamquiluan/RCAEval",
+    "requested_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "resolved_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "revision_matches_manifest": true,
+    "metadata_file_present": true,
+    "metadata_file": "cases.parquet",
+    "remote_file_count": 2080
+  },
+  "limitations": [
+    "This audit does not establish telemetry schemas, per-case file completeness, or case-level hashes.",
+    "A successful pinned-revision API response establishes accessibility of the named revision, not a signed archival guarantee.",
+    "The fetch script resolves the default dataset revision before recording it; a later rerun without the recorded revision can retrieve a different revision."
+  ]
+}

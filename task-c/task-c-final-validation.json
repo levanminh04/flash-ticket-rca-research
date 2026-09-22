@@ -1,0 +1,818 @@
+{
+  "schema_version": 1,
+  "validated_at": "2026-09-21T20:17:05.6177673+07:00",
+  "status": "PASS",
+  "scope": "Task C Phase 1 document, provenance and preservation validation. No raw corpus rescan, model experiment, novelty certification or human approval.",
+  "checks": {
+    "inputs_65_unchanged": true,
+    "original_reviewers_6_unchanged": true,
+    "hard_gate_50_questions": true,
+    "literature_gate_30_questions": true,
+    "red_team_18_unique_attacks": true,
+    "thesis_13_dimensions": true,
+    "final_matrix_14_dimensions": true,
+    "survivor_contracts_present": true,
+    "canonical_local_links_resolve": true,
+    "markdown_integrity": true,
+    "canonical_no_trailing_whitespace": true,
+    "governance_pass": true,
+    "git_diff_check_pass": true,
+    "phase1_complete_phase2_pending": true,
+    "human_decisions_last": true
+  },
+  "failed_checks": [],
+  "counts": {
+    "hashed_output_artifacts": 18,
+    "thesis_dimensions": 13,
+    "local_links": 17,
+    "hard_gate_rows": 50,
+    "red_team_rows": 18,
+    "comparison_dimensions": 14,
+    "frozen_reviewers": 6,
+    "inputs": 65,
+    "literature_rows": 30
+  },
+  "input_checks": [
+    {
+      "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-a-ban-do-bang-chung-doc-lap.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\TASK-B-RCAEval-audit.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\TASK-B-RCAEval-audit.pre-close.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\task-b-resume-state.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\TASK-B2-RE2TT-trace-scope.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\TASK-B2B-RE2TT-MULTIMODAL-SCOPE.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\b2b-re2tt-multimodal-download-manifest.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\main-log-multimodal-evidence.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\metadata-invariants.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\metadata-profile.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-manifest-verification.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-parquet-inventory.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-sample-plan.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-sample-plan.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-time-alignment.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\re2tt-target-candidate-coverage.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\re2tt-trace-full-subset-audit.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\re2tt-trace-full-subset-inventory.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\re2tt-trace-full-subset-progress.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\re2tt-trace-targeted-test.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-a-metadata.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-b-trace-schema.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-c-graph-constructability-evidence.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-c-graph-constructability.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-d-metrics-data.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-d-metrics.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-e-logs-multimodal.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-f-ground-truth-leakage-data.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-f-ground-truth-leakage.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-f-ground-truth-pyarrow-crosscheck.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-g-reproducibility-evidence.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-g-reproducibility.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-h-methodology-red-team.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-h-red-team-evidence.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-h-red-team-findings.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-i-re2tt-groundtruth.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-i-re2tt-groundtruth.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-re2tt-full-trace-audit.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-resource-observability-evidence.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-resource-observability.md",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_ground_truth.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_logs_multimodal_main.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_rcaeval_logs_multimodal.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_rcaeval_metadata.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_re2tt_full_trace_subset.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_reproducibility.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_resource_observability.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_subagent_d_metrics.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\audit_subagent_h_red_team.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\check_metadata_invariants.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\check_raw_time_alignment.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\check_re2tt_target_candidate_coverage.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\crosscheck_ground_truth_pyarrow.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\fetch_metadata.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\fetch_raw_samples.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\fetch_task_b2b_re2tt_multimodal.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\inventory_raw_parquet.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\profile_metadata.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\subagent_b_trace_schema.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\subagent_c_graph_constructability.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\subagent_i_re2tt_groundtruth.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\audit\\verify_raw_manifest.py",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\rcaeval-subagent-e-logs-multimodal-b2b.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\rcaeval-subagent-e-logs-multimodal.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\subagent-b-trace-schema.json",
+      "exists": true,
+      "bytes_match": true,
+      "sha256_match": true
+    }
+  ],
+  "frozen_reviewer_checks": [
+    {
+      "reviewer": "a",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-a.md",
+      "sha256": "0DE41D98353454B8F72EB5B9D1B6B3E64EEA157908248633F4022A1904732E96",
+      "unchanged": true
+    },
+    {
+      "reviewer": "b",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-b.md",
+      "sha256": "8AB922003022B3D24C2B8128A885D1616391DECA1DC98FC1E14705B3B3C6CEE0",
+      "unchanged": true
+    },
+    {
+      "reviewer": "c",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-c.md",
+      "sha256": "2CE355456BE32B3225C4ED179AF51CB5BCB335995C732C51195EB65C2509A161",
+      "unchanged": true
+    },
+    {
+      "reviewer": "d",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-d.md",
+      "sha256": "EF66A89C0C08257C61B16D3D055F5C1B9923474900E2EE8C2B91863232AD0B84",
+      "unchanged": true
+    },
+    {
+      "reviewer": "e",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-e.md",
+      "sha256": "C88E4B0DB7911AF8D869E5E237BFD248D5FBC70944D59EEF3532B650860B0E3D",
+      "unchanged": true
+    },
+    {
+      "reviewer": "f",
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-f.md",
+      "sha256": "ED8E7AAA2175EB256C7088FCD09D1D84C7D788DDEBABA68ACB44980593A9599B",
+      "unchanged": true
+    }
+  ],
+  "contract_checks": [
+    {
+      "candidate": "C1",
+      "rq_present": true,
+      "missing_contract_rows": [],
+      "graph_input_output_present": true,
+      "required_semantic_fields": 28,
+      "semantic_review": "Main and independent final-contract reviewer confirmed coverage; several rows combine fields; this is not a claim of 28 table rows."
+    },
+    {
+      "candidate": "C2",
+      "rq_present": true,
+      "missing_contract_rows": [],
+      "graph_input_output_present": true,
+      "required_semantic_fields": 28,
+      "semantic_review": "Main and independent final-contract reviewer confirmed coverage; several rows combine fields; this is not a claim of 28 table rows."
+    }
+  ],
+  "local_link_checks": [
+    {
+      "target": "../evidence/project-direction/2026-09-18-de-tai-va-nhiem-vu.md",
+      "resolved": "D:\\Project\\flash-ticket-platform\\docs\\evidence\\project-direction\\2026-09-18-de-tai-va-nhiem-vu.md",
+      "exists": true
+    },
+    {
+      "target": "../project/roles.md",
+      "resolved": "D:\\Project\\flash-ticket-platform\\docs\\project\\roles.md",
+      "exists": true
+    },
+    {
+      "target": "task-a-ban-do-bang-chung-doc-lap.md",
+      "resolved": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-a-ban-do-bang-chung-doc-lap.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/dataset-audit/TASK-B-RCAEval-audit.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\dataset-audit\\TASK-B-RCAEval-audit.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-evidence-ledger.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-ledger.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-input-inventory.json",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-input-inventory.json",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-machine-evidence-check.json",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-machine-evidence-check.json",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-targeted-verification.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-targeted-verification.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-normalized-candidate-universe.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-normalized-candidate-universe.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-feasibility-gate.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-feasibility-gate.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-literature-positioning.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-literature-positioning.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-evidence-cross-review.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-cross-review.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-red-team.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-red-team.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/phase-1-independent-candidates",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-resume-state.md",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-resume-state.md",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-governance-validation.txt",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-governance-validation.txt",
+      "exists": true
+    },
+    {
+      "target": "D:/Project/flash-ticket-rca-research/task-c/task-c-final-validation.json",
+      "resolved": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-final-validation.json",
+      "exists": true
+    }
+  ],
+  "markdown_checks": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-cross-review.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-ledger.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-feasibility-gate.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-literature-positioning.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-normalized-candidate-universe.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-red-team.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-resume-state.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-targeted-verification.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-a.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-b.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-c.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-d.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-e.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-f.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-c-independent-research-shortlist.md",
+      "strict_utf8": true,
+      "no_nul": true,
+      "no_replacement_character": true,
+      "trailing_whitespace_lines": 0
+    }
+  ],
+  "governance": {
+    "output": "WARN: Current diff touches 5 files; an approved impact map is required.\r\nINFO: canonical_root=D:\\Project\\flash-ticket-platform\r\nINFO: instruction_bytes=21355\r\nINFO: changed_files=5\r\nINFO: current_phase=5\r\nPASS: governance audit completed with 1 warning(s).\r\n",
+    "exit_code": 0,
+    "result": "PASS with one warning",
+    "warning": "Five files in working tree: four pre-existing changes and new canonical Task-C report; no mutation to the four prior files."
+  },
+  "git_status": [
+    " M README.md",
+    " M docs/research-rca/README.md",
+    " M docs/research/source-register.md",
+    "?? docs/research-rca/task-a-ban-do-bang-chung-doc-lap.md",
+    "?? docs/research-rca/task-c-independent-research-shortlist.md"
+  ],
+  "git_diff_check_output": [],
+  "output_artifacts": [
+    {
+      "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-c-independent-research-shortlist.md",
+      "bytes": 50357,
+      "sha256": "929597AA062584D303E58B64A57F8AA198CBE6BB0B164B67758AD070406B117C"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-a.md",
+      "bytes": 35537,
+      "sha256": "0DE41D98353454B8F72EB5B9D1B6B3E64EEA157908248633F4022A1904732E96"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-b.md",
+      "bytes": 28595,
+      "sha256": "8AB922003022B3D24C2B8128A885D1616391DECA1DC98FC1E14705B3B3C6CEE0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-c.md",
+      "bytes": 33623,
+      "sha256": "2CE355456BE32B3225C4ED179AF51CB5BCB335995C732C51195EB65C2509A161"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-d.md",
+      "bytes": 32645,
+      "sha256": "EF66A89C0C08257C61B16D3D055F5C1B9923474900E2EE8C2B91863232AD0B84"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-e.md",
+      "bytes": 29947,
+      "sha256": "C88E4B0DB7911AF8D869E5E237BFD248D5FBC70944D59EEF3532B650860B0E3D"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\phase-1-independent-candidates\\reviewer-f.md",
+      "bytes": 32737,
+      "sha256": "ED8E7AAA2175EB256C7088FCD09D1D84C7D788DDEBABA68ACB44980593A9599B"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-cross-review.md",
+      "bytes": 18911,
+      "sha256": "E1BCD36F2206AB8C562962EAD57E2133281C9C93D5C9F8D30CF156E7B5DB7E3C"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-evidence-ledger.md",
+      "bytes": 14889,
+      "sha256": "79AD146A4660BBBCC0291ADC0AF048F554DBDD8CB2F2AB650DF2189AE2944B29"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-feasibility-gate.md",
+      "bytes": 37980,
+      "sha256": "75E811D85CDE0C7F3490A027160F55232E7F44F140F735F83FAD7B68F9831180"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-governance-validation.txt",
+      "bytes": 258,
+      "sha256": "5F4DC381CB356B10792A1F5C4C4332795B512929AB1F9ECC514862563783B52A"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-input-inventory.json",
+      "bytes": 14131,
+      "sha256": "42334961E3225DF4F4DB2D9E56F0337616D5B054DBA0AB31B310307C88C49147"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-literature-positioning.md",
+      "bytes": 23029,
+      "sha256": "2627CF22B8C081C9C594D8CD3ADAF648658D8BF1A282438DEBCD8B45D1A9AAE3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-machine-evidence-check.json",
+      "bytes": 596,
+      "sha256": "357A0BA2BCB6EDA4D81348BC22C47E53E1EE702F3217338D3B169282ED417AAF"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-normalized-candidate-universe.md",
+      "bytes": 6782,
+      "sha256": "9E344367221E7BB649C7C4C8AC4E1E4D0C11E61538281F7E3A8C5FC5843039DC"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-red-team.md",
+      "bytes": 26805,
+      "sha256": "1DED5345C98A8114E89751B71C171B3A031546D411F8887B6AEDEC519EE2DDA7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-resume-state.md",
+      "bytes": 14543,
+      "sha256": "3546E3B9AFAB70D643BDC3F813BC69F829DBF6425387F8964CAB67F7D6AD52EB"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\task-c\\task-c-targeted-verification.md",
+      "bytes": 4834,
+      "sha256": "B900B0BC9559FE65323E1CFF88C519E23CA96AA6AD8796457AFDFDD2588BE024"
+    }
+  ],
+  "manifest_note": "This validation JSON excludes itself from its output hash list. Independent reviewer files are preserved; final canonical/resume/universe are final versions at validation time.",
+  "dimension_labels": {
+    "comparison": [
+      "Scientific question clarity",
+      "Evidence of unresolved problem",
+      "Dataset support",
+      "Ground-truth strength",
+      "Evaluation validity",
+      "Baseline fairness",
+      "Reproducibility",
+      "Engineering feasibility",
+      "Compute burden",
+      "Risk of thesis dead-end",
+      "Supervisor alignment",
+      "FlashTicket integration",
+      "LLM integration",
+      "Scope containment"
+    ],
+    "thesis": [
+      "Scientific validity",
+      "Dataset fit",
+      "Ground-truth quality",
+      "Baseline availability",
+      "Experimental complexity",
+      "Implementation complexity",
+      "Compute cost",
+      "Reproducibility",
+      "Risk of dead end",
+      "Supervisor alignment",
+      "FlashTicket transfer value",
+      "LLM integration compatibility",
+      "Scope controllability"
+    ]
+  },
+  "validator_correction": "Initial row counter included the table header. Corrected by explicitly excluding the two header labels, then verified all dimension labels. No research content was changed to satisfy the counter."
+}

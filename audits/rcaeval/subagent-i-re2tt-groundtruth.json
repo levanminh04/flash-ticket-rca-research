@@ -1,0 +1,405 @@
+{
+  "audit_identity": {
+    "independence": "This script does not read prior ground-truth/leakage reports.",
+    "role": "Independent additional reviewer — RE2-TT ground truth, candidate universe, leakage, and evaluation readiness",
+    "scope": "DATASET-WIDE METADATA FACT — all 90 RE2-TT cases; no telemetry content downloaded or inspected by this audit"
+  },
+  "candidate_universe": {
+    "authoritative_split": "ABSENT",
+    "case_id_conditioned_candidate_count": 1,
+    "known_injected_label_universe_top5": "TRIVIAL — five labels make Top-5 service accuracy structurally 1.0 if every label is returned.",
+    "label_universe_size": 5,
+    "metadata_has_candidate_or_split_columns": [],
+    "metadata_label_universe": [
+      "ts-auth-service",
+      "ts-order-service",
+      "ts-route-service",
+      "ts-train-service",
+      "ts-travel-service"
+    ],
+    "per_case_candidate_service_universe": "NOT AVAILABLE FROM METADATA",
+    "per_split_candidate_service_universe": "NOT AVAILABLE FROM METADATA",
+    "permitted_rule": "Derive candidate services only from telemetry observable in the evaluated case before labels are loaded; freeze and log that set per case."
+  },
+  "case_identifier_encoding": {
+    "all_tokens_match": 90,
+    "conclusion": "Every case ID encodes the indexed root-cause service, fault, and repetition. Case IDs and their directory paths are direct leakage.",
+    "parsed_case_count": 90,
+    "pattern": "^re2tt_(?P<service>.+)_(?P<fault>cpu|delay|disk|loss|mem|socket)_(?P<repetition>[1-9][0-9]*)$",
+    "token_matches": {
+      "fault": 90,
+      "repetition": 90,
+      "root_cause_service": 90
+    }
+  },
+  "evaluation_readiness": [
+    {
+      "basis": "All 90 cases have a valid injection boundary and a root-cause-service evaluation label.",
+      "protocol": "Use inject_time only to define the evaluation window or to supply an externally known incident time; never expose it as an end-to-end detector feature.",
+      "status": "YES",
+      "task": "RCA given a known incident window"
+    },
+    {
+      "basis": "Each case has normal/faulty injection windows and metrics/traces; 89/90 also have logs.",
+      "protocol": "It can score automatic incident-window detection against the injected-fault boundary, but not a fully labelled anomaly-object/task because observed anomaly onset and affected-node labels are absent.",
+      "status": "PARTIAL",
+      "task": "End-to-end anomaly detection"
+    },
+    {
+      "basis": "There is only one root-cause-service label per case and no affected/anomalous service set.",
+      "protocol": "Do not treat root_cause_service as a label for every anomalous service.",
+      "status": "NO",
+      "task": "Service-level anomaly evaluation"
+    },
+    {
+      "basis": "No authoritative node universe or per-node anomaly labels are available.",
+      "protocol": "NOT EVALUABLE WITH CURRENT GROUND TRUTH.",
+      "status": "NO",
+      "task": "Node-level anomaly F1"
+    },
+    {
+      "basis": "All 90 cases have a non-null root_cause_service label across five balanced services.",
+      "protocol": "Build each candidate universe from telemetry observable in that case, never from case paths, metadata labels, or known injected-service sets.",
+      "status": "YES",
+      "task": "Root-cause service ranking"
+    },
+    {
+      "basis": "No operation-level root-cause label exists.",
+      "protocol": "NOT EVALUABLE WITH CURRENT GROUND TRUTH.",
+      "status": "NO",
+      "task": "Operation-level root-cause ranking"
+    }
+  ],
+  "ground_truth_availability": [
+    {
+      "basis": "All 90 cases are indexed as fault-injection cases and every row has an in-range inject_time with nonzero normal and faulty windows.",
+      "item": "Incident label",
+      "limit": "This is an injection-window label, not an independently annotated observed anomaly onset.",
+      "status": "AVAILABLE"
+    },
+    {
+      "basis": "root_cause_service is non-null in all 90 metadata rows; five services are balanced at 18 cases each.",
+      "item": "Root-cause service",
+      "limit": "Evaluation-only label; it must not be used to form per-case model candidates or features.",
+      "status": "AVAILABLE"
+    },
+    {
+      "basis": "fault is non-null in all 90 metadata rows; six values occur 15 times each.",
+      "item": "Fault type",
+      "limit": "Evaluation-only label; it is encoded in every case identifier.",
+      "status": "AVAILABLE"
+    },
+    {
+      "basis": "The service label is present and exactly matches the service token in every case identifier.",
+      "item": "Injection target",
+      "limit": "There is no separate injection_target field or independent target record. The dataset does not distinguish an intended injection target from an observable causal root cause, and has no operation/resource target.",
+      "status": "PARTIAL"
+    },
+    {
+      "basis": "inject_time is non-null and within [time_start, time_end] for all 90 cases; every row has 720 normal and 721 faulty timesteps.",
+      "item": "Injection timestamp",
+      "limit": "Only an evaluation/protocol boundary. It is forbidden as an end-to-end detector input.",
+      "status": "AVAILABLE"
+    },
+    {
+      "basis": "No operation-root-cause field exists in cases.parquet, and the complete RE2-TT repository tree has no separate ground-truth artifact beyond the four telemetry/inject-time file types.",
+      "item": "Operation-level root cause",
+      "limit": "A trace operation name is an observable representation, not an operation ground-truth label.",
+      "status": "ABSENT"
+    },
+    {
+      "basis": "No resource target/type/root-cause metadata field or separate RE2-TT ground-truth artifact is present.",
+      "item": "Resource-level root cause",
+      "limit": "Fault labels such as disk/socket do not identify a specific resource entity.",
+      "status": "ABSENT"
+    },
+    {
+      "basis": "No affected-service/node set is in the metadata and no corresponding RE2-TT label artifact exists in the pinned tree.",
+      "item": "Affected-node label",
+      "limit": "The root-cause service label does not label all anomalous or affected nodes.",
+      "status": "ABSENT"
+    },
+    {
+      "basis": "No propagation-path field or RE2-TT artifact is present in the metadata/tree inventory.",
+      "item": "Propagation-path label",
+      "limit": "Span parentage cannot be promoted into a labelled causal path.",
+      "status": "ABSENT"
+    },
+    {
+      "basis": "The pinned RE2-TT metadata has no indicator field and its complete repository tree contains no root_cause.txt or indicator artifact.",
+      "item": "Machine-readable root-cause indicator",
+      "limit": "The official README's general benchmark description does not make a separate RE2-TT indicator field available in this pinned Hugging Face copy.",
+      "status": "ABSENT"
+    }
+  ],
+  "leakage_policy": [
+    {
+      "classification": "FORBIDDEN MODEL INPUT",
+      "field": "case ID",
+      "reason": "Every RE2-TT case ID deterministically encodes the root-cause service, fault type, and repetition."
+    },
+    {
+      "classification": "FORBIDDEN MODEL INPUT",
+      "field": "directory name/path",
+      "reason": "The official directory convention carries the same root-cause-service and fault tokens as the case ID."
+    },
+    {
+      "classification": "EVALUATION ONLY",
+      "field": "root_cause_service",
+      "reason": "It is the service-ranking answer label; using it in a case-specific candidate set collapses that universe to one."
+    },
+    {
+      "classification": "EVALUATION ONLY",
+      "field": "fault type",
+      "reason": "It is the service-fault answer label and is encoded in the case ID/path."
+    },
+    {
+      "classification": "EVALUATION ONLY — ONLY FOR RCA-GIVEN-INCIDENT-WINDOW",
+      "field": "inject_time",
+      "reason": "It defines the injected-fault boundary. FORBIDDEN FOR END-TO-END DETECTION INPUT."
+    },
+    {
+      "classification": "FORBIDDEN MODEL INPUT",
+      "field": "root_cause.txt",
+      "reason": "A direct root-cause artifact would be leakage. It is absent from all 90 RE2-TT cases in the pinned repository tree."
+    },
+    {
+      "classification": "PROVENANCE ONLY",
+      "field": "repetition",
+      "reason": "It identifies a repetition, not a runtime observable; it must not be a model feature."
+    }
+  ],
+  "metadata_absence_checks": {
+    "candidate_or_split_columns": [],
+    "interpretation": "Absence checks apply to the pinned metadata and pinned repository file tree, not to uninspected telemetry values.",
+    "label_field_name_matches": {
+      "affected": [],
+      "indicator": [],
+      "injection_target": [],
+      "operation": [],
+      "propagation": [],
+      "resource": []
+    }
+  },
+  "official_documentation": {
+    "evaluator_url": "https://github.com/phamquiluan/RCAEval/blob/main/main.py",
+    "facts_used": [
+      "The README identifies RE2-TT as a 90-case, six-fault, multi-source suite and defines inject_time.txt as a fault-injection timestamp.",
+      "The README identifies cases.parquet as the index for root-cause service, fault type, and injection time.",
+      "The evaluator source treats injection time as the boundary for normal/anomalous window construction and derives candidate counts from observed metric columns after preprocessing."
+    ],
+    "readme_url": "https://github.com/phamquiluan/RCAEval/blob/main/README.md"
+  },
+  "official_repository_tree": {
+    "basename_counts": {
+      "inject_time.txt": 90,
+      "logs.parquet": 89,
+      "metrics.parquet": 90,
+      "traces.parquet": 90
+    },
+    "metadata_case_set_matches_tree": true,
+    "re2tt_case_count": 90,
+    "re2tt_file_count": 359,
+    "repository_paths_total": 2080,
+    "root_cause_txt_cases": [],
+    "unexpected_basenames": []
+  },
+  "output_files": {
+    "json": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-i-re2tt-groundtruth.json",
+    "markdown": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\subagent-i-re2tt-groundtruth.md"
+  },
+  "provenance": {
+    "metadata_bytes": 29500,
+    "metadata_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\metadata\\cases.parquet",
+    "metadata_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "repository": "phamquiluan/RCAEval",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval"
+  },
+  "re2tt_metadata_facts": {
+    "case_count": 90,
+    "dataset_values": [
+      "RE2-TT"
+    ],
+    "factorial_coverage": {
+      "complete": true,
+      "duplicate_combinations": 0,
+      "expected_combinations": 90,
+      "missing_combinations": 0,
+      "observed_combinations": 90
+    },
+    "fault_counts": {
+      "cpu": 15,
+      "delay": 15,
+      "disk": 15,
+      "loss": 15,
+      "mem": 15,
+      "socket": 15
+    },
+    "faulty_timesteps": {
+      "unique_values": [
+        721
+      ]
+    },
+    "injection_window": {
+      "above_end": 0,
+      "below_start": 0,
+      "non_null": 90,
+      "normal_plus_faulty_equals_total": 90,
+      "offset_from_start_seconds": {
+        "max": 720,
+        "min": 720,
+        "unique_values": [
+          720
+        ]
+      },
+      "offset_to_end_seconds": {
+        "max": 720,
+        "min": 720,
+        "unique_values": [
+          720
+        ]
+      },
+      "within_window": 90
+    },
+    "modality_counts": {
+      "logs_cases": 89,
+      "metrics_cases": 90,
+      "no_log_cases": [
+        "re2tt_ts-auth-service_cpu_1"
+      ],
+      "root_cause_file_cases": 0,
+      "traces_cases": 90
+    },
+    "n_metrics": {
+      "max": 376,
+      "min": 340,
+      "unique_values": [
+        340,
+        345,
+        346,
+        356,
+        357,
+        358,
+        359,
+        360,
+        361,
+        362,
+        363,
+        364,
+        365,
+        366,
+        367,
+        368,
+        369,
+        370,
+        371,
+        372,
+        373,
+        374,
+        375,
+        376
+      ]
+    },
+    "n_timesteps": {
+      "max": 1441,
+      "min": 1441,
+      "unique_values": [
+        1441
+      ]
+    },
+    "normal_timesteps": {
+      "unique_values": [
+        720
+      ]
+    },
+    "repetition_counts": {
+      "1": 30,
+      "2": 30,
+      "3": 30
+    },
+    "root_cause_service_counts": {
+      "ts-auth-service": 18,
+      "ts-order-service": 18,
+      "ts-route-service": 18,
+      "ts-train-service": 18,
+      "ts-travel-service": 18
+    },
+    "root_service_by_fault": {
+      "cpu": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "delay": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "disk": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "loss": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "mem": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "socket": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ]
+    },
+    "root_service_by_repetition": {
+      "1": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "2": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ],
+      "3": [
+        "ts-auth-service",
+        "ts-order-service",
+        "ts-route-service",
+        "ts-train-service",
+        "ts-travel-service"
+      ]
+    },
+    "suite_values": [
+      "RE2"
+    ],
+    "system_name_values": [
+      "Train Ticket"
+    ],
+    "system_values": [
+      "tt"
+    ]
+  }
+}

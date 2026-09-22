@@ -1,0 +1,63 @@
+{
+  "scope": "RAW SAMPLE PLAN — six cases only; selection is not a dataset-wide sample",
+  "repo_id": "phamquiluan/RCAEval",
+  "repo_type": "dataset",
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "selection_rule": "Reconciled after independent proposals by Subagents A and F and the main agent; metadata labels are provenance/evaluation only and never model inputs.",
+  "cases": [
+    {
+      "case": "re1ob_productcatalogservice_cpu_3",
+      "suite": "RE1",
+      "system": "Online Boutique",
+      "fault": "cpu",
+      "root_target_metadata": "productcatalogservice",
+      "reason": "Metric-only resource-labeled case with a metadata injection/window contradiction; selected solely to adjudicate raw-data quality.",
+      "uncertainty_tested": "Whether inject_time.txt and metrics timestamps confirm, contradict, or leave unresolved the invalid metadata window."
+    },
+    {
+      "case": "re2ob_productcatalogservice_loss_1",
+      "suite": "RE2",
+      "system": "Online Boutique",
+      "fault": "loss",
+      "root_target_metadata": "productcatalogservice",
+      "reason": "Tri-modal network-labeled case; one side of cross-system trace-schema comparison.",
+      "uncertainty_tested": "Actual trace/log/metric schemas, cross-modal join keys, and directly observed service/call evidence."
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "suite": "RE2",
+      "system": "Sock Shop",
+      "fault": "loss",
+      "root_target_metadata": "orders",
+      "reason": "Logs-plus-metrics case without declared traces; contrasts a network-labeled fault with the Online Boutique trace-bearing case.",
+      "uncertainty_tested": "Whether trace absence is real in raw layout and how graph construction must classify the missing modality."
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "suite": "RE2",
+      "system": "Train Ticket",
+      "fault": "cpu",
+      "root_target_metadata": "ts-auth-service",
+      "reason": "The only metadata-declared RE2-TT case with traces but no logs.",
+      "uncertainty_tested": "Raw absence versus an empty/malformed logs file; trace schema at a second trace-bearing system."
+    },
+    {
+      "case": "re3ss_carts_f1_1",
+      "suite": "RE3",
+      "system": "Sock Shop",
+      "fault": "f1",
+      "root_target_metadata": "carts",
+      "reason": "Code-level case with metadata-declared root_cause.txt and no traces.",
+      "uncertainty_tested": "Exact leakage content and safe exclusion of root_cause.txt from log/model enumeration."
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "suite": "RE3",
+      "system": "Train Ticket",
+      "fault": "f2",
+      "root_target_metadata": "ts-route-service",
+      "reason": "Tri-modal code-level case with a distinct root target and cross-system schema coverage.",
+      "uncertainty_tested": "Whether raw telemetry supports operation/resource identity and how service-level ground truth maps to observed entities."
+    }
+  ]
+}

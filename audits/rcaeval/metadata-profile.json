@@ -1,0 +1,558 @@
+{
+  "scope": "DATASET-WIDE METADATA FACT",
+  "metadata_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\metadata\\cases.parquet",
+  "row_count": 735,
+  "column_count": 22,
+  "duplicate_case_count": 0,
+  "columns": {
+    "case": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "dataset": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 9,
+      "frequencies": {
+        "RE1-OB": 125,
+        "RE1-SS": 125,
+        "RE1-TT": 125,
+        "RE2-OB": 90,
+        "RE2-SS": 90,
+        "RE2-TT": 90,
+        "RE3-OB": 30,
+        "RE3-SS": 30,
+        "RE3-TT": 30
+      }
+    },
+    "suite": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 3,
+      "frequencies": {
+        "RE1": 375,
+        "RE2": 270,
+        "RE3": 90
+      }
+    },
+    "system": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 3,
+      "frequencies": {
+        "ob": 245,
+        "ss": 245,
+        "tt": 245
+      }
+    },
+    "system_name": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 3,
+      "frequencies": {
+        "Online Boutique": 245,
+        "Sock Shop": 245,
+        "Train Ticket": 245
+      }
+    },
+    "root_cause_service": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 18,
+      "frequencies": {
+        "ts-auth-service": 58,
+        "ts-route-service": 58,
+        "carts": 55,
+        "orders": 52,
+        "currencyservice": 46,
+        "checkoutservice": 43,
+        "productcatalogservice": 43,
+        "catalogue": 43,
+        "payment": 43,
+        "user": 43,
+        "ts-order-service": 43,
+        "ts-train-service": 43,
+        "ts-travel-service": 43,
+        "adservice": 34,
+        "emailservice": 33,
+        "cartservice": 28,
+        "recommendationservice": 18,
+        "front-end": 9
+      }
+    },
+    "fault": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 11,
+      "frequencies": {
+        "cpu": 120,
+        "delay": 120,
+        "disk": 120,
+        "loss": 120,
+        "mem": 120,
+        "socket": 45,
+        "f3": 26,
+        "f1": 26,
+        "f4": 19,
+        "f2": 13,
+        "f5": 6
+      }
+    },
+    "fault_description": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 11,
+      "frequencies": {
+        "CPU stress": 120,
+        "network delay": 120,
+        "disk I/O stress": 120,
+        "network packet loss": 120,
+        "memory stress": 120,
+        "socket exhaustion": 45,
+        "code-level fault F3": 26,
+        "code-level fault F1": 26,
+        "code-level fault F4": 19,
+        "code-level fault F2": 13,
+        "code-level fault F5": 6
+      }
+    },
+    "repetition": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 6,
+      "frequencies": {
+        "1": 192,
+        "2": 192,
+        "3": 192,
+        "4": 82,
+        "5": 76,
+        "6": 1
+      }
+    },
+    "inject_time": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "n_metrics": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 88,
+      "frequencies": {
+        "59": 78,
+        "49": 49,
+        "58": 49,
+        "74": 44,
+        "60": 36,
+        "76": 34,
+        "57": 30,
+        "75": 30,
+        "68": 23,
+        "198": 14,
+        "81": 14,
+        "200": 13,
+        "238": 12,
+        "77": 12,
+        "199": 11,
+        "71": 11,
+        "80": 11,
+        "72": 10,
+        "361": 10,
+        "201": 9,
+        "359": 9,
+        "220": 8,
+        "218": 8,
+        "78": 8,
+        "358": 8,
+        "56": 7,
+        "221": 7,
+        "69": 7,
+        "70": 6,
+        "73": 6,
+        "79": 6,
+        "367": 6,
+        "363": 6,
+        "315": 6,
+        "316": 6,
+        "215": 5,
+        "345": 5,
+        "366": 5,
+        "365": 5,
+        "84": 5,
+        "228": 4,
+        "202": 4,
+        "82": 4,
+        "369": 4,
+        "371": 4,
+        "360": 4,
+        "368": 4,
+        "317": 4,
+        "318": 4,
+        "217": 3,
+        "216": 3,
+        "222": 3,
+        "236": 3,
+        "223": 3,
+        "204": 3,
+        "340": 3,
+        "86": 3,
+        "319": 3,
+        "320": 3,
+        "219": 2,
+        "203": 2,
+        "226": 2,
+        "362": 2,
+        "374": 2,
+        "373": 2,
+        "375": 2,
+        "370": 2,
+        "356": 2,
+        "85": 2,
+        "298": 2,
+        "63": 1,
+        "231": 1,
+        "225": 1,
+        "232": 1,
+        "233": 1,
+        "224": 1,
+        "227": 1,
+        "357": 1,
+        "372": 1,
+        "346": 1,
+        "376": 1,
+        "364": 1,
+        "100": 1,
+        "101": 1,
+        "107": 1,
+        "83": 1,
+        "294": 1,
+        "322": 1
+      }
+    },
+    "n_timesteps": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 12,
+      "frequencies": {
+        "1441": 328,
+        "721": 223,
+        "961": 99,
+        "4201": 48,
+        "1801": 30,
+        "2679": 1,
+        "63": 1,
+        "647": 1,
+        "607": 1,
+        "848": 1,
+        "930": 1,
+        "1004": 1
+      }
+    },
+    "time_start": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "time_end": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "duration_minutes": {
+      "dtype": "float64",
+      "null_count": 0,
+      "distinct_non_null": 12,
+      "frequencies": {
+        "24.0": 328,
+        "12.0": 223,
+        "16.0": 99,
+        "70.0": 48,
+        "30.0": 30,
+        "44.6": 1,
+        "1.0": 1,
+        "10.8": 1,
+        "10.1": 1,
+        "14.1": 1,
+        "15.5": 1,
+        "16.7": 1
+      }
+    },
+    "normal_timesteps": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 7,
+      "frequencies": {
+        "720": 330,
+        "360": 224,
+        "480": 100,
+        "2100": 49,
+        "900": 30,
+        "0": 1,
+        "63": 1
+      }
+    },
+    "faulty_timesteps": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 12,
+      "frequencies": {
+        "721": 329,
+        "361": 222,
+        "481": 99,
+        "2101": 48,
+        "901": 30,
+        "579": 1,
+        "0": 1,
+        "287": 1,
+        "247": 1,
+        "368": 1,
+        "210": 1,
+        "284": 1
+      }
+    },
+    "has_logs": {
+      "dtype": "bool",
+      "null_count": 0,
+      "distinct_non_null": 2,
+      "frequencies": {
+        "False": 376,
+        "True": 359
+      }
+    },
+    "n_logs": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 357,
+      "frequencies": null
+    },
+    "has_traces": {
+      "dtype": "bool",
+      "null_count": 0,
+      "distinct_non_null": 2,
+      "frequencies": {
+        "False": 495,
+        "True": 240
+      }
+    },
+    "n_traces": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 241,
+      "frequencies": null
+    },
+    "has_root_cause_file": {
+      "dtype": "bool",
+      "null_count": 0,
+      "distinct_non_null": 2,
+      "frequencies": {
+        "False": 727,
+        "True": 8
+      }
+    }
+  },
+  "named_fields": {
+    "dataset": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 9,
+      "frequencies": {
+        "RE1-OB": 125,
+        "RE1-SS": 125,
+        "RE1-TT": 125,
+        "RE2-OB": 90,
+        "RE2-SS": 90,
+        "RE2-TT": 90,
+        "RE3-OB": 30,
+        "RE3-SS": 30,
+        "RE3-TT": 30
+      }
+    },
+    "suite": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 3,
+      "frequencies": {
+        "RE1": 375,
+        "RE2": 270,
+        "RE3": 90
+      }
+    },
+    "system": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 3,
+      "frequencies": {
+        "ob": 245,
+        "ss": 245,
+        "tt": 245
+      }
+    },
+    "case": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "fault": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 11,
+      "frequencies": {
+        "cpu": 120,
+        "delay": 120,
+        "disk": 120,
+        "loss": 120,
+        "mem": 120,
+        "socket": 45,
+        "f3": 26,
+        "f1": 26,
+        "f4": 19,
+        "f2": 13,
+        "f5": 6
+      }
+    },
+    "root_cause_service": {
+      "dtype": "str",
+      "null_count": 0,
+      "distinct_non_null": 18,
+      "frequencies": {
+        "ts-auth-service": 58,
+        "ts-route-service": 58,
+        "carts": 55,
+        "orders": 52,
+        "currencyservice": 46,
+        "checkoutservice": 43,
+        "productcatalogservice": 43,
+        "catalogue": 43,
+        "payment": 43,
+        "user": 43,
+        "ts-order-service": 43,
+        "ts-train-service": 43,
+        "ts-travel-service": 43,
+        "adservice": 34,
+        "emailservice": 33,
+        "cartservice": 28,
+        "recommendationservice": 18,
+        "front-end": 9
+      }
+    },
+    "inject_time": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 735,
+      "frequencies": null
+    },
+    "n_metrics": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 88,
+      "frequencies": {
+        "59": 78,
+        "49": 49,
+        "58": 49,
+        "74": 44,
+        "60": 36,
+        "76": 34,
+        "57": 30,
+        "75": 30,
+        "68": 23,
+        "198": 14,
+        "81": 14,
+        "200": 13,
+        "238": 12,
+        "77": 12,
+        "199": 11,
+        "71": 11,
+        "80": 11,
+        "72": 10,
+        "361": 10,
+        "201": 9,
+        "359": 9,
+        "220": 8,
+        "218": 8,
+        "78": 8,
+        "358": 8,
+        "56": 7,
+        "221": 7,
+        "69": 7,
+        "70": 6,
+        "73": 6,
+        "79": 6,
+        "367": 6,
+        "363": 6,
+        "315": 6,
+        "316": 6,
+        "215": 5,
+        "345": 5,
+        "366": 5,
+        "365": 5,
+        "84": 5,
+        "228": 4,
+        "202": 4,
+        "82": 4,
+        "369": 4,
+        "371": 4,
+        "360": 4,
+        "368": 4,
+        "317": 4,
+        "318": 4,
+        "217": 3,
+        "216": 3,
+        "222": 3,
+        "236": 3,
+        "223": 3,
+        "204": 3,
+        "340": 3,
+        "86": 3,
+        "319": 3,
+        "320": 3,
+        "219": 2,
+        "203": 2,
+        "226": 2,
+        "362": 2,
+        "374": 2,
+        "373": 2,
+        "375": 2,
+        "370": 2,
+        "356": 2,
+        "85": 2,
+        "298": 2,
+        "63": 1,
+        "231": 1,
+        "225": 1,
+        "232": 1,
+        "233": 1,
+        "224": 1,
+        "227": 1,
+        "357": 1,
+        "372": 1,
+        "346": 1,
+        "376": 1,
+        "364": 1,
+        "100": 1,
+        "101": 1,
+        "107": 1,
+        "83": 1,
+        "294": 1,
+        "322": 1
+      }
+    },
+    "n_logs": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 357,
+      "frequencies": null
+    },
+    "n_traces": {
+      "dtype": "int64",
+      "null_count": 0,
+      "distinct_non_null": 241,
+      "frequencies": null
+    }
+  }
+}

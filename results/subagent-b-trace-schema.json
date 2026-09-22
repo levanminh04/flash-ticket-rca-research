@@ -1,0 +1,3187 @@
+{
+  "audit": "Task B / Subagent B — Trace Schema Auditor",
+  "scope": "RAW SAMPLE FINDING — only trace-bearing files from the six-case raw-sample plan; not a dataset-wide claim.",
+  "source": {
+    "repository": "phamquiluan/RCAEval",
+    "repository_type": "dataset",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e"
+  },
+  "plan_path": "D:\\Project\\flash-ticket-rca-research\\audits\\rcaeval\\raw-sample-plan.json",
+  "manifest_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\raw-download-manifest.json",
+  "trace_bearing_cases": [
+    "re2ob_productcatalogservice_loss_1",
+    "re2tt_ts-auth-service_cpu_1",
+    "re3tt_ts-route-service_f2_1"
+  ],
+  "planned_cases_without_downloaded_traces_parquet": [
+    "re1ob_productcatalogservice_cpu_3",
+    "re2ss_orders_loss_2",
+    "re3ss_carts_f1_1"
+  ],
+  "checks": [
+    "Parquet schema and row count from pyarrow.parquet.ParquetFile",
+    "Column null/empty/distinct/top-value counts streamed from raw records",
+    "Parent resolution uses exact (traceID, parentSpanID) lookup within the same raw file",
+    "No data downloaded, transformed, or used to infer architecture or causal propagation"
+  ],
+  "cases": [
+    {
+      "case": "re2ob_productcatalogservice_loss_1",
+      "local_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2ob_productcatalogservice_loss_1\\traces.parquet",
+      "file_bytes": 6972318,
+      "parquet": {
+        "row_count": 254889,
+        "row_groups": 1,
+        "schema": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "unexpected_columns": [],
+        "missing_expected_columns": []
+      },
+      "column_profile": {
+        "time": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 25,
+          "top_values": [
+            {
+              "value": "18:17",
+              "rows": 17156
+            },
+            {
+              "value": "18:13",
+              "rows": 16696
+            },
+            {
+              "value": "18:14",
+              "rows": 16436
+            },
+            {
+              "value": "18:09",
+              "rows": 16292
+            },
+            {
+              "value": "18:16",
+              "rows": 16265
+            },
+            {
+              "value": "18:10",
+              "rows": 16235
+            },
+            {
+              "value": "18:15",
+              "rows": 16103
+            },
+            {
+              "value": "18:11",
+              "rows": 16069
+            },
+            {
+              "value": "18:12",
+              "rows": 15441
+            },
+            {
+              "value": "18:19",
+              "rows": 15438
+            },
+            {
+              "value": "18:18",
+              "rows": 15217
+            },
+            {
+              "value": "18:20",
+              "rows": 11178
+            },
+            {
+              "value": "18:08",
+              "rows": 8148
+            },
+            {
+              "value": "18:24",
+              "rows": 7702
+            },
+            {
+              "value": "18:21",
+              "rows": 6946
+            }
+          ]
+        },
+        "traceID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 17167,
+          "top_values": [
+            {
+              "value": "c2e72eeb2d9ccbae2317195d77bca365",
+              "rows": 45
+            },
+            {
+              "value": "68130e019501fb03e32651b84946d295",
+              "rows": 45
+            },
+            {
+              "value": "037f97bf12853bfe55e700102862f535",
+              "rows": 45
+            },
+            {
+              "value": "b91643d2bb1a54896249b90168bbd346",
+              "rows": 45
+            },
+            {
+              "value": "a47e3399f533b92ee1b19b721d7ba1db",
+              "rows": 45
+            },
+            {
+              "value": "3a80cca16908b7d9ee35b394f6712a06",
+              "rows": 45
+            },
+            {
+              "value": "d94c351e1fb2f9dde0861e0df5112a8e",
+              "rows": 45
+            },
+            {
+              "value": "8b89a986227b701f401040114d2e0fc2",
+              "rows": 45
+            },
+            {
+              "value": "55bad0094ae23e63894b5110e570e2d5",
+              "rows": 45
+            },
+            {
+              "value": "15ad9127c31b8332b77fcc36aba9fed7",
+              "rows": 45
+            },
+            {
+              "value": "b3bcca7aef88bda31f4e94fd9075213b",
+              "rows": 45
+            },
+            {
+              "value": "090cfe7a71e530b7199f41769306b710",
+              "rows": 45
+            },
+            {
+              "value": "7e0d7fd2c2247157045db49de9882058",
+              "rows": 45
+            },
+            {
+              "value": "d1c2dc6758bafcad9e9bca55a0bac49f",
+              "rows": 45
+            },
+            {
+              "value": "4c3f806a4f31fadbfdc589b9dca36de2",
+              "rows": 45
+            }
+          ]
+        },
+        "spanID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 254889,
+          "top_values": [
+            {
+              "value": "df88c8f81f5a1c6c",
+              "rows": 1
+            },
+            {
+              "value": "cc357b989f186803",
+              "rows": 1
+            },
+            {
+              "value": "99ec102f1fdfd6fe",
+              "rows": 1
+            },
+            {
+              "value": "22260dad0cc26a75",
+              "rows": 1
+            },
+            {
+              "value": "63d4ab567903415e",
+              "rows": 1
+            },
+            {
+              "value": "7d01c37bb59bc7af",
+              "rows": 1
+            },
+            {
+              "value": "8e70e825c3a13567",
+              "rows": 1
+            },
+            {
+              "value": "875842cf83e244dd",
+              "rows": 1
+            },
+            {
+              "value": "cf0df1230a843a4e",
+              "rows": 1
+            },
+            {
+              "value": "4d48c897ece44df5",
+              "rows": 1
+            },
+            {
+              "value": "ba24dd41d54f322c",
+              "rows": 1
+            },
+            {
+              "value": "1a59847f8ba052b2",
+              "rows": 1
+            },
+            {
+              "value": "26f6b730bcf12208",
+              "rows": 1
+            },
+            {
+              "value": "a8dc1e249c23a79c",
+              "rows": 1
+            },
+            {
+              "value": "b17fc2a72fed6bba",
+              "rows": 1
+            }
+          ]
+        },
+        "serviceName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 7,
+          "top_values": [
+            {
+              "value": "frontendservice",
+              "rows": 135363
+            },
+            {
+              "value": "productcatalogservice",
+              "rows": 56030
+            },
+            {
+              "value": "currencyservice",
+              "rows": 37921
+            },
+            {
+              "value": "recommendationservice",
+              "rows": 17720
+            },
+            {
+              "value": "checkoutservice",
+              "rows": 6141
+            },
+            {
+              "value": "emailservice",
+              "rows": 1001
+            },
+            {
+              "value": "paymentservice",
+              "rows": 713
+            }
+          ]
+        },
+        "methodName": {
+          "null_rows": 12634,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 16,
+          "top_values": [
+            {
+              "value": "GetProduct",
+              "rows": 103183
+            },
+            {
+              "value": "Convert",
+              "rows": 54938
+            },
+            {
+              "value": "GetSupportedCurrencies",
+              "rows": 20324
+            },
+            {
+              "value": "ListProducts",
+              "rows": 18445
+            },
+            {
+              "value": "ListRecommendations",
+              "rows": 17400
+            },
+            {
+              "value": "GetCart",
+              "rows": 10156
+            },
+            {
+              "value": "GetAds",
+              "rows": 7107
+            },
+            {
+              "value": "GetQuote",
+              "rows": 3037
+            },
+            {
+              "value": "Check",
+              "rows": 2144
+            },
+            {
+              "value": "AddItem",
+              "rows": 1295
+            },
+            {
+              "value": "PlaceOrder",
+              "rows": 852
+            },
+            {
+              "value": "Charge",
+              "rows": 850
+            },
+            {
+              "value": "SendOrderConfirmation",
+              "rows": 850
+            },
+            {
+              "value": "Export",
+              "rows": 824
+            },
+            {
+              "value": "ShipOrder",
+              "rows": 425
+            }
+          ]
+        },
+        "operationName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 25,
+          "top_values": [
+            {
+              "value": "hipstershop.ProductCatalogService/GetProduct",
+              "rows": 103183
+            },
+            {
+              "value": "grpc.hipstershop.CurrencyService/Convert",
+              "rows": 27470
+            },
+            {
+              "value": "hipstershop.CurrencyService/Convert",
+              "rows": 27468
+            },
+            {
+              "value": "frontend",
+              "rows": 12634
+            },
+            {
+              "value": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+              "rows": 10163
+            },
+            {
+              "value": "hipstershop.CurrencyService/GetSupportedCurrencies",
+              "rows": 10161
+            },
+            {
+              "value": "hipstershop.CartService/GetCart",
+              "rows": 10156
+            },
+            {
+              "value": "hipstershop.ProductCatalogService/ListProducts",
+              "rows": 9843
+            },
+            {
+              "value": "hipstershop.RecommendationService/ListRecommendations",
+              "rows": 8798
+            },
+            {
+              "value": "/hipstershop.ProductCatalogService/ListProducts",
+              "rows": 8602
+            },
+            {
+              "value": "/hipstershop.RecommendationService/ListRecommendations",
+              "rows": 8602
+            },
+            {
+              "value": "hipstershop.AdService/GetAds",
+              "rows": 7107
+            },
+            {
+              "value": "hipstershop.ShippingService/GetQuote",
+              "rows": 3037
+            },
+            {
+              "value": "hipstershop.CartService/AddItem",
+              "rows": 1295
+            },
+            {
+              "value": "/grpc.health.v1.Health/Check",
+              "rows": 1092
+            }
+          ]
+        },
+        "parentSpanID": {
+          "null_rows": 17108,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 123658,
+          "top_values": [
+            {
+              "value": "d68a856ecffdb52b",
+              "rows": 22
+            },
+            {
+              "value": "aaa8b0d51ae4a7a2",
+              "rows": 22
+            },
+            {
+              "value": "e9701ac6e55bb7bf",
+              "rows": 22
+            },
+            {
+              "value": "f52f7a4bb35fb9dc",
+              "rows": 22
+            },
+            {
+              "value": "fed4e2b0c79fbe08",
+              "rows": 22
+            },
+            {
+              "value": "607b0ab504c1f127",
+              "rows": 22
+            },
+            {
+              "value": "48a4b3e5bf205e18",
+              "rows": 22
+            },
+            {
+              "value": "8c47b07757b74839",
+              "rows": 22
+            },
+            {
+              "value": "5b895068c5d95cb1",
+              "rows": 22
+            },
+            {
+              "value": "c5029dcffb148fe5",
+              "rows": 22
+            },
+            {
+              "value": "055c22d398a33b65",
+              "rows": 22
+            },
+            {
+              "value": "0a8276f77c7529fe",
+              "rows": 22
+            },
+            {
+              "value": "18a38b62b30e6667",
+              "rows": 22
+            },
+            {
+              "value": "a63bbbffd4dca4a3",
+              "rows": 22
+            },
+            {
+              "value": "2253c78d0dad0d28",
+              "rows": 22
+            }
+          ]
+        },
+        "startTimeMillis": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 152743,
+          "top_values": [
+            {
+              "value": "1705343289856",
+              "rows": 43
+            },
+            {
+              "value": "1705343229819",
+              "rows": 42
+            },
+            {
+              "value": "1705342951996",
+              "rows": 38
+            },
+            {
+              "value": "1705343332220",
+              "rows": 38
+            },
+            {
+              "value": "1705343404809",
+              "rows": 38
+            },
+            {
+              "value": "1705342966001",
+              "rows": 36
+            },
+            {
+              "value": "1705343286039",
+              "rows": 36
+            },
+            {
+              "value": "1705343244234",
+              "rows": 35
+            },
+            {
+              "value": "1705343446265",
+              "rows": 35
+            },
+            {
+              "value": "1705343036165",
+              "rows": 34
+            },
+            {
+              "value": "1705342911146",
+              "rows": 33
+            },
+            {
+              "value": "1705342852499",
+              "rows": 32
+            },
+            {
+              "value": "1705343286057",
+              "rows": 32
+            },
+            {
+              "value": "1705343328090",
+              "rows": 32
+            },
+            {
+              "value": "1705343444794",
+              "rows": 32
+            }
+          ]
+        },
+        "startTime": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 251015,
+          "top_values": [
+            {
+              "value": "1705342462306910",
+              "rows": 3
+            },
+            {
+              "value": "1705342611208000",
+              "rows": 3
+            },
+            {
+              "value": "1705343305348431",
+              "rows": 3
+            },
+            {
+              "value": "1705342110004000",
+              "rows": 2
+            },
+            {
+              "value": "1705342110104999",
+              "rows": 2
+            },
+            {
+              "value": "1705342110203000",
+              "rows": 2
+            },
+            {
+              "value": "1705342110303000",
+              "rows": 2
+            },
+            {
+              "value": "1705342110400999",
+              "rows": 2
+            },
+            {
+              "value": "1705342110446576",
+              "rows": 2
+            },
+            {
+              "value": "1705342110503109",
+              "rows": 2
+            },
+            {
+              "value": "1705342114004999",
+              "rows": 2
+            },
+            {
+              "value": "1705342114008641",
+              "rows": 2
+            },
+            {
+              "value": "1705342114009654",
+              "rows": 2
+            },
+            {
+              "value": "1705342114033566",
+              "rows": 2
+            },
+            {
+              "value": "1705342114043710",
+              "rows": 2
+            }
+          ]
+        },
+        "duration": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 59987,
+          "top_values": [
+            {
+              "value": "8",
+              "rows": 6578
+            },
+            {
+              "value": "7",
+              "rows": 5796
+            },
+            {
+              "value": "9",
+              "rows": 5612
+            },
+            {
+              "value": "6",
+              "rows": 5071
+            },
+            {
+              "value": "10",
+              "rows": 4953
+            },
+            {
+              "value": "11",
+              "rows": 4485
+            },
+            {
+              "value": "12",
+              "rows": 3390
+            },
+            {
+              "value": "13",
+              "rows": 2567
+            },
+            {
+              "value": "14",
+              "rows": 2381
+            },
+            {
+              "value": "5",
+              "rows": 2318
+            },
+            {
+              "value": "15",
+              "rows": 1994
+            },
+            {
+              "value": "4",
+              "rows": 1793
+            },
+            {
+              "value": "16",
+              "rows": 1516
+            },
+            {
+              "value": "3",
+              "rows": 1151
+            },
+            {
+              "value": "2",
+              "rows": 1060
+            }
+          ]
+        },
+        "statusCode": {
+          "null_rows": 12634,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 5,
+          "top_values": [
+            {
+              "value": "0",
+              "rows": 242039
+            },
+            {
+              "value": "14",
+              "rows": 198
+            },
+            {
+              "value": "4",
+              "rows": 12
+            },
+            {
+              "value": "2",
+              "rows": 4
+            },
+            {
+              "value": "13",
+              "rows": 2
+            }
+          ]
+        }
+      },
+      "identity_and_parent_resolution": {
+        "distinct_traceID": 17167,
+        "distinct_spanID_global": 254889,
+        "distinct_traceID_spanID_composite": 254889,
+        "duplicate_traceID_spanID_rows": 0,
+        "duplicate_spanID_global_rows": 0,
+        "rows_with_nonempty_parentSpanID": 237781,
+        "rows_with_null_or_empty_parentSpanID": 17108,
+        "parent_resolved_same_traceID": 237492,
+        "parent_unresolved_same_traceID": 289,
+        "parent_resolution_rate": 0.9987846,
+        "parent_resolved_anywhere_in_raw_file_by_spanID": 237492,
+        "parent_resolved_only_outside_child_traceID": 0,
+        "self_parent_rows": 0,
+        "resolved_parent_child_same_service": 134433,
+        "resolved_parent_child_cross_service": 103059,
+        "resolved_parent_child_unknown_service": 0,
+        "top_cross_service_child_parent_pairs": [
+          {
+            "child_service": "productcatalogservice",
+            "parent_service": "frontendservice",
+            "rows": 47402
+          },
+          {
+            "child_service": "currencyservice",
+            "parent_service": "frontendservice",
+            "rows": 36123
+          },
+          {
+            "child_service": "recommendationservice",
+            "parent_service": "frontendservice",
+            "rows": 8602
+          },
+          {
+            "child_service": "productcatalogservice",
+            "parent_service": "recommendationservice",
+            "rows": 7272
+          },
+          {
+            "child_service": "currencyservice",
+            "parent_service": "checkoutservice",
+            "rows": 1506
+          },
+          {
+            "child_service": "productcatalogservice",
+            "parent_service": "checkoutservice",
+            "rows": 878
+          },
+          {
+            "child_service": "checkoutservice",
+            "parent_service": "frontendservice",
+            "rows": 426
+          },
+          {
+            "child_service": "paymentservice",
+            "parent_service": "checkoutservice",
+            "rows": 425
+          },
+          {
+            "child_service": "emailservice",
+            "parent_service": "checkoutservice",
+            "rows": 425
+          }
+        ]
+      },
+      "timing": {
+        "numeric_min": {
+          "startTimeMillis": 1705342110001,
+          "startTime": 1705342110001999,
+          "duration": 1,
+          "statusCode": 0
+        },
+        "numeric_max": {
+          "startTimeMillis": 1705343549558,
+          "startTime": 1705343549558894,
+          "duration": 39563148,
+          "statusCode": 14
+        },
+        "negative_duration_rows": 0,
+        "zero_duration_rows": 0,
+        "startTime_vs_startTimeMillis": {
+          "both_present": 254889,
+          "startTime_div_1000_equals_startTimeMillis": 254889
+        },
+        "resolved_parent_child_timing_comparable": 237492,
+        "resolved_child_start_before_parent_start": 0,
+        "resolved_child_end_after_parent_end": 0
+      },
+      "operation_identity": {
+        "distinct_service_operationName_pairs": 37,
+        "distinct_operationName_reused_across_more_than_one_service": 10,
+        "examples_exact_operationName_reused_across_services": [
+          {
+            "operationName": "/grpc.health.v1.Health/Check",
+            "services": [
+              "emailservice",
+              "recommendationservice"
+            ]
+          },
+          {
+            "operationName": "grpc.grpc.health.v1.Health/Check",
+            "services": [
+              "currencyservice",
+              "paymentservice"
+            ]
+          },
+          {
+            "operationName": "grpc.health.v1.Health/Check",
+            "services": [
+              "checkoutservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.CartService/GetCart",
+            "services": [
+              "checkoutservice",
+              "frontendservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.CheckoutService/PlaceOrder",
+            "services": [
+              "checkoutservice",
+              "frontendservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.CurrencyService/Convert",
+            "services": [
+              "checkoutservice",
+              "frontendservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.ProductCatalogService/GetProduct",
+            "services": [
+              "checkoutservice",
+              "frontendservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.ProductCatalogService/ListProducts",
+            "services": [
+              "frontendservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "operationName": "hipstershop.ShippingService/GetQuote",
+            "services": [
+              "checkoutservice",
+              "frontendservice"
+            ]
+          },
+          {
+            "operationName": "opentelemetry.proto.collector.trace.v1.TraceService/Export",
+            "services": [
+              "checkoutservice",
+              "frontendservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "operation_cardinality_by_service": [
+          {
+            "serviceName": "checkoutservice",
+            "distinct_operationName": 11
+          },
+          {
+            "serviceName": "currencyservice",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "emailservice",
+            "distinct_operationName": 2
+          },
+          {
+            "serviceName": "frontendservice",
+            "distinct_operationName": 12
+          },
+          {
+            "serviceName": "paymentservice",
+            "distinct_operationName": 2
+          },
+          {
+            "serviceName": "productcatalogservice",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "recommendationservice",
+            "distinct_operationName": 3
+          }
+        ]
+      },
+      "structured_attribute_assessment": {
+        "http": "No dedicated HTTP method, URL, route, status, host, or peer column exists in this Parquet schema.",
+        "rpc": "No dedicated RPC system/service/method or peer column exists in this Parquet schema.",
+        "database": "No dedicated database system/operation/statement/resource column exists in this Parquet schema.",
+        "messaging": "No dedicated messaging system/destination/operation column exists in this Parquet schema.",
+        "resource_peer": "No dedicated resource attributes, host, container, pod, process, or peer attributes column exists in this Parquet schema.",
+        "caution": "Text patterns inside operationName/methodName are raw strings, not structured semantic attributes.",
+        "operationName_textual_pattern_counts": {
+          "http_verb_at_start": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          },
+          "grpc_literal": {
+            "matched_rows": 40202,
+            "top_exact_operationName_values": [
+              {
+                "value": "grpc.hipstershop.CurrencyService/Convert",
+                "rows": 27470
+              },
+              {
+                "value": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+                "rows": 10163
+              },
+              {
+                "value": "/grpc.health.v1.Health/Check",
+                "rows": 1092
+              },
+              {
+                "value": "grpc.grpc.health.v1.Health/Check",
+                "rows": 576
+              },
+              {
+                "value": "grpc.health.v1.Health/Check",
+                "rows": 476
+              },
+              {
+                "value": "grpc.hipstershop.PaymentService/Charge",
+                "rows": 425
+              }
+            ]
+          },
+          "database_like_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          },
+          "messaging_like_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          }
+        }
+      }
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "local_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_1\\traces.parquet",
+      "file_bytes": 26833237,
+      "parquet": {
+        "row_count": 1143435,
+        "row_groups": 2,
+        "schema": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "unexpected_columns": [],
+        "missing_expected_columns": []
+      },
+      "column_profile": {
+        "time": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 25,
+          "top_values": [
+            {
+              "value": "10:09",
+              "rows": 54429
+            },
+            {
+              "value": "10:05",
+              "rows": 52639
+            },
+            {
+              "value": "10:11",
+              "rows": 51955
+            },
+            {
+              "value": "10:15",
+              "rows": 51429
+            },
+            {
+              "value": "10:02",
+              "rows": 50512
+            },
+            {
+              "value": "10:17",
+              "rows": 50218
+            },
+            {
+              "value": "10:04",
+              "rows": 49675
+            },
+            {
+              "value": "10:12",
+              "rows": 49504
+            },
+            {
+              "value": "10:14",
+              "rows": 48722
+            },
+            {
+              "value": "09:58",
+              "rows": 48680
+            },
+            {
+              "value": "09:59",
+              "rows": 48412
+            },
+            {
+              "value": "10:00",
+              "rows": 48175
+            },
+            {
+              "value": "09:57",
+              "rows": 47697
+            },
+            {
+              "value": "10:10",
+              "rows": 47114
+            },
+            {
+              "value": "10:19",
+              "rows": 46698
+            }
+          ]
+        },
+        "traceID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 6707,
+          "top_values": [
+            {
+              "value": "ba611fea5596c41509a6a858ea799b8a",
+              "rows": 2166
+            },
+            {
+              "value": "080aa51a28e8854673972f1faa1fafa1",
+              "rows": 2162
+            },
+            {
+              "value": "57734265968918791379ff3cf41bccb9",
+              "rows": 2162
+            },
+            {
+              "value": "662c8ec4c485215b026e3b5988295cb1",
+              "rows": 2162
+            },
+            {
+              "value": "e21d74546cf532468ff3c4f6f5fbc3aa",
+              "rows": 2162
+            },
+            {
+              "value": "11eba025f9243807c76ba445adeeffd3",
+              "rows": 2162
+            },
+            {
+              "value": "5249c9331b9bb77663b077b9b4a5ff39",
+              "rows": 2150
+            },
+            {
+              "value": "bc0979720824882b5007fa61904cc564",
+              "rows": 2150
+            },
+            {
+              "value": "cc4cc9da7d236c7bc72c823cf7634c20",
+              "rows": 2150
+            },
+            {
+              "value": "411606441e94362ccedc1536359e64dd",
+              "rows": 2146
+            },
+            {
+              "value": "8036ca9f7b9724d3d1446ceb6ab2d794",
+              "rows": 2142
+            },
+            {
+              "value": "d1c761d7431c7e12408bf771809c98cd",
+              "rows": 2138
+            },
+            {
+              "value": "aaab0a44ee09935a4392c7a8b952b45c",
+              "rows": 2130
+            },
+            {
+              "value": "3c9809206ab47919be56356a191ee1e1",
+              "rows": 2126
+            },
+            {
+              "value": "45eca984b97f3c3779c3a433d734c130",
+              "rows": 2126
+            }
+          ]
+        },
+        "spanID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 1143435,
+          "top_values": [
+            {
+              "value": "378e25fd09b4e844",
+              "rows": 1
+            },
+            {
+              "value": "6be01aa9726a18c5",
+              "rows": 1
+            },
+            {
+              "value": "f6c13ad28634a4b6",
+              "rows": 1
+            },
+            {
+              "value": "22812354307f8f99",
+              "rows": 1
+            },
+            {
+              "value": "8c9b82218f065b7b",
+              "rows": 1
+            },
+            {
+              "value": "f8ef0a55c67cedc0",
+              "rows": 1
+            },
+            {
+              "value": "91856a7ac470e5b5",
+              "rows": 1
+            },
+            {
+              "value": "e35f3c57ec0d281a",
+              "rows": 1
+            },
+            {
+              "value": "859fa77d3ca3cb3d",
+              "rows": 1
+            },
+            {
+              "value": "f1aa3cf36f7129b4",
+              "rows": 1
+            },
+            {
+              "value": "03090284d2e5a4b4",
+              "rows": 1
+            },
+            {
+              "value": "b80cabb6ee6ec7c9",
+              "rows": 1
+            },
+            {
+              "value": "d286377ad0f61bff",
+              "rows": 1
+            },
+            {
+              "value": "7fb67e60b82dbb57",
+              "rows": 1
+            },
+            {
+              "value": "21b30226e0da7755",
+              "rows": 1
+            }
+          ]
+        },
+        "serviceName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 27,
+          "top_values": [
+            {
+              "value": "ts-station-service",
+              "rows": 635150
+            },
+            {
+              "value": "ts-train-service",
+              "rows": 76395
+            },
+            {
+              "value": "ts-route-service",
+              "rows": 74256
+            },
+            {
+              "value": "ts-travel2-service",
+              "rows": 72505
+            },
+            {
+              "value": "ts-basic-service",
+              "rows": 67606
+            },
+            {
+              "value": "ts-ticketinfo-service",
+              "rows": 47788
+            },
+            {
+              "value": "ts-travel-service",
+              "rows": 43801
+            },
+            {
+              "value": "ts-seat-service",
+              "rows": 32124
+            },
+            {
+              "value": "ts-order-other-service",
+              "rows": 22175
+            },
+            {
+              "value": "ts-config-service",
+              "rows": 19629
+            },
+            {
+              "value": "ts-order-service",
+              "rows": 15434
+            },
+            {
+              "value": "ts-price-service",
+              "rows": 10623
+            },
+            {
+              "value": "ts-auth-service",
+              "rows": 10025
+            },
+            {
+              "value": "ts-food-service",
+              "rows": 3629
+            },
+            {
+              "value": "ts-food-map-service",
+              "rows": 3234
+            }
+          ]
+        },
+        "methodName": {
+          "null_rows": 1143435,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 0,
+          "top_values": []
+        },
+        "operationName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 122,
+          "top_values": [
+            {
+              "value": "find ts.station",
+              "rows": 299833
+            },
+            {
+              "value": "StationRepository.findById",
+              "rows": 264653
+            },
+            {
+              "value": "GET",
+              "rows": 145306
+            },
+            {
+              "value": "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+              "rows": 35180
+            },
+            {
+              "value": "StationRepository.findByName",
+              "rows": 35180
+            },
+            {
+              "value": "TrainTypeRepository.findById",
+              "rows": 30558
+            },
+            {
+              "value": "find ts.trainType",
+              "rows": 30558
+            },
+            {
+              "value": "GET /api/v1/routeservice/routes/{routeId}",
+              "rows": 24752
+            },
+            {
+              "value": "find ts.routes",
+              "rows": 24752
+            },
+            {
+              "value": "RouteRepository.findById",
+              "rows": 24752
+            },
+            {
+              "value": "POST",
+              "rows": 20827
+            },
+            {
+              "value": "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+              "rows": 20591
+            },
+            {
+              "value": "GET /api/v1/basicservice/basic/{stationName}",
+              "rows": 20591
+            },
+            {
+              "value": "find ts.trip",
+              "rows": 16610
+            },
+            {
+              "value": "GET /api/v1/trainservice/trains/{id}",
+              "rows": 15279
+            }
+          ]
+        },
+        "parentSpanID": {
+          "null_rows": 6704,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 738522,
+          "top_values": [
+            {
+              "value": "9e8b49b9f736b7ba",
+              "rows": 1080
+            },
+            {
+              "value": "866902e2d3a3625e",
+              "rows": 1078
+            },
+            {
+              "value": "1debc6a6d5257862",
+              "rows": 1078
+            },
+            {
+              "value": "33ecec6432f773e3",
+              "rows": 1078
+            },
+            {
+              "value": "cf3816341f2021d6",
+              "rows": 1078
+            },
+            {
+              "value": "f6db44a55cef7c54",
+              "rows": 1078
+            },
+            {
+              "value": "f54073bd6cc2fb2f",
+              "rows": 1072
+            },
+            {
+              "value": "81f8329dcf7b7941",
+              "rows": 1072
+            },
+            {
+              "value": "ffe3bbabda72b0bf",
+              "rows": 1072
+            },
+            {
+              "value": "1113d59491301ce7",
+              "rows": 1070
+            },
+            {
+              "value": "e2b3f9e20c28fd17",
+              "rows": 1068
+            },
+            {
+              "value": "fa931d6f44c6bc8b",
+              "rows": 1066
+            },
+            {
+              "value": "51b101981fe606a7",
+              "rows": 1062
+            },
+            {
+              "value": "a3d989edb214e8e7",
+              "rows": 1060
+            },
+            {
+              "value": "444d2acf7c2102ea",
+              "rows": 1060
+            }
+          ]
+        },
+        "startTimeMillis": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 554112,
+          "top_values": [
+            {
+              "value": "1705918410760",
+              "rows": 12
+            },
+            {
+              "value": "1705918544870",
+              "rows": 12
+            },
+            {
+              "value": "1705917463766",
+              "rows": 11
+            },
+            {
+              "value": "1705917723463",
+              "rows": 11
+            },
+            {
+              "value": "1705918004941",
+              "rows": 11
+            },
+            {
+              "value": "1705918004981",
+              "rows": 11
+            },
+            {
+              "value": "1705918005118",
+              "rows": 11
+            },
+            {
+              "value": "1705918005196",
+              "rows": 11
+            },
+            {
+              "value": "1705918029057",
+              "rows": 11
+            },
+            {
+              "value": "1705918410679",
+              "rows": 11
+            },
+            {
+              "value": "1705918410779",
+              "rows": 11
+            },
+            {
+              "value": "1705918457409",
+              "rows": 11
+            },
+            {
+              "value": "1705918544503",
+              "rows": 11
+            },
+            {
+              "value": "1705918544794",
+              "rows": 11
+            },
+            {
+              "value": "1705917581142",
+              "rows": 10
+            }
+          ]
+        },
+        "startTime": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 1132685,
+          "top_values": [
+            {
+              "value": "1705917463760000",
+              "rows": 4
+            },
+            {
+              "value": "1705917476130000",
+              "rows": 4
+            },
+            {
+              "value": "1705917482205000",
+              "rows": 4
+            },
+            {
+              "value": "1705917586343000",
+              "rows": 4
+            },
+            {
+              "value": "1705917619895000",
+              "rows": 4
+            },
+            {
+              "value": "1705917619968000",
+              "rows": 4
+            },
+            {
+              "value": "1705917723494000",
+              "rows": 4
+            },
+            {
+              "value": "1705918039794000",
+              "rows": 4
+            },
+            {
+              "value": "1705918200764000",
+              "rows": 4
+            },
+            {
+              "value": "1705918473808000",
+              "rows": 4
+            },
+            {
+              "value": "1705918482765000",
+              "rows": 4
+            },
+            {
+              "value": "1705918482771000",
+              "rows": 4
+            },
+            {
+              "value": "1705918636897000",
+              "rows": 4
+            },
+            {
+              "value": "1705917402911000",
+              "rows": 3
+            },
+            {
+              "value": "1705917402949000",
+              "rows": 3
+            }
+          ]
+        },
+        "duration": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 44118,
+          "top_values": [
+            {
+              "value": "741",
+              "rows": 1529
+            },
+            {
+              "value": "729",
+              "rows": 1521
+            },
+            {
+              "value": "736",
+              "rows": 1514
+            },
+            {
+              "value": "781",
+              "rows": 1504
+            },
+            {
+              "value": "753",
+              "rows": 1503
+            },
+            {
+              "value": "751",
+              "rows": 1500
+            },
+            {
+              "value": "766",
+              "rows": 1498
+            },
+            {
+              "value": "749",
+              "rows": 1495
+            },
+            {
+              "value": "731",
+              "rows": 1489
+            },
+            {
+              "value": "774",
+              "rows": 1483
+            },
+            {
+              "value": "761",
+              "rows": 1477
+            },
+            {
+              "value": "775",
+              "rows": 1476
+            },
+            {
+              "value": "773",
+              "rows": 1474
+            },
+            {
+              "value": "739",
+              "rows": 1474
+            },
+            {
+              "value": "756",
+              "rows": 1473
+            }
+          ]
+        },
+        "statusCode": {
+          "null_rows": 1143435,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 0,
+          "top_values": []
+        }
+      },
+      "identity_and_parent_resolution": {
+        "distinct_traceID": 6707,
+        "distinct_spanID_global": 1143435,
+        "distinct_traceID_spanID_composite": 1143435,
+        "duplicate_traceID_spanID_rows": 0,
+        "duplicate_spanID_global_rows": 0,
+        "rows_with_nonempty_parentSpanID": 1136731,
+        "rows_with_null_or_empty_parentSpanID": 6704,
+        "parent_resolved_same_traceID": 1136552,
+        "parent_unresolved_same_traceID": 179,
+        "parent_resolution_rate": 0.99984253,
+        "parent_resolved_anywhere_in_raw_file_by_spanID": 1136552,
+        "parent_resolved_only_outside_child_traceID": 0,
+        "self_parent_rows": 0,
+        "resolved_parent_child_same_service": 970420,
+        "resolved_parent_child_cross_service": 166132,
+        "resolved_parent_child_unknown_service": 0,
+        "top_cross_service_child_parent_pairs": [
+          {
+            "child_service": "ts-station-service",
+            "parent_service": "ts-basic-service",
+            "rows": 33802
+          },
+          {
+            "child_service": "ts-basic-service",
+            "parent_service": "ts-ticketinfo-service",
+            "rows": 23894
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 16137
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 14234
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "parent_service": "ts-seat-service",
+            "rows": 7682
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "parent_service": "ts-travel-service",
+            "rows": 7607
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-travel-service",
+            "rows": 7215
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 6916
+          },
+          {
+            "child_service": "ts-config-service",
+            "parent_service": "ts-seat-service",
+            "rows": 6304
+          },
+          {
+            "child_service": "ts-travel-service",
+            "parent_service": "ts-seat-service",
+            "rows": 5228
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-travel-service",
+            "rows": 5060
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "parent_service": "ts-seat-service",
+            "rows": 3841
+          },
+          {
+            "child_service": "ts-seat-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 3779
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-basic-service",
+            "rows": 3303
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-basic-service",
+            "rows": 3303
+          }
+        ]
+      },
+      "timing": {
+        "numeric_min": {
+          "startTimeMillis": 1705917385000,
+          "startTime": 1705917385000000,
+          "duration": 339,
+          "statusCode": null
+        },
+        "numeric_max": {
+          "startTimeMillis": 1705918825000,
+          "startTime": 1705918825000277,
+          "duration": 1152400,
+          "statusCode": null
+        },
+        "negative_duration_rows": 0,
+        "zero_duration_rows": 0,
+        "startTime_vs_startTimeMillis": {
+          "both_present": 1143435,
+          "startTime_div_1000_equals_startTimeMillis": 1143435
+        },
+        "resolved_parent_child_timing_comparable": 1136552,
+        "resolved_child_start_before_parent_start": 8,
+        "resolved_child_end_after_parent_end": 18114
+      },
+      "operation_identity": {
+        "distinct_service_operationName_pairs": 152,
+        "distinct_operationName_reused_across_more_than_one_service": 11,
+        "examples_exact_operationName_reused_across_services": [
+          {
+            "operationName": "GET",
+            "services": [
+              "ts-admin-basic-info-service",
+              "ts-admin-travel-service",
+              "ts-basic-service",
+              "ts-consign-service",
+              "ts-food-service",
+              "ts-inside-payment-service",
+              "ts-preserve-other-service",
+              "ts-preserve-service",
+              "ts-seat-service",
+              "ts-security-service",
+              "ts-ticketinfo-service",
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "POST",
+            "services": [
+              "ts-food-service",
+              "ts-inside-payment-service",
+              "ts-order-other-service",
+              "ts-order-service",
+              "ts-preserve-other-service",
+              "ts-preserve-service",
+              "ts-seat-service",
+              "ts-ticketinfo-service",
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "PaymentRepository.save",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          },
+          {
+            "operationName": "TripRepository.findAll",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "TripRepository.findByTripId",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "find ts.orders",
+            "services": [
+              "ts-order-other-service",
+              "ts-order-service"
+            ]
+          },
+          {
+            "operationName": "find ts.payment",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          },
+          {
+            "operationName": "find ts.trip",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "getMore ts.orders",
+            "services": [
+              "ts-order-other-service",
+              "ts-order-service"
+            ]
+          },
+          {
+            "operationName": "update ts.orders",
+            "services": [
+              "ts-order-other-service",
+              "ts-order-service"
+            ]
+          },
+          {
+            "operationName": "update ts.payment",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          }
+        ],
+        "operation_cardinality_by_service": [
+          {
+            "serviceName": "ts-admin-basic-info-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-admin-travel-service",
+            "distinct_operationName": 2
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-auth-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-basic-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-config-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-consign-price-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-food-service",
+            "distinct_operationName": 8
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "distinct_operationName": 10
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "distinct_operationName": 15
+          },
+          {
+            "serviceName": "ts-order-service",
+            "distinct_operationName": 15
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-preserve-other-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-preserve-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-price-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-route-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-security-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-station-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-train-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "distinct_operationName": 10
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "distinct_operationName": 10
+          },
+          {
+            "serviceName": "ts-user-service",
+            "distinct_operationName": 3
+          }
+        ]
+      },
+      "structured_attribute_assessment": {
+        "http": "No dedicated HTTP method, URL, route, status, host, or peer column exists in this Parquet schema.",
+        "rpc": "No dedicated RPC system/service/method or peer column exists in this Parquet schema.",
+        "database": "No dedicated database system/operation/statement/resource column exists in this Parquet schema.",
+        "messaging": "No dedicated messaging system/destination/operation column exists in this Parquet schema.",
+        "resource_peer": "No dedicated resource attributes, host, container, pod, process, or peer attributes column exists in this Parquet schema.",
+        "caution": "Text patterns inside operationName/methodName are raw strings, not structured semantic attributes.",
+        "operationName_textual_pattern_counts": {
+          "http_verb_at_start": {
+            "matched_rows": 166133,
+            "top_exact_operationName_values": [
+              {
+                "value": "GET",
+                "rows": 145306
+              },
+              {
+                "value": "POST",
+                "rows": 20827
+              }
+            ]
+          },
+          "grpc_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          },
+          "database_like_literal": {
+            "matched_rows": 404766,
+            "top_exact_operationName_values": [
+              {
+                "value": "StationRepository.findById",
+                "rows": 264653
+              },
+              {
+                "value": "StationRepository.findByName",
+                "rows": 35180
+              },
+              {
+                "value": "TrainTypeRepository.findById",
+                "rows": 30558
+              },
+              {
+                "value": "RouteRepository.findById",
+                "rows": 24752
+              },
+              {
+                "value": "TripRepository.findByTripId",
+                "rows": 13749
+              },
+              {
+                "value": "ConfigRepository.findByName",
+                "rows": 6304
+              },
+              {
+                "value": "OrderOtherRepository.findByTravelDateAndTrainNumber",
+                "rows": 5731
+              },
+              {
+                "value": "getMore ts.orders",
+                "rows": 4977
+              },
+              {
+                "value": "UserRepository.findByUsername",
+                "rows": 4010
+              },
+              {
+                "value": "OrderRepository.findByTravelDateAndTrainNumber",
+                "rows": 3877
+              }
+            ]
+          },
+          "messaging_like_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          }
+        }
+      }
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "local_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re3tt_ts-route-service_f2_1\\traces.parquet",
+      "file_bytes": 5154778,
+      "parquet": {
+        "row_count": 183623,
+        "row_groups": 1,
+        "schema": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "unexpected_columns": [],
+        "missing_expected_columns": []
+      },
+      "column_profile": {
+        "time": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 31,
+          "top_values": [
+            {
+              "value": "20:12",
+              "rows": 8147
+            },
+            {
+              "value": "20:05",
+              "rows": 7876
+            },
+            {
+              "value": "20:22",
+              "rows": 7715
+            },
+            {
+              "value": "20:15",
+              "rows": 7411
+            },
+            {
+              "value": "20:13",
+              "rows": 7352
+            },
+            {
+              "value": "20:26",
+              "rows": 7272
+            },
+            {
+              "value": "20:24",
+              "rows": 7169
+            },
+            {
+              "value": "20:23",
+              "rows": 7130
+            },
+            {
+              "value": "20:25",
+              "rows": 7065
+            },
+            {
+              "value": "20:08",
+              "rows": 6928
+            },
+            {
+              "value": "20:09",
+              "rows": 6896
+            },
+            {
+              "value": "20:11",
+              "rows": 6624
+            },
+            {
+              "value": "20:03",
+              "rows": 6600
+            },
+            {
+              "value": "20:20",
+              "rows": 6367
+            },
+            {
+              "value": "20:10",
+              "rows": 5938
+            }
+          ]
+        },
+        "traceID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 2623,
+          "top_values": [
+            {
+              "value": "0f34a746e36f0371de10a63119143412",
+              "rows": 435
+            },
+            {
+              "value": "77b0d869744e669914db973538f87674",
+              "rows": 435
+            },
+            {
+              "value": "2a34c7ea512b4165085f79563b388454",
+              "rows": 435
+            },
+            {
+              "value": "f5faf90c41d5b38678aaa89bb12dee41",
+              "rows": 435
+            },
+            {
+              "value": "b097a2fa412d989726d87b441a668e7a",
+              "rows": 435
+            },
+            {
+              "value": "ce8185f17ffbe3b6015d057a0b98b641",
+              "rows": 435
+            },
+            {
+              "value": "9371a9ad0f53c2a2b83238dfbe852662",
+              "rows": 435
+            },
+            {
+              "value": "e323f123f268c29377f6d0651f39ba64",
+              "rows": 435
+            },
+            {
+              "value": "b423e2679d15c5a4cd374bc70c05f5f5",
+              "rows": 435
+            },
+            {
+              "value": "8a189fe21bd112b2535a6a8aa3e15f1c",
+              "rows": 435
+            },
+            {
+              "value": "fca32c9dea2b5855510f8e8a11b6c6cf",
+              "rows": 435
+            },
+            {
+              "value": "2d2bd2a253772b28331982e743487b6a",
+              "rows": 435
+            },
+            {
+              "value": "b817e90d9df078ac0fb16c3dd08d406c",
+              "rows": 435
+            },
+            {
+              "value": "6aa71f10d00033c46b5a40c63c659525",
+              "rows": 435
+            },
+            {
+              "value": "b8033f227f3536ffdc8ec8e76a77b54e",
+              "rows": 435
+            }
+          ]
+        },
+        "spanID": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 183623,
+          "top_values": [
+            {
+              "value": "3f21d2ce30906156",
+              "rows": 1
+            },
+            {
+              "value": "49306af4cd10258b",
+              "rows": 1
+            },
+            {
+              "value": "4e4e5173913def27",
+              "rows": 1
+            },
+            {
+              "value": "79547993fbf0e6d0",
+              "rows": 1
+            },
+            {
+              "value": "ed2243281b2c84c7",
+              "rows": 1
+            },
+            {
+              "value": "b3c4dbc31ecc32a8",
+              "rows": 1
+            },
+            {
+              "value": "783c423ba3525093",
+              "rows": 1
+            },
+            {
+              "value": "cd330b745220b95f",
+              "rows": 1
+            },
+            {
+              "value": "812290b93713243a",
+              "rows": 1
+            },
+            {
+              "value": "d6dc5dd8a116c95c",
+              "rows": 1
+            },
+            {
+              "value": "b829d04176c0e95a",
+              "rows": 1
+            },
+            {
+              "value": "68fec650c4842565",
+              "rows": 1
+            },
+            {
+              "value": "e5f20ccf86b73aaf",
+              "rows": 1
+            },
+            {
+              "value": "93cbee466f2ce902",
+              "rows": 1
+            },
+            {
+              "value": "405afdcc0b884722",
+              "rows": 1
+            }
+          ]
+        },
+        "serviceName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 27,
+          "top_values": [
+            {
+              "value": "ts-station-service",
+              "rows": 41678
+            },
+            {
+              "value": "ts-train-service",
+              "rows": 30320
+            },
+            {
+              "value": "ts-route-service",
+              "rows": 23959
+            },
+            {
+              "value": "ts-travel2-service",
+              "rows": 18569
+            },
+            {
+              "value": "ts-basic-service",
+              "rows": 14390
+            },
+            {
+              "value": "ts-travel-service",
+              "rows": 13477
+            },
+            {
+              "value": "ts-ticketinfo-service",
+              "rows": 10148
+            },
+            {
+              "value": "ts-seat-service",
+              "rows": 6878
+            },
+            {
+              "value": "ts-config-service",
+              "rows": 5097
+            },
+            {
+              "value": "ts-order-other-service",
+              "rows": 3876
+            },
+            {
+              "value": "ts-auth-service",
+              "rows": 3575
+            },
+            {
+              "value": "ts-price-service",
+              "rows": 3168
+            },
+            {
+              "value": "ts-order-service",
+              "rows": 3138
+            },
+            {
+              "value": "ts-admin-basic-info-service",
+              "rows": 1396
+            },
+            {
+              "value": "ts-admin-travel-service",
+              "rows": 1026
+            }
+          ]
+        },
+        "methodName": {
+          "null_rows": 183623,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 0,
+          "top_values": []
+        },
+        "operationName": {
+          "null_rows": 0,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 122,
+          "top_values": [
+            {
+              "value": "GET",
+              "rows": 37629
+            },
+            {
+              "value": "find ts.station",
+              "rows": 17069
+            },
+            {
+              "value": "TrainTypeRepository.findById",
+              "rows": 12128
+            },
+            {
+              "value": "find ts.trainType",
+              "rows": 12128
+            },
+            {
+              "value": "StationRepository.findById",
+              "rows": 9596
+            },
+            {
+              "value": "RouteRepository.findById",
+              "rows": 7983
+            },
+            {
+              "value": "find ts.routes",
+              "rows": 7983
+            },
+            {
+              "value": "GET /api/v1/routeservice/routes/{routeId}",
+              "rows": 7973
+            },
+            {
+              "value": "GET /api/v1/stationservice/stations/id/{stationNameForId}",
+              "rows": 7473
+            },
+            {
+              "value": "StationRepository.findByName",
+              "rows": 7473
+            },
+            {
+              "value": "GET /api/v1/trainservice/trains/{id}",
+              "rows": 6064
+            },
+            {
+              "value": "POST",
+              "rows": 4453
+            },
+            {
+              "value": "GET /api/v1/ticketinfoservice/ticketinfo/{name}",
+              "rows": 4367
+            },
+            {
+              "value": "GET /api/v1/basicservice/basic/{stationName}",
+              "rows": 4367
+            },
+            {
+              "value": "find ts.trip",
+              "rows": 4118
+            }
+          ]
+        },
+        "parentSpanID": {
+          "null_rows": 2623,
+          "empty_string_rows": 0,
+          "non_null_non_empty_distinct": 135112,
+          "top_values": [
+            {
+              "value": "fb85267047913184",
+              "rows": 168
+            },
+            {
+              "value": "ae95f6bc4a8e9be0",
+              "rows": 168
+            },
+            {
+              "value": "1bfcf0df966e2f33",
+              "rows": 168
+            },
+            {
+              "value": "c89cdce87cbb1b9c",
+              "rows": 168
+            },
+            {
+              "value": "2bb202c86e16f2d0",
+              "rows": 166
+            },
+            {
+              "value": "63039404ab2e107f",
+              "rows": 166
+            },
+            {
+              "value": "485b5b90f8aacf69",
+              "rows": 164
+            },
+            {
+              "value": "98123cf07c2a9ae8",
+              "rows": 164
+            },
+            {
+              "value": "502c1d64fb7becca",
+              "rows": 164
+            },
+            {
+              "value": "84a48ef28ba43b4d",
+              "rows": 164
+            },
+            {
+              "value": "fa57bdf1af9a241d",
+              "rows": 162
+            },
+            {
+              "value": "fe5917835c1f8c98",
+              "rows": 162
+            },
+            {
+              "value": "d662c2abf82ce99a",
+              "rows": 160
+            },
+            {
+              "value": "f814ba6eda0b749a",
+              "rows": 158
+            },
+            {
+              "value": "408109281aa8b97b",
+              "rows": 158
+            }
+          ]
+        },
+        "startTimeMillis": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 126835,
+          "top_values": [
+            {
+              "value": "1733602142919",
+              "rows": 6
+            },
+            {
+              "value": "1733602226825",
+              "rows": 6
+            },
+            {
+              "value": "1733602260500",
+              "rows": 6
+            },
+            {
+              "value": "1733602575650",
+              "rows": 6
+            },
+            {
+              "value": "1733602575748",
+              "rows": 6
+            },
+            {
+              "value": "1733602690976",
+              "rows": 6
+            },
+            {
+              "value": "1733602774893",
+              "rows": 6
+            },
+            {
+              "value": "1733602774898",
+              "rows": 6
+            },
+            {
+              "value": "1733602774967",
+              "rows": 6
+            },
+            {
+              "value": "1733602774986",
+              "rows": 6
+            },
+            {
+              "value": "1733602837142",
+              "rows": 6
+            },
+            {
+              "value": "1733602879410",
+              "rows": 6
+            },
+            {
+              "value": "1733602894062",
+              "rows": 6
+            },
+            {
+              "value": "1733602981594",
+              "rows": 6
+            },
+            {
+              "value": "1733603098190",
+              "rows": 6
+            }
+          ]
+        },
+        "startTime": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 183230,
+          "top_values": [
+            {
+              "value": "1733602689954000",
+              "rows": 3
+            },
+            {
+              "value": "1733602690554000",
+              "rows": 3
+            },
+            {
+              "value": "1733602690753000",
+              "rows": 3
+            },
+            {
+              "value": "1733601709888000",
+              "rows": 2
+            },
+            {
+              "value": "1733601710100000",
+              "rows": 2
+            },
+            {
+              "value": "1733601717434000",
+              "rows": 2
+            },
+            {
+              "value": "1733601728294000",
+              "rows": 2
+            },
+            {
+              "value": "1733601728384000",
+              "rows": 2
+            },
+            {
+              "value": "1733601728411000",
+              "rows": 2
+            },
+            {
+              "value": "1733601728486000",
+              "rows": 2
+            },
+            {
+              "value": "1733601729044000",
+              "rows": 2
+            },
+            {
+              "value": "1733601781617000",
+              "rows": 2
+            },
+            {
+              "value": "1733601793193000",
+              "rows": 2
+            },
+            {
+              "value": "1733601794577000",
+              "rows": 2
+            },
+            {
+              "value": "1733601810380000",
+              "rows": 2
+            }
+          ]
+        },
+        "duration": {
+          "null_rows": 0,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 28114,
+          "top_values": [
+            {
+              "value": "629",
+              "rows": 90
+            },
+            {
+              "value": "631",
+              "rows": 85
+            },
+            {
+              "value": "630",
+              "rows": 80
+            },
+            {
+              "value": "624",
+              "rows": 80
+            },
+            {
+              "value": "615",
+              "rows": 78
+            },
+            {
+              "value": "658",
+              "rows": 77
+            },
+            {
+              "value": "761",
+              "rows": 77
+            },
+            {
+              "value": "685",
+              "rows": 76
+            },
+            {
+              "value": "663",
+              "rows": 76
+            },
+            {
+              "value": "621",
+              "rows": 76
+            },
+            {
+              "value": "680",
+              "rows": 76
+            },
+            {
+              "value": "651",
+              "rows": 76
+            },
+            {
+              "value": "587",
+              "rows": 75
+            },
+            {
+              "value": "650",
+              "rows": 74
+            },
+            {
+              "value": "608",
+              "rows": 73
+            }
+          ]
+        },
+        "statusCode": {
+          "null_rows": 183623,
+          "empty_string_rows": null,
+          "non_null_non_empty_distinct": 0,
+          "top_values": []
+        }
+      },
+      "identity_and_parent_resolution": {
+        "distinct_traceID": 2623,
+        "distinct_spanID_global": 183623,
+        "distinct_traceID_spanID_composite": 183623,
+        "duplicate_traceID_spanID_rows": 0,
+        "duplicate_spanID_global_rows": 0,
+        "rows_with_nonempty_parentSpanID": 181000,
+        "rows_with_null_or_empty_parentSpanID": 2623,
+        "parent_resolved_same_traceID": 181000,
+        "parent_unresolved_same_traceID": 0,
+        "parent_resolution_rate": 1.0,
+        "parent_resolved_anywhere_in_raw_file_by_spanID": 181000,
+        "parent_resolved_only_outside_child_traceID": 0,
+        "self_parent_rows": 0,
+        "resolved_parent_child_same_service": 138952,
+        "resolved_parent_child_cross_service": 42048,
+        "resolved_parent_child_unknown_service": 0,
+        "top_cross_service_child_parent_pairs": [
+          {
+            "child_service": "ts-station-service",
+            "parent_service": "ts-basic-service",
+            "rows": 7195
+          },
+          {
+            "child_service": "ts-basic-service",
+            "parent_service": "ts-ticketinfo-service",
+            "rows": 5074
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 4304
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 3323
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-travel-service",
+            "rows": 2962
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 2824
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-travel-service",
+            "rows": 2533
+          },
+          {
+            "child_service": "ts-ticketinfo-service",
+            "parent_service": "ts-travel-service",
+            "rows": 1719
+          },
+          {
+            "child_service": "ts-travel2-service",
+            "parent_service": "ts-seat-service",
+            "rows": 1576
+          },
+          {
+            "child_service": "ts-config-service",
+            "parent_service": "ts-seat-service",
+            "rows": 1350
+          },
+          {
+            "child_service": "ts-travel-service",
+            "parent_service": "ts-seat-service",
+            "rows": 1188
+          },
+          {
+            "child_service": "ts-order-other-service",
+            "parent_service": "ts-seat-service",
+            "rows": 788
+          },
+          {
+            "child_service": "ts-seat-service",
+            "parent_service": "ts-travel2-service",
+            "rows": 772
+          },
+          {
+            "child_service": "ts-train-service",
+            "parent_service": "ts-basic-service",
+            "rows": 707
+          },
+          {
+            "child_service": "ts-route-service",
+            "parent_service": "ts-basic-service",
+            "rows": 707
+          }
+        ]
+      },
+      "timing": {
+        "numeric_min": {
+          "startTimeMillis": 1733601694504,
+          "startTime": 1733601694504000,
+          "duration": 412,
+          "statusCode": null
+        },
+        "numeric_max": {
+          "startTimeMillis": 1733603493964,
+          "startTime": 1733603493964420,
+          "duration": 4819532,
+          "statusCode": null
+        },
+        "negative_duration_rows": 0,
+        "zero_duration_rows": 0,
+        "startTime_vs_startTimeMillis": {
+          "both_present": 183623,
+          "startTime_div_1000_equals_startTimeMillis": 183623
+        },
+        "resolved_parent_child_timing_comparable": 181000,
+        "resolved_child_start_before_parent_start": 160,
+        "resolved_child_end_after_parent_end": 8239
+      },
+      "operation_identity": {
+        "distinct_service_operationName_pairs": 151,
+        "distinct_operationName_reused_across_more_than_one_service": 10,
+        "examples_exact_operationName_reused_across_services": [
+          {
+            "operationName": "GET",
+            "services": [
+              "ts-admin-basic-info-service",
+              "ts-admin-travel-service",
+              "ts-basic-service",
+              "ts-consign-service",
+              "ts-food-service",
+              "ts-inside-payment-service",
+              "ts-preserve-other-service",
+              "ts-preserve-service",
+              "ts-seat-service",
+              "ts-security-service",
+              "ts-ticketinfo-service",
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "POST",
+            "services": [
+              "ts-food-service",
+              "ts-inside-payment-service",
+              "ts-order-other-service",
+              "ts-order-service",
+              "ts-preserve-other-service",
+              "ts-preserve-service",
+              "ts-seat-service",
+              "ts-ticketinfo-service",
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "PaymentRepository.save",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          },
+          {
+            "operationName": "TripRepository.findAll",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "TripRepository.findByTripId",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "find ts.orders",
+            "services": [
+              "ts-order-other-service",
+              "ts-order-service"
+            ]
+          },
+          {
+            "operationName": "find ts.payment",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          },
+          {
+            "operationName": "find ts.trip",
+            "services": [
+              "ts-travel-service",
+              "ts-travel2-service"
+            ]
+          },
+          {
+            "operationName": "update ts.orders",
+            "services": [
+              "ts-order-other-service",
+              "ts-order-service"
+            ]
+          },
+          {
+            "operationName": "update ts.payment",
+            "services": [
+              "ts-inside-payment-service",
+              "ts-payment-service"
+            ]
+          }
+        ],
+        "operation_cardinality_by_service": [
+          {
+            "serviceName": "ts-admin-basic-info-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-admin-travel-service",
+            "distinct_operationName": 2
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-auth-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-basic-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-config-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-consign-price-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "distinct_operationName": 6
+          },
+          {
+            "serviceName": "ts-food-service",
+            "distinct_operationName": 8
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "distinct_operationName": 9
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "distinct_operationName": 14
+          },
+          {
+            "serviceName": "ts-order-service",
+            "distinct_operationName": 14
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-preserve-other-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-preserve-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-price-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-route-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-security-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-station-service",
+            "distinct_operationName": 5
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "distinct_operationName": 4
+          },
+          {
+            "serviceName": "ts-train-service",
+            "distinct_operationName": 3
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "distinct_operationName": 10
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "distinct_operationName": 10
+          },
+          {
+            "serviceName": "ts-user-service",
+            "distinct_operationName": 3
+          }
+        ]
+      },
+      "structured_attribute_assessment": {
+        "http": "No dedicated HTTP method, URL, route, status, host, or peer column exists in this Parquet schema.",
+        "rpc": "No dedicated RPC system/service/method or peer column exists in this Parquet schema.",
+        "database": "No dedicated database system/operation/statement/resource column exists in this Parquet schema.",
+        "messaging": "No dedicated messaging system/destination/operation column exists in this Parquet schema.",
+        "resource_peer": "No dedicated resource attributes, host, container, pod, process, or peer attributes column exists in this Parquet schema.",
+        "caution": "Text patterns inside operationName/methodName are raw strings, not structured semantic attributes.",
+        "operationName_textual_pattern_counts": {
+          "http_verb_at_start": {
+            "matched_rows": 42082,
+            "top_exact_operationName_values": [
+              {
+                "value": "GET",
+                "rows": 37629
+              },
+              {
+                "value": "POST",
+                "rows": 4453
+              }
+            ]
+          },
+          "grpc_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          },
+          "database_like_literal": {
+            "matched_rows": 48445,
+            "top_exact_operationName_values": [
+              {
+                "value": "TrainTypeRepository.findById",
+                "rows": 12128
+              },
+              {
+                "value": "StationRepository.findById",
+                "rows": 9596
+              },
+              {
+                "value": "RouteRepository.findById",
+                "rows": 7983
+              },
+              {
+                "value": "StationRepository.findByName",
+                "rows": 7473
+              },
+              {
+                "value": "TripRepository.findByTripId",
+                "rows": 2936
+              },
+              {
+                "value": "UserRepository.findByUsername",
+                "rows": 1430
+              },
+              {
+                "value": "ConfigRepository.findByName",
+                "rows": 1350
+              },
+              {
+                "value": "TripRepository.findAll",
+                "rows": 1182
+              },
+              {
+                "value": "OrderOtherRepository.findByTravelDateAndTrainNumber",
+                "rows": 1174
+              },
+              {
+                "value": "OrderRepository.findByTravelDateAndTrainNumber",
+                "rows": 883
+              }
+            ]
+          },
+          "messaging_like_literal": {
+            "matched_rows": 0,
+            "top_exact_operationName_values": []
+          }
+        }
+      }
+    }
+  ]
+}

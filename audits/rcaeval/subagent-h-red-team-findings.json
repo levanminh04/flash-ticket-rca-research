@@ -1,0 +1,160 @@
+{
+  "audit": "Subagent H — independent methodology red team",
+  "status": "COMPLETE",
+  "scope": "Pinned RCAEval metadata; seven locally hash-verified raw cases; the full 90-case RE2-TT trace audit; and one targeted log-bearing RE2-TT multimodal case. No architecture, method, or Task-C choice is made.",
+  "source_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "evidence_file": "audits/rcaeval/subagent-h-red-team-evidence.json",
+  "checkpoint_corrections": [
+    {
+      "claim": "All metric/log/trace pairs can only be aligned by a time window.",
+      "resolution": "CONTRADICTED IN PART. Logs and metrics have a deterministic direct key join at the exact container/entity plus epoch-second bin. Metrics-to-traces and logs-to-traces remain service plus time-window joins, with no request/span/event identity."
+    },
+    {
+      "claim": "High aggregate parent resolution is enough to treat the RE2-TT graph as complete.",
+      "resolution": "CONTRADICTED. Overall resolution is 98.45274372%, but seven of 90 cases are below 90% and the lowest is 38.54287289%. Only resolved parent relations are observed graph evidence."
+    },
+    {
+      "claim": "The five RE2-TT root-cause labels define an acceptable candidate universe.",
+      "resolution": "CONTRADICTED. Those five services come from labels. The telemetry-derived literal trace-service universe is 20–27 services per case; use only the latter before labels are read."
+    }
+  ],
+  "findings": [
+    {
+      "id": 1,
+      "challenge": "Selection bias in the original six cases",
+      "classification": "MAJOR",
+      "evidence_scope": "RAW SAMPLE FINDING",
+      "evidence": "The plan deliberately stratifies modality, system, fault family, root-cause-file presence, and a timestamp anomaly; it is not a random or prevalence sample.",
+      "resolution": "Do not generalize six-case schemas or rates. The full-RE2-TT trace conclusion is separately supported by all 90 trace objects."
+    },
+    {
+      "id": 2,
+      "challenge": "Overgeneralization from six cases",
+      "classification": "CRITICAL",
+      "evidence_scope": "RAW SAMPLE FINDING and FULL-SUBSET PROPERTY",
+      "evidence": "Only the B2 trace audit covers all 90 RE2-TT trace files. Logs and metrics schemas/join behavior are raw evidence for selected cases only, including one normal log-bearing RE2-TT case.",
+      "resolution": "State the scope on every conclusion. Do not claim 89-case log schema or join prevalence from B2B."
+    },
+    {
+      "id": 3,
+      "challenge": "Operation representation mistaken for operation-level ground truth",
+      "classification": "MAJOR",
+      "evidence_scope": "FULL-SUBSET PROPERTY and DATASET-WIDE METADATA FACT",
+      "evidence": "All 90 RE2-TT trace files contain non-null serviceName and operationName, yielding 161 literal pairs; metadata and the pinned RE2-TT tree have no operation root-cause artifact.",
+      "resolution": "A literal (serviceName, operationName) representation is supported. Operation-level root-cause ranking is NOT EVALUABLE WITH CURRENT GROUND TRUTH."
+    },
+    {
+      "id": 4,
+      "challenge": "Root-cause service label mistaken for anomaly-node label",
+      "classification": "CRITICAL",
+      "evidence_scope": "DATASET-WIDE METADATA FACT",
+      "evidence": "RE2-TT has one root_cause_service label per case but no affected-node, per-node anomaly, or per-timestamp anomaly-object label.",
+      "resolution": "Do not report service-level anomaly evaluation or node-level anomaly F1. Service root-cause ranking remains separately evaluable."
+    },
+    {
+      "id": 5,
+      "challenge": "Injection target mistaken for an independently observable root cause",
+      "classification": "MAJOR",
+      "evidence_scope": "DATASET-WIDE METADATA FACT",
+      "evidence": "There is no injection_target field or separate RE2-TT injection-target artifact. Case IDs encode the same root_cause_service label and cannot provide independent corroboration.",
+      "resolution": "Classify injection target as PARTIAL label provenance only; do not claim a telemetry-observed injection entity."
+    },
+    {
+      "id": 6,
+      "challenge": "Span-parent relations mistaken for calls or causal propagation",
+      "classification": "CRITICAL",
+      "evidence_scope": "FULL-SUBSET PROPERTY",
+      "evidence": "All 90 RE2-TT trace schemas have only 11 flat fields and no span-kind, HTTP/RPC/peer, resource, messaging, attributes/events/links, or causal fields. There are 55 observed cross-service parent-child relation types.",
+      "resolution": "Use the label parent-to-child trace relation only. CALLS, USES, messaging, and causal propagation are NOT SUPPORTED BY DATASET."
+    },
+    {
+      "id": 7,
+      "challenge": "High-cardinality span names mistaken for a stable semantic operation identity",
+      "classification": "MAJOR",
+      "evidence_scope": "FULL-SUBSET PROPERTY",
+      "evidence": "Twelve operation strings are reused by more than one service, including GET and POST. The 161 pair keys are deterministic literal representations, not a typed operation vocabulary.",
+      "resolution": "Use the pair key only as a trace-derived representation; do not call it semantic operation ground truth."
+    },
+    {
+      "id": 8,
+      "challenge": "Approximate time alignment mistaken for direct multimodal correlation",
+      "classification": "RESOLVED",
+      "evidence_scope": "RAW SAMPLE FINDING",
+      "evidence": "In targeted RE2-TT case cpu_2, 271,919/271,919 logs match a metric epoch-second and exact parsed container/entity; logs have no trace/span column and zero exact traceID/spanID matches; trace pairs use second bins and exact service strings.",
+      "resolution": "Logs↔metrics is DIRECT only at service/container-second aggregation. Logs↔traces and metrics↔traces are SERVICE+TIME, never direct event/request joins."
+    },
+    {
+      "id": 9,
+      "challenge": "Root-cause artifact leakage",
+      "classification": "CRITICAL",
+      "evidence_scope": "RAW SAMPLE FINDING",
+      "evidence": "In re3ss_carts_f1_1, one nonempty root_cause.txt cell exactly matches a log message. Metadata declares eight root-cause-file cases.",
+      "resolution": "root_cause.txt and its presence flag are FORBIDDEN MODEL INPUT."
+    },
+    {
+      "id": 10,
+      "challenge": "Fault-name and root-cause-name leakage through case IDs or paths",
+      "classification": "CRITICAL",
+      "evidence_scope": "DATASET-WIDE METADATA FACT",
+      "evidence": "A deterministic case-name parser recovers service, fault, and repetition correctly for 735/735 metadata rows and 90/90 RE2-TT rows.",
+      "resolution": "case ID and directory/path are FORBIDDEN MODEL INPUT; root_cause_service and fault are EVALUATION ONLY."
+    },
+    {
+      "id": 11,
+      "challenge": "inject_time leakage",
+      "classification": "CRITICAL",
+      "evidence_scope": "DATASET-WIDE METADATA FACT",
+      "evidence": "RE2-TT inject_time exactly identifies each 720/721 normal/faulty boundary; two RE1 metadata cases lie outside their stated windows, and one was confirmed raw-invalid.",
+      "resolution": "inject_time is EVALUATION ONLY for RCA-GIVEN-KNOWN-INCIDENT-WINDOW and FORBIDDEN FOR END-TO-END DETECTION INPUT."
+    },
+    {
+      "id": 12,
+      "challenge": "Graph edges invented from architecture rather than telemetry",
+      "classification": "CRITICAL",
+      "evidence_scope": "FULL-SUBSET PROPERTY",
+      "evidence": "Only trace IDs, span IDs, parent IDs, literal service strings, operation strings, and timing fields are present. No architecture source was required for the 55 observed relation types.",
+      "resolution": "Construct only literal nodes and resolved parent-child relations. Do not add topology, resource, or protocol edges from external architectural expectations."
+    },
+    {
+      "id": 13,
+      "challenge": "Missing telemetry silently imputed",
+      "classification": "MAJOR",
+      "evidence_scope": "DATASET-WIDE METADATA FACT",
+      "evidence": "RE2-TT has traces and metrics in 90/90 cases but logs in 89/90; cpu_1 is the no-log case. Raw files confirm its trace+metric-only layout.",
+      "resolution": "No modality imputation is allowed. A trace+metric core can cover 90 cases; any log feature must use an explicit availability rule and must not silently fabricate cpu_1 logs."
+    },
+    {
+      "id": 14,
+      "challenge": "Resource identity overinferred from names such as mongo or repository text",
+      "classification": "MAJOR",
+      "evidence_scope": "FULL-SUBSET PROPERTY and RAW SAMPLE FINDING",
+      "evidence": "No typed host, pod/container, DB, logical database, cache, broker, queue/topic, peer, or resource attributes exist in the full RE2-TT trace schema. Metric/entity tokens and operation strings are untyped text.",
+      "resolution": "Resource nodes and USES edges are NOT SUPPORTED BY DATASET for this pilot; no resource-level ground truth is available."
+    },
+    {
+      "id": 15,
+      "challenge": "RE2-TT candidate universe restricted by injection-set knowledge",
+      "classification": "CRITICAL",
+      "evidence_scope": "FULL-SUBSET PROPERTY and DATASET-WIDE METADATA FACT",
+      "evidence": "Five root-cause services are labels, while trace-visible candidate services range from 20 to 27 per case. Metadata has no candidate-universe field.",
+      "resolution": "Enumerate candidates only from telemetry visible before labels. Never restrict candidates to the five injected-service labels or a label-derived per-case set."
+    },
+    {
+      "id": 16,
+      "challenge": "Ranking metrics made trivial by small candidate cardinality",
+      "classification": "CRITICAL",
+      "evidence_scope": "FULL-SUBSET PROPERTY",
+      "evidence": "Top-5 over the five known injected services is structurally trivial. Trace telemetry instead exposes 20–27 literal service candidates per case.",
+      "resolution": "A telemetry-derived 20–27 service universe avoids structural Top-5 triviality. Any label-restricted universe invalidates the metric."
+    },
+    {
+      "id": 17,
+      "challenge": "Aggregate parent-resolution rate hides case-level graph loss",
+      "classification": "MAJOR",
+      "evidence_scope": "FULL-SUBSET PROPERTY",
+      "evidence": "Overall parent resolution is 65,748,095/66,781,374 (98.45274372%), but seven cases fall below 90%; the minimum is re2tt_ts-route-service_disk_2 at 38.54287289%.",
+      "resolution": "Do not treat the trace graph as complete topology. Retain only resolved relations and report the per-case resolution rate in any later evaluation."
+    }
+  ],
+  "red_team_verdict": "No raw evidence requires rejecting a RE2-TT trace-plus-metrics, service-level, known-window RCA pilot. The evidence requires a strict leakage-safe protocol, telemetry-derived candidates, and explicit limits: no resource graph, no causal/CALLS claims, no operation-level ranking, no service/node anomaly labels, and no direct event-level trace correlation."
+}

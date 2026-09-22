@@ -1,0 +1,1070 @@
+{
+  "audit": "Task B2 / controlled trace audit test",
+  "scope": "RAW SUBSET TEST ONLY — not a full-RE2-TT conclusion",
+  "source": {
+    "repository": "phamquiluan/RCAEval",
+    "repository_type": "dataset",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "url": "https://huggingface.co/datasets/phamquiluan/RCAEval"
+  },
+  "cases": [
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "source": {
+        "kind": "LOCAL_PREEXISTING_VERIFIED",
+        "path_or_pinned_url": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_1\\traces.parquet",
+        "remote_path": "re2tt_ts-auth-service_cpu_1/traces.parquet",
+        "bytes": 26833237,
+        "lfs_sha256": "89dc1794060960e4dd47e3d4b24075bd6f5b768761fa86f51ed38c4748c8f955"
+      },
+      "parquet": {
+        "rows": 1143435,
+        "row_groups": 2,
+        "schema": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "missing_expected_columns": [],
+        "unexpected_columns": [],
+        "semantic_field_name_matches": {
+          "network_http_rpc_peer": [],
+          "resource": [],
+          "messaging": [],
+          "causal_or_ground_truth": [],
+          "structured_attributes_events_links_or_span_kind": []
+        }
+      },
+      "identity_coverage": {
+        "null_rows": {
+          "traceID": 0,
+          "spanID": 0,
+          "serviceName": 0,
+          "operationName": 0,
+          "parentSpanID": 6704,
+          "startTimeMillis": 0,
+          "startTime": 0,
+          "duration": 0
+        },
+        "empty_string_rows": {
+          "traceID": 0,
+          "spanID": 0,
+          "serviceName": 0,
+          "operationName": 0,
+          "parentSpanID": 0
+        },
+        "rows_complete_trace_span_service_operation": 1143435,
+        "rows_complete_trace_span_service_operation_rate": 1.0,
+        "rows_with_service_operation": 1143435,
+        "rows_with_service_operation_rate": 1.0,
+        "distinct_trace_ids": 6707,
+        "distinct_span_ids_global_to_file": 1143435,
+        "distinct_trace_span_pairs": 1143435,
+        "duplicate_trace_span_pair_rows": 0,
+        "duplicate_span_id_rows_global_to_file": 0
+      },
+      "parent_resolution": {
+        "resolved_same_trace": 1136552,
+        "unresolved_same_trace": 179,
+        "ambiguous_parent_due_to_duplicate_trace_span": 0,
+        "unresolved_parent_span_exists_elsewhere_in_file": 0,
+        "self_parent_rows": 0,
+        "resolved_same_service": 970420,
+        "resolved_cross_service": 166132,
+        "resolved_unknown_service": 0,
+        "observed_parent_to_child_service_edges": [
+          {
+            "parent_service": "ts-admin-basic-info-service",
+            "child_service": "ts-config-service",
+            "rows": 239
+          },
+          {
+            "parent_service": "ts-admin-basic-info-service",
+            "child_service": "ts-price-service",
+            "rows": 238
+          },
+          {
+            "parent_service": "ts-admin-travel-service",
+            "child_service": "ts-travel-service",
+            "rows": 237
+          },
+          {
+            "parent_service": "ts-admin-travel-service",
+            "child_service": "ts-travel2-service",
+            "rows": 237
+          },
+          {
+            "parent_service": "ts-basic-service",
+            "child_service": "ts-price-service",
+            "rows": 3303
+          },
+          {
+            "parent_service": "ts-basic-service",
+            "child_service": "ts-route-service",
+            "rows": 3303
+          },
+          {
+            "parent_service": "ts-basic-service",
+            "child_service": "ts-station-service",
+            "rows": 33802
+          },
+          {
+            "parent_service": "ts-basic-service",
+            "child_service": "ts-train-service",
+            "rows": 3303
+          },
+          {
+            "parent_service": "ts-consign-service",
+            "child_service": "ts-consign-price-service",
+            "rows": 141
+          },
+          {
+            "parent_service": "ts-food-service",
+            "child_service": "ts-food-map-service",
+            "rows": 1078
+          },
+          {
+            "parent_service": "ts-food-service",
+            "child_service": "ts-station-service",
+            "rows": 1078
+          },
+          {
+            "parent_service": "ts-food-service",
+            "child_service": "ts-travel-service",
+            "rows": 539
+          },
+          {
+            "parent_service": "ts-inside-payment-service",
+            "child_service": "ts-order-other-service",
+            "rows": 92
+          },
+          {
+            "parent_service": "ts-inside-payment-service",
+            "child_service": "ts-order-service",
+            "rows": 162
+          },
+          {
+            "parent_service": "ts-inside-payment-service",
+            "child_service": "ts-payment-service",
+            "rows": 90
+          },
+          {
+            "parent_service": "ts-order-other-service",
+            "child_service": "ts-station-service",
+            "rows": 113
+          },
+          {
+            "parent_service": "ts-order-service",
+            "child_service": "ts-station-service",
+            "rows": 191
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-assurance-service",
+            "rows": 25
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-contacts-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-food-service",
+            "rows": 34
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-order-other-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-seat-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-security-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-station-service",
+            "rows": 122
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-ticketinfo-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-travel2-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-other-service",
+            "child_service": "ts-user-service",
+            "rows": 61
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-assurance-service",
+            "rows": 43
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-contacts-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-food-service",
+            "rows": 45
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-order-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-seat-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-security-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-station-service",
+            "rows": 178
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-ticketinfo-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-travel-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-preserve-service",
+            "child_service": "ts-user-service",
+            "rows": 89
+          },
+          {
+            "parent_service": "ts-seat-service",
+            "child_service": "ts-config-service",
+            "rows": 6304
+          },
+          {
+            "parent_service": "ts-seat-service",
+            "child_service": "ts-order-other-service",
+            "rows": 3841
+          },
+          {
+            "parent_service": "ts-seat-service",
+            "child_service": "ts-order-service",
+            "rows": 2614
+          },
+          {
+            "parent_service": "ts-seat-service",
+            "child_service": "ts-travel-service",
+            "rows": 5228
+          },
+          {
+            "parent_service": "ts-seat-service",
+            "child_service": "ts-travel2-service",
+            "rows": 7682
+          },
+          {
+            "parent_service": "ts-security-service",
+            "child_service": "ts-order-other-service",
+            "rows": 150
+          },
+          {
+            "parent_service": "ts-security-service",
+            "child_service": "ts-order-service",
+            "rows": 150
+          },
+          {
+            "parent_service": "ts-ticketinfo-service",
+            "child_service": "ts-basic-service",
+            "rows": 23894
+          },
+          {
+            "parent_service": "ts-travel-service",
+            "child_service": "ts-order-service",
+            "rows": 1263
+          },
+          {
+            "parent_service": "ts-travel-service",
+            "child_service": "ts-route-service",
+            "rows": 7215
+          },
+          {
+            "parent_service": "ts-travel-service",
+            "child_service": "ts-seat-service",
+            "rows": 2525
+          },
+          {
+            "parent_service": "ts-travel-service",
+            "child_service": "ts-ticketinfo-service",
+            "rows": 7607
+          },
+          {
+            "parent_service": "ts-travel-service",
+            "child_service": "ts-train-service",
+            "rows": 5060
+          },
+          {
+            "parent_service": "ts-travel2-service",
+            "child_service": "ts-order-other-service",
+            "rows": 1890
+          },
+          {
+            "parent_service": "ts-travel2-service",
+            "child_service": "ts-route-service",
+            "rows": 14234
+          },
+          {
+            "parent_service": "ts-travel2-service",
+            "child_service": "ts-seat-service",
+            "rows": 3779
+          },
+          {
+            "parent_service": "ts-travel2-service",
+            "child_service": "ts-ticketinfo-service",
+            "rows": 16137
+          },
+          {
+            "parent_service": "ts-travel2-service",
+            "child_service": "ts-train-service",
+            "rows": 6916
+          }
+        ],
+        "rows_with_parent_and_trace_span": 1136731,
+        "parent_resolution_rate_among_unambiguous_candidates": 0.9998425309
+      },
+      "temporal_integrity": {
+        "negative_duration_rows": 0,
+        "zero_duration_rows": 0,
+        "rows_with_both_start_units": 1143435,
+        "startTime_div_1000_equals_startTimeMillis": 1143435,
+        "resolved_parent_child_timing_comparable": 1136552,
+        "resolved_child_start_before_parent_start": 8,
+        "resolved_child_end_after_parent_end": 18114
+      },
+      "operation_representation": {
+        "service_names": [
+          "ts-admin-basic-info-service",
+          "ts-admin-travel-service",
+          "ts-assurance-service",
+          "ts-auth-service",
+          "ts-basic-service",
+          "ts-config-service",
+          "ts-consign-price-service",
+          "ts-consign-service",
+          "ts-contacts-service",
+          "ts-food-map-service",
+          "ts-food-service",
+          "ts-inside-payment-service",
+          "ts-order-other-service",
+          "ts-order-service",
+          "ts-payment-service",
+          "ts-preserve-other-service",
+          "ts-preserve-service",
+          "ts-price-service",
+          "ts-route-service",
+          "ts-seat-service",
+          "ts-security-service",
+          "ts-station-service",
+          "ts-ticketinfo-service",
+          "ts-train-service",
+          "ts-travel-service",
+          "ts-travel2-service",
+          "ts-user-service"
+        ],
+        "distinct_service_operation_pairs": 152,
+        "service_operation_pairs": [
+          {
+            "serviceName": "ts-admin-basic-info-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-admin-basic-info-service",
+            "operationName": "GET /api/v1/adminbasicservice/adminbasic/configs"
+          },
+          {
+            "serviceName": "ts-admin-basic-info-service",
+            "operationName": "GET /api/v1/adminbasicservice/adminbasic/prices"
+          },
+          {
+            "serviceName": "ts-admin-travel-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-admin-travel-service",
+            "operationName": "GET /api/v1/admintravelservice/admintravel"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "AssuranceRepository.findByOrderId"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "AssuranceRepository.save"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "GET /api/v1/assuranceservice/assurances/types"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "GET /api/v1/assuranceservice/assurances/{typeIndex}/{orderId}"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "find ts.assurance"
+          },
+          {
+            "serviceName": "ts-assurance-service",
+            "operationName": "update ts.assurance"
+          },
+          {
+            "serviceName": "ts-auth-service",
+            "operationName": "POST /api/v1/users/login"
+          },
+          {
+            "serviceName": "ts-auth-service",
+            "operationName": "UserRepository.findByUsername"
+          },
+          {
+            "serviceName": "ts-auth-service",
+            "operationName": "find ts-auth-mongo.user"
+          },
+          {
+            "serviceName": "ts-basic-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-basic-service",
+            "operationName": "GET /api/v1/basicservice/basic/{stationName}"
+          },
+          {
+            "serviceName": "ts-basic-service",
+            "operationName": "POST /api/v1/basicservice/basic/travel"
+          },
+          {
+            "serviceName": "ts-config-service",
+            "operationName": "ConfigRepository.findAll"
+          },
+          {
+            "serviceName": "ts-config-service",
+            "operationName": "ConfigRepository.findByName"
+          },
+          {
+            "serviceName": "ts-config-service",
+            "operationName": "GET /api/v1/configservice/configs"
+          },
+          {
+            "serviceName": "ts-config-service",
+            "operationName": "GET /api/v1/configservice/configs/{configName}"
+          },
+          {
+            "serviceName": "ts-config-service",
+            "operationName": "find ts.config"
+          },
+          {
+            "serviceName": "ts-consign-price-service",
+            "operationName": "ConsignPriceConfigRepository.findByIndex"
+          },
+          {
+            "serviceName": "ts-consign-price-service",
+            "operationName": "GET /api/v1/consignpriceservice/consignprice/{weight}/{isWithinRegion}"
+          },
+          {
+            "serviceName": "ts-consign-price-service",
+            "operationName": "find ts.consign_price"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "ConsignRepository.findById"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "ConsignRepository.save"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "PUT /api/v1/consignservice/consigns"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "find ts.consign_record"
+          },
+          {
+            "serviceName": "ts-consign-service",
+            "operationName": "update ts.consign_record"
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "operationName": "ContactsRepository.findByAccountId"
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "operationName": "ContactsRepository.findById"
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "operationName": "GET /api/v1/contactservice/contacts/account/{accountId}"
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "operationName": "GET /api/v1/contactservice/contacts/{id}"
+          },
+          {
+            "serviceName": "ts-contacts-service",
+            "operationName": "find ts.contacts"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "FoodStoreRepository.findByStationIdIn"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "GET /api/v1/foodmapservice/trainfoods/{tripId}"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "POST /api/v1/foodmapservice/foodstores"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "TrainFoodRepository.findByTripId"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "find ts.stores"
+          },
+          {
+            "serviceName": "ts-food-map-service",
+            "operationName": "find ts.trainfoods"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "FoodOrderRepository.findByOrderId"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "FoodOrderRepository.save"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "GET /api/v1/foodservice/foods/{date}/{startStation}/{endStation}/{tripId}"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "POST /api/v1/foodservice/orders"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "find ts.foodorder"
+          },
+          {
+            "serviceName": "ts-food-service",
+            "operationName": "update ts.foodorder"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "AddMoneyRepository.findByUserId"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "POST /api/v1/inside_pay_service/inside_payment"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "PaymentRepository.findByUserId"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "PaymentRepository.save"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "find ts.addMoney"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "find ts.payment"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "getMore ts.payment"
+          },
+          {
+            "serviceName": "ts-inside-payment-service",
+            "operationName": "update ts.payment"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "GET /api/v1/orderOtherService/orderOther/security/{checkDate}/{accountId}"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "GET /api/v1/orderOtherService/orderOther/status/{orderId}/{status}"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "GET /api/v1/orderOtherService/orderOther/{orderId}"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "GET /api/v1/orderOtherService/orderOther/{travelDate}/{trainNumber}"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "OrderOtherRepository.findByAccountId"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "OrderOtherRepository.findById"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "OrderOtherRepository.findByTravelDateAndTrainNumber"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "OrderOtherRepository.save"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "POST /api/v1/orderOtherService/orderOther"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "POST /api/v1/orderOtherService/orderOther/refresh"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "POST /api/v1/orderOtherService/orderOther/tickets"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "find ts.orders"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "getMore ts.orders"
+          },
+          {
+            "serviceName": "ts-order-other-service",
+            "operationName": "update ts.orders"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "GET /api/v1/orderservice/order/security/{checkDate}/{accountId}"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "GET /api/v1/orderservice/order/status/{orderId}/{status}"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "GET /api/v1/orderservice/order/{orderId}"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "GET /api/v1/orderservice/order/{travelDate}/{trainNumber}"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "OrderRepository.findByAccountId"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "OrderRepository.findById"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "OrderRepository.findByTravelDateAndTrainNumber"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "OrderRepository.save"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "POST /api/v1/orderservice/order"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "POST /api/v1/orderservice/order/refresh"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "POST /api/v1/orderservice/order/tickets"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "find ts.orders"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "getMore ts.orders"
+          },
+          {
+            "serviceName": "ts-order-service",
+            "operationName": "update ts.orders"
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "operationName": "POST /api/v1/paymentservice/payment"
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "operationName": "PaymentRepository.findByOrderId"
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "operationName": "PaymentRepository.save"
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "operationName": "find ts.payment"
+          },
+          {
+            "serviceName": "ts-payment-service",
+            "operationName": "update ts.payment"
+          },
+          {
+            "serviceName": "ts-preserve-other-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-preserve-other-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-preserve-other-service",
+            "operationName": "POST /api/v1/preserveotherservice/preserveOther"
+          },
+          {
+            "serviceName": "ts-preserve-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-preserve-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-preserve-service",
+            "operationName": "POST /api/v1/preserveservice/preserve"
+          },
+          {
+            "serviceName": "ts-price-service",
+            "operationName": "GET /api/v1/priceservice/prices"
+          },
+          {
+            "serviceName": "ts-price-service",
+            "operationName": "GET /api/v1/priceservice/prices/{routeId}/{trainType}"
+          },
+          {
+            "serviceName": "ts-price-service",
+            "operationName": "PriceConfigRepository.findAll"
+          },
+          {
+            "serviceName": "ts-price-service",
+            "operationName": "PriceConfigRepository.findByRouteIdAndTrainType"
+          },
+          {
+            "serviceName": "ts-price-service",
+            "operationName": "find ts.price_config"
+          },
+          {
+            "serviceName": "ts-route-service",
+            "operationName": "GET /api/v1/routeservice/routes/{routeId}"
+          },
+          {
+            "serviceName": "ts-route-service",
+            "operationName": "RouteRepository.findById"
+          },
+          {
+            "serviceName": "ts-route-service",
+            "operationName": "find ts.routes"
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "operationName": "POST /api/v1/seatservice/seats"
+          },
+          {
+            "serviceName": "ts-seat-service",
+            "operationName": "POST /api/v1/seatservice/seats/left_tickets"
+          },
+          {
+            "serviceName": "ts-security-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-security-service",
+            "operationName": "GET /api/v1/securityservice/securityConfigs/{accountId}"
+          },
+          {
+            "serviceName": "ts-security-service",
+            "operationName": "SecurityRepository.findByName"
+          },
+          {
+            "serviceName": "ts-security-service",
+            "operationName": "find ts.security_config"
+          },
+          {
+            "serviceName": "ts-station-service",
+            "operationName": "GET /api/v1/stationservice/stations/id/{stationNameForId}"
+          },
+          {
+            "serviceName": "ts-station-service",
+            "operationName": "POST /api/v1/stationservice/stations/namelist"
+          },
+          {
+            "serviceName": "ts-station-service",
+            "operationName": "StationRepository.findById"
+          },
+          {
+            "serviceName": "ts-station-service",
+            "operationName": "StationRepository.findByName"
+          },
+          {
+            "serviceName": "ts-station-service",
+            "operationName": "find ts.station"
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "operationName": "GET /api/v1/ticketinfoservice/ticketinfo/{name}"
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-ticketinfo-service",
+            "operationName": "POST /api/v1/ticketinfoservice/ticketinfo"
+          },
+          {
+            "serviceName": "ts-train-service",
+            "operationName": "GET /api/v1/trainservice/trains/{id}"
+          },
+          {
+            "serviceName": "ts-train-service",
+            "operationName": "TrainTypeRepository.findById"
+          },
+          {
+            "serviceName": "ts-train-service",
+            "operationName": "find ts.trainType"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "GET /api/v1/travelservice/admin_trip"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "GET /api/v1/travelservice/routes/{tripId}"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "GET /api/v1/travelservice/train_types/{tripId}"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "POST /api/v1/travelservice/trip_detail"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "POST /api/v1/travelservice/trips/left"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "TripRepository.findAll"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "TripRepository.findByTripId"
+          },
+          {
+            "serviceName": "ts-travel-service",
+            "operationName": "find ts.trip"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "GET"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "GET /api/v1/travel2service/admin_trip"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "GET /api/v1/travel2service/routes/{tripId}"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "GET /api/v1/travel2service/train_types/{tripId}"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "POST"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "POST /api/v1/travel2service/trip_detail"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "POST /api/v1/travel2service/trips/left"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "TripRepository.findAll"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "TripRepository.findByTripId"
+          },
+          {
+            "serviceName": "ts-travel2-service",
+            "operationName": "find ts.trip"
+          },
+          {
+            "serviceName": "ts-user-service",
+            "operationName": "GET /api/v1/userservice/users/id/{userId}"
+          },
+          {
+            "serviceName": "ts-user-service",
+            "operationName": "UserRepository.findByUserId"
+          },
+          {
+            "serviceName": "ts-user-service",
+            "operationName": "find ts-user-mongo.user"
+          }
+        ]
+      },
+      "transfer": {
+        "logical_range_reads": 0,
+        "requested_bytes": 0,
+        "received_bytes": 0,
+        "redirect_resolutions": 0,
+        "response_statuses": {},
+        "retry_count": 0,
+        "retained_telemetry_bytes": 0
+      },
+      "completed_at_utc": "2026-09-20T06:32:28.772517+00:00"
+    }
+  ]
+}

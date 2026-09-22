@@ -1,0 +1,698 @@
+{
+  "scope": {
+    "metadata": "DATASET-WIDE METADATA FACT — 735 pinned cases",
+    "raw": "RAW SAMPLE FINDING — six planned cases only",
+    "note": "This is evidence collection for an independent methodology red-team review; it does not select a method."
+  },
+  "provenance": {
+    "metadata_path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\metadata\\cases.parquet",
+    "metadata_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "manifest_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "manifest_cases": [
+      "re1ob_productcatalogservice_cpu_3",
+      "re2ob_productcatalogservice_loss_1",
+      "re2ss_orders_loss_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re3ss_carts_f1_1",
+      "re3tt_ts-route-service_f2_1"
+    ],
+    "plan_cases": [
+      "re1ob_productcatalogservice_cpu_3",
+      "re2ob_productcatalogservice_loss_1",
+      "re2ss_orders_loss_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re3ss_carts_f1_1",
+      "re3tt_ts-route-service_f2_1"
+    ],
+    "same_case_order": true,
+    "metadata_columns": [
+      "case",
+      "dataset",
+      "suite",
+      "system",
+      "system_name",
+      "root_cause_service",
+      "fault",
+      "fault_description",
+      "repetition",
+      "inject_time",
+      "n_metrics",
+      "n_timesteps",
+      "time_start",
+      "time_end",
+      "duration_minutes",
+      "normal_timesteps",
+      "faulty_timesteps",
+      "has_logs",
+      "n_logs",
+      "has_traces",
+      "n_traces",
+      "has_root_cause_file"
+    ]
+  },
+  "integrity": {
+    "manifest_file_count": 20,
+    "files_matching_recorded_size_and_hash": 20,
+    "all_match": true
+  },
+  "dataset_wide_leakage": {
+    "case_regex_matches_and_recovers_service_fault_repetition": 735,
+    "metadata_rows": 735,
+    "mismatches": []
+  },
+  "re2tt_metadata": {
+    "case_count": 90,
+    "root_cause_service_counts": {
+      "ts-auth-service": 18,
+      "ts-order-service": 18,
+      "ts-route-service": 18,
+      "ts-train-service": 18,
+      "ts-travel-service": 18
+    },
+    "fault_counts": {
+      "cpu": 15,
+      "delay": 15,
+      "disk": 15,
+      "loss": 15,
+      "mem": 15,
+      "socket": 15
+    },
+    "service_fault_cells": 30,
+    "repetitions_per_service_fault_cell": [
+      3
+    ],
+    "all_inject_times_in_window": true,
+    "all_inject_times_equal_normal_boundary": true,
+    "logs_present": 89,
+    "traces_present": 90,
+    "root_cause_files_present": 0,
+    "candidate_universe_metadata_columns": [],
+    "ground_truth_columns_absent": [
+      "operation_label",
+      "resource_label",
+      "affected_node_label",
+      "propagation_path_label",
+      "injection_target"
+    ]
+  },
+  "metadata_injection_window_outliers": [
+    "re1ob_currencyservice_loss_1",
+    "re1ob_productcatalogservice_cpu_3"
+  ],
+  "raw_sample_evidence": [
+    {
+      "case": "re1ob_productcatalogservice_cpu_3",
+      "planned": true,
+      "metadata_dataset": "RE1-OB",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 59,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1685371737,
+        "time_end": 1685371799,
+        "row_count": 63,
+        "inject_time": 1685373255,
+        "injection_in_metric_window": false
+      }
+    },
+    {
+      "case": "re2ob_productcatalogservice_loss_1",
+      "planned": true,
+      "metadata_dataset": "RE2-OB",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "logs.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "traces.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 73,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1705342110,
+        "time_end": 1705343550,
+        "row_count": 1441,
+        "inject_time": 1705342830,
+        "injection_in_metric_window": true
+      },
+      "logs": {
+        "columns": [
+          "timestamp",
+          "container_name",
+          "message"
+        ],
+        "has_direct_trace_or_span_id_column": false,
+        "has_container_name": true
+      },
+      "traces": {
+        "columns": [
+          "time",
+          "traceID",
+          "spanID",
+          "serviceName",
+          "methodName",
+          "operationName",
+          "parentSpanID",
+          "startTimeMillis",
+          "startTime",
+          "duration",
+          "statusCode"
+        ],
+        "contains_typed_protocol_or_resource_field": {
+          "span.kind": false,
+          "http": false,
+          "rpc": false,
+          "db": false,
+          "messaging": false,
+          "peer": false,
+          "resource": false,
+          "container": false,
+          "host": false,
+          "pod": false,
+          "link": false,
+          "event": false
+        }
+      },
+      "logs_to_metrics_key_check": {
+        "classification": "DIRECT_KEY_JOIN_AT_SERVICE_SECOND_BIN",
+        "rule": "logs.timestamp == metrics.time AND logs.container_name equals an entity deterministically parsed from a metric column suffix",
+        "metric_entity_rule": "^(entity)_(cpu|mem|diskio|socket|workload|error)$ OR ^(entity)_latency(-50|-90)?$",
+        "log_rows": 117601,
+        "log_rows_matching_time_and_exact_entity": 117601,
+        "exact_container_entity_overlap": [
+          "adservice",
+          "cartservice",
+          "checkoutservice",
+          "currencyservice",
+          "emailservice",
+          "frontend",
+          "paymentservice",
+          "productcatalogservice",
+          "recommendationservice",
+          "redis",
+          "shippingservice"
+        ],
+        "limitation": "This maps each log event to a service-second metric bin and possibly multiple metric series; it is not an event-to-single-metric or causal mapping."
+      },
+      "logs_to_traces_embedded_id_check": {
+        "classification": "NO_DIRECT_ID_JOIN_IF_MATCH_COUNTS_ARE_ZERO",
+        "log_schema_has_trace_or_span_column": false,
+        "hex32_candidates_in_log_messages": 0,
+        "hex16_candidates_in_log_messages": 0,
+        "exact_trace_id_matches": 0,
+        "exact_span_id_matches": 0
+      }
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "planned": true,
+      "metadata_dataset": "RE2-SS",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "logs.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 77,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1705746259,
+        "time_end": 1705747699,
+        "row_count": 1441,
+        "inject_time": 1705746979,
+        "injection_in_metric_window": true
+      },
+      "logs": {
+        "columns": [
+          "timestamp",
+          "container_name",
+          "message"
+        ],
+        "has_direct_trace_or_span_id_column": false,
+        "has_container_name": true
+      },
+      "logs_to_metrics_key_check": {
+        "classification": "DIRECT_KEY_JOIN_AT_SERVICE_SECOND_BIN",
+        "rule": "logs.timestamp == metrics.time AND logs.container_name equals an entity deterministically parsed from a metric column suffix",
+        "metric_entity_rule": "^(entity)_(cpu|mem|diskio|socket|workload|error)$ OR ^(entity)_latency(-50|-90)?$",
+        "log_rows": 87652,
+        "log_rows_matching_time_and_exact_entity": 87652,
+        "exact_container_entity_overlap": [
+          "carts",
+          "carts-db",
+          "catalogue",
+          "front-end",
+          "orders",
+          "payment",
+          "queue-master",
+          "session-db",
+          "shipping",
+          "user"
+        ],
+        "limitation": "This maps each log event to a service-second metric bin and possibly multiple metric series; it is not an event-to-single-metric or causal mapping."
+      }
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "planned": true,
+      "metadata_dataset": "RE2-TT",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "traces.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 370,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1705917385,
+        "time_end": 1705918825,
+        "row_count": 1441,
+        "inject_time": 1705918105,
+        "injection_in_metric_window": true
+      },
+      "traces": {
+        "columns": [
+          "time",
+          "traceID",
+          "spanID",
+          "serviceName",
+          "methodName",
+          "operationName",
+          "parentSpanID",
+          "startTimeMillis",
+          "startTime",
+          "duration",
+          "statusCode"
+        ],
+        "contains_typed_protocol_or_resource_field": {
+          "span.kind": false,
+          "http": false,
+          "rpc": false,
+          "db": false,
+          "messaging": false,
+          "peer": false,
+          "resource": false,
+          "container": false,
+          "host": false,
+          "pod": false,
+          "link": false,
+          "event": false
+        }
+      }
+    },
+    {
+      "case": "re3ss_carts_f1_1",
+      "planned": true,
+      "metadata_dataset": "RE3-SS",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "logs.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "root_cause.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 81,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1732242483,
+        "time_end": 1732243923,
+        "row_count": 1441,
+        "inject_time": 1732243203,
+        "injection_in_metric_window": true
+      },
+      "logs": {
+        "columns": [
+          "timestamp",
+          "container_name",
+          "message"
+        ],
+        "has_direct_trace_or_span_id_column": false,
+        "has_container_name": true
+      },
+      "logs_to_metrics_key_check": {
+        "classification": "DIRECT_KEY_JOIN_AT_SERVICE_SECOND_BIN",
+        "rule": "logs.timestamp == metrics.time AND logs.container_name equals an entity deterministically parsed from a metric column suffix",
+        "metric_entity_rule": "^(entity)_(cpu|mem|diskio|socket|workload|error)$ OR ^(entity)_latency(-50|-90)?$",
+        "log_rows": 84665,
+        "log_rows_matching_time_and_exact_entity": 84665,
+        "exact_container_entity_overlap": [
+          "carts",
+          "carts-db",
+          "catalogue",
+          "front-end",
+          "orders",
+          "orders-db",
+          "payment",
+          "queue-master",
+          "rabbitmq",
+          "session-db",
+          "shipping",
+          "user",
+          "user-db"
+        ],
+        "limitation": "This maps each log event to a service-second metric bin and possibly multiple metric series; it is not an event-to-single-metric or causal mapping."
+      }
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "planned": true,
+      "metadata_dataset": "RE3-TT",
+      "manifest_file_status": {
+        "inject_time.txt": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "logs.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "metrics.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        "traces.parquet": {
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      },
+      "metrics": {
+        "column_count": 317,
+        "has_direct_trace_or_log_id_column": false,
+        "time_start": 1733601694,
+        "time_end": 1733603494,
+        "row_count": 1801,
+        "inject_time": 1733602594,
+        "injection_in_metric_window": true
+      },
+      "logs": {
+        "columns": [
+          "timestamp",
+          "container_name",
+          "message"
+        ],
+        "has_direct_trace_or_span_id_column": false,
+        "has_container_name": true
+      },
+      "traces": {
+        "columns": [
+          "time",
+          "traceID",
+          "spanID",
+          "serviceName",
+          "methodName",
+          "operationName",
+          "parentSpanID",
+          "startTimeMillis",
+          "startTime",
+          "duration",
+          "statusCode"
+        ],
+        "contains_typed_protocol_or_resource_field": {
+          "span.kind": false,
+          "http": false,
+          "rpc": false,
+          "db": false,
+          "messaging": false,
+          "peer": false,
+          "resource": false,
+          "container": false,
+          "host": false,
+          "pod": false,
+          "link": false,
+          "event": false
+        }
+      },
+      "logs_to_metrics_key_check": {
+        "classification": "DIRECT_KEY_JOIN_AT_SERVICE_SECOND_BIN",
+        "rule": "logs.timestamp == metrics.time AND logs.container_name equals an entity deterministically parsed from a metric column suffix",
+        "metric_entity_rule": "^(entity)_(cpu|mem|diskio|socket|workload|error)$ OR ^(entity)_latency(-50|-90)?$",
+        "log_rows": 74449,
+        "log_rows_matching_time_and_exact_entity": 74449,
+        "exact_container_entity_overlap": [
+          "ts-admin-basic-info-service",
+          "ts-admin-travel-service",
+          "ts-assurance-mongo",
+          "ts-assurance-service",
+          "ts-auth-mongo",
+          "ts-auth-service",
+          "ts-basic-service",
+          "ts-config-mongo",
+          "ts-config-service",
+          "ts-consign-mongo",
+          "ts-consign-price-mongo",
+          "ts-consign-price-service",
+          "ts-consign-service",
+          "ts-contacts-mongo",
+          "ts-contacts-service",
+          "ts-food-map-mongo",
+          "ts-food-map-service",
+          "ts-food-mongo",
+          "ts-food-service",
+          "ts-inside-payment-mongo",
+          "ts-inside-payment-service",
+          "ts-notification-mongo",
+          "ts-order-mongo",
+          "ts-order-other-mongo",
+          "ts-order-other-service",
+          "ts-order-service",
+          "ts-payment-mongo",
+          "ts-payment-service",
+          "ts-preserve-mongo",
+          "ts-preserve-other-mongo",
+          "ts-preserve-other-service",
+          "ts-preserve-service",
+          "ts-price-mongo",
+          "ts-price-service",
+          "ts-route-mongo",
+          "ts-route-service",
+          "ts-seat-service",
+          "ts-security-mongo",
+          "ts-security-service",
+          "ts-station-mongo",
+          "ts-ticket-office-mongo",
+          "ts-train-mongo",
+          "ts-travel-mongo",
+          "ts-travel-service",
+          "ts-travel2-mongo",
+          "ts-travel2-service",
+          "ts-ui-dashboard",
+          "ts-user-mongo"
+        ],
+        "limitation": "This maps each log event to a service-second metric bin and possibly multiple metric series; it is not an event-to-single-metric or causal mapping."
+      },
+      "logs_to_traces_embedded_id_check": {
+        "classification": "NO_DIRECT_ID_JOIN_IF_MATCH_COUNTS_ARE_ZERO",
+        "log_schema_has_trace_or_span_column": false,
+        "hex32_candidates_in_log_messages": 0,
+        "hex16_candidates_in_log_messages": 0,
+        "exact_trace_id_matches": 0,
+        "exact_span_id_matches": 0
+      }
+    }
+  ],
+  "root_cause_file_evidence": [
+    {
+      "case": "re3ss_carts_f1_1",
+      "root_cause_rows": 1,
+      "nonempty_cells": 6,
+      "exact_log_message_cell_matches": 1
+    }
+  ],
+  "b2b_re2tt_normal_log_case_evidence": {
+    "scope": "RAW SAMPLE FINDING — one targeted normal log-bearing RE2-TT case",
+    "case": "re2tt_ts-auth-service_cpu_2",
+    "metadata_dataset": "RE2-TT",
+    "manifest_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "file_integrity": {
+      "logs.parquet": {
+        "exists": true,
+        "bytes_match": true,
+        "sha256_matches_manifest": true,
+        "sha256_matches_official_lfs": true
+      },
+      "metrics.parquet": {
+        "exists": true,
+        "bytes_match": true,
+        "sha256_matches_manifest": true,
+        "sha256_matches_official_lfs": true
+      },
+      "traces.parquet": {
+        "exists": true,
+        "bytes_match": true,
+        "sha256_matches_manifest": true,
+        "sha256_matches_official_lfs": true
+      }
+    },
+    "schemas": {
+      "logs": [
+        "timestamp",
+        "container_name",
+        "message"
+      ],
+      "metrics_column_count": 368,
+      "traces": [
+        "time",
+        "traceID",
+        "spanID",
+        "serviceName",
+        "methodName",
+        "operationName",
+        "parentSpanID",
+        "startTimeMillis",
+        "startTime",
+        "duration",
+        "statusCode"
+      ]
+    },
+    "logs_to_metrics": {
+      "classification": "DIRECT_KEY_JOIN_AT_SERVICE_SECOND_BIN",
+      "rule": "logs.timestamp == metrics.time AND logs.container_name equals an entity deterministically parsed from a metric-column suffix",
+      "log_rows": 271919,
+      "log_rows_matching_time_and_exact_entity": 271919,
+      "exact_container_entity_overlap_count": 47,
+      "limitation": "A log event maps to a service-second bin and possibly several metric series; it does not map to one event-level metric observation."
+    },
+    "logs_to_traces": {
+      "classification": "SERVICE_AND_TIME_WINDOW_ONLY",
+      "log_schema_has_trace_or_span_column": false,
+      "exact_trace_id_matches": 0,
+      "exact_span_id_matches": 0,
+      "matching_log_seconds_to_trace_start_seconds": 1418,
+      "exact_container_trace_service_overlap_count": 22
+    },
+    "metrics_to_traces": {
+      "classification": "SERVICE_AND_TIME_WINDOW_ONLY",
+      "metric_schema_has_trace_or_span_column": false,
+      "matching_metric_seconds_to_trace_start_seconds": 1426,
+      "exact_metric_entity_trace_service_overlap_count": 27
+    }
+  },
+  "b2_re2tt_full_trace_scrutiny": {
+    "scope": "FULL-SUBSET PROPERTY — all 90 RE2-TT trace objects; deterministic results created by the separate B2 auditor",
+    "source_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "case_count": 90,
+    "row_count": 67345051,
+    "physical_schema_variants": 1,
+    "complete_trace_span_service_operation_rate": 1.0,
+    "distinct_literal_service_names": 27,
+    "distinct_literal_service_operation_pairs": 161,
+    "operation_names_reused_across_more_than_one_service": 12,
+    "per_case_literal_service_count": {
+      "minimum": 20,
+      "maximum": 27,
+      "cases_at_minimum": 11
+    },
+    "per_case_literal_service_operation_pair_count": {
+      "minimum": 74,
+      "maximum": 156
+    },
+    "parent_resolution_rate": 0.9845274372,
+    "parent_unresolved_count": 1033279,
+    "cases_below_90_percent_parent_resolution": [
+      {
+        "case": "re2tt_ts-route-service_disk_2",
+        "rate": 0.3854287289
+      },
+      {
+        "case": "re2tt_ts-auth-service_loss_3",
+        "rate": 0.7024166615
+      },
+      {
+        "case": "re2tt_ts-route-service_loss_2",
+        "rate": 0.8121387051
+      },
+      {
+        "case": "re2tt_ts-auth-service_delay_1",
+        "rate": 0.8266287896
+      },
+      {
+        "case": "re2tt_ts-order-service_delay_1",
+        "rate": 0.8397325183
+      },
+      {
+        "case": "re2tt_ts-train-service_socket_1",
+        "rate": 0.8516172206
+      },
+      {
+        "case": "re2tt_ts-travel-service_cpu_3",
+        "rate": 0.875504998
+      }
+    ],
+    "semantic_schema_field_matches": {
+      "causal_or_ground_truth": [],
+      "messaging": [],
+      "network_http_rpc_peer": [],
+      "resource": [],
+      "structured_attributes_events_links_or_span_kind": []
+    },
+    "observed_cross_service_parent_child_pair_count": 55
+  }
+}

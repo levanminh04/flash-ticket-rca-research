@@ -1,0 +1,78 @@
+{
+  "scope": "DATASET-WIDE METADATA FACT",
+  "row_count": 735,
+  "checks": {
+    "inject_time_before_start": {
+      "count": 1,
+      "rows": [
+        {
+          "case": "re1ob_currencyservice_loss_1",
+          "dataset": "RE1-OB",
+          "inject_time": 16933142,
+          "time_start": 1693313863,
+          "time_end": 1693314583,
+          "n_timesteps": 721,
+          "normal_timesteps": 0,
+          "faulty_timesteps": 721
+        }
+      ]
+    },
+    "inject_time_after_end": {
+      "count": 1,
+      "rows": [
+        {
+          "case": "re1ob_productcatalogservice_cpu_3",
+          "dataset": "RE1-OB",
+          "inject_time": 1685373255,
+          "time_start": 1685371737,
+          "time_end": 1685371799,
+          "n_timesteps": 63,
+          "normal_timesteps": 63,
+          "faulty_timesteps": 0
+        }
+      ]
+    },
+    "normal_plus_faulty_ne_timesteps": {
+      "count": 0,
+      "rows": []
+    },
+    "non_positive_faulty_timesteps": {
+      "count": 1,
+      "rows": [
+        {
+          "case": "re1ob_productcatalogservice_cpu_3",
+          "dataset": "RE1-OB",
+          "inject_time": 1685373255,
+          "time_start": 1685371737,
+          "time_end": 1685371799,
+          "n_timesteps": 63,
+          "normal_timesteps": 63,
+          "faulty_timesteps": 0
+        }
+      ]
+    },
+    "non_positive_normal_timesteps": {
+      "count": 1,
+      "rows": [
+        {
+          "case": "re1ob_currencyservice_loss_1",
+          "dataset": "RE1-OB",
+          "inject_time": 16933142,
+          "time_start": 1693313863,
+          "time_end": 1693314583,
+          "n_timesteps": 721,
+          "normal_timesteps": 0,
+          "faulty_timesteps": 721
+        }
+      ]
+    },
+    "has_logs_disagrees_n_logs": {
+      "count": 0,
+      "rows": []
+    },
+    "has_traces_disagrees_n_traces": {
+      "count": 0,
+      "rows": []
+    }
+  }
+}

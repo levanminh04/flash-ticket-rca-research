@@ -1,0 +1,721 @@
+{
+  "scope": "DATASET-WIDE METADATA FACT — cases.parquet only; no raw telemetry",
+  "input": {
+    "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\metadata\\cases.parquet",
+    "sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "rows": 735,
+    "columns": [
+      "case",
+      "dataset",
+      "suite",
+      "system",
+      "system_name",
+      "root_cause_service",
+      "fault",
+      "fault_description",
+      "repetition",
+      "inject_time",
+      "n_metrics",
+      "n_timesteps",
+      "time_start",
+      "time_end",
+      "duration_minutes",
+      "normal_timesteps",
+      "faulty_timesteps",
+      "has_logs",
+      "n_logs",
+      "has_traces",
+      "n_traces",
+      "has_root_cause_file"
+    ],
+    "column_profile": {
+      "case": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 735
+      },
+      "dataset": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 9
+      },
+      "suite": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 3
+      },
+      "system": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 3
+      },
+      "system_name": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 3
+      },
+      "root_cause_service": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 18
+      },
+      "fault": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 11
+      },
+      "fault_description": {
+        "dtype": "str",
+        "null_count": 0,
+        "distinct_non_null": 11
+      },
+      "repetition": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 6
+      },
+      "inject_time": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 735
+      },
+      "n_metrics": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 88
+      },
+      "n_timesteps": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 12
+      },
+      "time_start": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 735
+      },
+      "time_end": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 735
+      },
+      "duration_minutes": {
+        "dtype": "float64",
+        "null_count": 0,
+        "distinct_non_null": 12
+      },
+      "normal_timesteps": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 7
+      },
+      "faulty_timesteps": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 12
+      },
+      "has_logs": {
+        "dtype": "bool",
+        "null_count": 0,
+        "distinct_non_null": 2
+      },
+      "n_logs": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 357
+      },
+      "has_traces": {
+        "dtype": "bool",
+        "null_count": 0,
+        "distinct_non_null": 2
+      },
+      "n_traces": {
+        "dtype": "int64",
+        "null_count": 0,
+        "distinct_non_null": 241
+      },
+      "has_root_cause_file": {
+        "dtype": "bool",
+        "null_count": 0,
+        "distinct_non_null": 2
+      }
+    },
+    "unexpected_columns": [],
+    "duplicate_case_count": 0
+  },
+  "case_directory_encoding": {
+    "regex": "^(?P<prefix>re(?P<suite_number>[123])(?P<system_code>ob|ss|tt))_(?P<service>.+)_(?P<fault>[^_]+)_(?P<repetition>[0-9]+)$",
+    "all_rows_match_case_pattern_and_index_labels": 735,
+    "non_matching_rows": []
+  },
+  "derived_injection_window_checks": {
+    "normal_plus_faulty_equals_n_timesteps": 735,
+    "inject_time_equals_time_start_plus_normal_timesteps": 733,
+    "inject_time_within_inclusive_time_range": 733,
+    "total_rows": 735,
+    "anomalous_rows": [
+      {
+        "case": "re1ob_currencyservice_loss_1",
+        "dataset": "RE1-OB",
+        "suite": "RE1",
+        "system": "ob",
+        "root_cause_service": "currencyservice",
+        "fault": "loss",
+        "inject_time": 16933142,
+        "time_start": 1693313863,
+        "time_end": 1693314583,
+        "n_timesteps": 721,
+        "normal_timesteps": 0,
+        "faulty_timesteps": 721,
+        "duration_minutes": 12.0
+      },
+      {
+        "case": "re1ob_productcatalogservice_cpu_3",
+        "dataset": "RE1-OB",
+        "suite": "RE1",
+        "system": "ob",
+        "root_cause_service": "productcatalogservice",
+        "fault": "cpu",
+        "inject_time": 1685373255,
+        "time_start": 1685371737,
+        "time_end": 1685371799,
+        "n_timesteps": 63,
+        "normal_timesteps": 63,
+        "faulty_timesteps": 0,
+        "duration_minutes": 1.0
+      }
+    ]
+  },
+  "counts": {
+    "by_dataset": [
+      {
+        "dataset": "RE1-OB",
+        "suite": "RE1",
+        "system": "ob",
+        "case_count": 125
+      },
+      {
+        "dataset": "RE1-SS",
+        "suite": "RE1",
+        "system": "ss",
+        "case_count": 125
+      },
+      {
+        "dataset": "RE1-TT",
+        "suite": "RE1",
+        "system": "tt",
+        "case_count": 125
+      },
+      {
+        "dataset": "RE2-OB",
+        "suite": "RE2",
+        "system": "ob",
+        "case_count": 90
+      },
+      {
+        "dataset": "RE2-SS",
+        "suite": "RE2",
+        "system": "ss",
+        "case_count": 90
+      },
+      {
+        "dataset": "RE2-TT",
+        "suite": "RE2",
+        "system": "tt",
+        "case_count": 90
+      },
+      {
+        "dataset": "RE3-OB",
+        "suite": "RE3",
+        "system": "ob",
+        "case_count": 30
+      },
+      {
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "case_count": 30
+      },
+      {
+        "dataset": "RE3-TT",
+        "suite": "RE3",
+        "system": "tt",
+        "case_count": 30
+      }
+    ],
+    "by_root_cause_service": [
+      {
+        "system": "ob",
+        "root_cause_service": "adservice",
+        "case_count": 34
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "cartservice",
+        "case_count": 28
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "checkoutservice",
+        "case_count": 43
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "currencyservice",
+        "case_count": 46
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "emailservice",
+        "case_count": 33
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "productcatalogservice",
+        "case_count": 43
+      },
+      {
+        "system": "ob",
+        "root_cause_service": "recommendationservice",
+        "case_count": 18
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "carts",
+        "case_count": 55
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "catalogue",
+        "case_count": 43
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "front-end",
+        "case_count": 9
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "orders",
+        "case_count": 52
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "payment",
+        "case_count": 43
+      },
+      {
+        "system": "ss",
+        "root_cause_service": "user",
+        "case_count": 43
+      },
+      {
+        "system": "tt",
+        "root_cause_service": "ts-auth-service",
+        "case_count": 58
+      },
+      {
+        "system": "tt",
+        "root_cause_service": "ts-order-service",
+        "case_count": 43
+      },
+      {
+        "system": "tt",
+        "root_cause_service": "ts-route-service",
+        "case_count": 58
+      },
+      {
+        "system": "tt",
+        "root_cause_service": "ts-train-service",
+        "case_count": 43
+      },
+      {
+        "system": "tt",
+        "root_cause_service": "ts-travel-service",
+        "case_count": 43
+      }
+    ],
+    "by_fault": [
+      {
+        "fault": "cpu",
+        "fault_description": "CPU stress",
+        "case_count": 120
+      },
+      {
+        "fault": "delay",
+        "fault_description": "network delay",
+        "case_count": 120
+      },
+      {
+        "fault": "disk",
+        "fault_description": "disk I/O stress",
+        "case_count": 120
+      },
+      {
+        "fault": "f1",
+        "fault_description": "code-level fault F1",
+        "case_count": 26
+      },
+      {
+        "fault": "f2",
+        "fault_description": "code-level fault F2",
+        "case_count": 13
+      },
+      {
+        "fault": "f3",
+        "fault_description": "code-level fault F3",
+        "case_count": 26
+      },
+      {
+        "fault": "f4",
+        "fault_description": "code-level fault F4",
+        "case_count": 19
+      },
+      {
+        "fault": "f5",
+        "fault_description": "code-level fault F5",
+        "case_count": 6
+      },
+      {
+        "fault": "loss",
+        "fault_description": "network packet loss",
+        "case_count": 120
+      },
+      {
+        "fault": "mem",
+        "fault_description": "memory stress",
+        "case_count": 120
+      },
+      {
+        "fault": "socket",
+        "fault_description": "socket exhaustion",
+        "case_count": 45
+      }
+    ],
+    "root_cause_fault_group_size_distribution": [
+      {
+        "repetitions_in_group": 3,
+        "case_count": 110
+      },
+      {
+        "repetitions_in_group": 4,
+        "case_count": 6
+      },
+      {
+        "repetitions_in_group": 5,
+        "case_count": 75
+      },
+      {
+        "repetitions_in_group": 6,
+        "case_count": 1
+      }
+    ],
+    "root_cause_service_labels_used_by_multiple_systems": [],
+    "by_suite_and_modality": [
+      {
+        "suite": "RE1",
+        "system": "ob",
+        "has_logs": false,
+        "has_traces": false,
+        "has_root_cause_file": false,
+        "case_count": 125
+      },
+      {
+        "suite": "RE1",
+        "system": "ss",
+        "has_logs": false,
+        "has_traces": false,
+        "has_root_cause_file": false,
+        "case_count": 125
+      },
+      {
+        "suite": "RE1",
+        "system": "tt",
+        "has_logs": false,
+        "has_traces": false,
+        "has_root_cause_file": false,
+        "case_count": 125
+      },
+      {
+        "suite": "RE2",
+        "system": "ob",
+        "has_logs": true,
+        "has_traces": true,
+        "has_root_cause_file": false,
+        "case_count": 90
+      },
+      {
+        "suite": "RE2",
+        "system": "ss",
+        "has_logs": true,
+        "has_traces": false,
+        "has_root_cause_file": false,
+        "case_count": 90
+      },
+      {
+        "suite": "RE2",
+        "system": "tt",
+        "has_logs": false,
+        "has_traces": true,
+        "has_root_cause_file": false,
+        "case_count": 1
+      },
+      {
+        "suite": "RE2",
+        "system": "tt",
+        "has_logs": true,
+        "has_traces": true,
+        "has_root_cause_file": false,
+        "case_count": 89
+      },
+      {
+        "suite": "RE3",
+        "system": "ob",
+        "has_logs": true,
+        "has_traces": true,
+        "has_root_cause_file": false,
+        "case_count": 30
+      },
+      {
+        "suite": "RE3",
+        "system": "ss",
+        "has_logs": true,
+        "has_traces": false,
+        "has_root_cause_file": false,
+        "case_count": 22
+      },
+      {
+        "suite": "RE3",
+        "system": "ss",
+        "has_logs": true,
+        "has_traces": false,
+        "has_root_cause_file": true,
+        "case_count": 8
+      },
+      {
+        "suite": "RE3",
+        "system": "tt",
+        "has_logs": true,
+        "has_traces": true,
+        "has_root_cause_file": false,
+        "case_count": 30
+      }
+    ],
+    "root_cause_file_cases": [
+      {
+        "case": "re3ss_carts_f1_1",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "carts",
+        "fault": "f1",
+        "repetition": 1,
+        "n_logs": 84665,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_carts_f1_2",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "carts",
+        "fault": "f1",
+        "repetition": 2,
+        "n_logs": 85307,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_carts_f3_1",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "carts",
+        "fault": "f3",
+        "repetition": 1,
+        "n_logs": 84162,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_carts_f3_2",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "carts",
+        "fault": "f3",
+        "repetition": 2,
+        "n_logs": 84442,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_front-end_f1_1",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "front-end",
+        "fault": "f1",
+        "repetition": 1,
+        "n_logs": 85513,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_front-end_f1_2",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "front-end",
+        "fault": "f1",
+        "repetition": 2,
+        "n_logs": 85886,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_front-end_f2_1",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "front-end",
+        "fault": "f2",
+        "repetition": 1,
+        "n_logs": 86519,
+        "n_traces": 0
+      },
+      {
+        "case": "re3ss_front-end_f2_2",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "front-end",
+        "fault": "f2",
+        "repetition": 2,
+        "n_logs": 86678,
+        "n_traces": 0
+      }
+    ],
+    "no_log_cases_with_trace_count": [
+      {
+        "case": "re2tt_ts-auth-service_cpu_1",
+        "dataset": "RE2-TT",
+        "root_cause_service": "ts-auth-service",
+        "fault": "cpu",
+        "n_logs": 0,
+        "n_traces": 1143435
+      }
+    ]
+  },
+  "metadata_fields_absent": [
+    "operation_label",
+    "resource_label",
+    "affected_node_label",
+    "propagation_path_label",
+    "explicit_injection_target_separate_from_root_cause_service"
+  ],
+  "independent_raw_case_proposal": {
+    "proposed_case_ids": [
+      "re1ob_productcatalogservice_cpu_3",
+      "re2ob_checkoutservice_socket_1",
+      "re2ss_orders_loss_2",
+      "re2tt_ts-auth-service_cpu_1",
+      "re3ss_carts_f1_1",
+      "re3tt_ts-route-service_f2_1"
+    ],
+    "metadata_rows_found": [
+      {
+        "case": "re1ob_productcatalogservice_cpu_3",
+        "dataset": "RE1-OB",
+        "suite": "RE1",
+        "system": "ob",
+        "root_cause_service": "productcatalogservice",
+        "fault": "cpu",
+        "fault_description": "CPU stress",
+        "repetition": 3,
+        "inject_time": 1685373255,
+        "has_logs": false,
+        "n_logs": 0,
+        "has_traces": false,
+        "n_traces": 0,
+        "has_root_cause_file": false
+      },
+      {
+        "case": "re2ob_checkoutservice_socket_1",
+        "dataset": "RE2-OB",
+        "suite": "RE2",
+        "system": "ob",
+        "root_cause_service": "checkoutservice",
+        "fault": "socket",
+        "fault_description": "socket exhaustion",
+        "repetition": 1,
+        "inject_time": 1705656313,
+        "has_logs": true,
+        "n_logs": 177376,
+        "has_traces": true,
+        "n_traces": 404289,
+        "has_root_cause_file": false
+      },
+      {
+        "case": "re2ss_orders_loss_2",
+        "dataset": "RE2-SS",
+        "suite": "RE2",
+        "system": "ss",
+        "root_cause_service": "orders",
+        "fault": "loss",
+        "fault_description": "network packet loss",
+        "repetition": 2,
+        "inject_time": 1705746979,
+        "has_logs": true,
+        "n_logs": 87652,
+        "has_traces": false,
+        "n_traces": 0,
+        "has_root_cause_file": false
+      },
+      {
+        "case": "re2tt_ts-auth-service_cpu_1",
+        "dataset": "RE2-TT",
+        "suite": "RE2",
+        "system": "tt",
+        "root_cause_service": "ts-auth-service",
+        "fault": "cpu",
+        "fault_description": "CPU stress",
+        "repetition": 1,
+        "inject_time": 1705918105,
+        "has_logs": false,
+        "n_logs": 0,
+        "has_traces": true,
+        "n_traces": 1143435,
+        "has_root_cause_file": false
+      },
+      {
+        "case": "re3ss_carts_f1_1",
+        "dataset": "RE3-SS",
+        "suite": "RE3",
+        "system": "ss",
+        "root_cause_service": "carts",
+        "fault": "f1",
+        "fault_description": "code-level fault F1",
+        "repetition": 1,
+        "inject_time": 1732243203,
+        "has_logs": true,
+        "n_logs": 84665,
+        "has_traces": false,
+        "n_traces": 0,
+        "has_root_cause_file": true
+      },
+      {
+        "case": "re3tt_ts-route-service_f2_1",
+        "dataset": "RE3-TT",
+        "suite": "RE3",
+        "system": "tt",
+        "root_cause_service": "ts-route-service",
+        "fault": "f2",
+        "fault_description": "code-level fault F2",
+        "repetition": 1,
+        "inject_time": 1733602594,
+        "has_logs": true,
+        "n_logs": 74449,
+        "has_traces": true,
+        "n_traces": 183623,
+        "has_root_cause_file": false
+      }
+    ],
+    "proposal_rows_found": 6
+  }
+}

@@ -1,0 +1,685 @@
+{
+  "scope": "RAW SAMPLE FINDING — six planned cases only",
+  "reviewer_status": "MAIN-AGENT FALLBACK; independent Subagent E interrupted by execution quota",
+  "cases": [
+    {
+      "case": "re1ob_productcatalogservice_cpu_3",
+      "metrics_time_range": {
+        "min": 1685371737,
+        "max": 1685371799
+      },
+      "logs": null,
+      "traces": null,
+      "metrics_to_logs_join": "NOT SUPPORTED",
+      "metrics_to_traces_join": "NOT SUPPORTED",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": null
+    },
+    {
+      "case": "re2ob_productcatalogservice_loss_1",
+      "metrics_time_range": {
+        "min": 1705342110,
+        "max": 1705343550
+      },
+      "logs": {
+        "schema_columns": [
+          {
+            "name": "timestamp",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "container_name",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "message",
+            "type": "large_string",
+            "nullable": true
+          }
+        ],
+        "row_count": 117601,
+        "timestamp_range": {
+          "min": 1705342110,
+          "max": 1705343548
+        },
+        "null_counts": {
+          "timestamp": 0,
+          "container_name": 0,
+          "message": 0
+        },
+        "distinct_container_name": 11,
+        "top_container_name": [
+          [
+            "frontend",
+            42413
+          ],
+          [
+            "currencyservice",
+            37635
+          ],
+          [
+            "cartservice",
+            12164
+          ],
+          [
+            "recommendationservice",
+            8750
+          ],
+          [
+            "adservice",
+            7109
+          ],
+          [
+            "shippingservice",
+            6924
+          ],
+          [
+            "checkoutservice",
+            1276
+          ],
+          [
+            "paymentservice",
+            850
+          ],
+          [
+            "emailservice",
+            425
+          ],
+          [
+            "productcatalogservice",
+            35
+          ],
+          [
+            "redis",
+            20
+          ]
+        ],
+        "dedicated_trace_or_span_column": false,
+        "dedicated_exception_column": false,
+        "unstructured_hex_token_occurrences": 0,
+        "unstructured_hex_token_distinct": 0,
+        "log_trace_join": {
+          "classification": "TIME-WINDOW APPROXIMATION",
+          "why_not_direct": "logs.parquet has no dedicated traceID/spanID column; any identity is embedded in unstructured message text",
+          "message_tokens_matching_trace_ids": 0,
+          "message_tokens_matching_span_ids": 0,
+          "timestamp_overlap_is_not_identity": true
+        }
+      },
+      "traces": {
+        "schema_columns": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "trace_id_count": 17167,
+        "span_id_count": 254889,
+        "time_ranges": {
+          "time": {
+            "min": "18:08",
+            "max": "18:32"
+          },
+          "startTime": {
+            "min": 1705342110001999,
+            "max": 1705343549558894
+          },
+          "startTimeMillis": {
+            "min": 1705342110001,
+            "max": 1705343549558
+          }
+        }
+      },
+      "metrics_to_logs_join": "TIME-WINDOW APPROXIMATION",
+      "metrics_to_traces_join": "TIME-WINDOW APPROXIMATION",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": null
+    },
+    {
+      "case": "re2ss_orders_loss_2",
+      "metrics_time_range": {
+        "min": 1705746259,
+        "max": 1705747699
+      },
+      "logs": {
+        "schema_columns": [
+          {
+            "name": "timestamp",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "container_name",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "message",
+            "type": "large_string",
+            "nullable": true
+          }
+        ],
+        "row_count": 87652,
+        "timestamp_range": {
+          "min": 1705746259,
+          "max": 1705747698
+        },
+        "null_counts": {
+          "timestamp": 0,
+          "container_name": 0,
+          "message": 1664
+        },
+        "distinct_container_name": 10,
+        "top_container_name": [
+          [
+            "front-end",
+            46242
+          ],
+          [
+            "user",
+            13945
+          ],
+          [
+            "queue-master",
+            12492
+          ],
+          [
+            "orders",
+            5954
+          ],
+          [
+            "catalogue",
+            3849
+          ],
+          [
+            "payment",
+            2382
+          ],
+          [
+            "shipping",
+            1388
+          ],
+          [
+            "carts",
+            1350
+          ],
+          [
+            "carts-db",
+            25
+          ],
+          [
+            "session-db",
+            25
+          ]
+        ],
+        "dedicated_trace_or_span_column": false,
+        "dedicated_exception_column": false,
+        "unstructured_hex_token_occurrences": 65811,
+        "unstructured_hex_token_distinct": 11429,
+        "log_trace_join": "NOT SUPPORTED — no traces.parquet in this raw sample"
+      },
+      "traces": null,
+      "metrics_to_logs_join": "TIME-WINDOW APPROXIMATION",
+      "metrics_to_traces_join": "NOT SUPPORTED",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": null
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "metrics_time_range": {
+        "min": 1705917385,
+        "max": 1705918825
+      },
+      "logs": null,
+      "traces": {
+        "schema_columns": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "trace_id_count": 6707,
+        "span_id_count": 1143435,
+        "time_ranges": {
+          "time": {
+            "min": "09:56",
+            "max": "10:20"
+          },
+          "startTime": {
+            "min": 1705917385000000,
+            "max": 1705918825000277
+          },
+          "startTimeMillis": {
+            "min": 1705917385000,
+            "max": 1705918825000
+          }
+        }
+      },
+      "metrics_to_logs_join": "NOT SUPPORTED",
+      "metrics_to_traces_join": "TIME-WINDOW APPROXIMATION",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": null
+    },
+    {
+      "case": "re3ss_carts_f1_1",
+      "metrics_time_range": {
+        "min": 1732242483,
+        "max": 1732243923
+      },
+      "logs": {
+        "schema_columns": [
+          {
+            "name": "timestamp",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "container_name",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "message",
+            "type": "large_string",
+            "nullable": true
+          }
+        ],
+        "row_count": 84665,
+        "timestamp_range": {
+          "min": 1732242483,
+          "max": 1732243923
+        },
+        "null_counts": {
+          "timestamp": 0,
+          "container_name": 0,
+          "message": 1
+        },
+        "distinct_container_name": 13,
+        "top_container_name": [
+          [
+            "front-end",
+            45380
+          ],
+          [
+            "user",
+            14135
+          ],
+          [
+            "queue-master",
+            11065
+          ],
+          [
+            "catalogue",
+            3892
+          ],
+          [
+            "carts",
+            3565
+          ],
+          [
+            "orders",
+            2938
+          ],
+          [
+            "payment",
+            2251
+          ],
+          [
+            "shipping",
+            1287
+          ],
+          [
+            "carts-db",
+            81
+          ],
+          [
+            "orders-db",
+            38
+          ],
+          [
+            "session-db",
+            25
+          ],
+          [
+            "rabbitmq",
+            5
+          ],
+          [
+            "user-db",
+            3
+          ]
+        ],
+        "dedicated_trace_or_span_column": false,
+        "dedicated_exception_column": false,
+        "unstructured_hex_token_occurrences": 75277,
+        "unstructured_hex_token_distinct": 15814,
+        "log_trace_join": "NOT SUPPORTED — no traces.parquet in this raw sample"
+      },
+      "traces": null,
+      "metrics_to_logs_join": "TIME-WINDOW APPROXIMATION",
+      "metrics_to_traces_join": "NOT SUPPORTED",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": {
+        "file_exists": true,
+        "field_count": 6,
+        "container_field": "carts",
+        "contains_full_log_message": true,
+        "must_be_excluded_from_model_input": true,
+        "exact_message_matches_in_logs": 1
+      }
+    },
+    {
+      "case": "re3tt_ts-route-service_f2_1",
+      "metrics_time_range": {
+        "min": 1733601694,
+        "max": 1733603494
+      },
+      "logs": {
+        "schema_columns": [
+          {
+            "name": "timestamp",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "container_name",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "message",
+            "type": "large_string",
+            "nullable": true
+          }
+        ],
+        "row_count": 74449,
+        "timestamp_range": {
+          "min": 1733601695,
+          "max": 1733603494
+        },
+        "null_counts": {
+          "timestamp": 0,
+          "container_name": 0,
+          "message": 0
+        },
+        "distinct_container_name": 48,
+        "top_container_name": [
+          [
+            "ts-travel2-service",
+            14112
+          ],
+          [
+            "ts-travel-service",
+            13530
+          ],
+          [
+            "ts-basic-service",
+            12851
+          ],
+          [
+            "ts-seat-service",
+            9642
+          ],
+          [
+            "ts-route-service",
+            8140
+          ],
+          [
+            "ts-auth-service",
+            2860
+          ],
+          [
+            "ts-ui-dashboard",
+            2603
+          ],
+          [
+            "ts-order-other-service",
+            2224
+          ],
+          [
+            "ts-order-service",
+            2090
+          ],
+          [
+            "ts-price-service",
+            1414
+          ],
+          [
+            "ts-admin-basic-info-service",
+            1047
+          ],
+          [
+            "ts-admin-travel-service",
+            1044
+          ],
+          [
+            "ts-preserve-service",
+            451
+          ],
+          [
+            "ts-preserve-other-service",
+            443
+          ],
+          [
+            "ts-food-service",
+            360
+          ],
+          [
+            "ts-security-service",
+            256
+          ],
+          [
+            "ts-contacts-service",
+            192
+          ],
+          [
+            "ts-consign-service",
+            186
+          ],
+          [
+            "ts-food-map-service",
+            108
+          ],
+          [
+            "ts-inside-payment-service",
+            82
+          ]
+        ],
+        "dedicated_trace_or_span_column": false,
+        "dedicated_exception_column": false,
+        "unstructured_hex_token_occurrences": 0,
+        "unstructured_hex_token_distinct": 0,
+        "log_trace_join": {
+          "classification": "TIME-WINDOW APPROXIMATION",
+          "why_not_direct": "logs.parquet has no dedicated traceID/spanID column; any identity is embedded in unstructured message text",
+          "message_tokens_matching_trace_ids": 0,
+          "message_tokens_matching_span_ids": 0,
+          "timestamp_overlap_is_not_identity": true
+        }
+      },
+      "traces": {
+        "schema_columns": [
+          {
+            "name": "time",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "traceID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "spanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "serviceName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "methodName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "operationName",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "parentSpanID",
+            "type": "large_string",
+            "nullable": true
+          },
+          {
+            "name": "startTimeMillis",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "startTime",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "duration",
+            "type": "int64",
+            "nullable": true
+          },
+          {
+            "name": "statusCode",
+            "type": "int64",
+            "nullable": true
+          }
+        ],
+        "trace_id_count": 2623,
+        "span_id_count": 183623,
+        "time_ranges": {
+          "time": {
+            "min": "20:01",
+            "max": "20:31"
+          },
+          "startTime": {
+            "min": 1733601694504000,
+            "max": 1733603493964420
+          },
+          "startTimeMillis": {
+            "min": 1733601694504,
+            "max": 1733603493964
+          }
+        }
+      },
+      "metrics_to_logs_join": "TIME-WINDOW APPROXIMATION",
+      "metrics_to_traces_join": "TIME-WINDOW APPROXIMATION",
+      "metric_entity_join": "SERVICE-LEVEL ONLY — metric names are wide-column tokens, not a shared identity key",
+      "root_cause_file": null
+    }
+  ]
+}
