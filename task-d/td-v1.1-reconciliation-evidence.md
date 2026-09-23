@@ -3,7 +3,7 @@
 - Date: 2026-09-23. Owner: Minh; main adjudicator: Codex. Class: FORMATION / evidence supporting the canonical protocol in P.
 - Authority: current request “Independent Reconciliation + TD-v1.1 Revision” §§0–39; later explicit Minh clarification preserved in advisor evidence §3/RCA-018–021. Technical selections remain CANDIDATE.
 - P = `D:/Project/flash-ticket-platform`; W = `D:/Project/flash-ticket-rca-research`. Before review: P branch `codex/rca-research-program`, HEAD `6bd04e625926e923301cc6bb1433682f01fd87fc`; W `main`, HEAD `c7e47fdcc69c53876f7bd3f1a5e71ef89c59ccf6`. Only pre-existing tracked change was P/README.md; preserved SHA-256 `3646cb1b6e8da832e8b9513fd8318d749f7f5f6788b5d3223eda7f5a9a662274`. No newer D revision was present.
-- Current revision is local, not committed/pushed. Earlier commits above preserve TD-v1.0; do not describe this revision as already on GitHub.
+- TD-v1.1 đã commit/push lên P branch `codex/rca-research-program` (commit nội dung `a4a2fa3`) và W branch `main` (commit nội dung `9eca376`). Các receipt kiểm định bên dưới là snapshot trước commit; các commit cũ ở trên bảo tồn TD-v1.0.
 - Scope: source reconciliation/specification, independent reviews, small deterministic document/math checks. No E/F/G/H/I implementation, baseline/data run, training, install, full corpus download or app changes.
 
 ## 1. Evidence and independent discovery
@@ -215,7 +215,7 @@ Intentionally unchanged (exact paths, not a claim every file in both repos was i
 | D:/Project/flash-ticket-rca-research/task-d/task-d-governance-validation.txt | v1.0 audit preserved |
 | D:/Project/flash-ticket-rca-research/task-d/validate-task-d.py | Old synthetic/document validator preserved unchanged; new version has a separate script/receipt |
 
-All app/source/schema/API/architecture/legacy repositories, raw data and prior C/B reviewer/audit artifacts remain outside mutation scope. No commit/push/reset/stash/checkout/deletion. No C1 performance value generated in this task.
+All app/source/schema/API/architecture/legacy repositories, raw data and prior C/B reviewer/audit artifacts remain outside mutation scope. Trong giai đoạn revision khoa học trước handoff push, không có commit/push/reset/stash/checkout/deletion; sau đó TD-v1.1 đã được commit/push theo yêu cầu tiếp theo của Minh. No C1 performance value generated in this task.
 
 ## 11. Handoff constraints
 
@@ -242,4 +242,4 @@ Governance audit: **PASS, 1 warning** because P diff includes10 files (9 task-ow
 | 9 | What remains OPEN for E/F/G/H/I? | E: pins/licenses/env/calibration/resources/adapters; F: actual pipeline/all-used-log joins/invariance; G: frozen empirical effects; H: controlled target/arrival/healthy-workload validation and system coordination; I: model/prompt/rubric/faithfulness/usefulness. Minh: protocol acceptance/E authorization and second-public addendum/scope. |
 | 10 | Is Task E authorized? | **NO.** |
 
-Final protocol SHA-256: `9a70e64db570916b9f02fcc81fab3f4bf7cef0313f5c2de213a9eb0a8d690f3c`; independently recorded in delta-review§2.3. Final per-artifact hashes live in `td-v1.1-validation.json`. No commit or push of this revision; no Task E execution.
+Final protocol SHA-256: `9a70e64db570916b9f02fcc81fab3f4bf7cef0313f5c2de213a9eb0a8d690f3c`; independently recorded in delta-review§2.3. Per-artifact hashes in `td-v1.1-validation.json` record the precommit validation snapshot. TD-v1.1 đã commit/push; no Task E execution.
