@@ -1,6 +1,6 @@
 # Task B2B — targeted RE2-TT multimodal join audit scope
 
-**Status:** `APPROVED BY CURRENT TASK INSTRUCTION · EXECUTING`  
+**Status:** `COMPLETE` — corrected 2026-09-23 from the historical execution checkpoint; authoritative closure is [Task B §12.2–12.5, §12.20](TASK-B-RCAEval-audit.md). The scoped one-case retrieval/join check is complete; this does not certify all 89 log-bearing cases. The original authorization and scope below are preserved.
 **Bounded purpose:** resolve the Red Team's concrete challenge that the original RE2-TT raw sample is the one declared no-log case and therefore cannot establish whether a log-bearing RE2-TT case supports the same deterministic joins observed in other systems.
 
 ## QUESTION
