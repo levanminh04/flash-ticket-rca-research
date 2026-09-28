@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "predetermined_ids": [
+    "re2tt_ts-auth-service_cpu_3",
+    "re2tt_ts-auth-service_delay_2",
+    "re2tt_ts-order-service_disk_1",
+    "re2tt_ts-order-service_loss_3",
+    "re2tt_ts-route-service_mem_2",
+    "re2tt_ts-route-service_socket_1",
+    "re2tt_ts-train-service_cpu_3",
+    "re2tt_ts-train-service_delay_3",
+    "re2tt_ts-travel-service_disk_1",
+    "re2tt_ts-travel-service_loss_3"
+  ],
+  "no_method_selection": true,
+  "resources_seconds": {
+    "re2tt_ts-auth-service_cpu_3": 0.3303322999854572,
+    "re2tt_ts-auth-service_delay_2": 0.32753039995441213,
+    "re2tt_ts-order-service_disk_1": 0.3078249999671243,
+    "re2tt_ts-order-service_loss_3": 0.30809030000818893,
+    "re2tt_ts-route-service_mem_2": 0.33822520001558587,
+    "re2tt_ts-route-service_socket_1": 0.3450248999870382,
+    "re2tt_ts-train-service_cpu_3": 0.3285780000151135,
+    "re2tt_ts-train-service_delay_3": 0.3256967999623157,
+    "re2tt_ts-travel-service_disk_1": 0.2950295999762602,
+    "re2tt_ts-travel-service_loss_3": 0.3113478999584913
+  },
+  "case_count": 10,
+  "fixed_feasibility_local_index": 0,
+  "fixed_feasibility_local_config": {
+    "floor": 0.01,
+    "pool": "max",
+    "fusion": "max"
+  },
+  "rank_configs": [
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.85
+    },
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.5
+    },
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.2
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.85
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.5
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.2
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.85
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.5
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.2
+    }
+  ],
+  "input_failure_cases": []
+}

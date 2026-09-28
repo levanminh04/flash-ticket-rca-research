@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "D:\Project\flash-ticket-rca-research\scripts\task_e\rcd_recovery.py", line 250, in <module>
+    if __name__=='__main__':raise SystemExit(main())
+                                             ^^^^^^
+  File "D:\Project\flash-ticket-rca-research\scripts\task_e\rcd_recovery.py", line 225, in main
+    key=pending[future];completed[key]=future.result()
+                                       ^^^^^^^^^^^^^^^
+  File "C:\Users\84583\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 449, in result
+    return self.__get_result()
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\84583\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\_base.py", line 401, in __get_result
+    raise self._exception
+  File "C:\Users\84583\AppData\Local\Programs\Python\Python312\Lib\concurrent\futures\thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\Project\flash-ticket-rca-research\scripts\task_e\rcd_recovery.py", line 79, in job
+    raise ValueError('Incomplete chunk directory preserved; new attempt required')
+ValueError: Incomplete chunk directory preserved; new attempt required

@@ -1,0 +1,429 @@
+{
+  "created_utc": "2026-09-27T17:18:02.244776+00:00",
+  "scope": "Independent arithmetic on sealed035 primary predictions/models and89 raw-source hashes; no regression fitting/model rerun",
+  "status": "PASS_CHECKED_SCOPE",
+  "checks": {
+    "C5planned30": 1,
+    "campaign_contract": 1,
+    "case_seal": 30,
+    "completed18configs": 30,
+    "C5artifact_hash": 90,
+    "physical89_sha_bytes": 89,
+    "C5shape_grid": 30,
+    "C5_E_from_fit_only": 540,
+    "fit_center": 119529,
+    "fit_scale": 119529,
+    "normalized_target": 540,
+    "C5_model_input_gates": 540,
+    "fixed_target_masks": 540,
+    "finite_predictions_fixed_mask": 540,
+    "absolute_prediction_error": 540,
+    "residual_center": 118413,
+    "residual_scale": 118413,
+    "one_sided_scaled_residual": 540,
+    "system_max": 540,
+    "scored_channel_count": 540,
+    "G_L_ALL_lambda_fixed_ids": 270,
+    "MT_MTL_raw_components": 540,
+    "forecast_case_MAE": 270,
+    "forecast_arm_loss": 9,
+    "lambda_objective": 3,
+    "selected_lambda": 1,
+    "F1_planned30": 24,
+    "grouped_fold_size": 120,
+    "fold_threshold": 120,
+    "normal_support_exact": 120,
+    "confusion_or_PRF": 6480,
+    "q_objective": 24,
+    "macro_PRF": 72,
+    "selected_q": 8,
+    "full_threshold": 8,
+    "full_support_exact": 8,
+    "event_triggers": 480,
+    "first_post_trigger": 480,
+    "pre_trigger_at_tau": 480,
+    "normal_observed_hours": 480,
+    "normal_scored_hours": 480
+  },
+  "failures": [],
+  "max_absolute_differences": {
+    "fit_center": 0.0,
+    "fit_scale": 3.725290298461914e-09,
+    "normalized_target": 0.0,
+    "absolute_prediction_error": 0.0,
+    "residual_center": 0.000244140625,
+    "residual_scale": 0.00048828125,
+    "one_sided_scaled_residual": 0.0,
+    "system_max": 0.0,
+    "MT_MTL_raw_components": 0.0,
+    "forecast_case_MAE": 0.0,
+    "forecast_arm_loss": 0.0,
+    "lambda_objective": 0.0,
+    "fold_threshold": 0.0,
+    "confusion_or_PRF": 0.0,
+    "q_objective": 0.0,
+    "macro_PRF": 0.0,
+    "full_threshold": 0.0,
+    "normal_observed_hours": 0.0,
+    "normal_scored_hours": 0.0
+  },
+  "lambda_objectives": {
+    "0.1": 7077887533.624485,
+    "1.0": 7051263086.227625,
+    "10.0": 7051117096.178637
+  },
+  "selected_lambda": 10.0,
+  "detectors": {
+    "G-MTL": {
+      "selected_q": 0.95,
+      "full_threshold": 5300.844353103079,
+      "macro": {
+        "precision": 0.7980492669896335,
+        "recall": 0.649537037037037,
+        "f1": 0.6699937206406136
+      },
+      "scored_cases": 30
+    },
+    "G-MT": {
+      "selected_q": 0.95,
+      "full_threshold": 4361.702127659583,
+      "macro": {
+        "precision": 0.806514785177052,
+        "recall": 0.6655092592592593,
+        "f1": 0.6888623895868015
+      },
+      "scored_cases": 30
+    },
+    "L-MTL": {
+      "selected_q": 0.95,
+      "full_threshold": 221694927196937.78,
+      "macro": {
+        "precision": 0.17060042570456618,
+        "recall": 0.05023148148148148,
+        "f1": 0.07255474777392683
+      },
+      "scored_cases": 30
+    },
+    "L-MT": {
+      "selected_q": 0.95,
+      "full_threshold": 158890826408975.88,
+      "macro": {
+        "precision": 0.17520774490176388,
+        "recall": 0.04861111111111111,
+        "f1": 0.07200067791217264
+      },
+      "scored_cases": 30
+    },
+    "ALL-MTL": {
+      "selected_q": 0.95,
+      "full_threshold": 4361.702127659585,
+      "macro": {
+        "precision": 0.8076111640438073,
+        "recall": 0.6687500000000001,
+        "f1": 0.6908652803422453
+      },
+      "scored_cases": 30
+    },
+    "ALL-MT": {
+      "selected_q": 0.95,
+      "full_threshold": 4361.702127659583,
+      "macro": {
+        "precision": 0.806514785177052,
+        "recall": 0.6645833333333333,
+        "f1": 0.6874737379699619
+      },
+      "scored_cases": 30
+    },
+    "TV-MTL": {
+      "selected_q": 0.95,
+      "full_threshold": 2.4051748014087467e+24,
+      "macro": {
+        "precision": 0.2936919918192567,
+        "recall": 0.04861111111111111,
+        "f1": 0.07860034040005431
+      },
+      "scored_cases": 30
+    },
+    "TV-MT": {
+      "selected_q": 0.95,
+      "full_threshold": 1.16504925625623e+24,
+      "macro": {
+        "precision": 0.32115651933481393,
+        "recall": 0.04351851851851852,
+        "f1": 0.07481274091067329
+      },
+      "scored_cases": 30
+    }
+  },
+  "case_diagnostics": [
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "models_min": 229,
+      "models_max": 229,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 13300000000000.002
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "models_min": 221,
+      "models_max": 241,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 333059171221401.9
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "models_min": 227,
+      "models_max": 247,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 356693431108385.3
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "models_min": 230,
+      "models_max": 251,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 3.639112129954847e+16
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "models_min": 206,
+      "models_max": 226,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 7021.371158392438
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "models_min": 219,
+      "models_max": 239,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 2500.0
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "models_min": 216,
+      "models_max": 236,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 67995.112746584
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "models_min": 162,
+      "models_max": 176,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 79107.13292601914
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "models_min": 162,
+      "models_max": 176,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 282424.72930068674
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "models_min": 232,
+      "models_max": 252,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 331556156063748.75
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "models_min": 167,
+      "models_max": 181,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 74042.5531914894
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "models_min": 167,
+      "models_max": 181,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 8278.437660487041
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "models_min": 222,
+      "models_max": 242,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 13300000000000.002
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "models_min": 213,
+      "models_max": 233,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 384315535859351.1
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "models_min": 221,
+      "models_max": 241,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 175880704286981.97
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "models_min": 230,
+      "models_max": 250,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 311145267480197.3
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "models_min": 217,
+      "models_max": 237,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 2222.222222222222
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "models_min": 219,
+      "models_max": 239,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 336652548964967.56
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "models_min": 226,
+      "models_max": 246,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 13300000000000.002
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "models_min": 223,
+      "models_max": 243,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 222725151382427.0
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "models_min": 228,
+      "models_max": 248,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 26700000000000.004
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "models_min": 228,
+      "models_max": 248,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 13300000000000.002
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "models_min": 218,
+      "models_max": 238,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 68191.70144567333
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "models_min": 218,
+      "models_max": 238,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 346759997317561.3
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "models_min": 206,
+      "models_max": 226,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 71591.04973888319
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "models_min": 169,
+      "models_max": 183,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 80969.29753298746
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "models_min": 169,
+      "models_max": 183,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 323639.5491881157
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "models_min": 218,
+      "models_max": 238,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 138936.17021276592
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "models_min": 224,
+      "models_max": 244,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 371909763178351.6
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "models_min": 219,
+      "models_max": 239,
+      "scale_min": 1e-12,
+      "system_finite_all": true,
+      "max_score": 80000000000000.0
+    }
+  ],
+  "evidence_hashes": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-035-c5-development-full\\c5-selection.json",
+      "sha256": "4e56b27a2e044774f2fc4021f64a7d093f66dfaeb0c9dd019955d53f246f343c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-035-c5-development-full\\lambda-selection.json",
+      "sha256": "919c40ea168b545cf4419547c2470084a6b5d0061729376da284b4763cf7dac2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-035-c5-development-full\\predictions-seal.json",
+      "sha256": "b2d01f6de1d584b35d27a5f6ff9ab9ecfbe26eb018e70e4ac717e5b422d634bf"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-035-c5-development-full\\run-contract.json",
+      "sha256": "cbcdff14c799c6be6fe4ef6c509d74365d4426a0b23f73236f87182a1dad0628"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-035-c5-development-full\\source-manifest.json",
+      "sha256": "21c52da86e72df84d645b541260126d8b46339c76a498d5194d53fd6f35efd1e"
+    }
+  ],
+  "pending": [
+    "Graph-TV formula independent arithmetic",
+    "C5 model coefficient normal-equation conditioning audit",
+    "037sensitivity",
+    "038integrated",
+    "RCDcompleted"
+  ]
+}

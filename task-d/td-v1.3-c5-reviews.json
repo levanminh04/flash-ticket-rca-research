@@ -1,0 +1,120 @@
+{
+  "status": "INITIAL INDEPENDENT POLICY REVIEWS COMPLETE; fresh targeted qualification pending",
+  "pre_outcome": true,
+  "actual_development_predictions_seen": false,
+  "reviews": [
+    {
+      "reviewer": "c5_semantics_a",
+      "role": "semantics/dataflow",
+      "recommended": "scaler-only E, context independent of own model, local trace masks and immutable closed bins",
+      "alternatives": [
+        "own-model membership",
+        "warmup vocabulary context with weakened calibration claim",
+        "broader trace masking"
+      ],
+      "caveats": [
+        "singleton scalers",
+        "cal identity must not select fit roster",
+        "graph/count integrity snapshot asymmetry"
+      ]
+    },
+    {
+      "reviewer": "c5_statistics_b",
+      "role": "statistical consequences",
+      "recommended": "scaler-only E, Vfit identity freeze, local trace masks",
+      "alternative_not_adopted": "provisional fit counts may be cleaned at F before first score",
+      "coordinator_reason": "one cutoff/cache/no-retroactive numeric-bin rule; discredited committed counts explicitly retained and audited",
+      "caveats": [
+        "availability-driven residuals",
+        "ALL duplicate columns alter ridge penalty",
+        "short correlated calibration",
+        "weighted scored-support CDF"
+      ]
+    },
+    {
+      "reviewer": "c5_adversary_c",
+      "role": "adversarial falsification",
+      "recommended": "scaler-only E independent of lag eligibility; chronological key tombstone/local masks; immutable past bins and frozen graph",
+      "counterexamples": [
+        "model-less neighbor",
+        "cal-only service with fit metrics",
+        "same-time contradiction",
+        "conflict at F",
+        "independent edge support",
+        "third owner",
+        "unknown owner",
+        "future poison",
+        "cache cutoffs"
+      ]
+    }
+  ],
+  "coordinator_selection": "TD13 sections7.0a-b; rationale has competing policies, rejected alternatives and analytic expected tests",
+  "not_formal_human_approval": true,
+  "targeted_review": {
+    "status": "AUTO_RESUME_AUTHORIZED_DEVELOPMENT_ONLY",
+    "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "authority": "U27R sections1/12",
+    "technical_policy_state": "CANDIDATE for delegated development; not human algorithm approval",
+    "fresh_reviewer": "td13_fresh_review",
+    "findings_initial": [
+      {
+        "id": "FR-M1",
+        "severity": "MAJOR",
+        "finding": "nullable optional Arrow int rejected via pandas dtype",
+        "resolution": "physical Arrow check + fixture"
+      },
+      {
+        "id": "FR-M2",
+        "severity": "MAJOR",
+        "finding": "TV overflow vetoed valid forecasting",
+        "resolution": "explicit independent TV failure + finite-forecast fixture"
+      },
+      {
+        "id": "FR-m3",
+        "severity": "MINOR",
+        "finding": "late-discredit audit source-order dependent",
+        "resolution": "stable sorted audit + permutation fixture"
+      }
+    ],
+    "recheck": "No remaining CRITICAL/MAJOR within targeted amendment scope; all3findingsclosed",
+    "fixtures": {
+      "e27-011-td13-detection-review-fix": 24,
+      "e27-012-td13-replay-review-fix": 34,
+      "e27-010-td13-calibration-launch-fix": 16
+    },
+    "retained_failed_attempts": [
+      "e27-009-td13-calibration launcher mismatch",
+      "e27-013-raw-window-adapters pandas readonly array; fixed014"
+    ],
+    "not_yet_qualified": [
+      "worker/cache/process",
+      "real RCD runtime",
+      "full30 raw audit",
+      "R mobility",
+      "smoke",
+      "full30 outcomes",
+      "sensitivity",
+      "final scientific review"
+    ],
+    "final60_opened": false,
+    "formal_five_reviewer_assurance": "OPEN deferred for development only",
+    "source_hashes": {
+      "scripts\\task_e\\acquire.py": "7ba08ef3db82cf8bee55309374b02da14f740c7c3c0974bb9640e40c3c4da153",
+      "scripts\\task_e\\audit_development.py": "1a5c16ce9c3ff6839b1debffe2c15fbccc42e3c4de9e40db61539f1e8f41af8d",
+      "scripts\\task_e\\boundary.py": "99a85449a724179473cca2306bb486aeec0c82add00da402726b5bd89f7126c1",
+      "scripts\\task_e\\calibration.py": "0d27b9c3474645e54a5a1e22ba684359b854bd66076c9d541404627b5b2c572d",
+      "scripts\\task_e\\comparators.py": "dfcb4a70a78ddffbb9c9e35c59be9fd98cd2ed60739ae28d7cd1d0dd9a50c3e5",
+      "scripts\\task_e\\contract.py": "d157eb28db6154272a166d60b029f0249d130f8a8bac2912fcc81fe782dc27c3",
+      "scripts\\task_e\\detection.py": "084e48aab3b1a3edd5fe80f43d1dbd6fb3b490163ee6cd7564b9e835f7072122",
+      "scripts\\task_e\\evaluator.py": "73b1b4cbd0fcdda157d1d018614633dba72756a96423e445f64a966efcfe7511",
+      "scripts\\task_e\\execution.py": "385e67003355f0fff101942f71f369be2f8a2432aa6fd1a937214f9d67c1c92c",
+      "scripts\\task_e\\input_adapters.py": "1e4bda1303141a0a7182d5d40ef9a8a12f907d3b74523efdf3a12444199fdcfe",
+      "scripts\\task_e\\loader.py": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "scripts\\task_e\\ranking.py": "1b671310d326502ff0be9864c4e1ef8dcf52674a1810342687f896ac4d1b17ed",
+      "scripts\\task_e\\rcd_runtime.py": "fcf98f16595db0b8ce3b87b0f37b94aa0baf1d6d147c085ad3b608bac6737539",
+      "scripts\\task_e\\replay.py": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "scripts\\task_e\\run_stage.py": "215eef0546ddcc24d81788c93157e1a4350acd2be407b537a18ee151b5b3c8ab",
+      "scripts\\task_e\\worker.py": "c3f13a31f529a0aa250a9b8caf7f3451a37789d8e9a23499174b989055ad402f"
+    }
+  }
+}

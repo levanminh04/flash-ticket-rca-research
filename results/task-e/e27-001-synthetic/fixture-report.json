@@ -1,0 +1,63 @@
+{
+  "schema": "TD12-E-FIXTURE-v1",
+  "scope": "BOUNDED SYNTHETIC; not complete mission fixture suite",
+  "tests_run": 18,
+  "failures": [],
+  "errors": [],
+  "seconds": 0.7817401999782305,
+  "counterexamples": {
+    "C5-APPLICABILITY": {
+      "classification": "D-SPEC AMBIGUITY \u2014 RETURN TO D",
+      "source": "TD12 section7 same-type applicable degree / model availability",
+      "synthetic_only": true,
+      "data_files_read": [],
+      "prefix_finite_counts": [
+        24,
+        12
+      ],
+      "prefix_valid_lag1_target_pairs": [
+        23,
+        0
+      ],
+      "interpretation_A": "neighbor with a fit-prefix-defined scaler",
+      "interpretation_B": "neighbor whose own target has at least18fit rows",
+      "A_context": {
+        "mean": 10.0,
+        "coverage": 0.5,
+        "applicable_degree": 2
+      },
+      "B_context": {
+        "mean": 0.0,
+        "coverage": 0.0,
+        "applicable_degree": 1
+      },
+      "demonstrated": "Same telemetry and graph produce different G/ALL inputs",
+      "not_demonstrated": "No trained detector benefit, F1, data prevalence or chosen winner",
+      "adopted_interpretation": null
+    },
+    "C5-CONFLICT": {
+      "classification": "D-SPEC AMBIGUITY \u2014 affected corrupted-bin handling",
+      "source": "TD12 section7 encountered-bin conflicts versus section4 shared trace failure",
+      "synthetic_only": true,
+      "example": "At time200s a conflicting span key in service0; service1 has20valid spans",
+      "interpretation_A": {
+        "service0_available": false,
+        "service1_available": false
+      },
+      "interpretation_B": {
+        "service0_available": false,
+        "service1_available": true,
+        "service1_log1p_count": 3.044522437723423
+      },
+      "demonstrated": "Ambiguous mask scope affects another service and later detector context",
+      "adopted_interpretation": null
+    }
+  },
+  "not_run": [
+    "complete C5 detector/event fixtures",
+    "real30development models",
+    "RCD qualified runtime",
+    "empirical sensitivity",
+    "full firewall"
+  ]
+}

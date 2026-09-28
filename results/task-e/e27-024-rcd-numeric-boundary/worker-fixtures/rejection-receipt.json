@@ -1,0 +1,86 @@
+{
+  "real_process": true,
+  "rejections": [
+    {
+      "name": "malformed",
+      "reason": "invalid_json",
+      "raw_sha256": "3caff80291c5957be7e9d3f9b6854c2d4552d0c74c5f3ca6c5b0f4ad9c5d6c43"
+    },
+    {
+      "name": "duplicate",
+      "reason": "duplicate_json_key",
+      "raw_sha256": "70ada9461dfdfbe639cf0bb43f9b49e7fc16b50a7b83d92a67ca753d24d748b8"
+    },
+    {
+      "name": "nan",
+      "reason": "nonfinite_json_number",
+      "raw_sha256": "4c6b4cd034867b124dedc03da14617cf1eda3430fd340ab2fa09f1df5b0d7fb6"
+    },
+    {
+      "name": "overflow",
+      "reason": "nonfinite_or_out_of_float64_range",
+      "raw_sha256": "b6e64cc8d037191942d242b2759bd5cb50495cc4576b35f365575b0398db4be8"
+    },
+    {
+      "name": "root_cause_service",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "inject_time",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "path",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "metadata",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "owners",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "service_names",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "metric_names",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "old_predictions",
+      "reason": "request_fields_must_be_values_and_configs",
+      "raw_sha256": "527976e92cb7501214a1bd0bd1de260051d5c06d5b0daa297177901f127c0fbe"
+    },
+    {
+      "name": "missing-config",
+      "reason": "all_nine_registered_seed_bin_configs_required",
+      "raw_sha256": "7c9051dd6d6d5390576ea6f6d3957a7e604cd4f66d216e27d5b3487cf8f8c375"
+    },
+    {
+      "name": "duplicate-config",
+      "reason": "all_nine_configs_must_occur_once",
+      "raw_sha256": "ea1b7998ed237ef1e34f4ae586e26ff5ee8075ff5fb2f07d21032c1f44399d01"
+    },
+    {
+      "name": "unregistered-seed",
+      "reason": "unregistered_seed_or_bins",
+      "raw_sha256": "864060bf453f1ff3a669880f75a38c7baa3f6f7f2cb485820b83330a22ad5fde"
+    },
+    {
+      "name": "string-value",
+      "reason": "grid_requires_numbers_without_objects_strings_or_booleans",
+      "raw_sha256": "6bf2fc447c17ce570841334be5bac5e194f7a0c7195021d149329368c63e07ab"
+    }
+  ],
+  "model_predictions_for_rejected_requests": false
+}

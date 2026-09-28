@@ -1,0 +1,777 @@
+{
+  "identity": {
+    "schema": "TD13-C5-DEVELOPMENT-v1",
+    "variant": "primary",
+    "handle": "45e43770afa33cef",
+    "source": {
+      "status": "MATERIALIZED",
+      "numeric_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c5_primary.npz",
+      "numeric_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+      "case_audit_sha256": "b735750bb67bf0a4983bc003d5afd836db7f6a910104d460c8ce548bb44c8e09",
+      "profile": "primary",
+      "cutoff": 1440,
+      "graph_sha256": "d3f6a5ca38a7aa8d762685af51252ad9febe61e430dd4bd9362890da496c56aa"
+    },
+    "configs": [
+      {
+        "arm": "G",
+        "modalities": "MTL",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "G",
+        "modalities": "MTL",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "G",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "G",
+        "modalities": "MT",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "G",
+        "modalities": "MT",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "G",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MTL",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MTL",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MT",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MT",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "L",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MTL",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MTL",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MT",
+        "lambda": 0.1,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MT",
+        "lambda": 1.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 24,
+        "cal_bins": 12
+      }
+    ],
+    "contract_sha256": "d6ec57947c9caaf2ac0b5783780ce642249c38cf76c7b6de3781a0e71eec78bd"
+  },
+  "artifacts": [
+    {
+      "file": "predictions.npz",
+      "sha256": "26ae0482e736f7489223d73d92707e6b5d30d91824e860cd2b03607ac04771d0",
+      "bytes": 21680988
+    },
+    {
+      "file": "frozen-models.npz",
+      "sha256": "6d5061df8afbbeb98f5a3cb106e52fa408571144080f43e910efc80477f2be5d",
+      "bytes": 4700373
+    },
+    {
+      "file": "numeric-input.npz",
+      "sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+      "bytes": 218583
+    }
+  ],
+  "failed_configs": [],
+  "tv_failures": [],
+  "worker_input_contract": "exact warmup then one bin; no labels/paths/epochs",
+  "worker_handshake": {
+    "schema": "TD13-NUMERIC-WIRE-v1",
+    "project_modules": [
+      "scripts.task_e.detection",
+      "scripts.task_e.ranking"
+    ],
+    "isolation": "NUMERIC_API_AND_PROCESS_NOT_HOSTILE_OS_SANDBOX"
+  },
+  "capacity": [
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 34,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 2.31809976630344,
+      "active_columns_mean": 2.182186234817814,
+      "centered_design_rank_mean": 2.182186234817814,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 35,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 1.593521057865336,
+      "active_columns_mean": 2.182186234817814,
+      "centered_design_rank_mean": 2.182186234817814,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 38,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 1.2215519638927785,
+      "active_columns_mean": 2.182186234817814,
+      "centered_design_rank_mean": 2.182186234817814,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 34,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1128982945827.6418,
+      "effective_df_mean": 2.2905933520830586,
+      "active_columns_mean": 2.185022026431718,
+      "centered_design_rank_mean": 2.185022026431718,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 35,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1128982945827.6418,
+      "effective_df_mean": 1.5538705841422948,
+      "active_columns_mean": 2.185022026431718,
+      "centered_design_rank_mean": 2.185022026431718,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 38,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1128982945827.6418,
+      "effective_df_mean": 1.1811775510571587,
+      "active_columns_mean": 2.185022026431718,
+      "centered_design_rank_mean": 2.185022026431718,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 44,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 1.6811635496249557,
+      "active_columns_mean": 0.9392712550607287,
+      "centered_design_rank_mean": 0.9392712550607287,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 43,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 1.3141386579235106,
+      "active_columns_mean": 0.9392712550607287,
+      "centered_design_rank_mean": 0.9392712550607287,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 42,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1204187614853.5437,
+      "effective_df_mean": 1.0927725488220241,
+      "active_columns_mean": 0.9392712550607287,
+      "centered_design_rank_mean": 0.9392712550607287,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 43,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1123676515684.0835,
+      "effective_df_mean": 1.6653935478485233,
+      "active_columns_mean": 0.933920704845815,
+      "centered_design_rank_mean": 0.933920704845815,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 42,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1123676515684.0835,
+      "effective_df_mean": 1.3003392976384907,
+      "active_columns_mean": 0.933920704845815,
+      "centered_design_rank_mean": 0.933920704845815,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 41,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1123676515684.0835,
+      "effective_df_mean": 1.0827531838370201,
+      "active_columns_mean": 0.933920704845815,
+      "centered_design_rank_mean": 0.933920704845815,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 30,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1209803328320.041,
+      "effective_df_mean": 2.296387329586622,
+      "active_columns_mean": 3.2874493927125505,
+      "centered_design_rank_mean": 2.1093117408906883,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 31,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1209803328306.041,
+      "effective_df_mean": 1.7060904710827782,
+      "active_columns_mean": 3.2874493927125505,
+      "centered_design_rank_mean": 2.1093117408906883,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 247,
+      "applicable_channels": 247,
+      "fit_models": 247,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 61,
+      "residual_floor_scales": 33,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1209803328302.166,
+      "effective_df_mean": 1.33636610932505,
+      "active_columns_mean": 3.2874493927125505,
+      "centered_design_rank_mean": 2.1093117408906883,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 179
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 129
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 30,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1080792292761.2274,
+      "effective_df_mean": 2.251444171109623,
+      "active_columns_mean": 3.3127753303964758,
+      "centered_design_rank_mean": 2.118942731277533,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 31,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1080792292796.2274,
+      "effective_df_mean": 1.6415427139383894,
+      "active_columns_mean": 3.3127753303964758,
+      "centered_design_rank_mean": 2.118942731277533,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 227,
+      "applicable_channels": 227,
+      "fit_models": 227,
+      "singleton_scales": 0,
+      "constant_scales": 15,
+      "floor_scales": 58,
+      "residual_floor_scales": 33,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 1080792292803.6024,
+      "effective_df_mean": 1.2601654268112394,
+      "active_columns_mean": 3.3127753303964758,
+      "centered_design_rank_mean": 2.118942731277533,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 191
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 148
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    }
+  ],
+  "status": "COMPLETE",
+  "fit_seconds": 1.2556042000069283,
+  "score_seconds": 14.859134399623144,
+  "seconds": 17.973211299977265,
+  "completed_score_bins": 252,
+  "planned_score_bins": 252,
+  "prediction_sealed_before_evaluator": true,
+  "completed_worker_calls": 252
+}

@@ -1,0 +1,679 @@
+{
+  "phase": "BEFORE C5 amendment/implementation or new development outcome",
+  "mission_sha256": "0109696102a7945375433833b3c6051d593714139b9e9627c8ce2cb3950c8adb",
+  "TD_v12_sha256": "985f1c5fc983422272dfbde8b69ed5ff98ee4fdd1631af075d03788c3770ad54",
+  "TD_snapshot": "D:\\Project\\flash-ticket-rca-research\\task-d\\td-v1.2-before-c5-amendment.md",
+  "P_README_sha256": "3646cb1b6e8da832e8b9513fd8318d749f7f5f6788b5d3223eda7f5a9a662274",
+  "prior_task_files": [
+    {
+      "root": "P",
+      "relative_path": "docs/evidence/project-direction/2026-09-27-rca-development-preflight.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\evidence\\project-direction\\2026-09-27-rca-development-preflight.md",
+      "action": "CREATED",
+      "bytes": 15648,
+      "sha256": "40b181fb0f66b4ad65b4243a9ff9c617a680696f0aac90284fae598069658466",
+      "purpose": "Verbatim mission and human scoped authorization"
+    },
+    {
+      "root": "P",
+      "relative_path": "docs/project/decision-register.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\project\\decision-register.md",
+      "action": "MODIFIED",
+      "bytes": 296392,
+      "sha256": "b7968bb8daeab24fc9b1f589282e69a565be7c4f7724904417e6ebc1ac764cd3",
+      "purpose": "Append canonical registration of RCA subregister"
+    },
+    {
+      "root": "P",
+      "relative_path": "docs/research-rca/ARTIFACT-MAP.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\ARTIFACT-MAP.md",
+      "action": "MODIFIED",
+      "bytes": 30289,
+      "sha256": "7c70865429700e68c6526fd991e339addd0f75ed00a02be77b423e28b520a9a1",
+      "purpose": "Current TaskE evidence paths and qualification limits"
+    },
+    {
+      "root": "P",
+      "relative_path": "docs/research-rca/CURRENT-STATE.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\CURRENT-STATE.md",
+      "action": "MODIFIED",
+      "bytes": 7092,
+      "sha256": "25b661b11ce3265b50fb3ddcdf0244543f39c9402e0de6c4416020ea4626c040",
+      "purpose": "Live RETURN TO D checkpoint; historical state preserved"
+    },
+    {
+      "root": "P",
+      "relative_path": "docs/research-rca/RESEARCH-DECISIONS.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\RESEARCH-DECISIONS.md",
+      "action": "MODIFIED",
+      "bytes": 16115,
+      "sha256": "02fbbcf4457cd4144478193f4e649f9916eb17b87eca73a5553b586d584a8ab1",
+      "purpose": "Append atomic human-confirmed RCA043-048"
+    },
+    {
+      "root": "P",
+      "relative_path": "docs/research-rca/task-e-handoff.md",
+      "absolute_path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-e-handoff.md",
+      "action": "CREATED",
+      "bytes": 9275,
+      "sha256": "eb0b9433f4e95a34a61113f028270adaf5d694de1e3f77ef80ca705aca1916a5",
+      "purpose": "Canonical execution/failure/remaining-work synthesis"
+    },
+    {
+      "root": "W",
+      "relative_path": ".gitignore",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\.gitignore",
+      "action": "CREATED",
+      "bytes": 222,
+      "sha256": "b4e688b603502405f8ecdd2a517923297ddbab7c16a91fafb29fccf4e447a834",
+      "purpose": "Exclude new raw/env/caches; preserve tracked historical raw"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/rcd-td12.patch",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\rcd-td12.patch",
+      "action": "CREATED",
+      "bytes": 354,
+      "sha256": "472685d2513a47cefce36640d9de3e21769923f85de48f7cf6feec43e2ae8838",
+      "purpose": "Declared two-line time-drop-after-split patch; no realRCD run"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/task-e-source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\task-e-source-manifest.json",
+      "action": "CREATED",
+      "bytes": 14570,
+      "sha256": "f63c6224168d82613ef0a0b1d7c99f18fc94613895b4346528a3a80ba29b2c68",
+      "purpose": "Pinned upstream identities/licenses/declared fidelity deltas"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8/LICENSE",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8\\LICENSE",
+      "action": "CREATED",
+      "bytes": 1066,
+      "sha256": "9f2c6bb71f29569d5547e52b207bdf10743fbc1943fbe3b5ae200041f3d787e6",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8/REQUIREMENTS.md",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8\\REQUIREMENTS.md",
+      "action": "CREATED",
+      "bytes": 818,
+      "sha256": "d4229714dbb56976bb6b245c4e861a2451442bc8c3e6f0d1f860b1d4c03a127a",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8/baro/root_cause_analysis.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\baro-e35f4ec1095e5cac891d52de9ad18a5b32a37ec8\\baro\\root_cause_analysis.py",
+      "action": "CREATED",
+      "bytes": 9812,
+      "sha256": "b8459f50d8d1b40445cfe2a3d9dc1c47f82984bde88f1e3c562b3b7ef1ec1cf9",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/LICENSES/LICENSE-BARO",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\LICENSES\\LICENSE-BARO",
+      "action": "CREATED",
+      "bytes": 1066,
+      "sha256": "9f2c6bb71f29569d5547e52b207bdf10743fbc1943fbe3b5ae200041f3d787e6",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/LICENSES/LICENSE-RCD",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\LICENSES\\LICENSE-RCD",
+      "action": "CREATED",
+      "bytes": 1065,
+      "sha256": "9e71f9277846b06991c7121d015186cc21e155c3bc521ec4287fe085ea07da29",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/RCAEval/e2e/__init__.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\RCAEval\\e2e\\__init__.py",
+      "action": "CREATED",
+      "bytes": 8564,
+      "sha256": "0343cad183ff6699624c1f82780f6c001c8701904d912ae5f58a0a0fac303961",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/RCAEval/e2e/baro.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\RCAEval\\e2e\\baro.py",
+      "action": "CREATED",
+      "bytes": 6138,
+      "sha256": "bdccf114baf3e9a8554d1b9b07997736fa374af18412d3ab367e2ea0f32ba1e6",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/RCAEval/e2e/rcd.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\RCAEval\\e2e\\rcd.py",
+      "action": "CREATED",
+      "bytes": 13100,
+      "sha256": "e6a7df13e4f3256b45da0713b07b6bf41fb9178333e31397701ab2f08872f628",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/RCAEval/e2e/rcd_td12.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\RCAEval\\e2e\\rcd_td12.py",
+      "action": "CREATED",
+      "bytes": 13198,
+      "sha256": "036946005d53e5c6a11e2a4b5c099f2194ab104f15df8fd74d74668827278393",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/RCAEval/io/time_series.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\RCAEval\\io\\time_series.py",
+      "action": "CREATED",
+      "bytes": 3079,
+      "sha256": "e6c1e2ee5f3a98308182bdd3de72a4f03d950bfc1511385dce532797688fbbb0",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/docs/SETUP.md",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\docs\\SETUP.md",
+      "action": "CREATED",
+      "bytes": 3960,
+      "sha256": "36790423c71d8a02a6812c1dbb3d6a2aec302182d44aa264e7a7ae9dd898e560",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/lib/causallearn/LICENSE",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\lib\\causallearn\\LICENSE",
+      "action": "CREATED",
+      "bytes": 1065,
+      "sha256": "9e71f9277846b06991c7121d015186cc21e155c3bc521ec4287fe085ea07da29",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/lib/causallearn/graph/GraphClass.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\lib\\causallearn\\graph\\GraphClass.py",
+      "action": "CREATED",
+      "bytes": 11596,
+      "sha256": "1d75e73450d635a89c929b67e88644d6b9a175a560c25a24294cd99944f54635",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/lib/causallearn/search/ConstraintBased/FCI.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\lib\\causallearn\\search\\ConstraintBased\\FCI.py",
+      "action": "CREATED",
+      "bytes": 38715,
+      "sha256": "8b4acd094cdc1d83b4e15a3c1408a3817209000294c0124b464c2a00c944e54a",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/lib/causallearn/utils/Fas.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\lib\\causallearn\\utils\\Fas.py",
+      "action": "CREATED",
+      "bytes": 19914,
+      "sha256": "4f7e07434dc09e8335cfecdf5ad340d24fe57530daa0bf0bb0d2eaaa5520ddb5",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/lib/causallearn/utils/PCUtils/SkeletonDiscovery.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\lib\\causallearn\\utils\\PCUtils\\SkeletonDiscovery.py",
+      "action": "CREATED",
+      "bytes": 8394,
+      "sha256": "96b65269d34c89f1eb750eec7adf56c07f56404acf02594faa6d2fa40bc8e3c4",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/requirements_rcd.lock",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\requirements_rcd.lock",
+      "action": "CREATED",
+      "bytes": 2861,
+      "sha256": "3b23d870bb9365dc9d100235175b50b8680e2d5b182f366e5ccef3ad17edf804",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42/script/link.sh",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcaeval-7600283af1ea5e2e9fff6f07124951d0e989de42\\script\\link.sh",
+      "action": "CREATED",
+      "bytes": 597,
+      "sha256": "8f1eba5cb3b723d468b9af3b3f489e21052626ac9b691c7cce4c2ed738b60714",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409/README.md",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409\\README.md",
+      "action": "CREATED",
+      "bytes": 2235,
+      "sha256": "5f1c2f675a9d1d6f281fefed53b86174d05c8b396850c980234e4a7266de4c92",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409/rcd.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409\\rcd.py",
+      "action": "CREATED",
+      "bytes": 5116,
+      "sha256": "6bb012cf71f67b7536cc7215a32c13206298c7fc5a3715a4a8a80057559e78ea",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "baselines/upstream/rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409/requirements.txt",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\baselines\\upstream\\rcd-original-373882c6982db7a999ec1ff99ea54c644a48b409\\requirements.txt",
+      "action": "CREATED",
+      "bytes": 269,
+      "sha256": "5f9c56324fee2ca0d1832593e9bf67e9ceb53f671810fe585b381893440eb69e",
+      "purpose": "Pinned upstream source/license; original or explicitly patched copy, not executed runtime"
+    },
+    {
+      "root": "W",
+      "relative_path": "configs/task-e-td12-development.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\configs\\task-e-td12-development.json",
+      "action": "CREATED",
+      "bytes": 4884,
+      "sha256": "fb423ffe2ae02a9e0a496b47277b266d70c0bc3533951ffc487df315595d4f84",
+      "purpose": "Exact development IDs/folds/finite registry; C5 policy explicitly OPEN"
+    },
+    {
+      "root": "W",
+      "relative_path": "environments/task-e-requirements.lock.txt",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\environments\\task-e-requirements.lock.txt",
+      "action": "CREATED",
+      "bytes": 535,
+      "sha256": "7a4dac1786023b2456d9e26d45e4cacd4d939c299f2ee354cee67936a66b002f",
+      "purpose": "Existing Python environment versions, not qualified RCD environment"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/adjudication.md",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\adjudication.md",
+      "action": "CREATED",
+      "bytes": 14995,
+      "sha256": "8e0a309240daf84804e484bff27aca736d6178c6eb792d074c857de6c6cb4cbb",
+      "purpose": "Post-run synthesis,14questions,RETURN TO D and nextgate"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/baseline-fidelity.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\baseline-fidelity.json",
+      "action": "CREATED",
+      "bytes": 705,
+      "sha256": "93d2cbffefd26fe346c109724fe246df84e6b9524e722cba0a9dcb631e6c63a0",
+      "purpose": "Source/interface qualification versus realruntimeOPEN"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\execution.log",
+      "action": "CREATED",
+      "bytes": 2036,
+      "sha256": "bb5138195baf15366bb7215a12f4b9ac41b8cf07da7cabbdec21071648d73ca1",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/failures.jsonl",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\failures.jsonl",
+      "action": "CREATED",
+      "bytes": 4451,
+      "sha256": "805e2531d129275e4b5a3087869a3756b4c168c42e74a346499aeec0831c04ea",
+      "purpose": "Append-only categorized failure/limitation/closure ledger"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/final-validation.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\final-validation.json",
+      "action": "CREATED",
+      "bytes": 10328,
+      "sha256": "e1a118120fc09e900317f3378faa5ec73ffd7e0b4dbaecefe63613f9203228d8",
+      "purpose": "69source/preservation/receipt checks plus governance result"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/fixture-report.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\fixture-report.json",
+      "action": "CREATED",
+      "bytes": 2139,
+      "sha256": "f7dd46df1b7beb45cf537d746c0fdc5d168610a076abe41d04f8c76ecdf3f52c",
+      "purpose": "Actual bounded synthetic test outcomes, errors and examples"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/governance-validation.txt",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\governance-validation.txt",
+      "action": "CREATED",
+      "bytes": 646,
+      "sha256": "950a55f5f7827b4644d3ef883533633b6d91db84896a940ab09990260df3928e",
+      "purpose": "Required repository governance audit log"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/loader-audit.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\loader-audit.json",
+      "action": "CREATED",
+      "bytes": 3738,
+      "sha256": "9e26494ce6d98ce5adf765f6b1f1c5944cf1ee660ef9e6515f0fb756d2ae25e3",
+      "purpose": "Wave1 two-existing-sample facts and5verifiedrawhashes, not full30qualification"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/resources.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\resources.json",
+      "action": "CREATED",
+      "bytes": 1536,
+      "sha256": "60a3e3db74258bc2240f38190e1354e768f6d2959663d8d17e8d4040027ddb7a",
+      "purpose": "All6attempt timings and explicit unmeasured runtime/memory"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/review.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\review.json",
+      "action": "CREATED",
+      "bytes": 4680,
+      "sha256": "037cba8d07049d720b230d481fce000f0e31f74b17a70882011273120aae722e",
+      "purpose": "Actual reviewers/roles/independence limits/finding closure"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4551,
+      "sha256": "5434e693f2cde104c82483e19425aa825ccecb655351bd7994380e1420f16768",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-001-synthetic/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 54984,
+      "sha256": "381c7025ed23e72c9a67d8917236edf5b47c04b2ebc7d2c7f5218f9d6ff0bb95",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-002-boundary/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-002-boundary\\execution.log",
+      "action": "CREATED",
+      "bytes": 1234,
+      "sha256": "413408694bb438f3d37b148221950c05adf433bcaa7c08456b7cec16d2573cc1",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-002-boundary/leakage-audit.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-002-boundary\\leakage-audit.json",
+      "action": "CREATED",
+      "bytes": 475,
+      "sha256": "07584cb94a56ff4d2c4e6341967ef0545801b6206a4a8d638a766d39af383c5e",
+      "purpose": "Actual bounded synthetic/mocked boundary outcomes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-002-boundary/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-002-boundary\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4132,
+      "sha256": "1d489b18290a28a694ce4c51cfeedb13c7fb8838047d0a69304a409335212555",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-002-boundary/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-002-boundary\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 56049,
+      "sha256": "55dda6360b2105dfcb5a7418078184ac02f5e341a5eab58c7e6ea9034317fb29",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-003-math-fix/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-003-math-fix\\execution.log",
+      "action": "CREATED",
+      "bytes": 2197,
+      "sha256": "3e2d65d083280d2b0e3f36c231d9503e1e25fbfcf74b6a111d8c4c1dff3dec1d",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-003-math-fix/fixture-report.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-003-math-fix\\fixture-report.json",
+      "action": "CREATED",
+      "bytes": 2139,
+      "sha256": "9873168359d3aaeb30219fca72afccb7226e818ee28e7b2ee3db369021dec4e6",
+      "purpose": "Actual bounded synthetic test outcomes, errors and examples"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-003-math-fix/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-003-math-fix\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4562,
+      "sha256": "1af9028742d8dc3ccf63a434ba6096358afb75b566635b7b7022dd58345e20ea",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-003-math-fix/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-003-math-fix\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 55590,
+      "sha256": "383bcb1108e5cb07023232c796b831227dd801be94cd5a274f7f98820e78abb2",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-004-math-review/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-004-math-review\\execution.log",
+      "action": "CREATED",
+      "bytes": 3082,
+      "sha256": "cb28d4e02ca48a701550945bbcd8505ce4af4799bb62fe674cd02eba13976cd1",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-004-math-review/fixture-report.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-004-math-review\\fixture-report.json",
+      "action": "CREATED",
+      "bytes": 2623,
+      "sha256": "e70c233ccd9d6b0bf13aaa7ed1019c66d841d4ced423d9fa3a5e0fc17c5dc0ea",
+      "purpose": "Actual bounded synthetic test outcomes, errors and examples"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-004-math-review/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-004-math-review\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4580,
+      "sha256": "cdbea6755fda79281bac1e2b8a640dd3ee33c2adbaf81fcbc46939765777b9eb",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-004-math-review/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-004-math-review\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 57385,
+      "sha256": "b4f58218e82d386772229303ca0509a86cdd5bc19c6e3e7f6ca927be11738432",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-005-math-closure/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-005-math-closure\\execution.log",
+      "action": "CREATED",
+      "bytes": 2491,
+      "sha256": "66bf75c1a48b33acadbda9b338fb7f7b5b5e3fa58062f490f08023342bf4e636",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-005-math-closure/fixture-report.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-005-math-closure\\fixture-report.json",
+      "action": "CREATED",
+      "bytes": 2215,
+      "sha256": "e23208e1af63dea21ccf0c3ffa8830ec23fe2c193e36cf550ca2d150cb5b2aff",
+      "purpose": "Actual bounded synthetic test outcomes, errors and examples"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-005-math-closure/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-005-math-closure\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4524,
+      "sha256": "ec896fa5e4dc6ba276010df18cb22cbfd30a0267ea926f172ec950265c077f10",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-005-math-closure/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-005-math-closure\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 58651,
+      "sha256": "dffcd9b844f1114270664b265227ea3b7245ce5f347e90ed91c264a95ac01f21",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-006-boundary-closure/execution.log",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-006-boundary-closure\\execution.log",
+      "action": "CREATED",
+      "bytes": 1871,
+      "sha256": "9f2f5d84b9154045d16a4e68959ae1b902f3a11f26025bd861ce4613ef7911cd",
+      "purpose": "Preserved stdout/stderr including failed attempts"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-006-boundary-closure/leakage-audit.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-006-boundary-closure\\leakage-audit.json",
+      "action": "CREATED",
+      "bytes": 477,
+      "sha256": "bdde270594b2ffd9039901849a766781f4d40a906e950f50fbbb8bc16c037ad1",
+      "purpose": "Actual bounded synthetic/mocked boundary outcomes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-006-boundary-closure/run-contract.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-006-boundary-closure\\run-contract.json",
+      "action": "CREATED",
+      "bytes": 4127,
+      "sha256": "614d1d67ac17adc4a90023a72215eeb50a243473f9ac49e1d8206e309e662d90",
+      "purpose": "Pre-execution source/data/config/environment/Git identity"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/e27-006-boundary-closure/source-manifest.json",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-006-boundary-closure\\source-manifest.json",
+      "action": "CREATED",
+      "bytes": 61394,
+      "sha256": "6276f83178649a45586971d6561fae2878b9f2bd7cb996618a4d18e32517b866",
+      "purpose": "Complete source text snapshots with original byte hashes"
+    },
+    {
+      "root": "W",
+      "relative_path": "results/task-e/preflight-plan.md",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\preflight-plan.md",
+      "action": "CREATED",
+      "bytes": 10939,
+      "sha256": "0cc62f881a44056d582d853bcd70c2099b05e02162535b2950cc3bc352d30495",
+      "purpose": "Approved exact impact map and pre-outcome smoke scope"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/acquire.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\acquire.py",
+      "action": "CREATED",
+      "bytes": 10433,
+      "sha256": "7ba08ef3db82cf8bee55309374b02da14f740c7c3c0974bb9640e40c3c4da153",
+      "purpose": "Pinned exact89 development telemetry allowlist; downloader not invoked"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/comparators.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\comparators.py",
+      "action": "CREATED",
+      "bytes": 5417,
+      "sha256": "dfcb4a70a78ddffbb9c9e35c59be9fd98cd2ed60739ae28d7cd1d0dd9a50c3e5",
+      "purpose": "Declared BARO adaptation and RCD injected-callable interface; runtime unqualified"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/contract.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\contract.py",
+      "action": "CREATED",
+      "bytes": 7536,
+      "sha256": "b5d0b43524fdb60555e2e7bd22ffebc0a4fa9224ad4d591a6539ba3188fcb389",
+      "purpose": "Pre-execution identities/config/auth snapshot; trusted controller"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/evaluator.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\evaluator.py",
+      "action": "CREATED",
+      "bytes": 2927,
+      "sha256": "73b1b4cbd0fcdda157d1d018614633dba72756a96423e445f64a966efcfe7511",
+      "purpose": "Tie-aware ranking/denominator/partial baseline mapping utilities"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/loader.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\loader.py",
+      "action": "CREATED",
+      "bytes": 23605,
+      "sha256": "60a2d35a9487668a34fcef711ee0b0db7c22091da2e4bd808fc2eed0daaa4b07",
+      "purpose": "Trusted telemetry mapping/windows/masks; bounded C1 fixtures; C5 unqualified"
+    },
+    {
+      "root": "W",
+      "relative_path": "scripts/task_e/ranking.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\ranking.py",
+      "action": "CREATED",
+      "bytes": 17054,
+      "sha256": "1b671310d326502ff0be9864c4e1ef8dcf52674a1810342687f896ac4d1b17ed",
+      "purpose": "Numeric local/PPR/diffusion/structural controls; bounded math fixtures"
+    },
+    {
+      "root": "W",
+      "relative_path": "tests/task_e/test_firewall.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_firewall.py",
+      "action": "CREATED",
+      "bytes": 11186,
+      "sha256": "e217c742ca133e9dffed859be5dce7fd9b07df0b5946bf92a65604ccc0e4ac7f",
+      "purpose": "Synthetic bundle and mocked boundary fixtures; not full firewall"
+    },
+    {
+      "root": "W",
+      "relative_path": "tests/task_e/test_math.py",
+      "absolute_path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_math.py",
+      "action": "CREATED",
+      "bytes": 16468,
+      "sha256": "3eeaee8df860ed758e0f5daca30a53ed66bfbe1ae6e4a2b53bb82ae58f10ce46",
+      "purpose": "Analytic bounded math/adversarial regressions and C5 applicability example"
+    }
+  ],
+  "repos": {
+    "flash-ticket-platform": {
+      "head": "3d7ec9d824d12c98dc233705ef50908b62adf235",
+      "branch": "codex/rca-research-program",
+      "status": "M README.md\n M docs/project/decision-register.md\n M docs/research-rca/ARTIFACT-MAP.md\n M docs/research-rca/CURRENT-STATE.md\n M docs/research-rca/RESEARCH-DECISIONS.md\n?? docs/evidence/project-direction/2026-09-27-rca-c5-amendment-and-e-resume.md\n?? docs/evidence/project-direction/2026-09-27-rca-development-preflight.md\n?? docs/research-rca/task-e-handoff.md"
+    },
+    "flash-ticket-rca-research": {
+      "head": "f49859df7664758f1143a1033535da7f6f29d7d6",
+      "branch": "main",
+      "status": "?? .gitignore\n?? baselines/\n?? configs/\n?? environments/\n?? results/task-e/\n?? scripts/task_e/\n?? task-d/td-v1.2-before-c5-amendment.md\n?? tests/"
+    }
+  },
+  "previous_manifest_entries_verified": 73
+}

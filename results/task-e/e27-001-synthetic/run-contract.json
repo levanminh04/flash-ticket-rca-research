@@ -1,0 +1,118 @@
+{
+  "schema": "TD12-E-RUN-v1",
+  "run_id": "e27-001-synthetic",
+  "stage": "BOUNDED SYNTHETIC FALSIFICATION; C5 REAL RUN HELD",
+  "created_before_execution_utc": "2026-09-26T18:33:52.271168+00:00",
+  "authorization": {
+    "source": "D:\\Project\\flash-ticket-platform\\docs\\evidence\\project-direction\\2026-09-27-rca-development-preflight.md",
+    "sha256": "40b181fb0f66b4ad65b4243a9ff9c617a680696f0aac90284fae598069658466",
+    "decision_ids": [
+      "RCA-043",
+      "RCA-044",
+      "RCA-045",
+      "RCA-046",
+      "RCA-047",
+      "RCA-048"
+    ]
+  },
+  "td": {
+    "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-d-method-and-experiment-specification.md",
+    "sha256": "985f1c5fc983422272dfbde8b69ed5ff98ee4fdd1631af075d03788c3770ad54"
+  },
+  "git": {
+    "flash-ticket-platform": {
+      "head": "3d7ec9d824d12c98dc233705ef50908b62adf235",
+      "branch": "codex/rca-research-program",
+      "status": "M README.md\n M docs/project/decision-register.md\n M docs/research-rca/CURRENT-STATE.md\n M docs/research-rca/RESEARCH-DECISIONS.md\n?? docs/evidence/project-direction/2026-09-27-rca-development-preflight.md"
+    },
+    "flash-ticket-rca-research": {
+      "head": "f49859df7664758f1143a1033535da7f6f29d7d6",
+      "branch": "main",
+      "status": "?? .gitignore\n?? baselines/\n?? configs/\n?? environments/\n?? results/task-e/\n?? scripts/task_e/\n?? tests/"
+    }
+  },
+  "source_files": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\contract.py",
+      "sha256": "b5d0b43524fdb60555e2e7bd22ffebc0a4fa9224ad4d591a6539ba3188fcb389",
+      "bytes": 7536
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\evaluator.py",
+      "sha256": "429634753d50bc10cc579e991236b7bb918ad6339525da9c957b0430e5d13fe8",
+      "bytes": 2730
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\ranking.py",
+      "sha256": "1b671310d326502ff0be9864c4e1ef8dcf52674a1810342687f896ac4d1b17ed",
+      "bytes": 17054
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\comparators.py",
+      "sha256": "dfcb4a70a78ddffbb9c9e35c59be9fd98cd2ed60739ae28d7cd1d0dd9a50c3e5",
+      "bytes": 5417
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_math.py",
+      "sha256": "52e0bb7fbbd183c3830c9461c193e48d39ce0a3f1dfd65d4704691a76ca74193",
+      "bytes": 13063
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\configs\\task-e-td12-development.json",
+      "sha256": "fb423ffe2ae02a9e0a496b47277b266d70c0bc3533951ffc487df315595d4f84",
+      "bytes": 4884
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\environments\\task-e-requirements.lock.txt",
+      "sha256": "7a4dac1786023b2456d9e26d45e4cacd4d939c299f2ee354cee67936a66b002f",
+      "bytes": 535
+    }
+  ],
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "inputs": [],
+  "command": [
+    "D:\\Project\\flash-ticket-rca-research\\.venv\\Scripts\\python.exe",
+    "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_math.py",
+    "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-001-synthetic"
+  ],
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "D:\\Project\\flash-ticket-rca-research\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "click": "8.5.0",
+    "colorama": "0.4.6",
+    "filelock": "4.0.1",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.6.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.32.0",
+    "idna": "3.20",
+    "numpy": "2.5.3",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pip": "25.0.1",
+    "pyarrow": "25.0.1",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "six": "1.17.0",
+    "tqdm": "4.70.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4"
+  },
+  "hardware": {
+    "cpu": "Intel Core i5-1240P",
+    "physical_cores": 12,
+    "logical_processors": 16,
+    "ram_bytes": 16849293312
+  },
+  "seeds": {
+    "fixtures": "deterministic fixed arrays; PCG64 seeds explicit in code"
+  },
+  "exposure": "SYNTHETIC ONLY unless exact actual input files listed; no final outcomes",
+  "output_schema": "fixture-report.json: tests, failures, errors, counterexamples; stdout/stderr logs",
+  "limitations": "API/process isolation is not hostile-code OS filesystem sandboxing"
+}

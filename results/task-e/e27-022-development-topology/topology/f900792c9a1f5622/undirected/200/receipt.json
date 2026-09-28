@@ -1,0 +1,4473 @@
+{
+  "identity": {
+    "schema": "TD13-DEVELOPMENT-TOPOLOGY-v1",
+    "handle": "f900792c9a1f5622",
+    "representation": "undirected",
+    "budget": 200,
+    "chains": 256,
+    "source": {
+      "case_audit_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\f900792c9a1f5622.json",
+      "case_audit_sha256": "9696aa4a04c29ce0a06b4ebff42a0095042fa82caf9c5b1ecc3e6b8946d82561",
+      "audit_contract_sha256": "7f5b4b57b14dd00b4f70e03b43493e87a7a7f1502df88866030034c5e05016fd",
+      "numeric_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_primary.npz",
+      "numeric_sha256": "345854da660c753ba915e716d733b0329d8a745dc5d7a3e309e7041e7a9756cb",
+      "observed_adjacency_sha256": "e14689a8e0fae7b904c9760e23f779a5d3e9101e99c0401d4dccd0e224c69ae2"
+    },
+    "run_contract_sha256": "f5ed4c97437d211795212773adb447233cd34938f179dbca3e9f93682e822ba4"
+  },
+  "status": "COMPLETE",
+  "summary": {
+    "representation": "undirected",
+    "planned": 256,
+    "completed": 256,
+    "failed": 0,
+    "budget": 200,
+    "edges": 20,
+    "proposals_per_draw": 4000,
+    "distinct_final_graphs": 256,
+    "median_retained_edge_fraction": 0.4,
+    "mobile": true,
+    "degenerate": false,
+    "total_proposals": 1024000,
+    "isolates": 2,
+    "isolate_indices": [
+      2,
+      3
+    ],
+    "components": [
+      [
+        0,
+        5,
+        13
+      ],
+      [
+        1,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      [
+        2
+      ],
+      [
+        3
+      ],
+      [
+        6,
+        7
+      ]
+    ],
+    "independent_invariants": true,
+    "mean_acceptance_rate": 0.37567871093749994
+  },
+  "method_summary": {
+    "representation": "undirected",
+    "planned": 256,
+    "completed": 256,
+    "failed": 0,
+    "budget": 200,
+    "edges": 20,
+    "proposals_per_draw": 4000,
+    "partition": [
+      0,
+      1,
+      2,
+      3,
+      1,
+      0,
+      6,
+      6,
+      1,
+      1,
+      1,
+      1,
+      1,
+      0,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "component_sizes": {
+      "0": 3,
+      "1": 13,
+      "2": 1,
+      "3": 1,
+      "6": 2
+    },
+    "distinct_final_graphs": 256,
+    "median_retained_edge_fraction": 0.4,
+    "mobile": true,
+    "degenerate": false
+  },
+  "per_draw": [
+    {
+      "draw": 0,
+      "seed": 15536533980112213866,
+      "proposals": 4000,
+      "accepted": 1517,
+      "acceptance_rate": 0.37925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 754,
+        "existing_edge": 611,
+        "component_partition": 1118
+      },
+      "hash": "a002b561c778774a86f613bdf58210f5eb7f82a894ae513de050a466d4a9299e",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 1,
+      "seed": 10939862811767551540,
+      "proposals": 4000,
+      "accepted": 1483,
+      "acceptance_rate": 0.37075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 821,
+        "existing_edge": 584,
+        "component_partition": 1112
+      },
+      "hash": "2c4af08f6ff9202c8fe901651a678471b2322f19eb578a7fe9c08277fe4a0c17",
+      "invariants": true,
+      "retained_edge_fraction": 0.2,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 2,
+      "seed": 10492437699836259252,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 727,
+        "existing_edge": 619,
+        "component_partition": 1167
+      },
+      "hash": "c4bb2b67e2e6887f20838d08f13783e92412dc30fab8ab5e37ee38f964c3e20b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 3,
+      "seed": 5662226407584667959,
+      "proposals": 4000,
+      "accepted": 1444,
+      "acceptance_rate": 0.361,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 699,
+        "existing_edge": 632,
+        "component_partition": 1225
+      },
+      "hash": "7740985a3423ffd25a10bf2a497ce767e72c23d635c6c37410ff3b4a5b69ed94",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 4,
+      "seed": 15554799068541691827,
+      "proposals": 4000,
+      "accepted": 1448,
+      "acceptance_rate": 0.362,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 783,
+        "existing_edge": 633,
+        "component_partition": 1136
+      },
+      "hash": "994592011fb77a3f4883c3c12ff1e31f615539c3b68483228f3f04bc8537b194",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 5,
+      "seed": 9177475935122992971,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 759,
+        "existing_edge": 613,
+        "component_partition": 1141
+      },
+      "hash": "11d1771902cc95e8387b90ebce12f4642a0322cc54d9775ab54d86e7da953cb2",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 6,
+      "seed": 10895665193858240509,
+      "proposals": 4000,
+      "accepted": 1511,
+      "acceptance_rate": 0.37775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 741,
+        "existing_edge": 612,
+        "component_partition": 1136
+      },
+      "hash": "88c744ce920cb53efc7c126d782562641ceb156168e3a76a0c2cb7529a378f90",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 7,
+      "seed": 10957588459867246677,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 766,
+        "existing_edge": 641,
+        "component_partition": 1093
+      },
+      "hash": "d5731675b6872bc76cca8d38e06fc69cd9398b8b8d77261875ac5596d855b7eb",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 8,
+      "seed": 13263904538299304569,
+      "proposals": 4000,
+      "accepted": 1474,
+      "acceptance_rate": 0.3685,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 600,
+        "component_partition": 1165
+      },
+      "hash": "725b1b8724b80a02d99e1a078402eecf480a4a4b9eeeedaa8133ef10b8518432",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 9,
+      "seed": 3843415324041971616,
+      "proposals": 4000,
+      "accepted": 1557,
+      "acceptance_rate": 0.38925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 598,
+        "component_partition": 1084
+      },
+      "hash": "3addd70eb58d2cca36f763bc6fb5811b80f0e1209a668c82de3eaaad4b5730d9",
+      "invariants": true,
+      "retained_edge_fraction": 0.6,
+      "changed_node_fraction": 0.5
+    },
+    {
+      "draw": 10,
+      "seed": 7482488498258947198,
+      "proposals": 4000,
+      "accepted": 1555,
+      "acceptance_rate": 0.38875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 579,
+        "component_partition": 1091
+      },
+      "hash": "8284dd09bd229e2b6c2ba76b2d593a59dea723d79906eb706fca774eb921f8c3",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 11,
+      "seed": 8202304399637654880,
+      "proposals": 4000,
+      "accepted": 1518,
+      "acceptance_rate": 0.3795,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 596,
+        "component_partition": 1123
+      },
+      "hash": "5ef06063263d7ade15dc47efaf177b81a4d19726757d026766de0937149d92eb",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 12,
+      "seed": 15750765248951825592,
+      "proposals": 4000,
+      "accepted": 1469,
+      "acceptance_rate": 0.36725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 795,
+        "existing_edge": 636,
+        "component_partition": 1100
+      },
+      "hash": "83fb9e54bbe378b07f66ec485ab900a62ae86a65d70f02a5a737993f4ed8393e",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 13,
+      "seed": 11202093564210886650,
+      "proposals": 4000,
+      "accepted": 1518,
+      "acceptance_rate": 0.3795,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 686,
+        "existing_edge": 638,
+        "component_partition": 1158
+      },
+      "hash": "ec778d1736b862bc6082904d94cf21522ddaa1e418ebfe5570f77a4969465260",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 14,
+      "seed": 17114401131168993171,
+      "proposals": 4000,
+      "accepted": 1530,
+      "acceptance_rate": 0.3825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 615,
+        "component_partition": 1095
+      },
+      "hash": "6507c201c02a13ff6895c995730245a1875baa7236deef54bf6d77acd21beb48",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 15,
+      "seed": 17551657410961888254,
+      "proposals": 4000,
+      "accepted": 1522,
+      "acceptance_rate": 0.3805,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 734,
+        "existing_edge": 642,
+        "component_partition": 1102
+      },
+      "hash": "64a93132eda51ab1294475eb6c22cdea67b90c184fac7cf34bee5eb75389826e",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 16,
+      "seed": 856702788935882418,
+      "proposals": 4000,
+      "accepted": 1508,
+      "acceptance_rate": 0.377,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 750,
+        "existing_edge": 648,
+        "component_partition": 1094
+      },
+      "hash": "82f773dcde66ae67c3c92c6b05b657f90e774bbedf02242533cc6ee68d2c5cab",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 17,
+      "seed": 6602931060999878693,
+      "proposals": 4000,
+      "accepted": 1560,
+      "acceptance_rate": 0.39,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 740,
+        "existing_edge": 614,
+        "component_partition": 1086
+      },
+      "hash": "f47a95adec462de2e240a8ff470e7b995e465886c7bfbf463bf1d8307deb0bc6",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 18,
+      "seed": 16751138504257787967,
+      "proposals": 4000,
+      "accepted": 1524,
+      "acceptance_rate": 0.381,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 667,
+        "component_partition": 1034
+      },
+      "hash": "65e864ba5ecd39e1ff460af8c34f8b7c55d2bf6f6dc0dd480169552983c92f47",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 19,
+      "seed": 1131355646836078478,
+      "proposals": 4000,
+      "accepted": 1526,
+      "acceptance_rate": 0.3815,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 602,
+        "component_partition": 1136
+      },
+      "hash": "f5bf150fb99ec1ce59eb65571470b8fc2dd8e68198a6d1e5bd87f3bd227ed265",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 20,
+      "seed": 10937986158514946779,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 750,
+        "existing_edge": 632,
+        "component_partition": 1136
+      },
+      "hash": "d44b537654343c2578fd23e57ca273ec66a6e89db8f24f73243260c28fb0d66c",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 21,
+      "seed": 2858537699091171742,
+      "proposals": 4000,
+      "accepted": 1501,
+      "acceptance_rate": 0.37525,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 785,
+        "existing_edge": 600,
+        "component_partition": 1114
+      },
+      "hash": "5be9001c234a7da3236e1cc54885f1706ebc8df4d54497a30ae89bbef847ad2a",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 22,
+      "seed": 9914384940862851842,
+      "proposals": 4000,
+      "accepted": 1505,
+      "acceptance_rate": 0.37625,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 746,
+        "existing_edge": 608,
+        "component_partition": 1141
+      },
+      "hash": "34f57eed120233c0a2ac433c70a353e94c867d30eb1a7e811a5dcefb7bfb18ee",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 23,
+      "seed": 15653349317657164330,
+      "proposals": 4000,
+      "accepted": 1520,
+      "acceptance_rate": 0.38,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 646,
+        "component_partition": 1056
+      },
+      "hash": "94d6da834f224b085329a37e4e6f8644a3381ed70e4b0c966f921e80f93a793e",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 24,
+      "seed": 815200969713491130,
+      "proposals": 4000,
+      "accepted": 1510,
+      "acceptance_rate": 0.3775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 721,
+        "existing_edge": 644,
+        "component_partition": 1125
+      },
+      "hash": "d5f675006989f8a851dad4f23b0c3db56f64b7df8575a2d19837c365d8cc6b46",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 25,
+      "seed": 16153030805572930850,
+      "proposals": 4000,
+      "accepted": 1491,
+      "acceptance_rate": 0.37275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 642,
+        "component_partition": 1116
+      },
+      "hash": "1e7a1839f4096fc5148dab2d65f1a6aa8e4a41af8ecd79237a789e8427ff263f",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 26,
+      "seed": 5770182513505621078,
+      "proposals": 4000,
+      "accepted": 1516,
+      "acceptance_rate": 0.379,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 608,
+        "component_partition": 1118
+      },
+      "hash": "69715af332c362675a034331e985936cd0e070c09c4f92fd247d21b62c4f64b6",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 27,
+      "seed": 650406318360055014,
+      "proposals": 4000,
+      "accepted": 1463,
+      "acceptance_rate": 0.36575,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 771,
+        "existing_edge": 636,
+        "component_partition": 1130
+      },
+      "hash": "39667b009d011ded2116f56261e90aeaa5ca51d4f044e7518dcabe9277fefc3e",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 28,
+      "seed": 17612970031733982567,
+      "proposals": 4000,
+      "accepted": 1451,
+      "acceptance_rate": 0.36275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 774,
+        "existing_edge": 599,
+        "component_partition": 1176
+      },
+      "hash": "becbd7c5ee48d6a50c287b30823fde33dc859da2653e9080b54cd927ac38516b",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 29,
+      "seed": 2278729888605244790,
+      "proposals": 4000,
+      "accepted": 1521,
+      "acceptance_rate": 0.38025,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 579,
+        "component_partition": 1149
+      },
+      "hash": "b68506e99b0923a0bcb4677ec1682191c13b113d92450cd71312726304c9bf92",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 30,
+      "seed": 12224385442958316638,
+      "proposals": 4000,
+      "accepted": 1566,
+      "acceptance_rate": 0.3915,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 565,
+        "component_partition": 1112
+      },
+      "hash": "7b9643fa662a89812cc8bffc7c080541efd667ba3a60c7137c871511a5788aee",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 31,
+      "seed": 15949635873304978871,
+      "proposals": 4000,
+      "accepted": 1497,
+      "acceptance_rate": 0.37425,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 745,
+        "existing_edge": 608,
+        "component_partition": 1150
+      },
+      "hash": "f341dfdbcdf7becbf1458658879b947f1082f1a058289f35e3a3872041f311f4",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 32,
+      "seed": 1902204725220490914,
+      "proposals": 4000,
+      "accepted": 1506,
+      "acceptance_rate": 0.3765,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 785,
+        "existing_edge": 597,
+        "component_partition": 1112
+      },
+      "hash": "352d18a2d7c5b1e2f5d3db4c689e29603648c5c6392d82506873503b140c86bb",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 33,
+      "seed": 2860705526765514327,
+      "proposals": 4000,
+      "accepted": 1462,
+      "acceptance_rate": 0.3655,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 790,
+        "existing_edge": 593,
+        "component_partition": 1155
+      },
+      "hash": "ba6f56781be18b06228601ef9662497672e010d1760bb34157aa6f33c9dc799e",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 34,
+      "seed": 4532694261839769784,
+      "proposals": 4000,
+      "accepted": 1455,
+      "acceptance_rate": 0.36375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 788,
+        "existing_edge": 614,
+        "component_partition": 1143
+      },
+      "hash": "53de6a628e6dd0129901f774fb7290e5ea0e0ae33714bf9021accc4615b44103",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 35,
+      "seed": 1492387741238651444,
+      "proposals": 4000,
+      "accepted": 1483,
+      "acceptance_rate": 0.37075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 586,
+        "component_partition": 1180
+      },
+      "hash": "c986398ad3b0a27951b931bcb3ee1d9915537c1a088083e9648d9237e63c9aef",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 36,
+      "seed": 16655823040880869054,
+      "proposals": 4000,
+      "accepted": 1519,
+      "acceptance_rate": 0.37975,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 712,
+        "existing_edge": 669,
+        "component_partition": 1100
+      },
+      "hash": "4978effa0d4906582f5c787069f296ffe3791024031f3d1c111729dc9c5fa5a8",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 37,
+      "seed": 4287660627284155752,
+      "proposals": 4000,
+      "accepted": 1437,
+      "acceptance_rate": 0.35925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 633,
+        "component_partition": 1172
+      },
+      "hash": "73c5220efec664ac398077a40ea925b3a5d547a06a875d7866993f50d98541e6",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 38,
+      "seed": 3432151827887891902,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 787,
+        "existing_edge": 578,
+        "component_partition": 1135
+      },
+      "hash": "c86b4790022c2380c0a168570b0e0c2fec0218754f0b5cbb9bec4840922fe800",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 39,
+      "seed": 7412439409823049406,
+      "proposals": 4000,
+      "accepted": 1490,
+      "acceptance_rate": 0.3725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 624,
+        "component_partition": 1128
+      },
+      "hash": "2649f15b66786f47b74c69f961b88fccea2eee775257b8b2e627a7871e8f61a6",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 40,
+      "seed": 18289106718444678731,
+      "proposals": 4000,
+      "accepted": 1475,
+      "acceptance_rate": 0.36875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 825,
+        "existing_edge": 602,
+        "component_partition": 1098
+      },
+      "hash": "becf4ec4c137a042063a55b95bfd28de1fb435ef817adf098a3ddf3589f92567",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 41,
+      "seed": 4423072049802204036,
+      "proposals": 4000,
+      "accepted": 1546,
+      "acceptance_rate": 0.3865,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 717,
+        "existing_edge": 615,
+        "component_partition": 1122
+      },
+      "hash": "4a7a95cf7625c90838c63ab47d901056177afbffaeed9d73c65c241b611f98db",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 42,
+      "seed": 17473920817886800849,
+      "proposals": 4000,
+      "accepted": 1528,
+      "acceptance_rate": 0.382,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 722,
+        "existing_edge": 604,
+        "component_partition": 1146
+      },
+      "hash": "cdb8e05484e1168a3b70968ec4e790039cc5ddd584fbcbf10027f42e1faef7dd",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 43,
+      "seed": 13140080117407403335,
+      "proposals": 4000,
+      "accepted": 1523,
+      "acceptance_rate": 0.38075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 604,
+        "component_partition": 1116
+      },
+      "hash": "ce3f259a015a86499d8fa66b69d5f60182be805e04eb4fadf935bc0981225e7e",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 44,
+      "seed": 9159208321142254491,
+      "proposals": 4000,
+      "accepted": 1513,
+      "acceptance_rate": 0.37825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 583,
+        "component_partition": 1141
+      },
+      "hash": "b2e5b82ca3e5edf6d9af66a16f5ca5fa1ff477216a9680d20a81e06d809d3f4a",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 45,
+      "seed": 11296448269952678124,
+      "proposals": 4000,
+      "accepted": 1551,
+      "acceptance_rate": 0.38775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 743,
+        "existing_edge": 594,
+        "component_partition": 1112
+      },
+      "hash": "1a05ea7887c2b99735ece9c929a4f85612ef424b69426bd60e76b20c9164a353",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 46,
+      "seed": 10574429047225812692,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 614,
+        "component_partition": 1129
+      },
+      "hash": "b273826960125e4205270ae50cfae27cfcc9bde3c1a4cc48c5955fbc3512963d",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 47,
+      "seed": 10901914256000644336,
+      "proposals": 4000,
+      "accepted": 1489,
+      "acceptance_rate": 0.37225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 621,
+        "component_partition": 1154
+      },
+      "hash": "f4a780a589c3bfa5b6e84d4898587a447ba9abb03ffa4fb808c625b041036d3e",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 48,
+      "seed": 266991931737805642,
+      "proposals": 4000,
+      "accepted": 1491,
+      "acceptance_rate": 0.37275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 762,
+        "existing_edge": 659,
+        "component_partition": 1088
+      },
+      "hash": "e84f0a7815772123778bec1a5b6874f4a460755d7b66a945637e724c710b3c54",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 49,
+      "seed": 7330561868665955759,
+      "proposals": 4000,
+      "accepted": 1526,
+      "acceptance_rate": 0.3815,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 759,
+        "existing_edge": 611,
+        "component_partition": 1104
+      },
+      "hash": "2ba36aead7e2de9f9e2d6d59f3e00b9e80ec0169c826ac8efdec845847826af9",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 50,
+      "seed": 9379152630195493594,
+      "proposals": 4000,
+      "accepted": 1547,
+      "acceptance_rate": 0.38675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 773,
+        "existing_edge": 584,
+        "component_partition": 1096
+      },
+      "hash": "f8e3127fe92b90b435e31135242cb96f812fedc5a9f7e481723d7227a6d1331a",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 51,
+      "seed": 844878676775261565,
+      "proposals": 4000,
+      "accepted": 1567,
+      "acceptance_rate": 0.39175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 734,
+        "existing_edge": 593,
+        "component_partition": 1106
+      },
+      "hash": "8e4ddd329b81c14e2343879a40b1ff56ed6099a2139f83475e834d21c893b9cc",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 52,
+      "seed": 11159939907464481442,
+      "proposals": 4000,
+      "accepted": 1563,
+      "acceptance_rate": 0.39075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 741,
+        "existing_edge": 599,
+        "component_partition": 1097
+      },
+      "hash": "480173bc6040d4991de4cd91e2c782a7b9a2e1de782aaf4af87cab60fca465ea",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 53,
+      "seed": 6735616431122484056,
+      "proposals": 4000,
+      "accepted": 1489,
+      "acceptance_rate": 0.37225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 579,
+        "component_partition": 1154
+      },
+      "hash": "d958cfbf889996cafd07abcc47f6c1f5e56bd4fad6924acc865f752760636af0",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 54,
+      "seed": 15479937974535562127,
+      "proposals": 4000,
+      "accepted": 1536,
+      "acceptance_rate": 0.384,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 583,
+        "component_partition": 1130
+      },
+      "hash": "45c22241fd96e690a3e7060b2c46d48bb3b3f720ea29b1a2dce5da357cefc8ff",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 55,
+      "seed": 5718176153509981258,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 781,
+        "existing_edge": 579,
+        "component_partition": 1153
+      },
+      "hash": "c8041333ab28f3df4fd3cab18f3672eb4985d2e3d8c39a06c28b3f602421be58",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 56,
+      "seed": 1870290959406439177,
+      "proposals": 4000,
+      "accepted": 1506,
+      "acceptance_rate": 0.3765,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 793,
+        "existing_edge": 602,
+        "component_partition": 1099
+      },
+      "hash": "3295c77c3b62533048a53281a5f8140f285263dbc49c374c92991019937d9d4f",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 57,
+      "seed": 17793643355264223889,
+      "proposals": 4000,
+      "accepted": 1555,
+      "acceptance_rate": 0.38875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 737,
+        "existing_edge": 614,
+        "component_partition": 1094
+      },
+      "hash": "95bed653ca578936b3ba90571da594c96a37c8513a72d28ec5f94b751379f58a",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 58,
+      "seed": 17873948391555709163,
+      "proposals": 4000,
+      "accepted": 1533,
+      "acceptance_rate": 0.38325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 777,
+        "existing_edge": 628,
+        "component_partition": 1062
+      },
+      "hash": "28ee3836d91c3fd27e7afd7335b9a2eb333f6773ebe6581b449857f812c40353",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 59,
+      "seed": 5383358286851030292,
+      "proposals": 4000,
+      "accepted": 1485,
+      "acceptance_rate": 0.37125,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 619,
+        "component_partition": 1118
+      },
+      "hash": "809c53a281ccdf48e7c2d93f5f953016d69a4648cffa036472bf924faf5558ab",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 60,
+      "seed": 288260036820997970,
+      "proposals": 4000,
+      "accepted": 1543,
+      "acceptance_rate": 0.38575,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 642,
+        "component_partition": 1057
+      },
+      "hash": "8af684a638d03fe36ce5a6670b22bf3eb02560eb9eed870a82afb1b28e6a8be4",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 61,
+      "seed": 6287270902479563514,
+      "proposals": 4000,
+      "accepted": 1427,
+      "acceptance_rate": 0.35675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 772,
+        "existing_edge": 645,
+        "component_partition": 1156
+      },
+      "hash": "9fb22bd571eec4eb94ad8d2fb8745a9d91d00e97aea0a74f6a850dc9ff64db2d",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 62,
+      "seed": 14772406205406008098,
+      "proposals": 4000,
+      "accepted": 1505,
+      "acceptance_rate": 0.37625,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 767,
+        "existing_edge": 606,
+        "component_partition": 1122
+      },
+      "hash": "b4d238e80faae53a861a157106f4da839ace2f12385b796d56597ef6e6fb2eee",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 63,
+      "seed": 10279162510751069311,
+      "proposals": 4000,
+      "accepted": 1505,
+      "acceptance_rate": 0.37625,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 632,
+        "component_partition": 1103
+      },
+      "hash": "777835422a65d5540dc4a219ca5babbbdd0dd84d86e00d41d4544651586da5e5",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 64,
+      "seed": 18256349588985512914,
+      "proposals": 4000,
+      "accepted": 1516,
+      "acceptance_rate": 0.379,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 558,
+        "component_partition": 1169
+      },
+      "hash": "29883307eef248cbd53bbc2b9672b6d32cf18eebe1c7f5f20a316079696d9b0a",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 65,
+      "seed": 3479662426646916757,
+      "proposals": 4000,
+      "accepted": 1418,
+      "acceptance_rate": 0.3545,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 863,
+        "existing_edge": 649,
+        "component_partition": 1070
+      },
+      "hash": "e2faec74600290220cd6201f727415c050ed2acd12a6608188eb9b08938b0a61",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 66,
+      "seed": 15974849853922084381,
+      "proposals": 4000,
+      "accepted": 1480,
+      "acceptance_rate": 0.37,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 738,
+        "existing_edge": 634,
+        "component_partition": 1148
+      },
+      "hash": "b9bd94fb9543f661558d287ee48af7e4305954593ce9da82fa5af8dbb7ba4949",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 67,
+      "seed": 5717513233992689420,
+      "proposals": 4000,
+      "accepted": 1508,
+      "acceptance_rate": 0.377,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 772,
+        "existing_edge": 586,
+        "component_partition": 1134
+      },
+      "hash": "b51cd4cf99edefbe6eac2471f9274ecd4ee2d1ddb487ef08de0fd0263b8ce559",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 68,
+      "seed": 10615662905464910843,
+      "proposals": 4000,
+      "accepted": 1555,
+      "acceptance_rate": 0.38875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 734,
+        "existing_edge": 620,
+        "component_partition": 1091
+      },
+      "hash": "f75378a4334bfb525e7a45c3c25db8bbb7b58cb310fa7a8a1a02cd299c300ea4",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 69,
+      "seed": 12196996104919019360,
+      "proposals": 4000,
+      "accepted": 1555,
+      "acceptance_rate": 0.38875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 727,
+        "existing_edge": 592,
+        "component_partition": 1126
+      },
+      "hash": "6e41feea0f1d64355e86f07ec199e83404f8091528a8aa9d4ab5c3a50ab03364",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 70,
+      "seed": 3444585151506179698,
+      "proposals": 4000,
+      "accepted": 1524,
+      "acceptance_rate": 0.381,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 619,
+        "component_partition": 1100
+      },
+      "hash": "d58029ae31c50fab47c06fcfe2705116f3f65e988fa871c0596cf45cc47d98c6",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 71,
+      "seed": 15342775248984120119,
+      "proposals": 4000,
+      "accepted": 1528,
+      "acceptance_rate": 0.382,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 723,
+        "existing_edge": 620,
+        "component_partition": 1129
+      },
+      "hash": "8d1fcd912d363303971d04831a53a0bbd114330254e57d431322ceb364794cde",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 72,
+      "seed": 6606533758080466794,
+      "proposals": 4000,
+      "accepted": 1504,
+      "acceptance_rate": 0.376,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 619,
+        "component_partition": 1117
+      },
+      "hash": "35f0d561caa6a5a91a09a58e0f6bb1075123c1b827207ae8763eb5b2cced4d73",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 73,
+      "seed": 3169143425733639152,
+      "proposals": 4000,
+      "accepted": 1506,
+      "acceptance_rate": 0.3765,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 740,
+        "existing_edge": 650,
+        "component_partition": 1104
+      },
+      "hash": "3c22dfa5640912e980291dcc1177f2ccb18a6a6045664368ed4fc135096edbe3",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 74,
+      "seed": 3780776196419654117,
+      "proposals": 4000,
+      "accepted": 1492,
+      "acceptance_rate": 0.373,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 787,
+        "existing_edge": 578,
+        "component_partition": 1143
+      },
+      "hash": "98166840882a14be345e6f9648c15f24895cb29d3a1b729b1808de8614e2acc4",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 75,
+      "seed": 7172617721434766763,
+      "proposals": 4000,
+      "accepted": 1524,
+      "acceptance_rate": 0.381,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 621,
+        "component_partition": 1095
+      },
+      "hash": "1b0eba991b8b696765c460cfeda8e047dd4ee1bea4cd905d4f644ba08b98f263",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 76,
+      "seed": 2275996844097447862,
+      "proposals": 4000,
+      "accepted": 1491,
+      "acceptance_rate": 0.37275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 748,
+        "existing_edge": 592,
+        "component_partition": 1169
+      },
+      "hash": "d67ce8582258e4c7347c37715e0a5699cd1e38a1cdfe89bf50f1d9205f7b4624",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 77,
+      "seed": 13228180610965140011,
+      "proposals": 4000,
+      "accepted": 1488,
+      "acceptance_rate": 0.372,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 765,
+        "existing_edge": 611,
+        "component_partition": 1136
+      },
+      "hash": "997e644bda842903a1f1e655a3669e8e200d29b1c4ee58877dcad1d5cbb08eb8",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 78,
+      "seed": 8260174286221570280,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 770,
+        "existing_edge": 636,
+        "component_partition": 1107
+      },
+      "hash": "b1fa1689cb78dab908f66765769542aec6c5fa43ce2ff4991fa6a2014cf38b3a",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 79,
+      "seed": 14869836140581914850,
+      "proposals": 4000,
+      "accepted": 1493,
+      "acceptance_rate": 0.37325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 664,
+        "component_partition": 1086
+      },
+      "hash": "a9703563f87be8107bc031a7169cbaa7ec2d638bd74d8627d91cbcea872b9c56",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 80,
+      "seed": 14250545129205233756,
+      "proposals": 4000,
+      "accepted": 1484,
+      "acceptance_rate": 0.371,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 616,
+        "component_partition": 1122
+      },
+      "hash": "1f2d9251429bf10e3c645a7f09922612075679eed8003fd5496546b9afe6e4ef",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 81,
+      "seed": 1071353673190342506,
+      "proposals": 4000,
+      "accepted": 1467,
+      "acceptance_rate": 0.36675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 816,
+        "existing_edge": 613,
+        "component_partition": 1104
+      },
+      "hash": "d434bbcd18be4513fab13e8008c6edb3e1d73b269c7079db481a4a4dafc73284",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 82,
+      "seed": 13113087152477917869,
+      "proposals": 4000,
+      "accepted": 1534,
+      "acceptance_rate": 0.3835,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 601,
+        "component_partition": 1110
+      },
+      "hash": "47528a3c4b68f10c9128bf4323ba160e837288babf7e2fdf3d01f6dd8fab923b",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 83,
+      "seed": 12055358077069801465,
+      "proposals": 4000,
+      "accepted": 1501,
+      "acceptance_rate": 0.37525,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 603,
+        "component_partition": 1138
+      },
+      "hash": "591e8c9802d1abd28e9719e2b69c52f4757087c2760394c307f1d95a6cc7b6d6",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 84,
+      "seed": 9076503067815665687,
+      "proposals": 4000,
+      "accepted": 1480,
+      "acceptance_rate": 0.37,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 743,
+        "existing_edge": 600,
+        "component_partition": 1177
+      },
+      "hash": "f4b5a3b8029b756e6a5d6ab5cb0b2750c72020c9eaac39582df3d3d0c62d7465",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 85,
+      "seed": 15589794901743329268,
+      "proposals": 4000,
+      "accepted": 1552,
+      "acceptance_rate": 0.388,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 784,
+        "existing_edge": 603,
+        "component_partition": 1061
+      },
+      "hash": "2af84dcaa9e1eedd107cb2c42b1a1e0574e87f4a5439800d0b3e2141aaefe656",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 86,
+      "seed": 10624984918541395561,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 734,
+        "existing_edge": 625,
+        "component_partition": 1141
+      },
+      "hash": "ef33bfc1bc6382dbfeb325a1ae17be62e40a8c8cd24549d38eacd1e09bae1160",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 87,
+      "seed": 4114352644141172186,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 584,
+        "component_partition": 1147
+      },
+      "hash": "b458e4a34c364ab1d758ebf77ce15174c39ee8f1fa5d3a3ea0660adfee22e57d",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 88,
+      "seed": 1039187860598098473,
+      "proposals": 4000,
+      "accepted": 1509,
+      "acceptance_rate": 0.37725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 740,
+        "existing_edge": 611,
+        "component_partition": 1140
+      },
+      "hash": "a47caff4622a0b5ff6a842fc904ef162c876a847ae7e16b247afe6d923dc7989",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 89,
+      "seed": 9101418620448097560,
+      "proposals": 4000,
+      "accepted": 1467,
+      "acceptance_rate": 0.36675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 774,
+        "existing_edge": 620,
+        "component_partition": 1139
+      },
+      "hash": "eceeb0a37dcb4b99d88d580977d69095612b5da8d0105851cac492691d12b559",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 90,
+      "seed": 14416129169720421405,
+      "proposals": 4000,
+      "accepted": 1509,
+      "acceptance_rate": 0.37725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 625,
+        "component_partition": 1130
+      },
+      "hash": "c4e668f89bf99e44f30b3fb11891d567bf978117ec5ec44f98bf495a1ca0dd0c",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 91,
+      "seed": 10713150662395384834,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 782,
+        "existing_edge": 604,
+        "component_partition": 1132
+      },
+      "hash": "544a2ba9eef524b2ea7b29e707a312b30feb4f5fac6f8eb0e169eb4991ca8987",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 92,
+      "seed": 703625130564669775,
+      "proposals": 4000,
+      "accepted": 1499,
+      "acceptance_rate": 0.37475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 798,
+        "existing_edge": 595,
+        "component_partition": 1108
+      },
+      "hash": "4eb1c40c8e5f3b4f6fb590bdfd460319181168380e1ce797c1d356d64eb28d61",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 93,
+      "seed": 18039542470361286970,
+      "proposals": 4000,
+      "accepted": 1494,
+      "acceptance_rate": 0.3735,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 813,
+        "existing_edge": 631,
+        "component_partition": 1062
+      },
+      "hash": "f3bf5cc6c7adf7e85956022b23e93e9c4d178c343e863a2a3fedf8d2fac83069",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 94,
+      "seed": 6224672639189125571,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 620,
+        "component_partition": 1132
+      },
+      "hash": "e7b23a6b41bef29633f19f4b7170cade1ab7926153b6409c7afafba1a3f44697",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 95,
+      "seed": 1862990084568145978,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 742,
+        "existing_edge": 604,
+        "component_partition": 1140
+      },
+      "hash": "8ba1ce2330214bfccb7f1860b88094694b3c1e625459238283b044fa3d5b43a6",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 96,
+      "seed": 16183735987712010043,
+      "proposals": 4000,
+      "accepted": 1512,
+      "acceptance_rate": 0.378,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 699,
+        "existing_edge": 640,
+        "component_partition": 1149
+      },
+      "hash": "4c651c8a898d4f4294353b0740df01e980c46915c8643c60a5b7635f1949e566",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 97,
+      "seed": 10330361158165898403,
+      "proposals": 4000,
+      "accepted": 1501,
+      "acceptance_rate": 0.37525,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 762,
+        "existing_edge": 603,
+        "component_partition": 1134
+      },
+      "hash": "7771c8a758274a89b42c479b8969bb2b17691434521c7b69ea51d3d0c3c65f89",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 98,
+      "seed": 15467739846973994945,
+      "proposals": 4000,
+      "accepted": 1524,
+      "acceptance_rate": 0.381,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 770,
+        "existing_edge": 596,
+        "component_partition": 1110
+      },
+      "hash": "ac680e42e3fd87df1b63269320b7ec908b8ad6e7abd5d45b1bdb351e60adb448",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 99,
+      "seed": 8230803193265103237,
+      "proposals": 4000,
+      "accepted": 1552,
+      "acceptance_rate": 0.388,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 804,
+        "existing_edge": 589,
+        "component_partition": 1055
+      },
+      "hash": "bf02fa7410328f73f091340f324fce3560dced95280589d3e2f1e95d684c36df",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 100,
+      "seed": 4959006630343050883,
+      "proposals": 4000,
+      "accepted": 1459,
+      "acceptance_rate": 0.36475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 759,
+        "existing_edge": 645,
+        "component_partition": 1137
+      },
+      "hash": "24278cd8b96e8ca6e1b81e3cc01b0bc7b3c7f5bce7935785efbf81afdb4ebb77",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 101,
+      "seed": 22038651786773700,
+      "proposals": 4000,
+      "accepted": 1483,
+      "acceptance_rate": 0.37075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 787,
+        "existing_edge": 616,
+        "component_partition": 1114
+      },
+      "hash": "30d436c5b4969d54b884c1979faa14641faabb9192135b3b43a9025b62a1df2b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 102,
+      "seed": 15501897842661787595,
+      "proposals": 4000,
+      "accepted": 1520,
+      "acceptance_rate": 0.38,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 756,
+        "existing_edge": 599,
+        "component_partition": 1125
+      },
+      "hash": "72983bd039a88caf38cde89452617def685b8b31beaf990d5dc1dca6e4b6deb8",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 103,
+      "seed": 4560079662176662932,
+      "proposals": 4000,
+      "accepted": 1478,
+      "acceptance_rate": 0.3695,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 646,
+        "component_partition": 1121
+      },
+      "hash": "50d418ef14594c014e663c2b22e62c33ed96699bab08416ee45f1af7a738b316",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 104,
+      "seed": 14672168542692448943,
+      "proposals": 4000,
+      "accepted": 1494,
+      "acceptance_rate": 0.3735,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 662,
+        "component_partition": 1083
+      },
+      "hash": "d4924e4258686b8138abfbf520234527b87c358f3581d461ba3e28784ea2400b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 105,
+      "seed": 5179550927196469822,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 773,
+        "existing_edge": 595,
+        "component_partition": 1145
+      },
+      "hash": "40d50cd9805b052531de167d0d5d307de27fb465fea4de0226f6c9ab2c41d7ff",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 106,
+      "seed": 14089456993908658822,
+      "proposals": 4000,
+      "accepted": 1518,
+      "acceptance_rate": 0.3795,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 606,
+        "component_partition": 1125
+      },
+      "hash": "6d9a7a3017c9641f0405cc829381b7d4278952b0a0c03100b27fb46793413a10",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 107,
+      "seed": 2190383385798732119,
+      "proposals": 4000,
+      "accepted": 1532,
+      "acceptance_rate": 0.383,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 745,
+        "existing_edge": 657,
+        "component_partition": 1066
+      },
+      "hash": "ee0abc70982680f4d71accfa105abbe28b5e84329c68ed24745588626e3d0a97",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 108,
+      "seed": 16997275152400481260,
+      "proposals": 4000,
+      "accepted": 1509,
+      "acceptance_rate": 0.37725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 771,
+        "existing_edge": 615,
+        "component_partition": 1105
+      },
+      "hash": "8bf6515ffc36d9c9d6daf95f0d708059172c80048518581e5094a994e83443e2",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 109,
+      "seed": 8258963694264646775,
+      "proposals": 4000,
+      "accepted": 1520,
+      "acceptance_rate": 0.38,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 721,
+        "existing_edge": 656,
+        "component_partition": 1103
+      },
+      "hash": "3023c565082c1062987c27b5bed40b4312699e62b4eea59538ba8970e32d92a5",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 110,
+      "seed": 11898704547797751997,
+      "proposals": 4000,
+      "accepted": 1496,
+      "acceptance_rate": 0.374,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 771,
+        "existing_edge": 603,
+        "component_partition": 1130
+      },
+      "hash": "1c36f9f6e577ecfa24a3576443bdc762cd482c6d7f7ede15586abd39e4286836",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 111,
+      "seed": 3502796285485707843,
+      "proposals": 4000,
+      "accepted": 1521,
+      "acceptance_rate": 0.38025,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 721,
+        "existing_edge": 599,
+        "component_partition": 1159
+      },
+      "hash": "402464bc8a9ae06bac12149c08cc2bf3cd83e8522f089fca11f4cd4ea9a4d8e9",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 112,
+      "seed": 3435486359121341918,
+      "proposals": 4000,
+      "accepted": 1517,
+      "acceptance_rate": 0.37925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 708,
+        "existing_edge": 667,
+        "component_partition": 1108
+      },
+      "hash": "b3b95d645a866760cef4105dab5fe020d9eb65b5c670935f9c53be46d009f00e",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 113,
+      "seed": 3732892829239980837,
+      "proposals": 4000,
+      "accepted": 1523,
+      "acceptance_rate": 0.38075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 643,
+        "component_partition": 1073
+      },
+      "hash": "b4281dd5597582f3a2b9fd495a09e91cb02630d91429ee65b6136a19cfdea4b5",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 114,
+      "seed": 5877106199548049680,
+      "proposals": 4000,
+      "accepted": 1531,
+      "acceptance_rate": 0.38275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 770,
+        "existing_edge": 614,
+        "component_partition": 1085
+      },
+      "hash": "cb7306174b6b5e7111067eaf3315f80faf8cdf620d2c8bd23f93338bdf820732",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 115,
+      "seed": 7709536915737511871,
+      "proposals": 4000,
+      "accepted": 1489,
+      "acceptance_rate": 0.37225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 762,
+        "existing_edge": 594,
+        "component_partition": 1155
+      },
+      "hash": "8c0006b8971fbca1d990f97f76e3efcf59ea5ee6c10e6de8b84d0ce92a12f407",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 116,
+      "seed": 11085509053352583135,
+      "proposals": 4000,
+      "accepted": 1485,
+      "acceptance_rate": 0.37125,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 625,
+        "component_partition": 1133
+      },
+      "hash": "bd6a5a1874a60d7c64445823153f92cc81639bbef2632cf5dbfc55bdfdde25b9",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 117,
+      "seed": 15116717464531134436,
+      "proposals": 4000,
+      "accepted": 1513,
+      "acceptance_rate": 0.37825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 748,
+        "existing_edge": 596,
+        "component_partition": 1143
+      },
+      "hash": "605e214cc949566cd407394728aaf5d7930fd5acb211c3bcd90fca9934f66538",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 118,
+      "seed": 10126467374337575916,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 803,
+        "existing_edge": 628,
+        "component_partition": 1055
+      },
+      "hash": "e292274659014c3cc5db2ed18320c14a8f1c74a3af64d1f02baf5303fe12d0de",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 119,
+      "seed": 9776861445634707513,
+      "proposals": 4000,
+      "accepted": 1485,
+      "acceptance_rate": 0.37125,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 779,
+        "existing_edge": 629,
+        "component_partition": 1107
+      },
+      "hash": "376cee1e759c5829d26c9777c6ba0ecefc628da32f8a230257fd504f6fd1afa4",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 120,
+      "seed": 7635951029951354428,
+      "proposals": 4000,
+      "accepted": 1540,
+      "acceptance_rate": 0.385,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 752,
+        "existing_edge": 633,
+        "component_partition": 1075
+      },
+      "hash": "d5a1661586cad1130fe8765fb0f5a3872bf403ab39f0833c2833daacd531ff91",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 121,
+      "seed": 12893427113967053650,
+      "proposals": 4000,
+      "accepted": 1481,
+      "acceptance_rate": 0.37025,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 788,
+        "existing_edge": 626,
+        "component_partition": 1105
+      },
+      "hash": "4c64f32c292b6b5d2663431c004e89c4c66200c66a37cf8b42b18c21f163f1d3",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 122,
+      "seed": 4308239972060230048,
+      "proposals": 4000,
+      "accepted": 1552,
+      "acceptance_rate": 0.388,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 756,
+        "existing_edge": 583,
+        "component_partition": 1109
+      },
+      "hash": "dfc63aab1d9efa22d2c870b4b693bdb8a987d60cd7a737ae657a5cf4f99dc244",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 123,
+      "seed": 5225308042656238436,
+      "proposals": 4000,
+      "accepted": 1492,
+      "acceptance_rate": 0.373,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 766,
+        "existing_edge": 605,
+        "component_partition": 1137
+      },
+      "hash": "ac4352abf694b8e58416e9091e30c4df9e40136b3c4b9803a5fff1ec7b95b44f",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 124,
+      "seed": 3402925209342158126,
+      "proposals": 4000,
+      "accepted": 1444,
+      "acceptance_rate": 0.361,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 784,
+        "existing_edge": 642,
+        "component_partition": 1130
+      },
+      "hash": "3233e73ab1bc490184cdac4db7809935ebb438badc26b82addd8a1edd3be418e",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 125,
+      "seed": 16399567404473101353,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 788,
+        "existing_edge": 632,
+        "component_partition": 1098
+      },
+      "hash": "c5f71abe24d336be38b7dc68c7e9fb4c6cfc8383c36f54cdf906708e80536fec",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 126,
+      "seed": 6426909956481121315,
+      "proposals": 4000,
+      "accepted": 1547,
+      "acceptance_rate": 0.38675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 769,
+        "existing_edge": 566,
+        "component_partition": 1118
+      },
+      "hash": "636347b60c07efdb3f5f216fffcab617805b9629e61d1711e0eb9eea721e0f73",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 127,
+      "seed": 13319879760690261344,
+      "proposals": 4000,
+      "accepted": 1502,
+      "acceptance_rate": 0.3755,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 764,
+        "existing_edge": 608,
+        "component_partition": 1126
+      },
+      "hash": "807648c8827ad5cf7d08e0fd3ee8b33fc0e09a63fbb685c7823df801a3652e7d",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 128,
+      "seed": 16192255180155803093,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 750,
+        "existing_edge": 622,
+        "component_partition": 1114
+      },
+      "hash": "f58555a3f80c463a4f3d6ced609a6bc930fbc2830c5b98a4dcba6cd2e58d5088",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 129,
+      "seed": 17795260757721962418,
+      "proposals": 4000,
+      "accepted": 1521,
+      "acceptance_rate": 0.38025,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 768,
+        "existing_edge": 596,
+        "component_partition": 1115
+      },
+      "hash": "247cd5a3aa8bd60bd55ecf49419bc16ce5fbc442026081d513d0189e4c86a6e8",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 130,
+      "seed": 5891666225164835382,
+      "proposals": 4000,
+      "accepted": 1521,
+      "acceptance_rate": 0.38025,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 762,
+        "existing_edge": 636,
+        "component_partition": 1081
+      },
+      "hash": "fde6f398f6d2b49bbb981470d2254f64ee335827f490f3a358ac83d7121a7947",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 131,
+      "seed": 6227691942895883255,
+      "proposals": 4000,
+      "accepted": 1464,
+      "acceptance_rate": 0.366,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 748,
+        "existing_edge": 638,
+        "component_partition": 1150
+      },
+      "hash": "b09d09b0b0b1451175396205be32f14c1dce4db7927679fc8d8129924a679432",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 132,
+      "seed": 8980989878056750920,
+      "proposals": 4000,
+      "accepted": 1536,
+      "acceptance_rate": 0.384,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 747,
+        "existing_edge": 601,
+        "component_partition": 1116
+      },
+      "hash": "036384490e8f2f514407f0d5ab9f79a947434b41889161667fafc41742a0f2d4",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 133,
+      "seed": 3522026892331757371,
+      "proposals": 4000,
+      "accepted": 1429,
+      "acceptance_rate": 0.35725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 800,
+        "existing_edge": 663,
+        "component_partition": 1108
+      },
+      "hash": "3cf935d691accbc5e9e956e0b755dd8020be4befa90752ab893862fafe17d0fc",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 134,
+      "seed": 10280307682290783795,
+      "proposals": 4000,
+      "accepted": 1478,
+      "acceptance_rate": 0.3695,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 764,
+        "existing_edge": 628,
+        "component_partition": 1130
+      },
+      "hash": "ef82fa264ae337115a7fecb5d694f1f6a108075dfc3d10461245305bffece695",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 135,
+      "seed": 15137529947860773955,
+      "proposals": 4000,
+      "accepted": 1460,
+      "acceptance_rate": 0.365,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 787,
+        "existing_edge": 633,
+        "component_partition": 1120
+      },
+      "hash": "b8a71b48680be2f4653acec76562363bb7098981ed8613daf857c1091aec7859",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 136,
+      "seed": 2853300637909643327,
+      "proposals": 4000,
+      "accepted": 1497,
+      "acceptance_rate": 0.37425,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 588,
+        "component_partition": 1137
+      },
+      "hash": "d1f6f164cb76039e68f9f2edbe1a786b6e38e5b032610b1796b9397db8e0713c",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 137,
+      "seed": 2220596764652011758,
+      "proposals": 4000,
+      "accepted": 1435,
+      "acceptance_rate": 0.35875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 796,
+        "existing_edge": 658,
+        "component_partition": 1111
+      },
+      "hash": "c4780bf539c215f81df8d06baeb931f02824aac421a12acc4e0d0db3840b6196",
+      "invariants": true,
+      "retained_edge_fraction": 0.65,
+      "changed_node_fraction": 0.5
+    },
+    {
+      "draw": 138,
+      "seed": 2244591179660480,
+      "proposals": 4000,
+      "accepted": 1491,
+      "acceptance_rate": 0.37275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 807,
+        "existing_edge": 624,
+        "component_partition": 1078
+      },
+      "hash": "33c252cf7990782b0e10f7590e0896ee7719222aea883a891c8b6a9fe9f3450c",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 139,
+      "seed": 11894974860347004617,
+      "proposals": 4000,
+      "accepted": 1542,
+      "acceptance_rate": 0.3855,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 748,
+        "existing_edge": 614,
+        "component_partition": 1096
+      },
+      "hash": "761d5dec5f61e7a7b11aacf21a1f9285e45b8765995e5e7395d43059463b836b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 140,
+      "seed": 3355286227518468954,
+      "proposals": 4000,
+      "accepted": 1512,
+      "acceptance_rate": 0.378,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 729,
+        "existing_edge": 618,
+        "component_partition": 1141
+      },
+      "hash": "36ba41e9d4072279b5a203dbf2812a60c922736b739830f5ed2997888e9ed66a",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 141,
+      "seed": 14830144118800163528,
+      "proposals": 4000,
+      "accepted": 1523,
+      "acceptance_rate": 0.38075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 782,
+        "existing_edge": 584,
+        "component_partition": 1111
+      },
+      "hash": "62f8419c1a219c37a4cc8a82b9c25bbe8340a5d64dabf78a069ef7356c5f525c",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 142,
+      "seed": 9824732705594626376,
+      "proposals": 4000,
+      "accepted": 1542,
+      "acceptance_rate": 0.3855,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 730,
+        "existing_edge": 596,
+        "component_partition": 1132
+      },
+      "hash": "63ea50c49668f7d764b0eba6a2db8a3118bac739fe099bfc34cd5d0f90d5acd6",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 143,
+      "seed": 3138102872055555621,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 740,
+        "existing_edge": 625,
+        "component_partition": 1121
+      },
+      "hash": "f14ce3d2142dafcf2a660b666afe79542bc7f67ad2b9720c286778c617be00e4",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 144,
+      "seed": 17877958941358021666,
+      "proposals": 4000,
+      "accepted": 1495,
+      "acceptance_rate": 0.37375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 776,
+        "existing_edge": 618,
+        "component_partition": 1111
+      },
+      "hash": "61b8ed4386c7e753ff26be1cbd56f8ea31a7b15e61b1d9703fb268d64341df6a",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 145,
+      "seed": 14061667378333351658,
+      "proposals": 4000,
+      "accepted": 1489,
+      "acceptance_rate": 0.37225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 757,
+        "existing_edge": 582,
+        "component_partition": 1172
+      },
+      "hash": "4463877bb67f5bc8ba0f27ac5685bd2e584c3c462ef28aea52fc866979f6d961",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 146,
+      "seed": 4695398032135353637,
+      "proposals": 4000,
+      "accepted": 1504,
+      "acceptance_rate": 0.376,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 789,
+        "existing_edge": 601,
+        "component_partition": 1106
+      },
+      "hash": "ea0b772ee5b25e7be4a4aace1921ff0f65a1302e993b5aab9a46e21c17a71880",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 147,
+      "seed": 6811656982768819905,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 768,
+        "existing_edge": 608,
+        "component_partition": 1142
+      },
+      "hash": "f638212f75606025de4e2e75cba688f316388e7fb0eb014d6c4c10508befba14",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 148,
+      "seed": 12766874493613601360,
+      "proposals": 4000,
+      "accepted": 1476,
+      "acceptance_rate": 0.369,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 720,
+        "existing_edge": 606,
+        "component_partition": 1198
+      },
+      "hash": "d6fc48143f2dd69d95ceb980cf4e414686ea7db5e419921a834d5e93aa878080",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 149,
+      "seed": 4001013111283342757,
+      "proposals": 4000,
+      "accepted": 1533,
+      "acceptance_rate": 0.38325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 615,
+        "component_partition": 1089
+      },
+      "hash": "2085787126624bbf2321e862b5620e01b39fb992ea7a1dc494aebcb7aff58d01",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 150,
+      "seed": 13732390999179422303,
+      "proposals": 4000,
+      "accepted": 1464,
+      "acceptance_rate": 0.366,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 812,
+        "existing_edge": 614,
+        "component_partition": 1110
+      },
+      "hash": "979b0d9e137eb45df98fa1055b156c6f7d2d941cdd7913e5bce64f642e05d3bb",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 151,
+      "seed": 9835197206165628509,
+      "proposals": 4000,
+      "accepted": 1534,
+      "acceptance_rate": 0.3835,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 708,
+        "existing_edge": 636,
+        "component_partition": 1122
+      },
+      "hash": "3ab693fb748afa0187950993ed021cfd7065026cf63f64ac49a4545748920d47",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 152,
+      "seed": 5279160057550562383,
+      "proposals": 4000,
+      "accepted": 1511,
+      "acceptance_rate": 0.37775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 744,
+        "existing_edge": 589,
+        "component_partition": 1156
+      },
+      "hash": "5040d91859d7bd7c15c4be6c071baf7ec74003ec16fbe997f089eda1cb96f282",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 153,
+      "seed": 8518913498860102634,
+      "proposals": 4000,
+      "accepted": 1467,
+      "acceptance_rate": 0.36675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 791,
+        "existing_edge": 633,
+        "component_partition": 1109
+      },
+      "hash": "554adbeeabe4de73c1c2534c0783c0952d6c67a3bee100c9247928dcd7627897",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 154,
+      "seed": 12523298413600818293,
+      "proposals": 4000,
+      "accepted": 1531,
+      "acceptance_rate": 0.38275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 718,
+        "existing_edge": 606,
+        "component_partition": 1145
+      },
+      "hash": "57049f1c3c1a94ec1fa8068d6be2b75666e5c1caef96024dadc7505f69a1f770",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 155,
+      "seed": 13636405425135761830,
+      "proposals": 4000,
+      "accepted": 1478,
+      "acceptance_rate": 0.3695,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 774,
+        "existing_edge": 642,
+        "component_partition": 1106
+      },
+      "hash": "00e0980ff0900d16afa2fcfb88b3525329b3909b6a3dac123e79dde213b5f178",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 156,
+      "seed": 13707445147435793315,
+      "proposals": 4000,
+      "accepted": 1478,
+      "acceptance_rate": 0.3695,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 740,
+        "existing_edge": 606,
+        "component_partition": 1176
+      },
+      "hash": "1883d1f55e6fc02ebe077bc2ac25c2d774230a053c6018715d6ad56934b5f33e",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 157,
+      "seed": 15765598356796838447,
+      "proposals": 4000,
+      "accepted": 1451,
+      "acceptance_rate": 0.36275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 836,
+        "existing_edge": 568,
+        "component_partition": 1145
+      },
+      "hash": "51f374427b242a295133ca09ceedeb858c27442c21dc1b5c6f9429c46066b219",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 158,
+      "seed": 17952567286121934805,
+      "proposals": 4000,
+      "accepted": 1537,
+      "acceptance_rate": 0.38425,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 730,
+        "existing_edge": 602,
+        "component_partition": 1131
+      },
+      "hash": "2f4d36f7446fe129bcd6c957892449d6180e362cf303bf9a9211ad6dd7705499",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 159,
+      "seed": 1284843924642703834,
+      "proposals": 4000,
+      "accepted": 1530,
+      "acceptance_rate": 0.3825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 764,
+        "existing_edge": 606,
+        "component_partition": 1100
+      },
+      "hash": "c402f4b839009ed93d66c326355ef23c811c3671fd111017b321706a76a01fe7",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 160,
+      "seed": 16592045304609081562,
+      "proposals": 4000,
+      "accepted": 1471,
+      "acceptance_rate": 0.36775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 729,
+        "existing_edge": 609,
+        "component_partition": 1191
+      },
+      "hash": "5a8e0308d0fdbb999f6c73f32cce59224157320dafc89fd0539af0fc21e2fe50",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 161,
+      "seed": 11625105559170913135,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 749,
+        "existing_edge": 637,
+        "component_partition": 1132
+      },
+      "hash": "99d3eb9517ced4f5f7fad57aec944ee5290502f74c56753fe5c8b7de5c90b918",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 162,
+      "seed": 6526301033588703508,
+      "proposals": 4000,
+      "accepted": 1519,
+      "acceptance_rate": 0.37975,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 741,
+        "existing_edge": 607,
+        "component_partition": 1133
+      },
+      "hash": "a342c0fe2bda8c0fb566dc66fa88d883edf488689f3673cb655fed191b71dd8f",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 163,
+      "seed": 6844326191284742121,
+      "proposals": 4000,
+      "accepted": 1502,
+      "acceptance_rate": 0.3755,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 776,
+        "existing_edge": 616,
+        "component_partition": 1106
+      },
+      "hash": "881a95a966d0692e4b8b84a7b126fb1cd6cedb8dedb5858a0d5128aa93716ffd",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 164,
+      "seed": 8421957289775251699,
+      "proposals": 4000,
+      "accepted": 1556,
+      "acceptance_rate": 0.389,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 753,
+        "existing_edge": 605,
+        "component_partition": 1086
+      },
+      "hash": "461291fd4db7092e68a3b5b93c7d1d3d263d586ec198a0fe9b7db6f4e075e9d9",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 165,
+      "seed": 10560192790874091528,
+      "proposals": 4000,
+      "accepted": 1469,
+      "acceptance_rate": 0.36725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 743,
+        "existing_edge": 632,
+        "component_partition": 1156
+      },
+      "hash": "4539b058e9f3afcc4c69ae04018fe0576fac8af58e898fd166a7e4d164059cdc",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 166,
+      "seed": 16099661719809984448,
+      "proposals": 4000,
+      "accepted": 1465,
+      "acceptance_rate": 0.36625,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 811,
+        "existing_edge": 586,
+        "component_partition": 1138
+      },
+      "hash": "55bc6c4f100966d4337ba9497e87dd382afe3cff153f6d593f91f77dd8466e9e",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 167,
+      "seed": 8208366110800556962,
+      "proposals": 4000,
+      "accepted": 1544,
+      "acceptance_rate": 0.386,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 764,
+        "existing_edge": 574,
+        "component_partition": 1118
+      },
+      "hash": "4522e1e95e14aa818f7d907837fa0d5e1580fa977cecd5eb3d5b955ab2469ddc",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 168,
+      "seed": 7257949565798054739,
+      "proposals": 4000,
+      "accepted": 1491,
+      "acceptance_rate": 0.37275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 749,
+        "existing_edge": 655,
+        "component_partition": 1105
+      },
+      "hash": "5c3fdc2b937351dc6401a1a31e7f6c41322cf95aa752ddf64618fc6c21ef44a8",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 169,
+      "seed": 13037719464500709133,
+      "proposals": 4000,
+      "accepted": 1510,
+      "acceptance_rate": 0.3775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 597,
+        "component_partition": 1138
+      },
+      "hash": "63e76779807a8f54c9b7daafff1d3f9e5c65171e47f7e131d6d57dc03318e88f",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 170,
+      "seed": 16565053516756616139,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 614,
+        "component_partition": 1135
+      },
+      "hash": "e5374c7dd4f90396fab75834d1e5111483695927c37694926bb5ec321a9a95b9",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 171,
+      "seed": 11814353413051412648,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 745,
+        "existing_edge": 601,
+        "component_partition": 1154
+      },
+      "hash": "2c53eaa89024e761d981bab12865502e0a9cb89958c38f904956451355a5fc14",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 172,
+      "seed": 4534726802424622691,
+      "proposals": 4000,
+      "accepted": 1565,
+      "acceptance_rate": 0.39125,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 584,
+        "component_partition": 1096
+      },
+      "hash": "6e93b6c7280e832090b4462bf8d7037b2355db9b4e1783ee72b78d753f1d6d6a",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 173,
+      "seed": 8280992481241654566,
+      "proposals": 4000,
+      "accepted": 1494,
+      "acceptance_rate": 0.3735,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 610,
+        "component_partition": 1121
+      },
+      "hash": "e8f7c8bbf49458cad12a55d212b1257fa9fab33346bee821380d5f1e2c031178",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 174,
+      "seed": 9495836735367521535,
+      "proposals": 4000,
+      "accepted": 1532,
+      "acceptance_rate": 0.383,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 596,
+        "component_partition": 1109
+      },
+      "hash": "8a4e36a18803d14f1c5db25b2690903eb0957ca692bccc7e321e4b277adb2efe",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 175,
+      "seed": 5434366418315635773,
+      "proposals": 4000,
+      "accepted": 1468,
+      "acceptance_rate": 0.367,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 800,
+        "existing_edge": 587,
+        "component_partition": 1145
+      },
+      "hash": "97f9e75b876f5380af502759d74d93b0ba418c5d4e0a80f47895761561073c96",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 176,
+      "seed": 8180390300314421778,
+      "proposals": 4000,
+      "accepted": 1530,
+      "acceptance_rate": 0.3825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 718,
+        "existing_edge": 640,
+        "component_partition": 1112
+      },
+      "hash": "80dc1652931ec97aca7cc376cf0b4eb234de265b95b7ffb55b3a3198e0eff2a3",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 177,
+      "seed": 13565394403227148494,
+      "proposals": 4000,
+      "accepted": 1515,
+      "acceptance_rate": 0.37875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 746,
+        "existing_edge": 619,
+        "component_partition": 1120
+      },
+      "hash": "4c4c4d78fcd296f83bde737154f3d51cb8589f428da6ed1d5ce97f3a1c802189",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 178,
+      "seed": 6410936867586860558,
+      "proposals": 4000,
+      "accepted": 1498,
+      "acceptance_rate": 0.3745,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 780,
+        "existing_edge": 633,
+        "component_partition": 1089
+      },
+      "hash": "06c16a652a18864a17ecbebe30ec83ee33e5a829dc2ad3ec2df949a3064079d0",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 179,
+      "seed": 2224665477406173992,
+      "proposals": 4000,
+      "accepted": 1497,
+      "acceptance_rate": 0.37425,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 633,
+        "component_partition": 1115
+      },
+      "hash": "133829c6c13d7f8f79c6a781c8b3b5c668c4b0c397c2c8b40d725ed3b8367246",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 180,
+      "seed": 979393979742942230,
+      "proposals": 4000,
+      "accepted": 1508,
+      "acceptance_rate": 0.377,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 781,
+        "existing_edge": 604,
+        "component_partition": 1107
+      },
+      "hash": "3a598c0a1fe0bd1eb4061333b9ec39b39cb23f3feff16f16050b3a132ea3052b",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 181,
+      "seed": 16398405973816081302,
+      "proposals": 4000,
+      "accepted": 1528,
+      "acceptance_rate": 0.382,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 749,
+        "existing_edge": 600,
+        "component_partition": 1123
+      },
+      "hash": "254c868c29a519b5db854e879bf83847e2100c6d82f1c685b91f1612bf71b3dd",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 182,
+      "seed": 14804414805751655042,
+      "proposals": 4000,
+      "accepted": 1515,
+      "acceptance_rate": 0.37875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 758,
+        "existing_edge": 640,
+        "component_partition": 1087
+      },
+      "hash": "6b04f5fde274abad7369824af4b22274537fd569b68ce88dd499e05df82ceec0",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 183,
+      "seed": 3907313108765214925,
+      "proposals": 4000,
+      "accepted": 1552,
+      "acceptance_rate": 0.388,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 773,
+        "existing_edge": 573,
+        "component_partition": 1102
+      },
+      "hash": "add8ab661ad6ebc9f9e4bd7615b9b1ab9d3da83afe73706f80c5087b3fd3e7a9",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 184,
+      "seed": 2222859045279472121,
+      "proposals": 4000,
+      "accepted": 1532,
+      "acceptance_rate": 0.383,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 722,
+        "existing_edge": 617,
+        "component_partition": 1129
+      },
+      "hash": "e4d3ed41cb55da3373e462ddfc09771131c111ca04743c0be0b34217f6f05eb2",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 185,
+      "seed": 10757389921960551810,
+      "proposals": 4000,
+      "accepted": 1542,
+      "acceptance_rate": 0.3855,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 751,
+        "existing_edge": 630,
+        "component_partition": 1077
+      },
+      "hash": "952f97b3222c67f4eacabdd6da844ecfc9f8aac459174290460b2e81105a2d61",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 186,
+      "seed": 1895345783709761564,
+      "proposals": 4000,
+      "accepted": 1567,
+      "acceptance_rate": 0.39175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 765,
+        "existing_edge": 554,
+        "component_partition": 1114
+      },
+      "hash": "e2e962d9ea649b4966b5542491200e42241ce4f13e1f7cbb36aa3e2cb1472a69",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 187,
+      "seed": 2491180424745311005,
+      "proposals": 4000,
+      "accepted": 1483,
+      "acceptance_rate": 0.37075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 598,
+        "component_partition": 1159
+      },
+      "hash": "f52858b469cff59e5562a7a6702162903a0418726892b32046236e8da04c1719",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 188,
+      "seed": 9857429866761847643,
+      "proposals": 4000,
+      "accepted": 1423,
+      "acceptance_rate": 0.35575,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 766,
+        "existing_edge": 661,
+        "component_partition": 1150
+      },
+      "hash": "5f8e384b90bcef05ec6db8a7846aa0fe9631b1c56a728d72c90aac7f0f3d6ca5",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 189,
+      "seed": 1573242316939345814,
+      "proposals": 4000,
+      "accepted": 1474,
+      "acceptance_rate": 0.3685,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 805,
+        "existing_edge": 621,
+        "component_partition": 1100
+      },
+      "hash": "5620923231901244897d46e9bf561c91e1791c3411b711169a145eb6162cdf41",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 190,
+      "seed": 4223188336406638784,
+      "proposals": 4000,
+      "accepted": 1476,
+      "acceptance_rate": 0.369,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 779,
+        "existing_edge": 598,
+        "component_partition": 1147
+      },
+      "hash": "7e41b9ef88ddfd0c69de61a709d99a1285f3ebb98f61d85298621098b8378cf2",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 191,
+      "seed": 4990557905970971300,
+      "proposals": 4000,
+      "accepted": 1480,
+      "acceptance_rate": 0.37,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 798,
+        "existing_edge": 605,
+        "component_partition": 1117
+      },
+      "hash": "5002792a99b4af04e903bd26ac8ecc607325ce8f26de8504ed469befca32c126",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 192,
+      "seed": 12367725312658910091,
+      "proposals": 4000,
+      "accepted": 1476,
+      "acceptance_rate": 0.369,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 789,
+        "existing_edge": 628,
+        "component_partition": 1107
+      },
+      "hash": "2c79435d7ffb112e54d88810a1a65a64fe6b26d536772ba682e6aab3e5c1606f",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 193,
+      "seed": 12752653444455769332,
+      "proposals": 4000,
+      "accepted": 1482,
+      "acceptance_rate": 0.3705,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 769,
+        "existing_edge": 628,
+        "component_partition": 1121
+      },
+      "hash": "623a67b6d7f80f4db60e1699a66df4e5d57ea8b78ca342aff72927d7abd50c3d",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 194,
+      "seed": 6807186739054339670,
+      "proposals": 4000,
+      "accepted": 1488,
+      "acceptance_rate": 0.372,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 649,
+        "component_partition": 1127
+      },
+      "hash": "1b9445749548af3626d8bd007628ca4807feff23b09caf13b0a3a9775ac4c29c",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 195,
+      "seed": 13726975891661148249,
+      "proposals": 4000,
+      "accepted": 1526,
+      "acceptance_rate": 0.3815,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 727,
+        "existing_edge": 596,
+        "component_partition": 1151
+      },
+      "hash": "ab17251f262e5593430ba11a9888d16039882349036225b304e4f79e9caf3910",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 196,
+      "seed": 16210888421658701133,
+      "proposals": 4000,
+      "accepted": 1546,
+      "acceptance_rate": 0.3865,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 739,
+        "existing_edge": 602,
+        "component_partition": 1113
+      },
+      "hash": "802449c48dd5878cca757917716fee1148745d0cddd0c2c425841f76de7fe20a",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 197,
+      "seed": 16708718792002391343,
+      "proposals": 4000,
+      "accepted": 1515,
+      "acceptance_rate": 0.37875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 737,
+        "existing_edge": 625,
+        "component_partition": 1123
+      },
+      "hash": "294a382121b84ceda7a9ef79bb772287c9808db8240e5adeeb3829aff2129c6c",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 198,
+      "seed": 462974344793129125,
+      "proposals": 4000,
+      "accepted": 1498,
+      "acceptance_rate": 0.3745,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 782,
+        "existing_edge": 615,
+        "component_partition": 1105
+      },
+      "hash": "7a04052c2e6fb9a77b12395c639eecd09bdc9ac99f4eced7486e66cf1db38a1f",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 199,
+      "seed": 483303963314799876,
+      "proposals": 4000,
+      "accepted": 1512,
+      "acceptance_rate": 0.378,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 738,
+        "existing_edge": 627,
+        "component_partition": 1123
+      },
+      "hash": "a2b02a9aa3fa595fbc5748fedce93a615a9fb3f22a1c3f4cc0cfb64f9ab76b6b",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 200,
+      "seed": 5535406048247072178,
+      "proposals": 4000,
+      "accepted": 1543,
+      "acceptance_rate": 0.38575,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 717,
+        "existing_edge": 592,
+        "component_partition": 1148
+      },
+      "hash": "b3f11d105544c371a75b7bcfd19d1a7725f792b99feb458645339da39f44bc6a",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 201,
+      "seed": 1184427150231666790,
+      "proposals": 4000,
+      "accepted": 1484,
+      "acceptance_rate": 0.371,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 793,
+        "existing_edge": 615,
+        "component_partition": 1108
+      },
+      "hash": "9fa995ae99ff1249e680caf42054f1fc322776a409b7cec8cfa5114fe6e88628",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 202,
+      "seed": 13682900557791681377,
+      "proposals": 4000,
+      "accepted": 1556,
+      "acceptance_rate": 0.389,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 617,
+        "component_partition": 1091
+      },
+      "hash": "450c3964a8bb0544039a2c23aadecce130219aa029c09536a8751d7649acdf0a",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 203,
+      "seed": 11738991331669447628,
+      "proposals": 4000,
+      "accepted": 1477,
+      "acceptance_rate": 0.36925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 628,
+        "component_partition": 1132
+      },
+      "hash": "04fa48beb1b68d3eaca0e519962b18d9195b0f4f8735b44cdc3c777aceb8eced",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 204,
+      "seed": 6247744060492627899,
+      "proposals": 4000,
+      "accepted": 1530,
+      "acceptance_rate": 0.3825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 702,
+        "existing_edge": 636,
+        "component_partition": 1132
+      },
+      "hash": "103c7693f1dd7015f1db2d5696e0434829aa6ae70242dacffd22812b41d206fd",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 205,
+      "seed": 16833846983261735055,
+      "proposals": 4000,
+      "accepted": 1447,
+      "acceptance_rate": 0.36175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 754,
+        "existing_edge": 637,
+        "component_partition": 1162
+      },
+      "hash": "040d29c1067d0493452941f741554f27269bcf596d600a57925568b98c2ecae9",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 206,
+      "seed": 13913277531680373461,
+      "proposals": 4000,
+      "accepted": 1499,
+      "acceptance_rate": 0.37475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 720,
+        "existing_edge": 625,
+        "component_partition": 1156
+      },
+      "hash": "dd92fc44917d06e3ea9e3470fc9dc6a33ec7c352426d2af3c1f7cb518a4aa779",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 207,
+      "seed": 7946029053308419204,
+      "proposals": 4000,
+      "accepted": 1531,
+      "acceptance_rate": 0.38275,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 737,
+        "existing_edge": 623,
+        "component_partition": 1109
+      },
+      "hash": "2cf124e6b561f19fe829e36be1601dee9f0d5513e3f47c1f9beee1d286f38f5e",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 208,
+      "seed": 12055591449275758127,
+      "proposals": 4000,
+      "accepted": 1424,
+      "acceptance_rate": 0.356,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 777,
+        "existing_edge": 639,
+        "component_partition": 1160
+      },
+      "hash": "d15056dbfd3a9990b0299b419659f4728c8af390630576c73339cb39a3ad76f0",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 209,
+      "seed": 17100866155084534184,
+      "proposals": 4000,
+      "accepted": 1507,
+      "acceptance_rate": 0.37675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 747,
+        "existing_edge": 643,
+        "component_partition": 1103
+      },
+      "hash": "c932ffb579c0646a56cd4d428dca321827d4fa5ee2d965324aaf60241cf74f15",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 210,
+      "seed": 1422179824604607922,
+      "proposals": 4000,
+      "accepted": 1509,
+      "acceptance_rate": 0.37725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 756,
+        "existing_edge": 598,
+        "component_partition": 1137
+      },
+      "hash": "4fa12d95720740c708f0902075b70858618eb80fe6401e38b2a2841aaaf6208b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 211,
+      "seed": 13543943512105770934,
+      "proposals": 4000,
+      "accepted": 1523,
+      "acceptance_rate": 0.38075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 741,
+        "existing_edge": 606,
+        "component_partition": 1130
+      },
+      "hash": "098776bf8d677e36d5943f2e27633c733063960949fd1e2ce40cc897df696859",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 212,
+      "seed": 683044447729884100,
+      "proposals": 4000,
+      "accepted": 1539,
+      "acceptance_rate": 0.38475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 779,
+        "existing_edge": 586,
+        "component_partition": 1096
+      },
+      "hash": "af855786ae9bec1fae4a2b9fce7ab46922ddc24cd7821fc9614e09150d7ad73b",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 213,
+      "seed": 15788210468210838969,
+      "proposals": 4000,
+      "accepted": 1483,
+      "acceptance_rate": 0.37075,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 760,
+        "existing_edge": 610,
+        "component_partition": 1147
+      },
+      "hash": "bab0c4d39f4ac9fad68a84b0689b7dcdb4ccba728600ef0cc2f41315358a00e5",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 214,
+      "seed": 14497797912942281179,
+      "proposals": 4000,
+      "accepted": 1485,
+      "acceptance_rate": 0.37125,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 783,
+        "existing_edge": 597,
+        "component_partition": 1135
+      },
+      "hash": "2836eeb2d46b688f39e216fc3f8f3d611411b19147e1699137e20b4a01ce6137",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 215,
+      "seed": 9727213010581869253,
+      "proposals": 4000,
+      "accepted": 1465,
+      "acceptance_rate": 0.36625,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 661,
+        "component_partition": 1099
+      },
+      "hash": "3fe49bdc3374be0cba096f6001616c0e0c9c40af13e20c368601ae7ddc55182d",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 216,
+      "seed": 6009940221851695315,
+      "proposals": 4000,
+      "accepted": 1466,
+      "acceptance_rate": 0.3665,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 776,
+        "existing_edge": 617,
+        "component_partition": 1141
+      },
+      "hash": "9bb6f14231c71c3ab1863697ee0e72e17ddcf942a900855292645db8b7b20b3c",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 217,
+      "seed": 4661847122406738337,
+      "proposals": 4000,
+      "accepted": 1532,
+      "acceptance_rate": 0.383,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 726,
+        "existing_edge": 631,
+        "component_partition": 1111
+      },
+      "hash": "0336f6c864d5583133c5731fbbc5d66c4dffffb9750f590d6b957f23dfadab1a",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 218,
+      "seed": 14446620395445627857,
+      "proposals": 4000,
+      "accepted": 1446,
+      "acceptance_rate": 0.3615,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 619,
+        "component_partition": 1172
+      },
+      "hash": "247682bbaf818036548010f1003c3cb7d2c3ce85212da45fbd4158964f8dab7d",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 219,
+      "seed": 16800270758916100570,
+      "proposals": 4000,
+      "accepted": 1529,
+      "acceptance_rate": 0.38225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 797,
+        "existing_edge": 608,
+        "component_partition": 1066
+      },
+      "hash": "3f430429d5814a988108bc062a3abcb7d65859612f0a79f83bf9370d17ef2aca",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 220,
+      "seed": 7711656089460734539,
+      "proposals": 4000,
+      "accepted": 1499,
+      "acceptance_rate": 0.37475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 744,
+        "existing_edge": 616,
+        "component_partition": 1141
+      },
+      "hash": "665ebd4bd8a8292df6006d04760532d030998f5ff0ee8ed2f7fe76958624de9b",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 221,
+      "seed": 402181277713789384,
+      "proposals": 4000,
+      "accepted": 1476,
+      "acceptance_rate": 0.369,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 787,
+        "existing_edge": 603,
+        "component_partition": 1134
+      },
+      "hash": "1264853149d31ffe995ddc2065a01729d7b95ae1ec2cec03c34c6f8ab4abe4e8",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 222,
+      "seed": 13307171287531944028,
+      "proposals": 4000,
+      "accepted": 1493,
+      "acceptance_rate": 0.37325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 780,
+        "existing_edge": 626,
+        "component_partition": 1101
+      },
+      "hash": "50e03a0811afcc8e3bc9f7dcec218a75dcf042effab208131a497f24f9441634",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 223,
+      "seed": 3053559591494364492,
+      "proposals": 4000,
+      "accepted": 1499,
+      "acceptance_rate": 0.37475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 761,
+        "existing_edge": 602,
+        "component_partition": 1138
+      },
+      "hash": "ad7e19087e5b83e52a7f66e5cd1ee23ceb32efb6c40f8aef9a01dcd6ea974ca8",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 224,
+      "seed": 825126792591630885,
+      "proposals": 4000,
+      "accepted": 1514,
+      "acceptance_rate": 0.3785,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 731,
+        "existing_edge": 604,
+        "component_partition": 1151
+      },
+      "hash": "28ab297d139503e60792acba1deb53fa036c01e0d891d4d49c75ff88fc66a623",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 225,
+      "seed": 428436269288559110,
+      "proposals": 4000,
+      "accepted": 1520,
+      "acceptance_rate": 0.38,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 748,
+        "existing_edge": 659,
+        "component_partition": 1073
+      },
+      "hash": "c98b4df6d6191b63fbe72ae3e237b806df8ed566debe0cea628bd7a9bcacb988",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 226,
+      "seed": 780148327189381401,
+      "proposals": 4000,
+      "accepted": 1517,
+      "acceptance_rate": 0.37925,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 736,
+        "existing_edge": 652,
+        "component_partition": 1095
+      },
+      "hash": "2e4c569587aeb69b8dff35ec20750d6933128be6d3d9f155d05d466f6dabf0c2",
+      "invariants": true,
+      "retained_edge_fraction": 0.55,
+      "changed_node_fraction": 0.5
+    },
+    {
+      "draw": 227,
+      "seed": 12397086783333277765,
+      "proposals": 4000,
+      "accepted": 1493,
+      "acceptance_rate": 0.37325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 745,
+        "existing_edge": 628,
+        "component_partition": 1134
+      },
+      "hash": "1d766260543ab0ac09bf53f0f56123b9306a3a55289f05242df56d44b1d2fb0a",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 228,
+      "seed": 5890352684879915236,
+      "proposals": 4000,
+      "accepted": 1529,
+      "acceptance_rate": 0.38225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 766,
+        "existing_edge": 612,
+        "component_partition": 1093
+      },
+      "hash": "5913ff489a354bd9fc7c239044189556e99c7b85968e11dfaf968ad9d68e142a",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 229,
+      "seed": 10421287508404622742,
+      "proposals": 4000,
+      "accepted": 1458,
+      "acceptance_rate": 0.3645,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 784,
+        "existing_edge": 602,
+        "component_partition": 1156
+      },
+      "hash": "9e028a0b374913f5760b0779e9b1c6af26ef32576b3b003f10bca4fc06501821",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 230,
+      "seed": 2990961090157772917,
+      "proposals": 4000,
+      "accepted": 1479,
+      "acceptance_rate": 0.36975,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 779,
+        "existing_edge": 589,
+        "component_partition": 1153
+      },
+      "hash": "97a2a1dbbe6f9c66f6bb94997dcb84f39cf852b2a33aa8555de126819434b819",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 231,
+      "seed": 4855956478076883843,
+      "proposals": 4000,
+      "accepted": 1475,
+      "acceptance_rate": 0.36875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 782,
+        "existing_edge": 598,
+        "component_partition": 1145
+      },
+      "hash": "e84b9e8f3c5e9e7bda246cc986a6bcdd14c7ffcd1eb715e04a83ce99bdbfe602",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 232,
+      "seed": 13571356625985740344,
+      "proposals": 4000,
+      "accepted": 1494,
+      "acceptance_rate": 0.3735,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 784,
+        "existing_edge": 623,
+        "component_partition": 1099
+      },
+      "hash": "54b65d60634313ec3254d162d5f5617ef086e58c99f87ce30aba50c58dc91737",
+      "invariants": true,
+      "retained_edge_fraction": 0.25,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 233,
+      "seed": 3789201413568810119,
+      "proposals": 4000,
+      "accepted": 1494,
+      "acceptance_rate": 0.3735,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 726,
+        "existing_edge": 623,
+        "component_partition": 1157
+      },
+      "hash": "6c3f8b2928b6ea40c794a023c8b6567fd1cbcd598beb91dab36f2ae3f09e9608",
+      "invariants": true,
+      "retained_edge_fraction": 0.5,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 234,
+      "seed": 12029210927902771222,
+      "proposals": 4000,
+      "accepted": 1486,
+      "acceptance_rate": 0.3715,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 777,
+        "existing_edge": 607,
+        "component_partition": 1130
+      },
+      "hash": "50ec1613d7b7a90f8cd10e6208333633ccd5803f6d6d9bc9552248946d6ebd13",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 235,
+      "seed": 2370841104187873789,
+      "proposals": 4000,
+      "accepted": 1474,
+      "acceptance_rate": 0.3685,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 719,
+        "existing_edge": 607,
+        "component_partition": 1200
+      },
+      "hash": "096ae1490d254ee871f4950213da4fc3b32736a048b99701c3babd02829886a2",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 236,
+      "seed": 1799101450631439850,
+      "proposals": 4000,
+      "accepted": 1475,
+      "acceptance_rate": 0.36875,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 737,
+        "existing_edge": 631,
+        "component_partition": 1157
+      },
+      "hash": "dbb8781233b3a56e85a886637d2ecb4a30ddb8a276c1148670de5f0b2e2e6934",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 237,
+      "seed": 13930298835929460063,
+      "proposals": 4000,
+      "accepted": 1513,
+      "acceptance_rate": 0.37825,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 755,
+        "existing_edge": 601,
+        "component_partition": 1131
+      },
+      "hash": "11777ee0879c87b807c66e0e0418c414a9031ff444c93aaf73c28e3cc565c6df",
+      "invariants": true,
+      "retained_edge_fraction": 0.6,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 238,
+      "seed": 3284632840375328776,
+      "proposals": 4000,
+      "accepted": 1490,
+      "acceptance_rate": 0.3725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 763,
+        "existing_edge": 652,
+        "component_partition": 1095
+      },
+      "hash": "7d1b873aaba86aa0c98b72983fbdc1fa54c6647177377165f2c655606b17fef2",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.55
+    },
+    {
+      "draw": 239,
+      "seed": 16904524000751562400,
+      "proposals": 4000,
+      "accepted": 1533,
+      "acceptance_rate": 0.38325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 733,
+        "existing_edge": 577,
+        "component_partition": 1157
+      },
+      "hash": "9ba1b8f69c9465e6b935c64d1d25690afc59cfeb9bc9deaf0a2ec7d8cdbac356",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 240,
+      "seed": 14256789575098866433,
+      "proposals": 4000,
+      "accepted": 1463,
+      "acceptance_rate": 0.36575,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 769,
+        "existing_edge": 636,
+        "component_partition": 1132
+      },
+      "hash": "7ce3648de155ea15247be5b1efe9db30f98124e5211a0ce4e42c39aca2de8a5f",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 241,
+      "seed": 6321948712016504702,
+      "proposals": 4000,
+      "accepted": 1516,
+      "acceptance_rate": 0.379,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 778,
+        "existing_edge": 596,
+        "component_partition": 1110
+      },
+      "hash": "914808c499cf62e88cf7bd58a652d491088f8fa6e5a70c48ce868d24d73563a7",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 242,
+      "seed": 2709767165095503049,
+      "proposals": 4000,
+      "accepted": 1500,
+      "acceptance_rate": 0.375,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 777,
+        "existing_edge": 562,
+        "component_partition": 1161
+      },
+      "hash": "98b8942636a43c446dc05dab1dbdc2d7131d4152792e312b008b40ca5e3f7401",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 243,
+      "seed": 1307089304035689572,
+      "proposals": 4000,
+      "accepted": 1470,
+      "acceptance_rate": 0.3675,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 794,
+        "existing_edge": 611,
+        "component_partition": 1125
+      },
+      "hash": "1c705ba5b8b4fa576a9caac837f11a7f7c5f9e2e3f505bed0aaefb183487ccc2",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 244,
+      "seed": 17953645912944241221,
+      "proposals": 4000,
+      "accepted": 1528,
+      "acceptance_rate": 0.382,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 775,
+        "existing_edge": 572,
+        "component_partition": 1125
+      },
+      "hash": "ae0ff4aaaffa6201ae4244216c3a51138509ffda29934ddb956a151651568adb",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 245,
+      "seed": 16395391604277819908,
+      "proposals": 4000,
+      "accepted": 1519,
+      "acceptance_rate": 0.37975,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 765,
+        "existing_edge": 618,
+        "component_partition": 1098
+      },
+      "hash": "26639c7a1818bf0b227f045c7a36f27ba952469c37bd97778a5a5dbe99c812c5",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 246,
+      "seed": 16449689249191865116,
+      "proposals": 4000,
+      "accepted": 1538,
+      "acceptance_rate": 0.3845,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 766,
+        "existing_edge": 601,
+        "component_partition": 1095
+      },
+      "hash": "692398a734de3940b1cec721aea736a9ff909d089e6b0a11576f0152e9856e1e",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 247,
+      "seed": 13926560842732848640,
+      "proposals": 4000,
+      "accepted": 1487,
+      "acceptance_rate": 0.37175,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 732,
+        "existing_edge": 591,
+        "component_partition": 1190
+      },
+      "hash": "d6999baff005fb9aa90bb7ae3acaa8e7c5a02130455e1a410f374dee75b86451",
+      "invariants": true,
+      "retained_edge_fraction": 0.3,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 248,
+      "seed": 7735657065012757292,
+      "proposals": 4000,
+      "accepted": 1459,
+      "acceptance_rate": 0.36475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 786,
+        "existing_edge": 631,
+        "component_partition": 1124
+      },
+      "hash": "8135b0e5ec3798c86d0418f95a8f6cddc3a5e9bd38d8e5cb3ef4bb23f997fa47",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 249,
+      "seed": 2739988730530553694,
+      "proposals": 4000,
+      "accepted": 1499,
+      "acceptance_rate": 0.37475,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 779,
+        "existing_edge": 570,
+        "component_partition": 1152
+      },
+      "hash": "9d156a11dae528b94d7d02af080319866252fdda2eb55e7d54e0bda14f74bc1b",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 250,
+      "seed": 4016427680910246512,
+      "proposals": 4000,
+      "accepted": 1453,
+      "acceptance_rate": 0.36325,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 822,
+        "existing_edge": 624,
+        "component_partition": 1101
+      },
+      "hash": "2caa5729219bf5aff7aed9f7871fb68c286b994123a76ba0697d9c2c9d53973c",
+      "invariants": true,
+      "retained_edge_fraction": 0.4,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 251,
+      "seed": 3662085403687812684,
+      "proposals": 4000,
+      "accepted": 1486,
+      "acceptance_rate": 0.3715,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 795,
+        "existing_edge": 589,
+        "component_partition": 1130
+      },
+      "hash": "39c6b612e97251ebf1f4a8ce0e3a1d71f93700e53ba446f0842239adcfac59bd",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 252,
+      "seed": 5520852222063254009,
+      "proposals": 4000,
+      "accepted": 1529,
+      "acceptance_rate": 0.38225,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 806,
+        "existing_edge": 575,
+        "component_partition": 1090
+      },
+      "hash": "7f07141944d24e794ab3e9fdfe4c4b441cebb37b8497e58451a25f3624d9f8d8",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 253,
+      "seed": 15649751066287622376,
+      "proposals": 4000,
+      "accepted": 1522,
+      "acceptance_rate": 0.3805,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 776,
+        "existing_edge": 608,
+        "component_partition": 1094
+      },
+      "hash": "d1455ff3b3fdfe66b57ca138fda487a882201247174850a7d4d89fe675ab25a4",
+      "invariants": true,
+      "retained_edge_fraction": 0.35,
+      "changed_node_fraction": 0.65
+    },
+    {
+      "draw": 254,
+      "seed": 1584862486988882560,
+      "proposals": 4000,
+      "accepted": 1509,
+      "acceptance_rate": 0.37725,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 752,
+        "existing_edge": 595,
+        "component_partition": 1144
+      },
+      "hash": "9b1867d3dd9b2675dfe09efc42d1123a979b6e8d6d8f8d4a7e8465cc76430559",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    },
+    {
+      "draw": 255,
+      "seed": 11981072812354657257,
+      "proposals": 4000,
+      "accepted": 1511,
+      "acceptance_rate": 0.37775,
+      "rejections": {
+        "insufficient_edges": 0,
+        "shared_endpoint": 774,
+        "existing_edge": 582,
+        "component_partition": 1133
+      },
+      "hash": "a8f972d1cd1cf9e5d1e5bbf46d24e13a4cbc399077f0b6c5f217a37718c93ce4",
+      "invariants": true,
+      "retained_edge_fraction": 0.45,
+      "changed_node_fraction": 0.6
+    }
+  ],
+  "graphs_sha256": "59624d07cab8b7adae33cfccbba56e99e97e2906c61dacab69367157a01b329c",
+  "planned_draws": 256,
+  "completed_draws": 256,
+  "no_predictions": true,
+  "seconds": 26.220730900007766
+}

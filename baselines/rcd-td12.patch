@@ -1,0 +1,11 @@
+--- a/RCAEval/e2e/rcd.py
++++ b/RCAEval/e2e/rcd.py
+@@ -460,6 +460,8 @@
+ ):
+     normal_df = data[data["time"] < inject_time]
+     anomal_df = data[data["time"] >= inject_time]
++    normal_df = normal_df.drop(columns=["time"])
++    anomal_df = anomal_df.drop(columns=["time"])
+ 
+     if dk_select_useful is True:
+         normal_df = drop_extra(normal_df)

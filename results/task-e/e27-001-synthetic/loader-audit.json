@@ -1,0 +1,111 @@
+{
+  "schema": "TD12-E-WAVE1-READONLY-v1",
+  "qualification": "NOT_FULL_LOADER_QUALIFICATION",
+  "provenance": "Wave1 reviewer directly inspected two existing development cases before model implementation; coordinator reverified file bytes/hashes. These are not inputs to synthetic run e27-001.",
+  "planned_cases": 30,
+  "sample_cases_read": 2,
+  "existing_telemetry_files": 5,
+  "required_telemetry_files": 89,
+  "missing_files": 84,
+  "missing_trace_bytes_from_existing_inventory": 501871707,
+  "missing_metric_log_bytes": "NOT_VERIFIED",
+  "raw_files": [
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "modality": "metrics",
+      "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_1\\metrics.parquet",
+      "bytes": 933062,
+      "sha256": "3defe3d34b6373badf39bd030e1144a1178467a12ad1543f68273eaae132ddf6"
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "modality": "traces",
+      "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_1\\traces.parquet",
+      "bytes": 26833237,
+      "sha256": "89dc1794060960e4dd47e3d4b24075bd6f5b768761fa86f51ed38c4748c8f955"
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "modality": "metrics",
+      "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_2\\metrics.parquet",
+      "bytes": 933362,
+      "sha256": "16597725c18258ce0a3bdedc1833fb52ad6638fdc5068e944dce23c1bbde6d93"
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "modality": "traces",
+      "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_2\\traces.parquet",
+      "bytes": 20050343,
+      "sha256": "3d704979b684c5450a3ddcd48bb91a71d07c485edc878a2969b04ff152b5857c"
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "modality": "logs",
+      "path": "D:\\Project\\flash-ticket-rca-research\\datasets\\rcaeval\\raw-samples\\re2tt_ts-auth-service_cpu_2\\logs.parquet",
+      "bytes": 3351283,
+      "sha256": "0cc2ed5ff13a20cf776a42d9d4c3914981afe025fbaa69109ac652d9c7502537"
+    }
+  ],
+  "reviewer_sample_observations": {
+    "cpu1": {
+      "metric_rows": 1441,
+      "value_columns": 369,
+      "metric_range": [
+        1705917385,
+        1705918825
+      ],
+      "tau_controller_only": 1705918105,
+      "trace_rows": 1143435,
+      "C1_candidates": 27,
+      "C1_ref_edges": 55,
+      "C1_parent_resolved": [
+        241395,
+        241395
+      ],
+      "metric_exact_mapped": 202,
+      "metric_eligible_C1": 202,
+      "C5_prefix_parent_resolved": [
+        99575,
+        99754
+      ],
+      "C5_input_metric_eligible": 202,
+      "logs": "OFFICIALLY_ABSENT"
+    },
+    "cpu2": {
+      "metric_rows": 1441,
+      "value_columns": 367,
+      "metric_range": [
+        1706022891,
+        1706024331
+      ],
+      "tau_controller_only": 1706023611,
+      "trace_rows": 838936,
+      "C1_candidates": 27,
+      "C1_ref_edges": 55,
+      "C1_parent_resolved": [
+        169196,
+        169196
+      ],
+      "metric_exact_mapped": 200,
+      "metric_eligible_C1": 192,
+      "C5_prefix_parent_resolved": [
+        70370,
+        70370
+      ],
+      "C5_input_metric_eligible": 194,
+      "log_rows": 271919,
+      "log_containers": 47,
+      "null_messages": 16,
+      "duplicate_full_log_rows_counted": 1052,
+      "first120s_services_with_logs": 20,
+      "trace_services": 27
+    }
+  },
+  "no_models_or_rank_outputs": true,
+  "no_final_or_transfer_raw_opened": true,
+  "limits": [
+    "Sample facts are not full30 actual-used loader PASS",
+    "No C5 predictor/scaler qualification",
+    "No new raw acquisition"
+  ]
+}

@@ -1,0 +1,2329 @@
+{
+  "source": "local-selection.json",
+  "rank_configs": [
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.85
+    },
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.5
+    },
+    {
+      "operator": "ppr",
+      "direction": "reverse",
+      "damping": 0.2
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.85
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.5
+    },
+    {
+      "operator": "ppr",
+      "direction": "undirected",
+      "damping": 0.2
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.85
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.5
+    },
+    {
+      "operator": "diffusion",
+      "direction": "undirected",
+      "damping": 0.2
+    }
+  ],
+  "ordered_requests": [
+    {
+      "local_index": 6,
+      "cases": [
+        {
+          "case": "re2tt_ts-auth-service_cpu_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_cpu_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_cpu_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_delay_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_delay_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_delay_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "loss"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_1",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_2",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_3",
+          "reasons": [
+            {
+              "scope": "primary"
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "disk"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-order-service",
+                "loss"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "mem"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-route-service",
+                "socket"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "cpu"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-train-service",
+                "delay"
+              ]
+            },
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-travel-service",
+                "disk"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "local_index": 0,
+      "cases": [
+        {
+          "case": "re2tt_ts-auth-service_delay_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_delay_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-auth-service_delay_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_disk_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-order-service_loss_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_mem_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-route-service_socket_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_cpu_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-train-service_delay_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_disk_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_1",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_2",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        },
+        {
+          "case": "re2tt_ts-travel-service_loss_3",
+          "reasons": [
+            {
+              "scope": "leave_cell",
+              "omitted_cell": [
+                "ts-auth-service",
+                "cpu"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "no_cartesian_search": true,
+  "primary_before_conditional_leave_cell": true
+}

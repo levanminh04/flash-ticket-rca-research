@@ -1,0 +1,2189 @@
+{
+  "reviewer": "independent numerical/data reviewer",
+  "scope": "completed C1 development033, sensitivity036, loader019 numeric artifacts, topology022 incl all100/200/400E; no new model predictions",
+  "created_utc": "2026-09-27T17:06:00.765184+00:00",
+  "status": "FINDINGS",
+  "checks": {
+    "planned30": 1,
+    "sealed_prediction_hash": 447,
+    "source_snapshot_hash": 84,
+    "td_hash_current": 2,
+    "pinned_input_hash": 1027,
+    "loader_case_identity": 30,
+    "all8_profiles": 30,
+    "loader_numeric_hash": 270,
+    "no_channel_numerical_failure": 30,
+    "observed_no_selfloop": 30,
+    "observed_binary": 30,
+    "identity_same_ppr_scale": 240,
+    "identity_same_diffusion_scale": 240,
+    "finite_rank": 70593,
+    "all_local_metrics": 240,
+    "ppr_mass": 702,
+    "ppr_nonnegative": 702,
+    "equation_ppr": 702,
+    "diffusion_bounds": 351,
+    "equation_diffusion": 351,
+    "all_observed_metrics": 513,
+    "case_L": 30,
+    "case_O": 30,
+    "case_diffusion": 30,
+    "case_Ldiffusion": 30,
+    "case_BARO": 30,
+    "case_Local_MAX_MT": 30,
+    "R_planned_shape": 60,
+    "per_draw_metrics": 270,
+    "R_denominator": 270,
+    "R_mean_of_metrics": 270,
+    "R_MC_SD": 270,
+    "R_MC_SE": 270,
+    "selected_R_metrics": 60,
+    "topology_file_hash": 180,
+    "topology_draw_count": 180,
+    "graph_simple": 46080,
+    "graph_degrees": 46080,
+    "graph_exact_partition": 46080,
+    "graph_hash_seed": 46080,
+    "proposal_accounting": 46080,
+    "overlap": 46080,
+    "mobility": 180,
+    "headline_L": 1,
+    "headline_O": 1,
+    "headline_R": 1,
+    "headline_Ldiffusion": 1,
+    "headline_diffusion": 1,
+    "headline_Rdiffusion": 1,
+    "headline_BARO": 1,
+    "headline_Local_MAX_MT": 1,
+    "aggregate_MC_SD": 2,
+    "aggregate_MC_SE": 2,
+    "aggregate_independent_SE": 2,
+    "sensitivity_planned30": 9,
+    "sensitivity_case_metric": 540,
+    "sensitivity_headline": 18
+  },
+  "max_absolute_differences": {
+    "identity_same_ppr_scale": 5.551115123125783e-16,
+    "identity_same_diffusion_scale": 1.1102230246251565e-16,
+    "all_local_metrics": 0.0,
+    "ppr_mass": 5.551115123125783e-16,
+    "equation_ppr": 5.089033239410144e-16,
+    "equation_diffusion": 5.828670879282072e-16,
+    "all_observed_metrics": 0.0,
+    "case_L": 0.0,
+    "case_O": 0.0,
+    "case_diffusion": 0.0,
+    "case_Ldiffusion": 0.0,
+    "case_BARO": 0.0,
+    "case_Local_MAX_MT": 0.0,
+    "per_draw_metrics": 0.0,
+    "R_mean_of_metrics": 4.107825191113079e-15,
+    "R_MC_SD": 4.11587186913041e-15,
+    "R_MC_SE": 2.5724199182065064e-16,
+    "selected_R_metrics": 4.107825191113079e-15,
+    "overlap": 0.0,
+    "headline_L": 1.1102230246251565e-16,
+    "headline_O": 0.0,
+    "headline_R": 4.440892098500626e-16,
+    "headline_Ldiffusion": 1.1102230246251565e-16,
+    "headline_diffusion": 1.1102230246251565e-16,
+    "headline_Rdiffusion": 6.661338147750939e-16,
+    "headline_BARO": 0.0,
+    "headline_Local_MAX_MT": 0.0,
+    "aggregate_MC_SD": 1.3348773629612144e-15,
+    "aggregate_MC_SE": 8.34298351850759e-17,
+    "aggregate_independent_SE": 1.0842021724855044e-18,
+    "sensitivity_case_metric": 0.0,
+    "sensitivity_headline": 1.1102230246251565e-16
+  },
+  "failures": [
+    "source_snapshot_hash",
+    "source_snapshot_hash",
+    "source_snapshot_hash",
+    "source_snapshot_hash",
+    "source_snapshot_hash",
+    "source_snapshot_hash"
+  ],
+  "summary": {
+    "L": {
+      "rr": 0.7442063492063493,
+      "hit1": 0.5666666666666667,
+      "hit3": 0.9,
+      "hit5": 0.9333333333333333,
+      "ndcg5": 0.7869681446738837
+    },
+    "O": {
+      "rr": 0.7024052287581699,
+      "hit1": 0.5666666666666667,
+      "hit3": 0.8,
+      "hit5": 0.8333333333333334,
+      "ndcg5": 0.7267787027411582
+    },
+    "R": {
+      "rr": 0.6782346218755165,
+      "hit1": 0.5666666666666667,
+      "hit3": 0.7427083333333333,
+      "hit5": 0.8,
+      "ndcg5": 0.6960397598493292
+    },
+    "Ldiffusion": {
+      "rr": 0.7442063492063493,
+      "hit1": 0.5666666666666667,
+      "hit3": 0.9,
+      "hit5": 0.9333333333333333,
+      "ndcg5": 0.7869681446738837
+    },
+    "diffusion": {
+      "rr": 0.7201617933723196,
+      "hit1": 0.6,
+      "hit3": 0.8333333333333334,
+      "hit5": 0.8666666666666667,
+      "ndcg5": 0.7528441775310227
+    },
+    "Rdiffusion": {
+      "rr": 0.6967286198275685,
+      "hit1": 0.5858072916666667,
+      "hit3": 0.79375,
+      "hit5": 0.8282552083333333,
+      "ndcg5": 0.7221575363713825
+    },
+    "BARO": {
+      "rr": 0.6591203703703704,
+      "hit1": 0.5333333333333333,
+      "hit3": 0.7333333333333333,
+      "hit5": 0.9,
+      "ndcg5": 0.7094590348331109
+    },
+    "Local_MAX_MT": {
+      "rr": 0.741178451178451,
+      "hit1": 0.5666666666666667,
+      "hit3": 0.9,
+      "hit5": 0.9333333333333333,
+      "ndcg5": 0.7855073529792553
+    }
+  },
+  "cases": [
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "n": 20,
+      "edges": 20,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 20
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "n": 27,
+      "edges": 55,
+      "root_visible": true,
+      "local_alltie": false,
+      "zero": false,
+      "local_participating": 27
+    }
+  ],
+  "topology": [
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_1",
+      "handle": "96538c0c0d6a11d8",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_2",
+      "handle": "63f914383963739b",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_cpu_3",
+      "handle": "45e43770afa33cef",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_1",
+      "handle": "87443a2d6d14434c",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_2",
+      "handle": "24851f5149e4321a",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-auth-service_delay_3",
+      "handle": "549b2f655fc55fd1",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_1",
+      "handle": "4bdb62f38b122bbc",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_2",
+      "handle": "b0a2dcc878eeefa3",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_disk_3",
+      "handle": "9b847bd8f23c07af",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.38181818181818183,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_1",
+      "handle": "cea480a087995c2a",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_2",
+      "handle": "f900792c9a1f5622",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-order-service_loss_3",
+      "handle": "9d1464b4fb8a49c0",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.41818181818181815,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.38181818181818183,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_1",
+      "handle": "58e365eed32084b4",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_2",
+      "handle": "15fa2ad3a7eecebd",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_mem_3",
+      "handle": "c60cff817fc2d5cf",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.41818181818181815,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_1",
+      "handle": "0f1447a5823d8a23",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_2",
+      "handle": "5bf54b9f116a5fa1",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-route-service_socket_3",
+      "handle": "47f193d58b233d8a",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_1",
+      "handle": "f13a01ab09a3962b",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_2",
+      "handle": "b4f7da80e26ff729",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_cpu_3",
+      "handle": "8fe6a000483edc0e",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_1",
+      "handle": "8534e6237bee1618",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_2",
+      "handle": "84c4c18e60502036",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-train-service_delay_3",
+      "handle": "0868b9b567cd44c8",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.40909090909090906,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_1",
+      "handle": "27afdc4e5ac07b32",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_2",
+      "handle": "757b880ecadc87f4",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_disk_3",
+      "handle": "3b90d794c8506cef",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_1",
+      "handle": "dd8536efed49ca5a",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.37735849056603776,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3679245283018868,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_2",
+      "handle": "b493b6b9e7b01687",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "directed",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "directed",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "directed",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.4,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "undirected",
+      "budget": 100,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "undirected",
+      "budget": 200,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    },
+    {
+      "case": "re2tt_ts-travel-service_loss_3",
+      "handle": "7138fe1fe1ddf617",
+      "representation": "undirected",
+      "budget": 400,
+      "distinct": 256,
+      "median_overlap": 0.3584905660377358,
+      "mobile": true
+    }
+  ],
+  "sensitivity": {
+    "bin5": {
+      "L_MRR": 0.4983432154265488,
+      "O_MRR": 0.3370604721470734,
+      "effect": -0.1612827432794754
+    },
+    "bin20": {
+      "L_MRR": 0.752962962962963,
+      "O_MRR": 0.7542063492063491,
+      "effect": 0.0012433862433861576
+    },
+    "horizon180": {
+      "L_MRR": 0.7030780022446689,
+      "O_MRR": 0.6569375852905264,
+      "effect": -0.046140416954142505
+    },
+    "horizon420": {
+      "L_MRR": 0.7967340067340066,
+      "O_MRR": 0.7866666666666667,
+      "effect": -0.010067340067339892
+    },
+    "floor-0.0001": {
+      "L_MRR": 0.43376984126984125,
+      "O_MRR": 0.40982193550821006,
+      "effect": -0.023947905761631194
+    },
+    "floor-0.001": {
+      "L_MRR": 0.5465223665223665,
+      "O_MRR": 0.48652915240170136,
+      "effect": -0.05999321412066516
+    },
+    "temporal-max": {
+      "L_MRR": 0.652936507936508,
+      "O_MRR": 0.60528885003885,
+      "effect": -0.04764765789765801
+    },
+    "old-cap20": {
+      "L_MRR": 0.5834656084656086,
+      "O_MRR": 0.46274928774928764,
+      "effect": -0.12071632071632094
+    },
+    "old-fixed-fusion": {
+      "L_MRR": 0.7442063492063493,
+      "O_MRR": 0.7024052287581699,
+      "effect": -0.04180112044817941
+    }
+  },
+  "evidence_hashes": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\run-contract.json",
+      "sha256": "dc3c87ab29cc57ee0b7f45aea2619a15e39edc673a61e031a547396199169f4f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\source-manifest.json",
+      "sha256": "96a83d80a7a82b93af56632055d02bd70689c3f765e673f1babd0fa00b10d1ad"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\execution.json",
+      "sha256": "c24c0205fe2749c18041ef44f93815919f8c82c7963df0d4d9cd79238ddb98b6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-036-c1-development-sensitivity\\run-contract.json",
+      "sha256": "385cd386f98f860f100a601f877837a10b8feb7e8a118a9088c0912d5584b2d9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-036-c1-development-sensitivity\\source-manifest.json",
+      "sha256": "5e26d9956e83561ba04751eb4705699447062f57839d914a5a5c157f822558ef"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-036-c1-development-sensitivity\\execution.json",
+      "sha256": "f124c86bf34f1b95f6be1177fa2578713058aa98cba4284e986e2f06d9e485d6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\c1-results.json",
+      "sha256": "eeeb0a09f43281d1df649a1b74e352d484796263bd3fb921aadb1c634e1c1e3d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\selection.json",
+      "sha256": "b573102a18763eecd235ca2450438e265c2404c990a0180be6164af9806ea754"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-036-c1-development-sensitivity\\c1-sensitivity.json",
+      "sha256": "0e955b12ad6977a9b2ce7f7b80db211c6e3c87aebe45250bb673227befd3648b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\loader-summary.json",
+      "sha256": "842ed4c43da6c7e7faebb42da2a5769338e58ef7b7f722031bbfaae7ca2aae20"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-026-recovery-verification\\recovery-verification.json",
+      "sha256": "80a043bd3cf085555c42547c92fe741bec8c30cc1dd56b9c84f23bca04180fc3"
+    }
+  ],
+  "pending": [
+    "C5 primary independent numerical review",
+    "C5 sensitivity and integrated completed evidence when available",
+    "RCD completion/fidelity disposition",
+    "raw physical source bytes independent hash audit"
+  ],
+  "seconds": 37.519622564315796
+}

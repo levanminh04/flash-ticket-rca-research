@@ -1,0 +1,1808 @@
+{
+  "schema": "TD13-E-RUN-v1",
+  "run_id": "e27-036-c1-development-sensitivity",
+  "stage": "development-c1-sensitivity",
+  "created_before_execution_utc": "2026-09-27T12:15:56.154188+00:00",
+  "authorization": {
+    "source": "D:\\Project\\flash-ticket-platform\\docs\\evidence\\project-direction\\2026-09-27-rca-c5-amendment-and-e-resume.md",
+    "sha256": "1236e6ab0b57cfb6724f602f8181f8cdd53bcf79639521a2a0cab97ff1b4f2f9",
+    "decision_ids": [
+      "RCA-049",
+      "RCA-050",
+      "RCA-051",
+      "RCA-052",
+      "RCA-053",
+      "RCA-054",
+      "RCA-055",
+      "RCA-056",
+      "RCA-057",
+      "RCA-058",
+      "RCA-059",
+      "RCA-060",
+      "RCA-061"
+    ]
+  },
+  "td": {
+    "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-d-method-and-experiment-specification.md",
+    "sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971"
+  },
+  "git": {
+    "flash-ticket-platform": {
+      "head": "3d7ec9d824d12c98dc233705ef50908b62adf235",
+      "branch": "codex/rca-research-program",
+      "status": "M README.md\n M docs/project/decision-register.md\n M docs/research-rca/ARTIFACT-MAP.md\n M docs/research-rca/CURRENT-STATE.md\n M docs/research-rca/RESEARCH-DECISIONS.md\n M docs/research-rca/task-d-handoff.md\n M docs/research-rca/task-d-method-and-experiment-specification.md\n?? docs/evidence/project-direction/2026-09-27-rca-c5-amendment-and-e-resume.md\n?? docs/evidence/project-direction/2026-09-27-rca-development-preflight.md\n?? docs/research-rca/task-e-handoff.md"
+    },
+    "flash-ticket-rca-research": {
+      "head": "f49859df7664758f1143a1033535da7f6f29d7d6",
+      "branch": "main",
+      "status": "?? .gitignore\n?? baselines/\n?? configs/\n?? environments/\n?? results/task-e/\n?? scripts/task_e/\n?? task-d/td-v1.2-before-c5-amendment.md\n?? task-d/td-v1.3-c5-clarification-rationale.md\n?? task-d/td-v1.3-c5-reviews.json\n?? task-d/td-v1.3-prechange-inventory.json\n?? tests/"
+    }
+  },
+  "source_files": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\acquire.py",
+      "sha256": "7ba08ef3db82cf8bee55309374b02da14f740c7c3c0974bb9640e40c3c4da153",
+      "bytes": 10433
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\audit_development.py",
+      "sha256": "1a5c16ce9c3ff6839b1debffe2c15fbccc42e3c4de9e40db61539f1e8f41af8d",
+      "bytes": 5734
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\boundary.py",
+      "sha256": "1796dd0cf2a2fa5293bd59d2449c2996cb11b484aef8c4b5e1f32b9d5f2b1371",
+      "bytes": 12592
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\c1_development.py",
+      "sha256": "c2e97d7840466963ff41cd1c7a47fc492bac90e8d4b40cc9788f833443f71fe2",
+      "bytes": 29153
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\c5_development.py",
+      "sha256": "618c75ed188f2769952942fc50b350bac3de631dd1e063367aac281ce6b8c054",
+      "bytes": 53111
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\calibration.py",
+      "sha256": "0d27b9c3474645e54a5a1e22ba684359b854bd66076c9d541404627b5b2c572d",
+      "bytes": 24185
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\comparators.py",
+      "sha256": "dfcb4a70a78ddffbb9c9e35c59be9fd98cd2ed60739ae28d7cd1d0dd9a50c3e5",
+      "bytes": 5417
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\contract.py",
+      "sha256": "d157eb28db6154272a166d60b029f0249d130f8a8bac2912fcc81fe782dc27c3",
+      "bytes": 7828
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\detection.py",
+      "sha256": "084e48aab3b1a3edd5fe80f43d1dbd6fb3b490163ee6cd7564b9e835f7072122",
+      "bytes": 23757
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\evaluator.py",
+      "sha256": "73b1b4cbd0fcdda157d1d018614633dba72756a96423e445f64a966efcfe7511",
+      "bytes": 2927
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\execution.py",
+      "sha256": "385e67003355f0fff101942f71f369be2f8a2432aa6fd1a937214f9d67c1c92c",
+      "bytes": 2215
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\input_adapters.py",
+      "sha256": "1e4bda1303141a0a7182d5d40ef9a8a12f907d3b74523efdf3a12444199fdcfe",
+      "bytes": 4861
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\integrated_development.py",
+      "sha256": "dc1b3394f07c3b58d564262f2b2888eaa5121aa29d599f1fc479b3fe3ceaf212",
+      "bytes": 12002
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\launch_development.py",
+      "sha256": "f46babc398d708e7fb2e6472714ce0199377f4a69e8345a616913a28591ff16d",
+      "bytes": 3611
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\loader.py",
+      "sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "bytes": 24856
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\prepare_rcd_env.py",
+      "sha256": "7b79c4900b425722a2a016ef838f6a284afdfabdc5db7ce8b8ad30b7616ce0a5",
+      "bytes": 2770
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\ranking.py",
+      "sha256": "1b671310d326502ff0be9864c4e1ef8dcf52674a1810342687f896ac4d1b17ed",
+      "bytes": 17054
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\rcd_development.py",
+      "sha256": "fd4d81d7a7b511396d26e44c3f9a00efd479a27b7f93a027c1b418bf1d46f33d",
+      "bytes": 26848
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\rcd_numeric_worker.py",
+      "sha256": "1c50785996450bd0a9522fe75e85aa00e1eb36fd3a4590afe3610f4385ca1c19",
+      "bytes": 13275
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\rcd_runtime.py",
+      "sha256": "fcf98f16595db0b8ce3b87b0f37b94aa0baf1d6d147c085ad3b608bac6737539",
+      "bytes": 10629
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\replay.py",
+      "sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "bytes": 12842
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\run_stage.py",
+      "sha256": "215eef0546ddcc24d81788c93157e1a4350acd2be407b537a18ee151b5b3c8ab",
+      "bytes": 2077
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\save_checkpoint.py",
+      "sha256": "23aaf53f04080c347dddfe4307b88021f3233c4e7a43f2aad9d2ac2232e89c3d",
+      "bytes": 2586
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\summarize_inputs.py",
+      "sha256": "78fb53141b41bdf17eee613643b51652075aca4837f69be50212d3ba559e4f3a",
+      "bytes": 3395
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\topology_development.py",
+      "sha256": "f8199d5a22ae411fedc3dcb5b5f94c02163b65ee4c087e028900da3c1b8d48cf",
+      "bytes": 17523
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\verify_recovery.py",
+      "sha256": "d8cb594a3f46dda156e38a461c1e397741d19b86ae3c830a0b4138099024a91f",
+      "bytes": 2953
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\worker.py",
+      "sha256": "483ffc40577e125b8c1d27ebbde1afa5d8ffa8d38990ba657c260a0453bb1e92",
+      "bytes": 15900
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_adapters.py",
+      "sha256": "5ce4f70dddf95058b7da9170ef2d2688b32fe0e60a5d56b18e098881371850c2",
+      "bytes": 3262
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_c1_campaign.py",
+      "sha256": "01cf4d1ad57f7eeb98096fd7ca33af5680f3e91b658f7646411bb991232cfc0c",
+      "bytes": 30601
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_c5_campaign.py",
+      "sha256": "217187b5cebfb964c1f2510da237e93cf99ecb43a51275f8861cacddfc76d292",
+      "bytes": 23370
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_c5_replay.py",
+      "sha256": "cb7db5fed69cfa9e3414c4b9e28f2109a23e9b727df3019499febc04855e4883",
+      "bytes": 17740
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_calibration.py",
+      "sha256": "86dcafd1e2fd638328b8c93d9def188269bb732946f292f45aabd7cd5f024407",
+      "bytes": 12727
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_detection.py",
+      "sha256": "cfcf08c90b729f8ef6f434798492f2bcac5d4c982368c7ed27ada810733f75de",
+      "bytes": 16413
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_firewall.py",
+      "sha256": "e217c742ca133e9dffed859be5dce7fd9b07df0b5946bf92a65604ccc0e4ac7f",
+      "bytes": 11186
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_integrated_campaign.py",
+      "sha256": "cd2d655e47bf5b93a37291c1e624ab840c91dd743d10655055dacd7c8e35f06f",
+      "bytes": 25355
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_math.py",
+      "sha256": "3eeaee8df860ed758e0f5daca30a53ed66bfbe1ae6e4a2b53bb82ae58f10ce46",
+      "bytes": 16468
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_rcd_runtime.py",
+      "sha256": "d63f80ce29364506a7efd53bbf98e9117edaaf9ea5c9413de7542e56590a12cd",
+      "bytes": 8390
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_rcd_worker.py",
+      "sha256": "f58ceefe8ab51ee05f63cb5f94e97946e18ee11a6616687b1168a5f6e00b3ec4",
+      "bytes": 14712
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_topology_job.py",
+      "sha256": "3727ce2ce1f78034f2aab3e3fa1cab92841ce3f6266b655a7f8afe7d7f307274",
+      "bytes": 10746
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_worker.py",
+      "sha256": "40f6ee44b4d18b7f0c79183a44796531441d83fe5b51b6b4893579d02d8913c1",
+      "bytes": 16741
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-platform\\docs\\research-rca\\task-d-method-and-experiment-specification.md",
+      "sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+      "bytes": 53951
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\baselines\\task-e-source-manifest.json",
+      "sha256": "f63c6224168d82613ef0a0b1d7c99f18fc94613895b4346528a3a80ba29b2c68",
+      "bytes": 14570
+    }
+  ],
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "inputs": [
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\configs\\task-e-td13-development.json",
+      "sha256": "d39a150b61696bd38c178682561bf4e45f39103463323f4acef0b38b00d84c60"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\continuation-resume-receipt.json",
+      "sha256": "1d5ed480ff22dc638c52b95090156026ac7f2ff71cca0e636e5531ce7fa430fb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\0868b9b567cd44c8.json",
+      "sha256": "04c658563bb5d647f050fddfd04d7f6a70a73d854dea03a186e4648b3193628f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\0f1447a5823d8a23.json",
+      "sha256": "21488e46741e89ab192c870c7897d8be3122332bbd819a3595ed6199c7c971d1"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\15fa2ad3a7eecebd.json",
+      "sha256": "2225a6c2cfbddeda9217f812798d47113099241fbf265b67b2691c43148e72d2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\24851f5149e4321a.json",
+      "sha256": "b6c993b5430db39e68a25207ca2dc85cd8ed4e11f810f348c46bf78e55f12278"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\27afdc4e5ac07b32.json",
+      "sha256": "bab581ee1f738c5bfe32b921f155f2b9c120bafff55ce2cc470fcbd9f7e254e4"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\3b90d794c8506cef.json",
+      "sha256": "56270f42336c3ef603d7fd0a3085b52c084f7ffe4496e114d1afc17d69b9271a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\45e43770afa33cef.json",
+      "sha256": "b735750bb67bf0a4983bc003d5afd836db7f6a910104d460c8ce548bb44c8e09"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\47f193d58b233d8a.json",
+      "sha256": "3ef0bb9b26bd19f91346a30463e8ab2af1ee184b76d60378ad91896873ca5628"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\4bdb62f38b122bbc.json",
+      "sha256": "bd8c4c04e2313a4afaafe076189cebd99beae59d334e2768ee9b8d35c488fa51"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\549b2f655fc55fd1.json",
+      "sha256": "28c1e3399e68354b9ae1d7d44935798a7983ceb0f805b2247847ee24cf09721a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\58e365eed32084b4.json",
+      "sha256": "1f361051ef6dd2427b9cfe6a9b3e3ab67c20cacee336daf30fa336bd0b86ff5b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\5bf54b9f116a5fa1.json",
+      "sha256": "50b975f90db20b5822ec957d01fecc8d09d3fef4071f4039bd55729591aa3d1d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\63f914383963739b.json",
+      "sha256": "f2d47b6f3b715649c4b100eaabc11783510175b2c8d454a5aaf7e88c3daaf806"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\7138fe1fe1ddf617.json",
+      "sha256": "716c192f61e86fd9c618439af01de25dd89a76cca5d7f5bf9ea56e551d4e0d4f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\757b880ecadc87f4.json",
+      "sha256": "a927a0e8df18782419c0e80a61c3a929e55488650f7840c643968ecad4310607"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\84c4c18e60502036.json",
+      "sha256": "d8ecc2b300d6ba0529abad1ee37099c8fab9f793bf12facf2728ee801aa52924"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\8534e6237bee1618.json",
+      "sha256": "bac97fc6aec1019317fc1c1954d7c1409889eb5c7354f0b2504dc585b64ca4d1"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\87443a2d6d14434c.json",
+      "sha256": "b141524b12245349b9238adfc010cea783ce990557eb0cba49d9eb7a57b37084"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\8fe6a000483edc0e.json",
+      "sha256": "9723860e507674fde930e847652a247c6b954e2619efd5220700ecb74749fa42"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\96538c0c0d6a11d8.json",
+      "sha256": "6bc2f3d36993034764e8a5315176044df3c89ed66cce5d49387f2c5c777c8d08"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\9b847bd8f23c07af.json",
+      "sha256": "3dec960298ae3106ef34c10364765fab6bed3adc8689639bfc8ff32d25a4bf37"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\9d1464b4fb8a49c0.json",
+      "sha256": "5311c27c7e2bac53b26bfcea665bc0151d5e70bf9b2fae9351ea1a134e4a6c5b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\b0a2dcc878eeefa3.json",
+      "sha256": "acfcb0a3b75eaca782266f08765637ab990d809e39b6f5365d2d441598839487"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\b493b6b9e7b01687.json",
+      "sha256": "3243415cc9b67b84a4916a29b9a2434b40218debb4984729a940ef06a69cabf9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\b4f7da80e26ff729.json",
+      "sha256": "0be2b95cc7ad295179b5eec0dc62956ed3ecc7c4274e85cec994d6c16ec79eea"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\c60cff817fc2d5cf.json",
+      "sha256": "0c22eb2c3022acd4274a80b90663ab5f5d3d37b7ced913d65368ee83c7f93681"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\cea480a087995c2a.json",
+      "sha256": "8a5ca99b6bb8b30056e8b034e5691d43eff23753c74f3013ddbf8889765f75c6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\dd8536efed49ca5a.json",
+      "sha256": "e415d6353ea7497a3127d087ffb95bd859b01ceef348b29b0a4f1b0856252d36"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\f13a01ab09a3962b.json",
+      "sha256": "66cb4367f2659157a54c27182a2e77779b1e06edcca3cb3f5db0fd2f82a979ea"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\case-audits\\f900792c9a1f5622.json",
+      "sha256": "9696aa4a04c29ce0a06b4ebff42a0095042fa82caf9c5b1ecc3e6b8946d82561"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c1_bin20.npz",
+      "sha256": "54f15920fb67ab170b88a3c9f4422e28fd95087ba8a66daa7606c191c7add105"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c1_bin5.npz",
+      "sha256": "57c6b4c4172c2c7fc1ee513dd53c480ad4ddb8ec1a53ca7b688cac49604aacfa"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c1_horizon180.npz",
+      "sha256": "3cb48977cc76ee1de5d11f79d57561abadb0396065c452e2b4167575c38538c8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c1_horizon420.npz",
+      "sha256": "328a904a03d0f7e8a6cbe30daf055af9643b3f651fa0f39f9db483e05360661c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c1_primary.npz",
+      "sha256": "7cdf31584257e46d207ab723c95a4dbc0877fbbd79ffe73d5f054cde85fe30cb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c5_bin10.npz",
+      "sha256": "3f88c0bb0299e643b08405ffb889539e1a2ab395e15b5cb9e9bccd8e2cd341c6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c5_prefix240.npz",
+      "sha256": "d325b564d87c5001221ec43ef4d35285648e892591e5d0018f77d5a0d95c387d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\c5_primary.npz",
+      "sha256": "d325b564d87c5001221ec43ef4d35285648e892591e5d0018f77d5a0d95c387d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0868b9b567cd44c8\\rcd.npz",
+      "sha256": "8ca6d3bc290ca872b14730896d756298cf7076d537d53762835f64879185f097"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c1_bin20.npz",
+      "sha256": "5c422e9e91e2acf892033306fb2894d2e654eb402f572b664cd4a70a9141517d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c1_bin5.npz",
+      "sha256": "11190afe1878159dae48421133e85b4b72199cd68987f2b83d86631d24e1738d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c1_horizon180.npz",
+      "sha256": "5e38c84c1cbcde6563262cc1e08489cdbf2cc398d74b29cb40885742c3c2743a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c1_horizon420.npz",
+      "sha256": "2dedba3991f16b06533bca7e547a274feb59100f9d72503dab5abf0308db8bbc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c1_primary.npz",
+      "sha256": "6e509499d13c3ef8b07bd0b2f41aad6db5301ea34cc42d3fad990e0df58e4a3d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c5_bin10.npz",
+      "sha256": "2e3b78016e7f0a198a66a0c23fb661b6e15db245a12fc3f2ccd53435ea02e233"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c5_prefix240.npz",
+      "sha256": "4062bfb316f210ef2e6ea7a5b2caee29a130ee09d1df2d13be72ec61cebedd72"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\c5_primary.npz",
+      "sha256": "4062bfb316f210ef2e6ea7a5b2caee29a130ee09d1df2d13be72ec61cebedd72"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\0f1447a5823d8a23\\rcd.npz",
+      "sha256": "15fae1b5ddf1d1b00130e8cc54a15ebfa0c42364384bc0edaac545323cfc990a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c1_bin20.npz",
+      "sha256": "da0813a48b2a8678310cc3b01e778e052276c5b911ad353d5be9320184f82ae7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c1_bin5.npz",
+      "sha256": "13b4712bb4f6a859370317ee6bca44cecaa8fb8180886c4b9a64fd414ea1749b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c1_horizon180.npz",
+      "sha256": "c60915204b82e2aab39a346a9196f11b24a8279b3a0c1d3d391f97a3c895c02d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c1_horizon420.npz",
+      "sha256": "4cd70d687af138e9decc7945656cf861eb67ef1762e2e9c9c6ec5688c3a2db67"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c1_primary.npz",
+      "sha256": "298c4acf59d63430137defaa46ec35b7210878489caedc618a0cc8b0e5cc8431"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c5_bin10.npz",
+      "sha256": "9294d23d1401c957b4c47c8c93abf75ed82dde0f4c644c5329f4043894fc32fb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c5_prefix240.npz",
+      "sha256": "c06d2be258b63cec8562826688bda0447f0071fd0d3a7e6c7bfdab4f3d3e089c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\c5_primary.npz",
+      "sha256": "425056ab5378bd6d15ab6a79ca6578ae2fb1e6afcd948266b3cba2eb238d0f8a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\15fa2ad3a7eecebd\\rcd.npz",
+      "sha256": "11bf848c220d73b8b13be394711c53df8e947b3323ffd8014ac0b4411cfe1984"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c1_bin20.npz",
+      "sha256": "537602fdae7a769694c9d312b7437019b35ce4098b84d918fd0456a8afcb6161"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c1_bin5.npz",
+      "sha256": "db7aea3c6e2b359b25d87d9f38d5db0873a28e7ba5872d405a9d5f2f35497d6a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c1_horizon180.npz",
+      "sha256": "29317bdda00856845c829b2a41b20937eadc3e954be733435a69bb1b29449b52"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c1_horizon420.npz",
+      "sha256": "32ede7bb0bdec61289370b7b54aecc8f707e05ca74882c5c73b515f0e8f666c3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c1_primary.npz",
+      "sha256": "20e866f3a7ab7a8e788f12e6080e2462b882161d4904d1620850c3bb26de54cf"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c5_bin10.npz",
+      "sha256": "2cb147bb57567f11e102b31f06832accf41e17a4337aabf6f27151bc9f6c93a9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c5_prefix240.npz",
+      "sha256": "178c77bf59e80ea9ed36a9cb30cfdb9a8d17c0ccea5945ed345ed3286705955e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\c5_primary.npz",
+      "sha256": "178c77bf59e80ea9ed36a9cb30cfdb9a8d17c0ccea5945ed345ed3286705955e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\24851f5149e4321a\\rcd.npz",
+      "sha256": "9dd93e91966025ac1ec5aa19bf6dca78c2e231970c25b43bdc1620e66c456b55"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c1_bin20.npz",
+      "sha256": "edc465759be09998e48ffe1e1394d258a0c742fbe0996bcb79f3eee05613daf3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c1_bin5.npz",
+      "sha256": "a10da25d95904d81133a07da8ebeb87496dacfc88c75d5560491c11c077b5b24"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c1_horizon180.npz",
+      "sha256": "199ae6b262c9e09047a1bd46993146b6d0326ab17b2c778ab51f478385a21536"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c1_horizon420.npz",
+      "sha256": "7148d3222327bdcae7e66af5656ab56430a988c5454a402ec22891fb6c6208eb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c1_primary.npz",
+      "sha256": "40173d2063fd02ecb2fe539fdcdeb01bb3da43d16fc95aa65f2c107c79ae46d3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c5_bin10.npz",
+      "sha256": "1c04dd9b20a20a4e0cec26e09dcc9512f80c869a243202f6d6d06a0601669e04"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c5_prefix240.npz",
+      "sha256": "d75c4319c2e3dce14d9fcb901a1c7472e6db506d1c6c43397c52a7b9e4dbae65"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\c5_primary.npz",
+      "sha256": "a1169849cf15403c29cb06c53632513c738db73444c9100c3189350fad9fbb15"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\27afdc4e5ac07b32\\rcd.npz",
+      "sha256": "96352ff857748a2db6c699aef5224d5addb609493d1c2259d25125952ea90f74"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c1_bin20.npz",
+      "sha256": "37ad025acb72d7498b6d03fda5f403432641beb85ab729ac4a0d2d9639239fd2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c1_bin5.npz",
+      "sha256": "990e500219446a64a7604035c5bc0468101ad9f16925f214950f81b9fad3889a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c1_horizon180.npz",
+      "sha256": "a09ada45a57cd2b298ae48c47f173d80432f50cbd1e71cb9855093048868da42"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c1_horizon420.npz",
+      "sha256": "279ecf8d8dbe17eeb25f25e730d9ff622173c0254e9fa849633b66b3244cbb52"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c1_primary.npz",
+      "sha256": "01d4b5619a6dd62679f384022a3946849311282b4a8b650df9d615b329da45d0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c5_bin10.npz",
+      "sha256": "54cea17b71f4534fa28a7144a58464059ac532195ab3bdafb54c1cc80a8db08a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c5_prefix240.npz",
+      "sha256": "c4575690c22ac34ea5283594ff913c4f4f3f58adc4054ee372a5f41d960c9365"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\c5_primary.npz",
+      "sha256": "c4575690c22ac34ea5283594ff913c4f4f3f58adc4054ee372a5f41d960c9365"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\3b90d794c8506cef\\rcd.npz",
+      "sha256": "890b92803e05f88b4fccfc2688cfb8c492f004ae58cba9642c77911742a3d94d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c1_bin20.npz",
+      "sha256": "df5e409e881cf51aaf3c3ad665012a81ff72428d9601a58c6754e374235668e7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c1_bin5.npz",
+      "sha256": "1786dcb06aa221e6fe3d7f9a956004b879c4aafa02de49b1fe943bfb8e825731"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c1_horizon180.npz",
+      "sha256": "bdde7cd17f38337f7e18bf82c05b77ee9a4cffe756e99ad5429eeec92af416f2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c1_horizon420.npz",
+      "sha256": "a44671e3447ca1a32d16b8ad2095fc42fcd9925acdb521b14917bb71a970f1c0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c1_primary.npz",
+      "sha256": "479442ec0e7ac37f4ddcb67ab3e0855ee8b3e78123bdd90f3e565e6fb5926ba9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c5_bin10.npz",
+      "sha256": "8ddce00e3cb06b3f51a40d9ddd57f220998398a2422f411d7e04fab17ac2ba5c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c5_prefix240.npz",
+      "sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\c5_primary.npz",
+      "sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\45e43770afa33cef\\rcd.npz",
+      "sha256": "14b682d51520eae4d91002d7d248a70762986a572d79db994192b06f0671b83a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c1_bin20.npz",
+      "sha256": "4a0bb938d49805ca282b72c78ba10f15f78670f914d9e0596e3260dedf777d95"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c1_bin5.npz",
+      "sha256": "9e767cbf2d234a9ceaeee386c612adf76972c28d97cbc740db8276f6b0c3c193"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c1_horizon180.npz",
+      "sha256": "6c302568eb873ef122d3e229d49db14d8077aea1ef6b83ef46fd9f56e2cae507"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c1_horizon420.npz",
+      "sha256": "3677440bd14e9c58877ec888e1b7d39a88b40ec226387fc26a27964d2b49ae9d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c1_primary.npz",
+      "sha256": "6087bed225cb9fe238b8b8d8d09417f862fc37944157f07c36c4127f9fdd6e66"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c5_bin10.npz",
+      "sha256": "ef41d7a8ce41741dacfca9e39081e7d5c1752dd965a53e781f9487caa25eac19"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c5_prefix240.npz",
+      "sha256": "c6f1bf67588ce38926eccd7a6193e54a1bf010b57ff7c99a3d3d0f6506907b1c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\c5_primary.npz",
+      "sha256": "753695b5d14156d0701d439b6d163a3d217336229681d8b1d89d24a7b6bbf2f3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\47f193d58b233d8a\\rcd.npz",
+      "sha256": "33a7cf56a089a1cd873a5ab983fbf78ade1c508cf00622077cfdfc1bdc31f30c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c1_bin20.npz",
+      "sha256": "c68222944ab6cb1ebb7c83dc88e7912408c5a8ea383a4173eb675260656e7255"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c1_bin5.npz",
+      "sha256": "3fe727435bc63fd7b8fe1537de774c59d8981b95c042113af7aab920ee61f771"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c1_horizon180.npz",
+      "sha256": "862594e34a210638816c197355321103368f03933bc1b65627b36797cb342a2c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c1_horizon420.npz",
+      "sha256": "a668dd2b9e933bef0dfaf59bbecdf3b1c96fc950c9c098cf5d0448865052d716"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c1_primary.npz",
+      "sha256": "6c2c53b6ec4e0efd336226481f22a3587f2087f738f243b50e8bb30984826e4a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c5_bin10.npz",
+      "sha256": "e121a90b46caaa51be567c53552eb66285c0c6cc620fa57da0fb8cbd82f677f2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c5_prefix240.npz",
+      "sha256": "5d7d12382cd1cedf06021bcdf80b251df34be2538bd95b9e2036c2fe1d3d4b91"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\c5_primary.npz",
+      "sha256": "5d7d12382cd1cedf06021bcdf80b251df34be2538bd95b9e2036c2fe1d3d4b91"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\4bdb62f38b122bbc\\rcd.npz",
+      "sha256": "3b28eec2e93d1d1396b5770ceb664263a2c00b1c5a98b16c55c14bce49133726"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c1_bin20.npz",
+      "sha256": "7446a9444286d5f69d44036f839833571e900c12e9b869a0257a4c14e34de764"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c1_bin5.npz",
+      "sha256": "0b47bea82b7486da9bf773936528005b4e0475e1ae2a085f4950b7293dccc1b3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c1_horizon180.npz",
+      "sha256": "8c1034ac542cfac358dc8e93e98adad2a88ce8f8304c3c224f57ef667ae09521"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c1_horizon420.npz",
+      "sha256": "7f679218e0f28e025ac621286344e48af72ebb71cc88b7d8d3d6c0462fdd18ae"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c1_primary.npz",
+      "sha256": "01fed69a575d9c8ab94fb7fbada197ce4ff03080f536e9c9000c246dfc97d508"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c5_bin10.npz",
+      "sha256": "b89159004af8c2cd7afdfd3b77843cb7d1caeba28118dae8e3cdf5e0fe121672"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c5_prefix240.npz",
+      "sha256": "5ed4ea7ed7a889c800854430bf46067fee54d7526d52c98b099920563f4f8639"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\c5_primary.npz",
+      "sha256": "5ed4ea7ed7a889c800854430bf46067fee54d7526d52c98b099920563f4f8639"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\549b2f655fc55fd1\\rcd.npz",
+      "sha256": "deff0beb6438d1163ec525614b3b5c67d39ff0678fcb659b00088fc8c91bc7da"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c1_bin20.npz",
+      "sha256": "a2efcbbfdceb07fc7d7bc0198ce5d23cec1cd3cd6cfbbee34b63e46de695dd9c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c1_bin5.npz",
+      "sha256": "49d75430b389c03c9e02e16b0dd3e4567bfddfb1b27ee26f3cd5dca3561d8ee7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c1_horizon180.npz",
+      "sha256": "4b1e1f802806afde3c8cf9781609f1bc9ad6e9a711109abce6c673729627925d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c1_horizon420.npz",
+      "sha256": "86702025a1b2de0dbcb372eff7eacb7f5116ac0f0b1ee5354dffce9b7bb81eb5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c1_primary.npz",
+      "sha256": "62027f1b88fadb5b2342757c45e46633024e89d11437738a70e7c60b2a287ce5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c5_bin10.npz",
+      "sha256": "b0c77555e71e6af1be44de66bd49fde6965e8b6e00de5e4e9f815b3149d3532f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c5_prefix240.npz",
+      "sha256": "b493868fd0bf0897a57950bba9551a05dfa75da65bb077689190adac6dada032"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\c5_primary.npz",
+      "sha256": "b493868fd0bf0897a57950bba9551a05dfa75da65bb077689190adac6dada032"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\58e365eed32084b4\\rcd.npz",
+      "sha256": "9f8c7772816b489998a21cf11753029277ca8555b933cc67035e08e230df13e3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c1_bin20.npz",
+      "sha256": "dcf2edfc3b45375b861185d0d166c3324fb5e6a834012bd9d20bb2cac7773ac6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c1_bin5.npz",
+      "sha256": "3854800629884f29c836a2a9254a9f8a9458bb3f13cbde807bf9231149a2c968"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c1_horizon180.npz",
+      "sha256": "5947e0fdbc07534effabb24a049e5ae32b1318a901341f46e6f4e86f018082f2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c1_horizon420.npz",
+      "sha256": "a12dd2529a434f675453fbbbd0d93f5adf200ca6d6699e2c6931655edefdbdc5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c1_primary.npz",
+      "sha256": "466b4b6c5e52387bcd92dfdf41ef8e4453920103bfc2de07dbd23a2348afba10"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c5_bin10.npz",
+      "sha256": "445dcf59e09eb8c64a35b587faae34bc7435e2e6345b32ff2772d63551375e34"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c5_prefix240.npz",
+      "sha256": "ee8934d260b96ebcb6a0defa99e2f8efe4ea0d0458ece2803bf00f539b66582f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\c5_primary.npz",
+      "sha256": "ee8934d260b96ebcb6a0defa99e2f8efe4ea0d0458ece2803bf00f539b66582f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\5bf54b9f116a5fa1\\rcd.npz",
+      "sha256": "9e5b249b64102742da9a77abb58ccba50eec9257439e4280f54c5458aaee69c7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c1_bin20.npz",
+      "sha256": "afe846476fca29b8203f40839151104d9106821b8c85723e00a3ff5e246cf53d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c1_bin5.npz",
+      "sha256": "7db8a21f793e6c4cb895e04708d21e6ddb0be8861ac192f0d6f6b0ced78b8f6f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c1_horizon180.npz",
+      "sha256": "27876c464d49ebdf9b52c25a7b4bf49ecc9adaf102fccaf4141d8b686d348ffc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c1_horizon420.npz",
+      "sha256": "51abb959084b7807a9ca81b2f182ee1cb46fdd30084741e93486386014a46e92"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c1_primary.npz",
+      "sha256": "b4c953cc0857b88e0b36eec1a19b8eee6a5991d1052b7bc7205c328f651f03b9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c5_bin10.npz",
+      "sha256": "5d8658102ea9cb0286d2740c22eb9e51ed1a653752b905598d5134efa1e4cfe2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c5_prefix240.npz",
+      "sha256": "88355d187ad573349d949d89a73a2c03e3a32e8079bd737cb30203921cf5aa69"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\c5_primary.npz",
+      "sha256": "88355d187ad573349d949d89a73a2c03e3a32e8079bd737cb30203921cf5aa69"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\63f914383963739b\\rcd.npz",
+      "sha256": "82b513b4cec55ae045a1d2280949810eb3a0b4e5b12657158fa8a812bcbad497"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c1_bin20.npz",
+      "sha256": "573e010f2f67e1a08110c87ee0c1e413b6992b570473ecc6307e9793736cf4fe"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c1_bin5.npz",
+      "sha256": "23ff617637f80905b3b77aae11beb3a9b8bd0c65af2f7513fb770a5e06ee50af"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c1_horizon180.npz",
+      "sha256": "cb4f85fe0ced5cd0c259a30fa18f7dccd98646f3c256d7ad6e1e5228bafc249c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c1_horizon420.npz",
+      "sha256": "f1fec3e7aebafc2e447e0237d9d5dcc1f6d771cc704f661b2fdb900fd8c6a5f4"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c1_primary.npz",
+      "sha256": "16c19fec5caa98f2e1e280fee448e786af528b2e931996f9b413b243e76bd0db"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c5_bin10.npz",
+      "sha256": "0815ff9312ed8711eb80696200d38e0a7618fcc2ea5f7b3a1d44910337a4215b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c5_prefix240.npz",
+      "sha256": "efb1241f7eecd686971d5141b1d0be4d9587584c3fc7630e2b8695292fe46af0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\c5_primary.npz",
+      "sha256": "efb1241f7eecd686971d5141b1d0be4d9587584c3fc7630e2b8695292fe46af0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\7138fe1fe1ddf617\\rcd.npz",
+      "sha256": "1084b0456938615f24f9071a076c25e421354d93a2fa188866e0fd1dd0a974e8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c1_bin20.npz",
+      "sha256": "647207498c48d824502b021961f7ba55c58fed65ddb3985b3a568bd2b371944a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c1_bin5.npz",
+      "sha256": "a415c47581c63aa4a6ef41eadd9910caaf6d514d475db0a511ddc58f7ae37538"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c1_horizon180.npz",
+      "sha256": "d8aa2cf1029294d68f3d443a0f35ff42f2f1ab02ce2a91f2a21c2d24c317b4f5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c1_horizon420.npz",
+      "sha256": "718b696109728f39778b8bd0b23fa886003d70862f40472d166322ddf1f89762"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c1_primary.npz",
+      "sha256": "177894e1b3e85ff1afeb231c7a333ec19dd631077e18523c0eff5e22563538f7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c5_bin10.npz",
+      "sha256": "085f03f5637fb1758b17af5d6c068fba635a3c8f63f7307770a6c182394509a6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c5_prefix240.npz",
+      "sha256": "a4a74eb514dfb2df36d9d61ca7e32b13b5e8349cb35e3638f6264f9b2753a458"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\c5_primary.npz",
+      "sha256": "6d4c8bdcb0d01d70f23f6e90309fb7b5cd508cab9a092792a915f128ea142483"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\757b880ecadc87f4\\rcd.npz",
+      "sha256": "572cfca196d2901b9eb343e0ebcafe5b2a01a3813f2309b2b915d6016b39a923"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c1_bin20.npz",
+      "sha256": "2f3b03760bb2dcd40e8b2cc82d72da1848444ca441652e176f846ade77c6549a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c1_bin5.npz",
+      "sha256": "7123ca3356fe8268c2cab29db18440ec29c1548295dcb0e2a4af56afa39f1206"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c1_horizon180.npz",
+      "sha256": "1ff8d908bf198e755cff97cfd1f792b779ab6b0e956d881bcce876b0777dbce8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c1_horizon420.npz",
+      "sha256": "3429dca1fccdafb7c73170f31d9a031f08fc4a33c659c6d83d7bbfed0a6612d4"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c1_primary.npz",
+      "sha256": "f83e07b44da8878cce29cbff6df50639726909297ac73dac78661ba160c4ca5d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c5_bin10.npz",
+      "sha256": "e3ca2e243f74b638ff6039c9d97243139525aac4e5da94aff43ca813576d5525"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c5_prefix240.npz",
+      "sha256": "4223efc1f94495930ff0b014f460c8a7c39c520bff41e3cd3dd4df98766d49cc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\c5_primary.npz",
+      "sha256": "4223efc1f94495930ff0b014f460c8a7c39c520bff41e3cd3dd4df98766d49cc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\84c4c18e60502036\\rcd.npz",
+      "sha256": "62e98c56efcd1d320b76739af7dce63a5cc66e569057532085803c6d08a335ca"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c1_bin20.npz",
+      "sha256": "0e8d30cdad215aece5f288927a40c58923dfd6ea05f5eb6596051789df095a14"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c1_bin5.npz",
+      "sha256": "fde50069d8dc90d52c4935f868fd6bbc7027308c4e76165a84f39efb8d3b69b3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c1_horizon180.npz",
+      "sha256": "b0e9b9892248375c6caf6a695d93a86b0db43c312cff56cfc5f9697e5e10f114"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c1_horizon420.npz",
+      "sha256": "7990240edd05dffbfa0cbdf463c2b5b5d5cbc36fe6f8b2caf4953a15e3b5bace"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c1_primary.npz",
+      "sha256": "4ebcc9194ae8741d6bdad00c6e787da32d56f02b5896960ff444aea06dbd2371"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c5_bin10.npz",
+      "sha256": "bd7a63bfa4fe3d2a0c8952d14b7fbb300dcad103aa72d8e2bf5a2f691292c51d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c5_prefix240.npz",
+      "sha256": "bb6ddf2e71f1982a43a077305be628eab0b9d83acf0eb1ab33fd5c1eda8df142"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\c5_primary.npz",
+      "sha256": "bb6ddf2e71f1982a43a077305be628eab0b9d83acf0eb1ab33fd5c1eda8df142"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8534e6237bee1618\\rcd.npz",
+      "sha256": "da28f111d38fcf05cc56ccbfd284abb1a28c86001e8668085bd29db02ae57ceb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c1_bin20.npz",
+      "sha256": "e6356e57ba5d08360190ae3c4afdef7978093cfb7a1399e56b97d0dfd8738ab7"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c1_bin5.npz",
+      "sha256": "2e7f6e33ada7ce6fb5ee0323da93b3661f3c76a0d445a21eb0659169acb5a1e6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c1_horizon180.npz",
+      "sha256": "2096e17228e6e87689aa350a52688018c357abdddd829ca5b847a16c6c1406d6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c1_horizon420.npz",
+      "sha256": "0b65b513da48a474f0679567e37258ee9698266ddf9f1c3bdf3395fe8610a483"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c1_primary.npz",
+      "sha256": "51f75f718be57dbd208fb3bbdb9e11aa01624728ea2da927dbe5be4e16007316"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c5_bin10.npz",
+      "sha256": "e4f132d4af0113556db15f6f60dd179639cfc725beaa433f45cce58d8521d7ae"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c5_prefix240.npz",
+      "sha256": "449679b08de2abb1317756e51a69186bca2168f7370bc923cd3749438f8797fb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\c5_primary.npz",
+      "sha256": "449679b08de2abb1317756e51a69186bca2168f7370bc923cd3749438f8797fb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\87443a2d6d14434c\\rcd.npz",
+      "sha256": "a0335e37ab788be181e0a5019845cdab8eecc07ca98417629248a042fa003853"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c1_bin20.npz",
+      "sha256": "9e9511e69dd9693badf76e90e5993e3a2ec2c5a08d57205a2a4f0b15048352f5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c1_bin5.npz",
+      "sha256": "3559f8f97768250916ac1e5e7acfb1062734d2d1cb5c25bbf39879c6bfe4bc3d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c1_horizon180.npz",
+      "sha256": "550ff5175867c7a3f7cee692f182e92e0ab2e5d2f2c5e75e20200841e58e1e63"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c1_horizon420.npz",
+      "sha256": "1fca236fc6edb6a7785626b9121d62bce72b760840034e58acb7ce39967c1143"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c1_primary.npz",
+      "sha256": "c8f6db3c75cf8d1cff1e8d83ac1678711a0a029d5f50040157ad02db9797d5cc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c5_bin10.npz",
+      "sha256": "668d8e44551ff899c171930ff80ed019bd5586f4225f117ee26aabc873716511"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c5_prefix240.npz",
+      "sha256": "6b33ea199a229dfe09f0b1f2c5335995d059212cb7b78b2987775f66097b1764"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\c5_primary.npz",
+      "sha256": "6b33ea199a229dfe09f0b1f2c5335995d059212cb7b78b2987775f66097b1764"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\8fe6a000483edc0e\\rcd.npz",
+      "sha256": "ae4f5ed3c0047b9cc3b4f1355031cc6459d93dda592178c3a86b708c54c0108b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c1_bin20.npz",
+      "sha256": "8e9680760c440cd1edd8681138f9a2a0785e55615e4edf45513ab5e504ff3728"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c1_bin5.npz",
+      "sha256": "d4cdc6d182063352ab17ef547d3a86beaee428e82ac0442900405eaa1c491e86"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c1_horizon180.npz",
+      "sha256": "dd3d02daf772eb08518f0c181c57d0adfa219313d9d5da1df75887fbb76f53ba"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c1_horizon420.npz",
+      "sha256": "d3a016b6996b0cd1b8791cdca0b8e6a8a2cb3fa0fd5575a676d49b08080a606f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c1_primary.npz",
+      "sha256": "c006cc45608cd4cd7e2c9680fe788e27e5df7b217e6fc92850ee19c4f031c977"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c5_bin10.npz",
+      "sha256": "7c9751f452e9f6577db46610433a8c04ebce9595713359a45f688f3ed5989c3f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c5_prefix240.npz",
+      "sha256": "037ccbc3d8a411df9ccf07da49e2d234de419dc6c93de2591104a82c64800dec"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\c5_primary.npz",
+      "sha256": "037ccbc3d8a411df9ccf07da49e2d234de419dc6c93de2591104a82c64800dec"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\96538c0c0d6a11d8\\rcd.npz",
+      "sha256": "4634556f95de310c854a70dbba82a87463790b0b91d24c94dfd2d48aa028ea2a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c1_bin20.npz",
+      "sha256": "54a03ee3b213ed82b2e9fb7aad7da08f83f6f7f9007948f3303c1d3324b3b836"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c1_bin5.npz",
+      "sha256": "235f57886047e661b628fc5ebe66c9551d022596a7234c3d2f780c62af6f8dbb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c1_horizon180.npz",
+      "sha256": "f945096778e6b9df7b871a2c13afbf6e2c16f4b0b6232e95e638468f6147c8c6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c1_horizon420.npz",
+      "sha256": "78ed67965e6e08b164c54512b144208ac05693c6eee23610fe5c4ce2ff0e6a13"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c1_primary.npz",
+      "sha256": "a270454182038002380648f692cd487302f5242fc5bcb5d7a304f8c8c7c1aee0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c5_bin10.npz",
+      "sha256": "a59275c5e9547ee45548063fb2a6aa1d368917ab1bf08d1672f8fabf339da14a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c5_prefix240.npz",
+      "sha256": "eae88066829b54765fbb32f64ea1a3fbadb31dbad6c0742b68497a8518179628"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\c5_primary.npz",
+      "sha256": "eae88066829b54765fbb32f64ea1a3fbadb31dbad6c0742b68497a8518179628"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9b847bd8f23c07af\\rcd.npz",
+      "sha256": "30eb1d4bcc65215cc062d5ef9099f0f358d0fcf628975dbe70e0a69da48e5606"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c1_bin20.npz",
+      "sha256": "9d54bdf1244bc08dde666f647b217b069336c7ca708c29ebdf09406594d2f93e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c1_bin5.npz",
+      "sha256": "56ac37cce8186ff5b70e831d60680f8aef70ba6487ea68d8355812b973dccc5e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c1_horizon180.npz",
+      "sha256": "480c56b7365598bdd7550a01523a1809dab4c1f04bb51441906538d8744fa6e8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c1_horizon420.npz",
+      "sha256": "6d2685aa9b767d1b3884ee7ceb12d7b6adc7da3cd34c4715da8861515e363714"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c1_primary.npz",
+      "sha256": "b6c38109b92c3476478eff07beac440ea49c79fe266058d6acb9ddbc249507ac"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c5_bin10.npz",
+      "sha256": "4d9490d15886c4fda32b67bd94561a7e2e183a8103812ff02e7f7e0c6881ce0f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c5_prefix240.npz",
+      "sha256": "f0b9038b3fffae14fea1ca7de20bc9ee05a7c46693ea4aac009a14c7bf4c9eaa"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\c5_primary.npz",
+      "sha256": "f0b9038b3fffae14fea1ca7de20bc9ee05a7c46693ea4aac009a14c7bf4c9eaa"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\9d1464b4fb8a49c0\\rcd.npz",
+      "sha256": "cab2159826fd01b929097102d24e42a5ba99ddde2bd4267fb378cabf44871878"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c1_bin20.npz",
+      "sha256": "20f492586482bfa42ae4f12005f29c73bdfd7b0ca52439c235f7fbced92d6684"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c1_bin5.npz",
+      "sha256": "c53eaab47959b45e32b578c4dc374b56eaab438d57c12927d323b6c95c6f6ae4"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c1_horizon180.npz",
+      "sha256": "770e4f66d8796cb249443ad3c29e3b33c20e2f07af0a11885dcd1dd1ae9cd8a9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c1_horizon420.npz",
+      "sha256": "dddd7a917f7abdbce576b1a509cf89f7c0dea8c127bd30d789d871ae4159287f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c1_primary.npz",
+      "sha256": "23b0797b5a37dec84f5b1070158a48f49899b17906a1234f0b8c5af4fda55157"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c5_bin10.npz",
+      "sha256": "0f16eafae4effd27d9977a551728b55489b37608ea88c42c2e28808950471c1a"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c5_prefix240.npz",
+      "sha256": "56a7460027679c03257dc9443e1e0a13574f02411f4ce441c88f8f82630fc80d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\c5_primary.npz",
+      "sha256": "56a7460027679c03257dc9443e1e0a13574f02411f4ce441c88f8f82630fc80d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b0a2dcc878eeefa3\\rcd.npz",
+      "sha256": "73adad4d3e84c4b6c41953aeb206b6364335763bd9d498aac71eb38f2f15fc62"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c1_bin20.npz",
+      "sha256": "0c3ddc8fbe17cdcc3ed9705a8d2dbfeb18905dde7641b93f9ff5fb84c17d7731"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c1_bin5.npz",
+      "sha256": "12e2de6973908c72ad3033ee7f7e7b346044e908468559fca80f93de1028dd59"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c1_horizon180.npz",
+      "sha256": "4ffdc77ce4d383c648ae3b0eb4624c93432a480e5e4b3b8c427545345991c755"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c1_horizon420.npz",
+      "sha256": "302c02528fbcdb6f41ed6f07d9679c23529906e362338a883f9db8e679fdcb96"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c1_primary.npz",
+      "sha256": "918bd2a8860b1cd35c7e7b62ef4e017b5103c7582616db3fd94089206b1848b4"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c5_bin10.npz",
+      "sha256": "2a75319b7a3631561032fdc1156c39c09d841585989ca0f23cd73a50003db494"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c5_prefix240.npz",
+      "sha256": "65f6d4da09a6856d3e647cd3908365d41f27b9eaa9fb7bae3783ad12d7a56a6c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\c5_primary.npz",
+      "sha256": "65f6d4da09a6856d3e647cd3908365d41f27b9eaa9fb7bae3783ad12d7a56a6c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b493b6b9e7b01687\\rcd.npz",
+      "sha256": "ce87c72762ceeea8bff072ff634e746dd3ad896160275b209bdcc5d2031d2699"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c1_bin20.npz",
+      "sha256": "2322d151d0b0b76bf6fbc8f5adb62072a84840c7ff451aaedb7e88018e1e6832"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c1_bin5.npz",
+      "sha256": "ee279ca77fe7ab672f9665e629271dd63de23ceac8d6c753e45ee5a37ffd5c21"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c1_horizon180.npz",
+      "sha256": "e0419ca5fecfa88233c55ebbc2676196f960d4281181915b3d61a10a9d72f1b1"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c1_horizon420.npz",
+      "sha256": "381dc1346fd5f1d192ac3fa52739a29dbc0db32dfbe65fdb950608eff5662df8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c1_primary.npz",
+      "sha256": "b332636e8b6a162928bd6133b240b744556d047d91f88c7e7d2c7a1239512a24"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c5_bin10.npz",
+      "sha256": "430b18fc726de946106d853d01580b0b26167deda8fcd206df333abc1e404b56"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c5_prefix240.npz",
+      "sha256": "b13c3967b16fcfbdaee1b7c8529a915c8f801efa126621e9373dcf7dc3e24b4e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\c5_primary.npz",
+      "sha256": "b13c3967b16fcfbdaee1b7c8529a915c8f801efa126621e9373dcf7dc3e24b4e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\b4f7da80e26ff729\\rcd.npz",
+      "sha256": "74cfb784b3dc9d09b99a1506ccff8519931d82ced830d943d5dc15e283a78a2e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c1_bin20.npz",
+      "sha256": "43df5fee64af21b56d97a385a2e62d245fb0f285df19b664487aad695ff6bc2e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c1_bin5.npz",
+      "sha256": "d98975be17ddc21f14ed7f8dbf92ccd9f90a2d701937c3e805c270af63320213"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c1_horizon180.npz",
+      "sha256": "0425dfe0773c6200f3fe6ee77ced39a6ded66b917934bf053ab92180698b2ddc"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c1_horizon420.npz",
+      "sha256": "c94f170b9154fba268e490f15ad641a05f34bafb02f2f94416ed887d0b2eb09e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c1_primary.npz",
+      "sha256": "f6e86f5b2277de8f0654e557027da65c7c32733e51b154438eeb80d4e3ce04a2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c5_bin10.npz",
+      "sha256": "60d613121493a92a2b549b9f73b970a7b7cca125e96456b06bd7756b735c116b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c5_prefix240.npz",
+      "sha256": "7c72bb888eb3f357f0c7f076d6f857109a0014c7b463dbf035e222d9afd22adf"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c5_primary.npz",
+      "sha256": "7c72bb888eb3f357f0c7f076d6f857109a0014c7b463dbf035e222d9afd22adf"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\rcd.npz",
+      "sha256": "089668f8f2620e4240277da0c72d678228dccab63d79390840b9955c19d4a6d0"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c1_bin20.npz",
+      "sha256": "a0d435da9f161b030987b9d453e4408f9e4fa7c124f2412025a3c068a44553b3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c1_bin5.npz",
+      "sha256": "82f88693527350bbe7dffbbd1b8e3a071030c3a6d8adcd117ee739aed9424f38"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c1_horizon180.npz",
+      "sha256": "5a1d89f69460dc8a93e1633c68d1f820d525ac3ee911a715be3b3c2eb5572bc3"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c1_horizon420.npz",
+      "sha256": "bb5d6933dffc59fe71f9b0d29234fd3c12423d4c05fc8e3895ad2cf792cd6a13"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c1_primary.npz",
+      "sha256": "d1c187326cb7b0aa2f4c14472b04f4d0d0a390795425a3c4dbdf0886c9636c71"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c5_bin10.npz",
+      "sha256": "ca87a567101afe5a139ced1dd7826878d10c05959eba7604355640ce7a6fff05"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c5_prefix240.npz",
+      "sha256": "dd51f47fa4e9c881061fb9cbd6f1055fc40ce2488d8a31d55baefd125e175e04"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\c5_primary.npz",
+      "sha256": "dd51f47fa4e9c881061fb9cbd6f1055fc40ce2488d8a31d55baefd125e175e04"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\cea480a087995c2a\\rcd.npz",
+      "sha256": "edbd380c4346d445c7ea6b6ef5fbfb0484f2cde824047e1305ba3e663e11aca6"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c1_bin20.npz",
+      "sha256": "4b2c7b53f7dcb57fb9aa19e12b0d6fb028dc8a2b920394b950c738fbded04dfe"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c1_bin5.npz",
+      "sha256": "27246e2870e8af93b7b4853067cd3d6505d5b3d506ea8f21293ccc0093b80c0d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c1_horizon180.npz",
+      "sha256": "6a7bbce7e5cf758def3746ae74d28d76101a1344d3c2e10f8562db0eaee2d36c"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c1_horizon420.npz",
+      "sha256": "77caedb8668445f1a207cca47dd960efa83bb3d2ac4705fc10aebc2e4e92066f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c1_primary.npz",
+      "sha256": "64f5533095fe0c47a89d14b6c2b7449606804935611d08ae0d087fb3b9f6e5b9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c5_bin10.npz",
+      "sha256": "2e2cdc00981ef7b2949194b2aa4e40fe08ef161a95cdf7efc514b0aee1212f09"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c5_prefix240.npz",
+      "sha256": "109cd588612bbd17522505bb169c0209aead52ff2baee506cba81d82d4fe428b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\c5_primary.npz",
+      "sha256": "109cd588612bbd17522505bb169c0209aead52ff2baee506cba81d82d4fe428b"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\dd8536efed49ca5a\\rcd.npz",
+      "sha256": "7fac989d8cb34d6abd8d402ec555043ce068c08106685f83a98c536c04fac683"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c1_bin20.npz",
+      "sha256": "d9ff746e3af479b8448655d01c815eec568a3ac3ae9f68032e7826e52cd3cf36"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c1_bin5.npz",
+      "sha256": "603d6b6fe4fad7162a610b4d63704cc644e827795557fc0ae0618e686e20ee7f"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c1_horizon180.npz",
+      "sha256": "6ca8c219f799b8e08f1fc24b77ca9c7067aa988b56a94aaf82e0497e0571ee66"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c1_horizon420.npz",
+      "sha256": "93746cf033a79c1c26eeb27ee76edda2ba699a401e8e2ac5713fd0bfbb1e5216"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c1_primary.npz",
+      "sha256": "2e48a83d5a87b64f717d43ee94302ac7a19857d59bb3cece2a9ea0075861cf01"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c5_bin10.npz",
+      "sha256": "84272a8e93e8561ccbd809254f3f2f74658edbf3a6425df1a4746c8839fc9da8"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c5_prefix240.npz",
+      "sha256": "ada64e5f2f5b36ce528ccce66735b666e787271b10f675d91b685710c8459af5"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\c5_primary.npz",
+      "sha256": "b026b9621500220d998349a5bb5b36030a49fa9b798164e64af9ff88cb414420"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f13a01ab09a3962b\\rcd.npz",
+      "sha256": "9f23b45dce6c645ae526a55843945fc9da1f051549142d563ccdbb26892699ce"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_bin20.npz",
+      "sha256": "e37df40d4df3d665bebce13dbe0461c3555da90373796caabd0c6d71f2ce8a89"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_bin5.npz",
+      "sha256": "049a04bf4925eeb0b7b26ae52a22a4907d5143c544a948bf88f795eef067b008"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_horizon180.npz",
+      "sha256": "e0ec55596d24566c4c3cfd97d4e339624e97fa498f487a669e9e74e8823fb9d9"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_horizon420.npz",
+      "sha256": "69e92ea1b7374b23bd6bad85bac6dd10ff4c84006038c85a1cc9321a4d88001e"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c1_primary.npz",
+      "sha256": "345854da660c753ba915e716d733b0329d8a745dc5d7a3e309e7041e7a9756cb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c5_bin10.npz",
+      "sha256": "4fc8411b2f0325189b9abac5576032e0300a1dd2eac30a0a1cfe1d48796be1f2"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c5_prefix240.npz",
+      "sha256": "4384629283abaf68b521f6f0cf1cd4ebeb153e682708fa64d1eb6ed6c1e549bb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\c5_primary.npz",
+      "sha256": "4384629283abaf68b521f6f0cf1cd4ebeb153e682708fa64d1eb6ed6c1e549bb"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\f900792c9a1f5622\\rcd.npz",
+      "sha256": "6bf78351b5f9ae53e60624fc48c351158ddd608a15d29d1ea972d39fec2b346d"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\loader-summary.json",
+      "sha256": "842ed4c43da6c7e7faebb42da2a5769338e58ef7b7f722031bbfaae7ca2aae20"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\run-contract.json",
+      "sha256": "7f5b4b57b14dd00b4f70e03b43493e87a7a7f1502df88866030034c5e05016fd"
+    },
+    {
+      "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-033-c1-development-full\\selection.json",
+      "sha256": "b573102a18763eecd235ca2450438e265c2404c990a0180be6164af9806ea754"
+    }
+  ],
+  "command": [
+    "D:\\Project\\flash-ticket-rca-research\\.venv\\Scripts\\python.exe",
+    "D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\c1_development.py",
+    "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-036-c1-development-sensitivity",
+    "sensitivity",
+    "--audit-root",
+    "results/task-e/e27-019-development-loader-audit",
+    "--selection",
+    "results/task-e/e27-033-c1-development-full/selection.json"
+  ],
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "executable": "D:\\Project\\flash-ticket-rca-research\\.venv\\Scripts\\python.exe",
+  "platform": "Windows-11-10.0.22631-SP0",
+  "packages": {
+    "anyio": "4.15.1",
+    "certifi": "2026.7.22",
+    "click": "8.5.0",
+    "colorama": "0.4.6",
+    "filelock": "4.0.1",
+    "fsspec": "2026.9.0",
+    "h11": "0.16.0",
+    "hf-xet": "1.6.0",
+    "httpcore": "1.0.9",
+    "httpx": "0.28.1",
+    "huggingface_hub": "1.32.0",
+    "idna": "3.20",
+    "numpy": "2.5.3",
+    "packaging": "26.3",
+    "pandas": "3.0.6",
+    "pip": "25.0.1",
+    "pyarrow": "25.0.1",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "six": "1.17.0",
+    "tqdm": "4.70.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.4"
+  },
+  "hardware": {
+    "cpu": "Intel Core i5-1240P",
+    "physical_cores": 12,
+    "logical_processors": 16,
+    "ram_bytes": 16849293312
+  },
+  "seeds": {
+    "fixtures": "deterministic fixed arrays; PCG64 seeds explicit in code"
+  },
+  "config": {
+    "schema": "TD13-E-REGISTRY-v1",
+    "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "development_ids": [
+      "re2tt_ts-auth-service_cpu_1",
+      "re2tt_ts-auth-service_cpu_2",
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_delay_1",
+      "re2tt_ts-auth-service_delay_2",
+      "re2tt_ts-auth-service_delay_3",
+      "re2tt_ts-order-service_disk_1",
+      "re2tt_ts-order-service_disk_2",
+      "re2tt_ts-order-service_disk_3",
+      "re2tt_ts-order-service_loss_1",
+      "re2tt_ts-order-service_loss_2",
+      "re2tt_ts-order-service_loss_3",
+      "re2tt_ts-route-service_mem_1",
+      "re2tt_ts-route-service_mem_2",
+      "re2tt_ts-route-service_mem_3",
+      "re2tt_ts-route-service_socket_1",
+      "re2tt_ts-route-service_socket_2",
+      "re2tt_ts-route-service_socket_3",
+      "re2tt_ts-train-service_cpu_1",
+      "re2tt_ts-train-service_cpu_2",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_delay_1",
+      "re2tt_ts-train-service_delay_2",
+      "re2tt_ts-train-service_delay_3",
+      "re2tt_ts-travel-service_disk_1",
+      "re2tt_ts-travel-service_disk_2",
+      "re2tt_ts-travel-service_disk_3",
+      "re2tt_ts-travel-service_loss_1",
+      "re2tt_ts-travel-service_loss_2",
+      "re2tt_ts-travel-service_loss_3"
+    ],
+    "development_cells": [
+      [
+        "ts-auth-service",
+        "cpu"
+      ],
+      [
+        "ts-auth-service",
+        "delay"
+      ],
+      [
+        "ts-order-service",
+        "disk"
+      ],
+      [
+        "ts-order-service",
+        "loss"
+      ],
+      [
+        "ts-route-service",
+        "mem"
+      ],
+      [
+        "ts-route-service",
+        "socket"
+      ],
+      [
+        "ts-train-service",
+        "cpu"
+      ],
+      [
+        "ts-train-service",
+        "delay"
+      ],
+      [
+        "ts-travel-service",
+        "disk"
+      ],
+      [
+        "ts-travel-service",
+        "loss"
+      ]
+    ],
+    "folds": [
+      [
+        [
+          "ts-auth-service",
+          "cpu"
+        ],
+        [
+          "ts-order-service",
+          "disk"
+        ]
+      ],
+      [
+        [
+          "ts-auth-service",
+          "delay"
+        ],
+        [
+          "ts-travel-service",
+          "loss"
+        ]
+      ],
+      [
+        [
+          "ts-train-service",
+          "cpu"
+        ],
+        [
+          "ts-route-service",
+          "mem"
+        ]
+      ],
+      [
+        [
+          "ts-train-service",
+          "delay"
+        ],
+        [
+          "ts-travel-service",
+          "disk"
+        ]
+      ],
+      [
+        [
+          "ts-order-service",
+          "loss"
+        ],
+        [
+          "ts-route-service",
+          "socket"
+        ]
+      ]
+    ],
+    "smoke_rule": "one minimum-issued-opaque-handle case per development cell",
+    "smoke_ids": [
+      "re2tt_ts-auth-service_cpu_3",
+      "re2tt_ts-auth-service_delay_2",
+      "re2tt_ts-order-service_disk_1",
+      "re2tt_ts-order-service_loss_3",
+      "re2tt_ts-route-service_mem_2",
+      "re2tt_ts-route-service_socket_1",
+      "re2tt_ts-train-service_cpu_3",
+      "re2tt_ts-train-service_delay_3",
+      "re2tt_ts-travel-service_disk_1",
+      "re2tt_ts-travel-service_loss_3"
+    ],
+    "local": {
+      "floor": [
+        0.001,
+        0.01
+      ],
+      "pool": [
+        "max",
+        "q90"
+      ],
+      "fusion": [
+        "max",
+        "availablemean"
+      ],
+      "temporal": "q90"
+    },
+    "ppr": {
+      "direction": [
+        "reverse",
+        "undirected"
+      ],
+      "damping": [
+        0.2,
+        0.5,
+        0.85
+      ]
+    },
+    "secondary_diffusion": {
+      "direction": "undirected",
+      "alpha": [
+        0.2,
+        0.5,
+        0.85
+      ]
+    },
+    "R": {
+      "chains": 256,
+      "proposals_per_edge": 200,
+      "topology_only_sensitivity_budgets": [
+        100,
+        200,
+        400
+      ]
+    },
+    "c5": {
+      "arms": [
+        "G",
+        "L",
+        "ALL"
+      ],
+      "modalities": [
+        "MTL",
+        "MT"
+      ],
+      "lambda": [
+        0.1,
+        1,
+        10
+      ],
+      "q": [
+        0.95,
+        0.975,
+        0.99
+      ],
+      "neighbor_applicability": "TD13 section7.0a scaler-only E; Vfit at F, cal-only isolates at H",
+      "conflicting_span_policy": "TD13 section7.0b event-time local trace mask; permanent key quarantine; no retroactive bins",
+      "fit_bins": 24,
+      "cal_bins": 12,
+      "bin_seconds": 5,
+      "min_fit_rows": 18,
+      "min_cal_rows": 9,
+      "lag": 1,
+      "residual_floor": 0.01,
+      "streak": 3,
+      "refractory_seconds": 300
+    },
+    "sensitivity": {
+      "mode": "one-factor-at-a-time; diagnostic only; full list TD section8",
+      "c1_bins": [
+        5,
+        10,
+        20
+      ],
+      "c1_horizons": [
+        180,
+        300,
+        420
+      ],
+      "relative_floors": [
+        0.0001,
+        0.001,
+        0.01
+      ],
+      "c5_bin_prefix": [
+        [
+          5,
+          180
+        ],
+        [
+          10,
+          180
+        ],
+        [
+          5,
+          240
+        ]
+      ],
+      "c5_lags": [
+        1,
+        3
+      ],
+      "residual_floors": [
+        0.001,
+        0.01,
+        0.1
+      ],
+      "event_streaks": [
+        1,
+        3,
+        5
+      ],
+      "refractory_seconds": [
+        60,
+        300,
+        600
+      ],
+      "rcd_bins": [
+        3,
+        5,
+        7
+      ],
+      "rcd_seeds": [
+        420,
+        421,
+        422
+      ]
+    },
+    "selection": "NOT RUN; preserve TD section3 cascade and tie priorities",
+    "final_evaluation": "FORBIDDEN; no final IDs/materialized labels here"
+  },
+  "exposure": "Exact development30 only; no final60 raw files or outcomes",
+  "output_schema": "Stage-specific immutable JSON receipts and sealed lossless numeric predictions/intermediates",
+  "limitations": "API/process isolation is not hostile-code OS filesystem sandboxing"
+}

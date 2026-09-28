@@ -1,0 +1,18 @@
+{
+  "tests_run": 4,
+  "failures": [],
+  "errors": [
+    [
+      "test_duplicate_conflict_invalidates_channel (__main__.Adapters.test_duplicate_conflict_invalidates_channel)",
+      "Traceback (most recent call last):\n  File \"D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_adapters.py\", line 47, in test_duplicate_conflict_invalidates_channel\n    self.assertEqual(rcd_bundle(r,400,['a'])['values'].shape,(600,1))\n                     ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\input_adapters.py\", line 25, in rcd_bundle\n    values[~np.isfinite(values)] = np.nan\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nValueError: assignment destination is read-only\n"
+    ],
+    [
+      "test_finite_240_gate_not_row_count (__main__.Adapters.test_finite_240_gate_not_row_count)",
+      "Traceback (most recent call last):\n  File \"D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_adapters.py\", line 39, in test_finite_240_gate_not_row_count\n    self.assertEqual(rcd_bundle(r,400,['a'])['values'].shape,(600,0))\n                     ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\input_adapters.py\", line 25, in rcd_bundle\n    values[~np.isfinite(values)] = np.nan\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nValueError: assignment destination is read-only\n"
+    ],
+    [
+      "test_raw_seconds_not_binned_and_reference_only_imputation (__main__.Adapters.test_raw_seconds_not_binned_and_reference_only_imputation)",
+      "Traceback (most recent call last):\n  File \"D:\\Project\\flash-ticket-rca-research\\tests\\task_e\\test_adapters.py\", line 28, in test_raw_seconds_not_binned_and_reference_only_imputation\n    b = rcd_bundle(r, 400, ['a'])\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\input_adapters.py\", line 25, in rcd_bundle\n    values[~np.isfinite(values)] = np.nan\n    ~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nValueError: assignment destination is read-only\n"
+    ]
+  ]
+}

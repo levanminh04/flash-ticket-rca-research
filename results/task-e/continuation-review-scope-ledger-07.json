@@ -1,0 +1,86 @@
+{
+  "as_of_utc": "2026-09-27T23:25:15.508372+00:00",
+  "policy": "Agent finished closes its turn, not pending scope. Never reopen a CLOSED scope without source/input/hash drift or substantive new finding. Audit additions inspect only newly complete evidence, never rerun predictions.",
+  "reviewers": [
+    {
+      "agent": "/root/final_numeric_audit",
+      "closed": [
+        "C1-033",
+        "C5-primary-035",
+        "C1-sensitivity-036",
+        "C5-sensitivity-037",
+        "integrated-038",
+        "C5-arithmetic-adjudication"
+      ],
+      "pending": [
+        "RCD-041-final-evidence"
+      ],
+      "evidence": [
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-numerical-review.md",
+          "sha256": "f8151f8fa0c2a7bbf30ba3a41c7a14d972aa4969d0cf255fe5e1de4855939a54"
+        },
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-numerical-verification.json",
+          "sha256": "bbca4f7b287deb7f11b62b06a923269024b043f1041bd9bfa4cdf8462da3b756"
+        },
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-numerical-c5-sensitivity-verification.json",
+          "sha256": "28564f5e933cd519b28afd465c9e2c494063b2d486438f30326c64863642dee5"
+        },
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-numerical-c5-context-adjudication.json",
+          "sha256": "f3589ac0717cef3294c2ccbe94d02103ffb87546a06975e944b4af53f70d7f54"
+        }
+      ]
+    },
+    {
+      "agent": "/root/final_leakage_audit",
+      "closed": [
+        "C1-033",
+        "C5-primary-035",
+        "C1-sensitivity-036",
+        "C5-sensitivity-037",
+        "integrated-038",
+        "RCD-recovery-source",
+        "RCD-040-qualification"
+      ],
+      "pending": [
+        "RCD-041-final-evidence"
+      ],
+      "evidence": [
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-leakage-review.md",
+          "sha256": "ab2147bcc614de5456ad8001c703f4de4fd1df3befeb0f328c72fc2db1388d88"
+        },
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-leakage-checks-sensitivity.json",
+          "sha256": "99022ea325f5798b6715fb00d98e0152c03095e2c8a015a413fc15b44ed67d3a"
+        }
+      ]
+    },
+    {
+      "agent": "/root/final_scientific_review",
+      "closed": [
+        "C1-033",
+        "C5-primary-035",
+        "C1-sensitivity-036",
+        "C5-sensitivity-037",
+        "integrated-038",
+        "RCD-execution-attribution-034-039-040"
+      ],
+      "pending": [
+        "RCD-041-final-interpretation",
+        "final-coordinator-verdict-boundary"
+      ],
+      "evidence": [
+        {
+          "path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\final-scientific-review.md",
+          "sha256": "39a0622689b7f27d5e2f363d72222633263e46b9f95909569729286d797d98dd"
+        }
+      ]
+    }
+  ],
+  "new_reviewers_created": false,
+  "formal_five_review_assurance": "OPEN; separate from development review"
+}

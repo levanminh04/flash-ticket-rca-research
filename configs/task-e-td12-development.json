@@ -1,0 +1,273 @@
+{
+  "schema": "TD12-E-REGISTRY-v1",
+  "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+  "td_sha256": "985f1c5fc983422272dfbde8b69ed5ff98ee4fdd1631af075d03788c3770ad54",
+  "development_ids": [
+    "re2tt_ts-auth-service_cpu_1",
+    "re2tt_ts-auth-service_cpu_2",
+    "re2tt_ts-auth-service_cpu_3",
+    "re2tt_ts-auth-service_delay_1",
+    "re2tt_ts-auth-service_delay_2",
+    "re2tt_ts-auth-service_delay_3",
+    "re2tt_ts-order-service_disk_1",
+    "re2tt_ts-order-service_disk_2",
+    "re2tt_ts-order-service_disk_3",
+    "re2tt_ts-order-service_loss_1",
+    "re2tt_ts-order-service_loss_2",
+    "re2tt_ts-order-service_loss_3",
+    "re2tt_ts-route-service_mem_1",
+    "re2tt_ts-route-service_mem_2",
+    "re2tt_ts-route-service_mem_3",
+    "re2tt_ts-route-service_socket_1",
+    "re2tt_ts-route-service_socket_2",
+    "re2tt_ts-route-service_socket_3",
+    "re2tt_ts-train-service_cpu_1",
+    "re2tt_ts-train-service_cpu_2",
+    "re2tt_ts-train-service_cpu_3",
+    "re2tt_ts-train-service_delay_1",
+    "re2tt_ts-train-service_delay_2",
+    "re2tt_ts-train-service_delay_3",
+    "re2tt_ts-travel-service_disk_1",
+    "re2tt_ts-travel-service_disk_2",
+    "re2tt_ts-travel-service_disk_3",
+    "re2tt_ts-travel-service_loss_1",
+    "re2tt_ts-travel-service_loss_2",
+    "re2tt_ts-travel-service_loss_3"
+  ],
+  "development_cells": [
+    [
+      "ts-auth-service",
+      "cpu"
+    ],
+    [
+      "ts-auth-service",
+      "delay"
+    ],
+    [
+      "ts-order-service",
+      "disk"
+    ],
+    [
+      "ts-order-service",
+      "loss"
+    ],
+    [
+      "ts-route-service",
+      "mem"
+    ],
+    [
+      "ts-route-service",
+      "socket"
+    ],
+    [
+      "ts-train-service",
+      "cpu"
+    ],
+    [
+      "ts-train-service",
+      "delay"
+    ],
+    [
+      "ts-travel-service",
+      "disk"
+    ],
+    [
+      "ts-travel-service",
+      "loss"
+    ]
+  ],
+  "folds": [
+    [
+      [
+        "ts-auth-service",
+        "cpu"
+      ],
+      [
+        "ts-order-service",
+        "disk"
+      ]
+    ],
+    [
+      [
+        "ts-auth-service",
+        "delay"
+      ],
+      [
+        "ts-travel-service",
+        "loss"
+      ]
+    ],
+    [
+      [
+        "ts-train-service",
+        "cpu"
+      ],
+      [
+        "ts-route-service",
+        "mem"
+      ]
+    ],
+    [
+      [
+        "ts-train-service",
+        "delay"
+      ],
+      [
+        "ts-travel-service",
+        "disk"
+      ]
+    ],
+    [
+      [
+        "ts-order-service",
+        "loss"
+      ],
+      [
+        "ts-route-service",
+        "socket"
+      ]
+    ]
+  ],
+  "smoke_rule": "one minimum-issued-opaque-handle case per development cell",
+  "smoke_ids": [
+    "re2tt_ts-auth-service_cpu_3",
+    "re2tt_ts-auth-service_delay_2",
+    "re2tt_ts-order-service_disk_1",
+    "re2tt_ts-order-service_loss_3",
+    "re2tt_ts-route-service_mem_2",
+    "re2tt_ts-route-service_socket_1",
+    "re2tt_ts-train-service_cpu_3",
+    "re2tt_ts-train-service_delay_3",
+    "re2tt_ts-travel-service_disk_1",
+    "re2tt_ts-travel-service_loss_3"
+  ],
+  "local": {
+    "floor": [
+      0.001,
+      0.01
+    ],
+    "pool": [
+      "max",
+      "q90"
+    ],
+    "fusion": [
+      "max",
+      "availablemean"
+    ],
+    "temporal": "q90"
+  },
+  "ppr": {
+    "direction": [
+      "reverse",
+      "undirected"
+    ],
+    "damping": [
+      0.2,
+      0.5,
+      0.85
+    ]
+  },
+  "secondary_diffusion": {
+    "direction": "undirected",
+    "alpha": [
+      0.2,
+      0.5,
+      0.85
+    ]
+  },
+  "R": {
+    "chains": 256,
+    "proposals_per_edge": 200,
+    "topology_only_sensitivity_budgets": [
+      100,
+      200,
+      400
+    ]
+  },
+  "c5": {
+    "arms": [
+      "G",
+      "L",
+      "ALL"
+    ],
+    "modalities": [
+      "MTL",
+      "MT"
+    ],
+    "lambda": [
+      0.1,
+      1,
+      10
+    ],
+    "q": [
+      0.95,
+      0.975,
+      0.99
+    ],
+    "neighbor_applicability": "OPEN — RETURN TO D; do not run C5",
+    "conflicting_span_policy": "OPEN — no silent repair"
+  },
+  "sensitivity": {
+    "mode": "one-factor-at-a-time; diagnostic only; full list TD section8",
+    "c1_bins": [
+      5,
+      10,
+      20
+    ],
+    "c1_horizons": [
+      180,
+      300,
+      420
+    ],
+    "relative_floors": [
+      0.0001,
+      0.001,
+      0.01
+    ],
+    "c5_bin_prefix": [
+      [
+        5,
+        180
+      ],
+      [
+        10,
+        180
+      ],
+      [
+        5,
+        240
+      ]
+    ],
+    "c5_lags": [
+      1,
+      3
+    ],
+    "residual_floors": [
+      0.001,
+      0.01,
+      0.1
+    ],
+    "event_streaks": [
+      1,
+      3,
+      5
+    ],
+    "refractory_seconds": [
+      60,
+      300,
+      600
+    ],
+    "rcd_bins": [
+      3,
+      5,
+      7
+    ],
+    "rcd_seeds": [
+      420,
+      421,
+      422
+    ]
+  },
+  "selection": "NOT RUN; preserve TD section3 cascade and tie priorities",
+  "final_evaluation": "FORBIDDEN; no final IDs/materialized labels here"
+}
