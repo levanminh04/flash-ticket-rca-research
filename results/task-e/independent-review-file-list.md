@@ -2,10 +2,11 @@
 
 Repository aliases: `P` = `flash-ticket-platform` on branch `codex/rca-research-program`; `W` = `flash-ticket-rca-research` on branch `main`. Every path below is relative to its named repository root. No local filesystem paths are used.
 
-This index contains all 5,677 entries in `results/task-e/development-preflight-file-inventory.json` plus the inventory JSON, inventory Markdown, final-verification receipt, governance-final receipt, and this index. The installed Python environment and local execution caches are excluded; the small Hugging Face download metadata directory is included because it appears in the source inventory. The self-entry has no size/hash because that would be circular.
+This index contains all 5,677 entries in `results/task-e/development-preflight-file-inventory.json` plus the inventory JSON, inventory Markdown, final-verification receipt, governance-final receipt, `.gitattributes`, and this index. The installed Python environment and local execution caches are excluded; the small Hugging Face download metadata directory is included because it appears in the source inventory. The self-entry has no size/hash because that would be circular.
 
 | Repo | Relative path | State | Bytes | SHA-256 | Purpose |
 |---|---|---:|---:|---|---|
+| W | `.gitattributes` | ADDED_LOCAL | 104 | `81a4dd9745f5e94466670d0e0297267106055425786bf83f493a52c873608d24` | Declare Git LFS tracking for the single 152 MB result object |
 | P | `docs/evidence/project-direction/2026-09-27-rca-c5-amendment-and-e-resume.md` | ADDED_LOCAL | 21461 | `1236e6ab0b57cfb6724f602f8181f8cdd53bcf79639521a2a0cab97ff1b4f2f9` | Verbatim human authorization and scope evidence |
 | P | `docs/evidence/project-direction/2026-09-27-rca-development-preflight.md` | ADDED_LOCAL | 15648 | `40b181fb0f66b4ad65b4243a9ff9c617a680696f0aac90284fae598069658466` | Verbatim human authorization and scope evidence |
 | P | `docs/project/decision-register.md` | MODIFIED | 297023 | `71750b661813521a49be69e99a46e659b9288fcdc298f6f6ac453b78c5aeb61f` | Append atomic user authorization and canonical registration |
