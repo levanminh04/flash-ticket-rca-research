@@ -1,0 +1,486 @@
+{
+  "schema": "TD13-C5-DEVELOPMENT-v1",
+  "mode": "sensitivity",
+  "planned_cases": [
+    "re2tt_ts-auth-service_cpu_1",
+    "re2tt_ts-auth-service_cpu_2",
+    "re2tt_ts-auth-service_cpu_3",
+    "re2tt_ts-auth-service_delay_1",
+    "re2tt_ts-auth-service_delay_2",
+    "re2tt_ts-auth-service_delay_3",
+    "re2tt_ts-order-service_disk_1",
+    "re2tt_ts-order-service_disk_2",
+    "re2tt_ts-order-service_disk_3",
+    "re2tt_ts-order-service_loss_1",
+    "re2tt_ts-order-service_loss_2",
+    "re2tt_ts-order-service_loss_3",
+    "re2tt_ts-route-service_mem_1",
+    "re2tt_ts-route-service_mem_2",
+    "re2tt_ts-route-service_mem_3",
+    "re2tt_ts-route-service_socket_1",
+    "re2tt_ts-route-service_socket_2",
+    "re2tt_ts-route-service_socket_3",
+    "re2tt_ts-train-service_cpu_1",
+    "re2tt_ts-train-service_cpu_2",
+    "re2tt_ts-train-service_cpu_3",
+    "re2tt_ts-train-service_delay_1",
+    "re2tt_ts-train-service_delay_2",
+    "re2tt_ts-train-service_delay_3",
+    "re2tt_ts-travel-service_disk_1",
+    "re2tt_ts-travel-service_disk_2",
+    "re2tt_ts-travel-service_disk_3",
+    "re2tt_ts-travel-service_loss_1",
+    "re2tt_ts-travel-service_loss_2",
+    "re2tt_ts-travel-service_loss_3"
+  ],
+  "configs": [
+    {
+      "id": "bin10",
+      "profile": "bin10",
+      "dimension": "bin_prefix",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 10,
+          "fit_bins": 12,
+          "cal_bins": 6
+        }
+      ]
+    },
+    {
+      "id": "prefix240",
+      "profile": "prefix240",
+      "dimension": "bin_prefix",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 32,
+          "cal_bins": 16
+        }
+      ]
+    },
+    {
+      "id": "lag3",
+      "profile": "primary",
+      "dimension": "lag",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "lag": 3
+        }
+      ]
+    },
+    {
+      "id": "residual-floor-0.001",
+      "profile": "primary",
+      "dimension": "residual_floor",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.001
+        }
+      ]
+    },
+    {
+      "id": "residual-floor-0.1",
+      "profile": "primary",
+      "dimension": "residual_floor",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.01,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12,
+          "residual_floor": 0.1
+        }
+      ]
+    },
+    {
+      "id": "relative-floor-0.0001",
+      "profile": "primary",
+      "dimension": "relative_floor",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.0001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        }
+      ]
+    },
+    {
+      "id": "relative-floor-0.001",
+      "profile": "primary",
+      "dimension": "relative_floor",
+      "configs": [
+        {
+          "arm": "G",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "G",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "L",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "L",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MTL",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        },
+        {
+          "arm": "ALL",
+          "modalities": "MT",
+          "lambda": 10.0,
+          "floor": 0.001,
+          "bin_seconds": 5,
+          "fit_bins": 24,
+          "cal_bins": 12
+        }
+      ]
+    }
+  ],
+  "floor_source": "results/task-e/e27-033-c1-development-full/selection.json",
+  "evaluation_opened_only_after_case_seal": true,
+  "no_final_cases": true
+}

@@ -2,7 +2,7 @@
 
 Repository aliases: `P` = `flash-ticket-platform` on branch `codex/rca-research-program`; `W` = `flash-ticket-rca-research` on branch `main`. Every path below is relative to its named repository root. No local filesystem paths are used.
 
-This index contains all 5,677 entries in `results/task-e/development-preflight-file-inventory.json` plus the inventory JSON, inventory Markdown, final-verification receipt, and this index. The installed Python environment and local execution caches are excluded; the small Hugging Face download metadata directory is included because it appears in the source inventory. The self-entry has no size/hash because that would be circular.
+This index contains all 5,677 entries in `results/task-e/development-preflight-file-inventory.json` plus the inventory JSON, inventory Markdown, final-verification receipt, governance-final receipt, and this index. The installed Python environment and local execution caches are excluded; the small Hugging Face download metadata directory is included because it appears in the source inventory. The self-entry has no size/hash because that would be circular.
 
 | Repo | Relative path | State | Bytes | SHA-256 | Purpose |
 |---|---|---:|---:|---|---|
@@ -5686,4 +5686,5 @@ This index contains all 5,677 entries in `results/task-e/development-preflight-f
 | W | `results/task-e/development-preflight-file-inventory.json` | ADDED_LOCAL | 3425186 | `5e33bda9ee8315065f3aff49c7631bf788167ecf4fdeedd3960abb8c86710d49` | Packaging audit artifact excluded from source inventory to avoid circular hashes |
 | W | `results/task-e/development-preflight-file-inventory.md` | ADDED_LOCAL | 2300059 | `adfc108ada6e5fb0f0cae6f27e7944851c635463445af7f6e67be78475f7fcad` | Packaging audit artifact excluded from source inventory to avoid circular hashes |
 | W | `results/task-e/development-preflight-final-verification.json` | ADDED_LOCAL | 3645 | `0271999da3976cb034c392684dd618943aad7bbca57174016c6a2c49269a5103` | Packaging audit artifact excluded from source inventory to avoid circular hashes |
+| W | `results/task-e/development-preflight-governance-final.txt` | ADDED_LOCAL | 260 | `7ba0cb12f37be3f83dc76c86f74836e929cdc83b0dc363ed36005eb544a2a1a1` | Final governance audit receipt |
 | W | `results/task-e/independent-review-file-list.md` | ADDED_LOCAL | — | — | Complete relative-path index; self-hash omitted |

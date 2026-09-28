@@ -1,0 +1,297 @@
+{
+  "identity": {
+    "schema": "TD13-C5-DEVELOPMENT-v1",
+    "variant": "prefix240",
+    "handle": "c60cff817fc2d5cf",
+    "source": {
+      "status": "MATERIALIZED",
+      "numeric_path": "D:\\Project\\flash-ticket-rca-research\\results\\task-e\\e27-019-development-loader-audit\\intermediates\\c60cff817fc2d5cf\\c5_prefix240.npz",
+      "numeric_sha256": "7c72bb888eb3f357f0c7f076d6f857109a0014c7b463dbf035e222d9afd22adf",
+      "case_audit_sha256": "0c22eb2c3022acd4274a80b90663ab5f5d3d37b7ced913d65368ee83c7f93681",
+      "profile": "prefix240",
+      "cutoff": 1440,
+      "graph_sha256": "efe2ff28c4f02a1faac916f0bb46dcdb570a4cba08242f3c36b57816c09f9ef6"
+    },
+    "configs": [
+      {
+        "arm": "G",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      },
+      {
+        "arm": "G",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      },
+      {
+        "arm": "L",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      },
+      {
+        "arm": "L",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MTL",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      },
+      {
+        "arm": "ALL",
+        "modalities": "MT",
+        "lambda": 10.0,
+        "floor": 0.01,
+        "bin_seconds": 5,
+        "fit_bins": 32,
+        "cal_bins": 16
+      }
+    ],
+    "contract_sha256": "1933e9f0028d3abe313de92a95ccfa07f9c1800ba8b7f11f377d11e7652c94bc"
+  },
+  "artifacts": [
+    {
+      "file": "predictions.npz",
+      "sha256": "4d7ff70e1234a9bc2cdae26893aaf67c45e8088071ac6eb650d8b1df774e7ff7",
+      "bytes": 7139604
+    },
+    {
+      "file": "frozen-models.npz",
+      "sha256": "540052d0ff88683e94c74b8fcbfde6bd41a8815a93316421f23acab93ef77d2a",
+      "bytes": 1695085
+    },
+    {
+      "file": "numeric-input.npz",
+      "sha256": "7c72bb888eb3f357f0c7f076d6f857109a0014c7b463dbf035e222d9afd22adf",
+      "bytes": 221763
+    }
+  ],
+  "failed_configs": [],
+  "tv_failures": [],
+  "worker_input_contract": "exact warmup then one bin; no labels/paths/epochs",
+  "worker_handshake": {
+    "schema": "TD13-NUMERIC-WIRE-v1",
+    "project_modules": [
+      "scripts.task_e.detection",
+      "scripts.task_e.ranking"
+    ],
+    "isolation": "NUMERIC_API_AND_PROCESS_NOT_HOSTILE_OS_SANDBOX"
+  },
+  "capacity": [
+    {
+      "model_count": 241,
+      "applicable_channels": 241,
+      "fit_models": 241,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 26,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 67832307008.9762,
+      "effective_df_mean": 1.1676912365254932,
+      "active_columns_mean": 2.219917012448133,
+      "centered_design_rank_mean": 2.219917012448133,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 190
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 138
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 221,
+      "applicable_channels": 221,
+      "fit_models": 221,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 25,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 67832307008.9762,
+      "effective_df_mean": 1.1758558740049412,
+      "active_columns_mean": 2.226244343891403,
+      "centered_design_rank_mean": 2.226244343891403,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 202
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 157
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 241,
+      "applicable_channels": 241,
+      "fit_models": 241,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 30,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 66931493941.72229,
+      "effective_df_mean": 1.0794982928891221,
+      "active_columns_mean": 0.9626556016597511,
+      "centered_design_rank_mean": 0.9626556016597511,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 190
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 138
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 221,
+      "applicable_channels": 221,
+      "fit_models": 221,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 29,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 66931493941.72229,
+      "effective_df_mean": 1.082590945140649,
+      "active_columns_mean": 0.9592760180995475,
+      "centered_design_rank_mean": 0.9592760180995475,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 202
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 157
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    },
+    {
+      "model_count": 241,
+      "applicable_channels": 241,
+      "fit_models": 241,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 24,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 225844053319.74225,
+      "effective_df_mean": 1.2097987101115768,
+      "active_columns_mean": 2.921161825726141,
+      "centered_design_rank_mean": 1.941908713692946,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 190
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 138
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 54
+        }
+      }
+    },
+    {
+      "model_count": 221,
+      "applicable_channels": 221,
+      "fit_models": 221,
+      "singleton_scales": 0,
+      "constant_scales": 9,
+      "floor_scales": 47,
+      "residual_floor_scales": 23,
+      "residual_scales_min": 0.01,
+      "residual_scales_max": 225844053319.74225,
+      "effective_df_mean": 1.2223100968843015,
+      "active_columns_mean": 2.914027149321267,
+      "centered_design_rank_mean": 1.9366515837104072,
+      "degrees": {
+        "out": {
+          "min": 0,
+          "max": 10,
+          "empty_targets": 202
+        },
+        "in": {
+          "min": 0,
+          "max": 6,
+          "empty_targets": 157
+        },
+        "all": {
+          "min": 0,
+          "max": 26,
+          "empty_targets": 81
+        }
+      }
+    }
+  ],
+  "status": "COMPLETE",
+  "fit_seconds": 0.6256785999867134,
+  "score_seconds": 7.729641599871684,
+  "seconds": 9.894786500022747,
+  "completed_score_bins": 240,
+  "planned_score_bins": 240,
+  "prediction_sealed_before_evaluator": true,
+  "completed_worker_calls": 240
+}
