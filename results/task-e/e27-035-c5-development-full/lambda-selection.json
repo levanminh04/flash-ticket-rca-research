@@ -1,0 +1,1808 @@
+{
+  "selected_lambda": 10.0,
+  "objectives": {
+    "0.1": 7077887533.624485,
+    "1.0": 7051263086.227625,
+    "10.0": 7051117096.178637
+  },
+  "details": {
+    "0.1": {
+      "arms": {
+        "G": {
+          "loss": 7064371374.555701,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.598559712740993,
+            "re2tt_ts-auth-service_cpu_2": 6843965024.718489,
+            "re2tt_ts-auth-service_cpu_3": 23674738663.086704,
+            "re2tt_ts-auth-service_delay_1": 7164154794.9931965,
+            "re2tt_ts-auth-service_delay_2": 9669060623.021162,
+            "re2tt_ts-auth-service_delay_3": 2684105412.848241,
+            "re2tt_ts-order-service_disk_1": 24027274434.048664,
+            "re2tt_ts-order-service_disk_2": 1.6032535504215033,
+            "re2tt_ts-order-service_disk_3": 0.8324644516266873,
+            "re2tt_ts-order-service_loss_1": 15830608118.310553,
+            "re2tt_ts-order-service_loss_2": 0.7622294302741727,
+            "re2tt_ts-order-service_loss_3": 0.6577474041630758,
+            "re2tt_ts-route-service_mem_1": 8194820880.511487,
+            "re2tt_ts-route-service_mem_2": 16648353417.206861,
+            "re2tt_ts-route-service_mem_3": 2696020062.6103525,
+            "re2tt_ts-route-service_socket_1": 6389325745.2357,
+            "re2tt_ts-route-service_socket_2": 8898920185.746496,
+            "re2tt_ts-route-service_socket_3": 8065713637.795327,
+            "re2tt_ts-train-service_cpu_1": 6792966818.831955,
+            "re2tt_ts-train-service_cpu_2": 2067039721.4919922,
+            "re2tt_ts-train-service_cpu_3": 7345753862.588042,
+            "re2tt_ts-train-service_delay_1": 2516378175.62035,
+            "re2tt_ts-train-service_delay_2": 12004064413.527403,
+            "re2tt_ts-train-service_delay_3": 7493924627.122864,
+            "re2tt_ts-travel-service_disk_1": 18262224696.914127,
+            "re2tt_ts-travel-service_disk_2": 8132799314.090989,
+            "re2tt_ts-travel-service_disk_3": 0.7737749511020895,
+            "re2tt_ts-travel-service_loss_1": 0.7732163729768904,
+            "re2tt_ts-travel-service_loss_2": 6528928599.630096,
+            "re2tt_ts-travel-service_loss_3": 0.7187427821206882
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10172901229.467918
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6505773610.287534
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 8009091478.828127
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5276869373.24351
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9179731453.4429
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7784653189.592507
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5401920134.303997
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7338122405.423538
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8798341337.25963
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2176309533.7073517
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "L": {
+          "loss": 7010433685.199835,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.572525512473072,
+            "re2tt_ts-auth-service_cpu_2": 6807639166.176907,
+            "re2tt_ts-auth-service_cpu_3": 23755950926.649532,
+            "re2tt_ts-auth-service_delay_1": 7130901500.49305,
+            "re2tt_ts-auth-service_delay_2": 9569232836.359268,
+            "re2tt_ts-auth-service_delay_3": 2685750650.202578,
+            "re2tt_ts-order-service_disk_1": 23116698949.950066,
+            "re2tt_ts-order-service_disk_2": 1.1072747895031114,
+            "re2tt_ts-order-service_disk_3": 0.791768717856631,
+            "re2tt_ts-order-service_loss_1": 15510950797.469126,
+            "re2tt_ts-order-service_loss_2": 0.72200675491253,
+            "re2tt_ts-order-service_loss_3": 0.6172145372828812,
+            "re2tt_ts-route-service_mem_1": 8164461114.184298,
+            "re2tt_ts-route-service_mem_2": 16518232155.579247,
+            "re2tt_ts-route-service_mem_3": 2691508127.94227,
+            "re2tt_ts-route-service_socket_1": 6425419882.558982,
+            "re2tt_ts-route-service_socket_2": 8855542953.016933,
+            "re2tt_ts-route-service_socket_3": 8067583050.871784,
+            "re2tt_ts-train-service_cpu_1": 6625561546.2534895,
+            "re2tt_ts-train-service_cpu_2": 1967109391.5608106,
+            "re2tt_ts-train-service_cpu_3": 7345385356.86415,
+            "re2tt_ts-train-service_delay_1": 2590104979.816092,
+            "re2tt_ts-train-service_delay_2": 11932923428.848894,
+            "re2tt_ts-train-service_delay_3": 7238884673.132912,
+            "re2tt_ts-travel-service_disk_1": 18621571511.48383,
+            "re2tt_ts-travel-service_disk_2": 8023878309.606958,
+            "re2tt_ts-travel-service_disk_3": 0.717362590807623,
+            "re2tt_ts-travel-service_loss_1": 0.7295020036553552,
+            "re2tt_ts-travel-service_loss_2": 6667719241.034424,
+            "re2tt_ts-travel-service_loss_3": 0.6817832368523712
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10187863364.466322
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6461961662.351632
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 7705566317.283036
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5170316932.936116
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9124733799.235271
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7782848628.8159
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5312685431.559484
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7253971027.265965
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8881816607.269382
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2222573080.8152366
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "ALL": {
+          "loss": 7158857541.11792,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.5923858090353966,
+            "re2tt_ts-auth-service_cpu_2": 6950989112.689581,
+            "re2tt_ts-auth-service_cpu_3": 24318810187.335052,
+            "re2tt_ts-auth-service_delay_1": 7112592887.70248,
+            "re2tt_ts-auth-service_delay_2": 9713686270.292078,
+            "re2tt_ts-auth-service_delay_3": 2689979778.176918,
+            "re2tt_ts-order-service_disk_1": 25223462933.779724,
+            "re2tt_ts-order-service_disk_2": 1.1742668410632495,
+            "re2tt_ts-order-service_disk_3": 0.8531180770167734,
+            "re2tt_ts-order-service_loss_1": 15667637983.726324,
+            "re2tt_ts-order-service_loss_2": 0.7572348044252425,
+            "re2tt_ts-order-service_loss_3": 0.6729351231313428,
+            "re2tt_ts-route-service_mem_1": 8216538624.593387,
+            "re2tt_ts-route-service_mem_2": 17066458612.85849,
+            "re2tt_ts-route-service_mem_3": 2698524735.1307817,
+            "re2tt_ts-route-service_socket_1": 6250529369.258149,
+            "re2tt_ts-route-service_socket_2": 8862778600.6674,
+            "re2tt_ts-route-service_socket_3": 8072430237.812668,
+            "re2tt_ts-train-service_cpu_1": 6997602037.296134,
+            "re2tt_ts-train-service_cpu_2": 2018695356.113644,
+            "re2tt_ts-train-service_cpu_3": 7553428268.110752,
+            "re2tt_ts-train-service_delay_1": 2628002628.382529,
+            "re2tt_ts-train-service_delay_2": 12132452397.367195,
+            "re2tt_ts-train-service_delay_3": 7569563426.341169,
+            "re2tt_ts-travel-service_disk_1": 18293564338.13583,
+            "re2tt_ts-travel-service_disk_2": 8223012268.136124,
+            "re2tt_ts-travel-service_disk_3": 0.8026831423946791,
+            "re2tt_ts-travel-service_loss_1": 0.7972089367478573,
+            "re2tt_ts-travel-service_loss_2": 6504986173.277889,
+            "re2tt_ts-travel-service_loss_3": 0.7034670699101951
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10423266433.539007
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6505419645.390492
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 8407820978.602369
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5222545995.052165
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9327173990.860886
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7728579402.579406
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5523241887.17351
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7443339484.030298
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8838858869.02488
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2168328724.9261885
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        }
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "train_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 9090996354.148022,
+            "L": 8946714840.87468,
+            "ALL": 9415543706.070688
+          }
+        },
+        {
+          "fold": 2,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "arm_losses": {
+            "G": 4341041571.997442,
+            "L": 4342267371.583434,
+            "ALL": 4336874185.15834
+          }
+        },
+        {
+          "fold": 3,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3"
+          ],
+          "arm_losses": {
+            "G": 7290825793.873448,
+            "L": 7218709615.397377,
+            "ALL": 7425207939.017198
+          }
+        },
+        {
+          "fold": 4,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 8068231871.341584,
+            "L": 8067893817.2676735,
+            "ALL": 8141099176.527589
+          }
+        },
+        {
+          "fold": 5,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3"
+          ],
+          "arm_losses": {
+            "G": 6530761281.418009,
+            "L": 6476582780.876008,
+            "ALL": 6475562698.815785
+          }
+        }
+      ]
+    },
+    "1.0": {
+      "arms": {
+        "G": {
+          "loss": 7025639554.591994,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.7033841487372482,
+            "re2tt_ts-auth-service_cpu_2": 6813759432.667793,
+            "re2tt_ts-auth-service_cpu_3": 23650392992.751522,
+            "re2tt_ts-auth-service_delay_1": 7129280305.66112,
+            "re2tt_ts-auth-service_delay_2": 9544214572.32681,
+            "re2tt_ts-auth-service_delay_3": 2685318311.012438,
+            "re2tt_ts-order-service_disk_1": 23888963301.546814,
+            "re2tt_ts-order-service_disk_2": 1.3880184700760017,
+            "re2tt_ts-order-service_disk_3": 0.9794906989034292,
+            "re2tt_ts-order-service_loss_1": 15612653052.330217,
+            "re2tt_ts-order-service_loss_2": 0.8403510161598285,
+            "re2tt_ts-order-service_loss_3": 0.759725327663609,
+            "re2tt_ts-route-service_mem_1": 8169182603.020493,
+            "re2tt_ts-route-service_mem_2": 16606863834.70904,
+            "re2tt_ts-route-service_mem_3": 2692443845.582762,
+            "re2tt_ts-route-service_socket_1": 6408243215.421512,
+            "re2tt_ts-route-service_socket_2": 8863644850.646072,
+            "re2tt_ts-route-service_socket_3": 8066358626.610717,
+            "re2tt_ts-train-service_cpu_1": 6564358509.8912525,
+            "re2tt_ts-train-service_cpu_2": 1994798629.8775992,
+            "re2tt_ts-train-service_cpu_3": 7343397875.035298,
+            "re2tt_ts-train-service_delay_1": 2576171594.974953,
+            "re2tt_ts-train-service_delay_2": 11950015769.768354,
+            "re2tt_ts-train-service_delay_3": 7275391648.802944,
+            "re2tt_ts-travel-service_disk_1": 18272241913.63607,
+            "re2tt_ts-travel-service_disk_2": 8040018380.047143,
+            "re2tt_ts-travel-service_disk_3": 0.8645457770516788,
+            "re2tt_ts-travel-service_loss_1": 0.9277066226192353,
+            "re2tt_ts-travel-service_loss_2": 6621473364.182608,
+            "re2tt_ts-travel-service_loss_3": 0.793078230409128
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10154717475.374233
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6452937729.66679
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 7962987767.97144
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5204217684.643431
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9156163427.770765
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7779415564.2261
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5300851671.601383
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7267193004.515417
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8770753431.51592
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2207157788.6344643
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "L": {
+          "loss": 7010433685.37662,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.7043746793649089,
+            "re2tt_ts-auth-service_cpu_2": 6807639166.299692,
+            "re2tt_ts-auth-service_cpu_3": 23755950926.7845,
+            "re2tt_ts-auth-service_delay_1": 7130901500.616625,
+            "re2tt_ts-auth-service_delay_2": 9569232836.787445,
+            "re2tt_ts-auth-service_delay_3": 2685750650.4571714,
+            "re2tt_ts-order-service_disk_1": 23116698950.09325,
+            "re2tt_ts-order-service_disk_2": 1.2834051231029404,
+            "re2tt_ts-order-service_disk_3": 0.9737288968920594,
+            "re2tt_ts-order-service_loss_1": 15510950797.613678,
+            "re2tt_ts-order-service_loss_2": 0.8338163065795009,
+            "re2tt_ts-order-service_loss_3": 0.7549366128077228,
+            "re2tt_ts-route-service_mem_1": 8164461114.3884,
+            "re2tt_ts-route-service_mem_2": 16518232155.883738,
+            "re2tt_ts-route-service_mem_3": 2691508128.0936046,
+            "re2tt_ts-route-service_socket_1": 6425419882.69585,
+            "re2tt_ts-route-service_socket_2": 8855542953.318352,
+            "re2tt_ts-route-service_socket_3": 8067583051.048679,
+            "re2tt_ts-train-service_cpu_1": 6625561546.397874,
+            "re2tt_ts-train-service_cpu_2": 1967109391.6955738,
+            "re2tt_ts-train-service_cpu_3": 7345385357.026941,
+            "re2tt_ts-train-service_delay_1": 2590104979.9484973,
+            "re2tt_ts-train-service_delay_2": 11932923429.012775,
+            "re2tt_ts-train-service_delay_3": 7238884673.276404,
+            "re2tt_ts-travel-service_disk_1": 18621571511.69113,
+            "re2tt_ts-travel-service_disk_2": 8023878309.851323,
+            "re2tt_ts-travel-service_disk_3": 0.8522230049506464,
+            "re2tt_ts-travel-service_loss_1": 0.9306721071935417,
+            "re2tt_ts-travel-service_loss_2": 6667719241.186983,
+            "re2tt_ts-travel-service_loss_3": 0.7969540201449149
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10187863364.59619
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6461961662.620414
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 7705566317.450129
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5170316933.067476
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9124733799.455248
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7782848629.020961
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5312685431.706797
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7253971027.4125595
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8881816607.464893
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2222573080.971536
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "ALL": {
+          "loss": 7117716018.714261,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.7041572287079588,
+            "re2tt_ts-auth-service_cpu_2": 6841213485.111634,
+            "re2tt_ts-auth-service_cpu_3": 24318810187.794495,
+            "re2tt_ts-auth-service_delay_1": 7116523654.001395,
+            "re2tt_ts-auth-service_delay_2": 9710847778.045204,
+            "re2tt_ts-auth-service_delay_3": 2684929536.3074636,
+            "re2tt_ts-order-service_disk_1": 25223462934.021004,
+            "re2tt_ts-order-service_disk_2": 1.300360755739151,
+            "re2tt_ts-order-service_disk_3": 0.9805670669586434,
+            "re2tt_ts-order-service_loss_1": 15667637983.82933,
+            "re2tt_ts-order-service_loss_2": 0.8375391486756292,
+            "re2tt_ts-order-service_loss_3": 0.764125681883544,
+            "re2tt_ts-route-service_mem_1": 8186677337.09922,
+            "re2tt_ts-route-service_mem_2": 17066458612.785725,
+            "re2tt_ts-route-service_mem_3": 2694250114.5062246,
+            "re2tt_ts-route-service_socket_1": 6351610040.690185,
+            "re2tt_ts-route-service_socket_2": 8852162483.51904,
+            "re2tt_ts-route-service_socket_3": 8067395766.525564,
+            "re2tt_ts-train-service_cpu_1": 6559705977.424874,
+            "re2tt_ts-train-service_cpu_2": 1987410345.3449924,
+            "re2tt_ts-train-service_cpu_3": 7198827673.736974,
+            "re2tt_ts-train-service_delay_1": 2606146909.5657105,
+            "re2tt_ts-train-service_delay_2": 12107284803.317507,
+            "re2tt_ts-train-service_delay_3": 7370633983.644717,
+            "re2tt_ts-travel-service_disk_1": 18293564336.825527,
+            "re2tt_ts-travel-service_disk_2": 8049817971.364647,
+            "re2tt_ts-travel-service_disk_3": 0.8672435181854583,
+            "re2tt_ts-travel-service_loss_1": 0.9384640929406162,
+            "re2tt_ts-travel-service_loss_2": 6576108638.7785845,
+            "re2tt_ts-travel-service_loss_3": 0.7953758789051022
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10386674557.870094
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6504100322.784688
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 8407820978.76731
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5222545995.143664
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9315795354.797056
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7757056096.911596
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5248647998.835614
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7361355232.175978
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8781127436.352472
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2192036213.5041413
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        }
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "train_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 9058852621.672836,
+            "L": 8946714841.023159,
+            "ALL": 9397247768.318703
+          }
+        },
+        {
+          "fold": 2,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "arm_losses": {
+            "G": 4330047759.150627,
+            "L": 4342267371.795975,
+            "ALL": 4348068268.144415
+          }
+        },
+        {
+          "fold": 3,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3"
+          ],
+          "arm_losses": {
+            "G": 7228507549.686074,
+            "L": 7218709615.581022,
+            "ALL": 7282221676.816336
+          }
+        },
+        {
+          "fold": 4,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 8018973218.015669,
+            "L": 8067893817.438726,
+            "ALL": 8071241334.264225
+          }
+        },
+        {
+          "fold": 5,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3"
+          ],
+          "arm_losses": {
+            "G": 6491816624.434765,
+            "L": 6476582781.044218,
+            "ALL": 6489801046.02763
+          }
+        }
+      ]
+    },
+    "10.0": {
+      "arms": {
+        "G": {
+          "loss": 7021877238.464478,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.8252157728001315,
+            "re2tt_ts-auth-service_cpu_2": 6808326352.109549,
+            "re2tt_ts-auth-service_cpu_3": 23643198770.637527,
+            "re2tt_ts-auth-service_delay_1": 7130885779.297944,
+            "re2tt_ts-auth-service_delay_2": 9562969310.207447,
+            "re2tt_ts-auth-service_delay_3": 2685699010.62214,
+            "re2tt_ts-order-service_disk_1": 23831660132.500362,
+            "re2tt_ts-order-service_disk_2": 1.4419720824714466,
+            "re2tt_ts-order-service_disk_3": 1.1183338853509224,
+            "re2tt_ts-order-service_loss_1": 15524308025.805264,
+            "re2tt_ts-order-service_loss_2": 0.9324104271844678,
+            "re2tt_ts-order-service_loss_3": 0.8792147509239302,
+            "re2tt_ts-route-service_mem_1": 8164668252.236459,
+            "re2tt_ts-route-service_mem_2": 16593127068.363922,
+            "re2tt_ts-route-service_mem_3": 2691612957.265331,
+            "re2tt_ts-route-service_socket_1": 6423059431.499173,
+            "re2tt_ts-route-service_socket_2": 8856460704.571476,
+            "re2tt_ts-route-service_socket_3": 8067446740.147788,
+            "re2tt_ts-train-service_cpu_1": 6613069288.244397,
+            "re2tt_ts-train-service_cpu_2": 1970500558.062752,
+            "re2tt_ts-train-service_cpu_3": 7345121850.376323,
+            "re2tt_ts-train-service_delay_1": 2588575541.92503,
+            "re2tt_ts-train-service_delay_2": 11934913249.483791,
+            "re2tt_ts-train-service_delay_3": 7242599908.426272,
+            "re2tt_ts-travel-service_disk_1": 18290605617.129005,
+            "re2tt_ts-travel-service_disk_2": 8025640213.681651,
+            "re2tt_ts-travel-service_disk_3": 1.006886449466281,
+            "re2tt_ts-travel-service_loss_1": 1.060728036930569,
+            "re2tt_ts-travel-service_loss_2": 6661868383.18135,
+            "re2tt_ts-travel-service_loss_3": 0.8946063209724071
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10150508374.524097
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6459851366.709177
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 7943886711.68689
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5174769342.538963
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9149802759.28857
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7782322292.072813
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5309563898.894491
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7255362899.945031
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8772081943.93918
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2220622795.0455613
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "L": {
+          "loss": 7010433685.533826,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.8284665655391567,
+            "re2tt_ts-auth-service_cpu_2": 6807639166.418018,
+            "re2tt_ts-auth-service_cpu_3": 23755950926.898922,
+            "re2tt_ts-auth-service_delay_1": 7130901500.715605,
+            "re2tt_ts-auth-service_delay_2": 9569232837.16418,
+            "re2tt_ts-auth-service_delay_3": 2685750650.6758165,
+            "re2tt_ts-order-service_disk_1": 23116698950.209503,
+            "re2tt_ts-order-service_disk_2": 1.439124067470436,
+            "re2tt_ts-order-service_disk_3": 1.1221826658249128,
+            "re2tt_ts-order-service_loss_1": 15510950797.724615,
+            "re2tt_ts-order-service_loss_2": 0.9347265940060703,
+            "re2tt_ts-order-service_loss_3": 0.8826626778464952,
+            "re2tt_ts-route-service_mem_1": 8164461114.540142,
+            "re2tt_ts-route-service_mem_2": 16518232156.15041,
+            "re2tt_ts-route-service_mem_3": 2691508128.2201996,
+            "re2tt_ts-route-service_socket_1": 6425419882.808405,
+            "re2tt_ts-route-service_socket_2": 8855542953.580921,
+            "re2tt_ts-route-service_socket_3": 8067583051.209392,
+            "re2tt_ts-train-service_cpu_1": 6625561546.513887,
+            "re2tt_ts-train-service_cpu_2": 1967109391.8323376,
+            "re2tt_ts-train-service_cpu_3": 7345385357.188988,
+            "re2tt_ts-train-service_delay_1": 2590104980.0667415,
+            "re2tt_ts-train-service_delay_2": 11932923429.14429,
+            "re2tt_ts-train-service_delay_3": 7238884673.444959,
+            "re2tt_ts-travel-service_disk_1": 18621571511.88941,
+            "re2tt_ts-travel-service_disk_2": 8023878310.096567,
+            "re2tt_ts-travel-service_disk_3": 1.0052764428369243,
+            "re2tt_ts-travel-service_loss_1": 1.0646029475065881,
+            "re2tt_ts-travel-service_loss_2": 6667719241.346389,
+            "re2tt_ts-travel-service_loss_3": 0.8980403513265571
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10187863364.715136
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6461961662.851868
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 7705566317.59027
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5170316933.180669
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9124733799.636917
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7782848629.199573
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5312685431.845071
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7253971027.551997
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8881816607.66375
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2222573081.1030107
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        },
+        "ALL": {
+          "loss": 7121040364.537608,
+          "case_losses": {
+            "re2tt_ts-auth-service_cpu_1": 0.8275054771880852,
+            "re2tt_ts-auth-service_cpu_2": 6810737479.966213,
+            "re2tt_ts-auth-service_cpu_3": 24318810188.267998,
+            "re2tt_ts-auth-service_delay_1": 7119636832.276896,
+            "re2tt_ts-auth-service_delay_2": 9716225600.43742,
+            "re2tt_ts-auth-service_delay_3": 2685639581.2899036,
+            "re2tt_ts-order-service_disk_1": 25223462934.14899,
+            "re2tt_ts-order-service_disk_2": 1.437540989412145,
+            "re2tt_ts-order-service_disk_3": 1.1226152476885494,
+            "re2tt_ts-order-service_loss_1": 15667637983.936329,
+            "re2tt_ts-order-service_loss_2": 0.9340825433633796,
+            "re2tt_ts-order-service_loss_3": 0.8832197349802453,
+            "re2tt_ts-route-service_mem_1": 8173691060.932835,
+            "re2tt_ts-route-service_mem_2": 17066458613.045387,
+            "re2tt_ts-route-service_mem_3": 2691894751.076443,
+            "re2tt_ts-route-service_socket_1": 6414572475.984394,
+            "re2tt_ts-route-service_socket_2": 8855138247.711311,
+            "re2tt_ts-route-service_socket_3": 8067298746.060449,
+            "re2tt_ts-train-service_cpu_1": 6610614308.206168,
+            "re2tt_ts-train-service_cpu_2": 1969982993.957428,
+            "re2tt_ts-train-service_cpu_3": 7326475681.154223,
+            "re2tt_ts-train-service_delay_1": 2592475578.399281,
+            "re2tt_ts-train-service_delay_2": 12095783004.107016,
+            "re2tt_ts-train-service_delay_3": 7259933858.933132,
+            "re2tt_ts-travel-service_disk_1": 18293564336.984432,
+            "re2tt_ts-travel-service_disk_2": 8017145222.306199,
+            "re2tt_ts-travel-service_disk_3": 1.0064366098147708,
+            "re2tt_ts-travel-service_loss_1": 1.0643431231454017,
+            "re2tt_ts-travel-service_loss_2": 6654031448.772851,
+            "re2tt_ts-travel-service_loss_3": 0.8971904783667048
+          },
+          "scenario_losses": [
+            {
+              "scenario": [
+                "ts-auth-service",
+                "cpu"
+              ],
+              "loss": 10376515889.687239
+            },
+            {
+              "scenario": [
+                "ts-auth-service",
+                "delay"
+              ],
+              "loss": 6507167338.001407
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "disk"
+              ],
+              "loss": 8407820978.9030485
+            },
+            {
+              "scenario": [
+                "ts-order-service",
+                "loss"
+              ],
+              "loss": 5222545995.25121
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "mem"
+              ],
+              "loss": 9310681475.018223
+            },
+            {
+              "scenario": [
+                "ts-route-service",
+                "socket"
+              ],
+              "loss": 7779003156.585385
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "cpu"
+              ],
+              "loss": 5302357661.10594
+            },
+            {
+              "scenario": [
+                "ts-train-service",
+                "delay"
+              ],
+              "loss": 7316064147.146476
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "disk"
+              ],
+              "loss": 8770236520.099024
+            },
+            {
+              "scenario": [
+                "ts-travel-service",
+                "loss"
+              ],
+              "loss": 2218010483.578128
+            }
+          ],
+          "planned_cases": 30,
+          "eligible_cases": 30,
+          "case_coverage": 1.0,
+          "support_source": "predictions/primary/<handle>/predictions.npz target_mask+endpoints; starts>=warmup and ends<=tau"
+        }
+      },
+      "folds": [
+        {
+          "fold": 1,
+          "train_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 9047197543.105494,
+            "L": 8946714841.152702,
+            "ALL": 9392168434.295143
+          }
+        },
+        {
+          "fold": 2,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "arm_losses": {
+            "G": 4340237080.877369,
+            "L": 4342267371.977439,
+            "ALL": 4362588910.789767
+          }
+        },
+        {
+          "fold": 3,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3"
+          ],
+          "arm_losses": {
+            "G": 7229683329.091531,
+            "L": 7218709615.7409935,
+            "ALL": 7306519568.062081
+          }
+        },
+        {
+          "fold": 4,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3"
+          ],
+          "arm_losses": {
+            "G": 8013722421.942106,
+            "L": 8067893817.607874,
+            "ALL": 8043150333.622749
+          }
+        },
+        {
+          "fold": 5,
+          "train_ids": [
+            "re2tt_ts-auth-service_cpu_1",
+            "re2tt_ts-auth-service_cpu_2",
+            "re2tt_ts-auth-service_cpu_3",
+            "re2tt_ts-auth-service_delay_1",
+            "re2tt_ts-auth-service_delay_2",
+            "re2tt_ts-auth-service_delay_3",
+            "re2tt_ts-order-service_disk_1",
+            "re2tt_ts-order-service_disk_2",
+            "re2tt_ts-order-service_disk_3",
+            "re2tt_ts-route-service_mem_1",
+            "re2tt_ts-route-service_mem_2",
+            "re2tt_ts-route-service_mem_3",
+            "re2tt_ts-train-service_cpu_1",
+            "re2tt_ts-train-service_cpu_2",
+            "re2tt_ts-train-service_cpu_3",
+            "re2tt_ts-train-service_delay_1",
+            "re2tt_ts-train-service_delay_2",
+            "re2tt_ts-train-service_delay_3",
+            "re2tt_ts-travel-service_disk_1",
+            "re2tt_ts-travel-service_disk_2",
+            "re2tt_ts-travel-service_disk_3",
+            "re2tt_ts-travel-service_loss_1",
+            "re2tt_ts-travel-service_loss_2",
+            "re2tt_ts-travel-service_loss_3"
+          ],
+          "heldout_ids": [
+            "re2tt_ts-order-service_loss_1",
+            "re2tt_ts-order-service_loss_2",
+            "re2tt_ts-order-service_loss_3",
+            "re2tt_ts-route-service_socket_1",
+            "re2tt_ts-route-service_socket_2",
+            "re2tt_ts-route-service_socket_3"
+          ],
+          "arm_losses": {
+            "G": 6478545817.305888,
+            "L": 6476582781.190121,
+            "ALL": 6500774575.918298
+          }
+        }
+      ]
+    }
+  },
+  "objective": "MTL; equal eligible scenario/case/bin/channel; equal G/L/ALL",
+  "margin": 145990.04898834229,
+  "leave_cell_reselection": {
+    "deletions": [
+      {
+        "excluded_scenario": [
+          "ts-auth-service",
+          "cpu"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 6724170184.491159,
+          "1.0": 6696616192.18475,
+          "10.0": 6696986120.608617
+        },
+        "margin": 369928.42386722565
+      },
+      {
+        "excluded_scenario": [
+          "ts-auth-service",
+          "delay"
+        ],
+        "status": "VALID",
+        "selected_lambda": 10.0,
+        "objectives": {
+          "0.1": 7143091521.877959,
+          "1.0": 7115514550.80581,
+          "10.0": 7114982685.84432
+        },
+        "margin": 531864.9614896774
+      },
+      {
+        "excluded_scenario": [
+          "ts-order-service",
+          "disk"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 6970894342.000778,
+          "1.0": 6943019167.50518,
+          "10.0": 6943564402.858479
+        },
+        "margin": 545235.3532981873
+      },
+      {
+        "excluded_scenario": [
+          "ts-order-service",
+          "loss"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 7283959026.203806,
+          "1.0": 7257067110.147192,
+          "10.0": 7257995578.310677
+        },
+        "margin": 928468.1634845734
+      },
+      {
+        "excluded_scenario": [
+          "ts-route-service",
+          "mem"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 6840925435.747981,
+          "1.0": 6812637037.215026,
+          "10.0": 6812899809.311682
+        },
+        "margin": 262772.09665584564
+      },
+      {
+        "excluded_scenario": [
+          "ts-route-service",
+          "socket"
+        ],
+        "status": "VALID",
+        "selected_lambda": 10.0,
+        "objectives": {
+          "0.1": 7001501658.805435,
+          "1.0": 6971058233.210005,
+          "10.0": 6969975511.388939
+        },
+        "margin": 1082721.8210659027
+      },
+      {
+        "excluded_scenario": [
+          "ts-train-service",
+          "cpu"
+        ],
+        "status": "VALID",
+        "selected_lambda": 10.0,
+        "objectives": {
+          "0.1": 7262917724.285095,
+          "1.0": 7247248425.358702,
+          "10.0": 7244774292.352356
+        },
+        "margin": 2474133.006345749
+      },
+      {
+        "excluded_scenario": [
+          "ts-train-service",
+          "delay"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 7048192336.741287,
+          "1.0": 7024273086.026844,
+          "10.0": 7026226474.470948
+        },
+        "margin": 1953388.4441041946
+      },
+      {
+        "excluded_scenario": [
+          "ts-travel-service",
+          "disk"
+        ],
+        "status": "VALID",
+        "selected_lambda": 1.0,
+        "objectives": {
+          "0.1": 6882133673.89558,
+          "1.0": 6855710930.0553875,
+          "10.0": 6855902881.987303
+        },
+        "margin": 191951.9319152832
+      },
+      {
+        "excluded_scenario": [
+          "ts-travel-service",
+          "loss"
+        ],
+        "status": "VALID",
+        "selected_lambda": 10.0,
+        "objectives": {
+          "0.1": 7621089432.19577,
+          "1.0": 7589486129.767357,
+          "10.0": 7587863204.653053
+        },
+        "margin": 1622925.1143035889
+      }
+    ],
+    "winner_counts": {
+      "1.0": 6,
+      "10.0": 4
+    },
+    "primary_registry_changed": false
+  }
+}
