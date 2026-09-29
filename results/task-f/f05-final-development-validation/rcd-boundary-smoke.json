@@ -1,0 +1,21 @@
+{
+  "schema": "TD13-TASK-F-RCD-BOUNDARY-SMOKE-v1",
+  "scope": "SYNTHETIC BOUNDED RUNTIME QUALIFICATION; NO DEVELOPMENT RERUN; FINAL60 FORBIDDEN",
+  "method": "RCD-RCAEval-adapted-TD12",
+  "status": "FAIL",
+  "runs": [],
+  "failures": [
+    {
+      "failure_type": "RuntimeError",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\Project\\flash-ticket-rca-research\\tests\\task_f\\run_rcd_boundary_smoke.py\", line 123, in main\n    loaded = load_pinned_rcd(QUALIFICATION, W)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Project\\flash-ticket-rca-research\\scripts\\task_e\\rcd_runtime.py\", line 163, in load_pinned_rcd\n    raise RuntimeError(\"RCD requires the declared isolated Python3.9 environment\")\nRuntimeError: RCD requires the declared isolated Python3.9 environment\n"
+    }
+  ],
+  "firewall": {
+    "development_telemetry_loaded": false,
+    "final60_opened": false,
+    "labels_or_root_fault_loaded": false
+  },
+  "run_id": "f05-final-development-validation",
+  "contract_sha256": "2a0ccae9b5310f244c30ca3e33e3bcc9378356be19df883f6fa959607bccfb77",
+  "wall_seconds": 0.028967900012503378
+}

@@ -1,0 +1,1239 @@
+{
+  "schema": "TD13-TASK-F-DEVELOPMENT-VALIDATION-v1",
+  "run_id": "f03-release-development-validation",
+  "scope": "DEVELOPMENT30 IMPLEMENTATION VALIDATION ONLY; NOT EFFICACY; FINAL60 FORBIDDEN",
+  "contract_sha256": "cc7a8f4b4a41b7c5e01a4cace8267821db887938201c9d9fa4bf24b8bb673289",
+  "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+  "frozen_manifest": {
+    "path": "configs/task-f-td13-frozen-release.json",
+    "file_sha256": "4c2393d0f3b7332b9fa2680bb11f24f09d73d80657ef1543600b8d2ef2c1b801",
+    "canonical_sha256": "3f80837855fb157b88d666000c8fda8bbc53f5be266a6d424e0eb6a0cadee26a"
+  },
+  "release_code_identity": {
+    "src/rca/__init__.py": "aa508cafdd5c653fed133bd0bfdfa798d0efa6f1d0454f48adc92490c9c9de8e",
+    "src/rca/cache.py": "dca7e6606c83677a73f526b764c90d74431ec85380927093e903171e5299a288",
+    "src/rca/comparators.py": "581b725bf279bbd6686da73521db4158f941fa924703a8851b4ee4aaba41aa36",
+    "src/rca/contracts.py": "3846ce13d10843da4fa0d3f72a2b9dee1600d99eeef5e103c8862b0cb1436555",
+    "src/rca/detection.py": "20fb9f1d00e5f462373e2f172aaab95ccb98f2b9ac98b30dcc2629d32338d4d0",
+    "src/rca/observation.py": "3383fd3625e8782d3729e872420070c05ebf13ca53790d6a54c47b51080ba1a1",
+    "src/rca/packet.py": "74f2ff65261f46c8b7777f682e9dbc443e967e416dfa037d44374002f9fadbca",
+    "src/rca/pipeline.py": "401243c9178f8c26a9c4742e6827904d3e2758e00d73e00e2a09019de31f34cc",
+    "src/rca/ranking.py": "b634b763a7fc571ef0a7a6ebba046a0e8bdd6bc0265bc59d88370893e2164780",
+    "src/rca/release.py": "4bea6ef72313740e7a80f0cdb6caeb6baa561d483dc28ea7725da5216efc3be4"
+  },
+  "development_allowlist_sha256": "03f28a92af927031b44760cfdf03808f3485fceac88069c0b85b773f84d3f978",
+  "planned_cases": 30,
+  "completed_cases": 30,
+  "cases": [
+    {
+      "development_id": "re2tt_ts-auth-service_cpu_1",
+      "opaque_handle": "96538c0c0d6a11d8",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "c006cc45608cd4cd7e2c9680fe788e27e5df7b217e6fc92850ee19c4f031c977",
+        "output_hashes": {
+          "L": "a6127013c71b0e5cc52584ad0269e1823824468700b354b99430f95b8013f7f6",
+          "O": "5e5f9f226b9103b2fd33130aa297dc521a617d8e3b22cba5e88db3cebeaebf3c",
+          "diffusion": "422e1f20e6bc547fb529f19ec19471173be54b2d960a264996b94faa6280647c",
+          "local_max": "1d1bddeed2acb5c259992e5961a941f1606c6d69857e1449cc1967d62683c0fb",
+          "baro": "1968d2db1ad5040d137a5b981157859d6a59ae07a1c8cf9dace2da3e419b6507"
+        },
+        "packet_sha256": "4124d8fce0913262f210fb748ea51d2acb6348d2f5fa5bf3df30f7bbd239d43e",
+        "seconds": 0.301719499999308
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "037ccbc3d8a411df9ccf07da49e2d234de419dc6c93de2591104a82c64800dec",
+        "output_hashes": {
+          "predictions": "9d45eca4fd35b0956c5ee3b2ca2beca782616407b1b6a1a254fe61a6a699fe22",
+          "errors": "89f9cf269a33777bb16973891bff3beeb1f3ab2574c8ce49f73d6cc2e6303be1",
+          "residuals": "498ec9ec19c8e78c357d2296e1ff0b15b2539f2af81b0382072ad300c64d7f21",
+          "masks": "f50b83f8065f5b77e2eb8c9db84a07bf7a63dcb08312fa2a51fb96fb5953cd11",
+          "scores": "76a04f00b094195f5d00c6c426b15aff0308e609216973c71730babb10173da1"
+        },
+        "packet_sha256": "725dd85fc8650cf67562134cb7503d96f34adc2832537067f69cf4c72cd36594",
+        "trigger_packet_count": 1,
+        "seconds": 0.8582940000051167
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-auth-service_cpu_2",
+      "opaque_handle": "63f914383963739b",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "b4c953cc0857b88e0b36eec1a19b8eee6a5991d1052b7bc7205c328f651f03b9",
+        "output_hashes": {
+          "L": "93bee916919c9f834949c4784bbabb09208a33b2c7b8c807ce010f2dd9e9144d",
+          "O": "9e171c8784e98179ec22d03275beb3f31ac020bf50d29299b27dad8b997e3c34",
+          "diffusion": "80e12638a72828dab614c91ffe3bb4f64002723915aab7923244d9c1c1d70d06",
+          "local_max": "1c3f7cbbe1e9efc05b3e76652647a21ec6cccef219d94c7edefbe0b2cdfa4359",
+          "baro": "a40156b3d34f483ac95048852a11fe2a88f0cbac229c758ca651e609b13d09b6"
+        },
+        "packet_sha256": "0dcd3caeed4edecce8a957093ae89f23ad146bb8082d1125e19551395f93f608",
+        "seconds": 0.08443700001225807
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "88355d187ad573349d949d89a73a2c03e3a32e8079bd737cb30203921cf5aa69",
+        "output_hashes": {
+          "predictions": "f29edfa4cc94673d870219b303c6a35fa8dd549bad5be30a8985a87083f5d410",
+          "errors": "dcbc635d42bb647ad3c76615961ab6f5b118efe36cd1559de8cebc8d09f790d0",
+          "residuals": "bd06ce164d67cf1b2e5009d3991bbd37432c5184a1407a04e2870e49d54b3d5c",
+          "masks": "3b85148787ce18807570ef41c54dc57bcb06b4fbab2aff128fd4b5d8509dd613",
+          "scores": "c82a72315caccff9c798a07647d4288be70dcc454556c07434cd30301c568009"
+        },
+        "packet_sha256": "508929b010888d1231baec8aa09768fbd748bee70f9640a3c92758815d58660f",
+        "trigger_packet_count": 3,
+        "seconds": 0.9076184000005014
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-auth-service_cpu_3",
+      "opaque_handle": "45e43770afa33cef",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "479442ec0e7ac37f4ddcb67ab3e0855ee8b3e78123bdd90f3e565e6fb5926ba9",
+        "output_hashes": {
+          "L": "7997370fc2ac42305ca23b4931789806675ec9c5b9a7326e878e4f4d1aeb8fd9",
+          "O": "4254cf0cd36b651fb1ddbe9754b160df7cfcb4b491e8024003a23ead10c9e017",
+          "diffusion": "a0f1fb4a643c14a931d0a637accbf4caba980cb3123342d61c193071b036592b",
+          "local_max": "6ec2402b7e4130b97fdfc1fa8aa3d022ce3fd0354c41b059b1629b309fc0e593",
+          "baro": "433381664b0a102f6cd78d09ed796f3284112944e4ade120fc4fc262424d5bf0"
+        },
+        "packet_sha256": "2a6e3b7ec5fd27de07cf88881b8c557f99937b1f4d5730a64158cd87a54388b4",
+        "seconds": 0.09067389999108855
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "672b8ef68cc3375b694a2abf5f2d315a39d9a325888896a4d75ec4c9de71baf9",
+          "errors": "70ac9ea5285b2d4ccfe65443fffe8efeecc55978c0feb643de9536ffaa8d7063",
+          "residuals": "47cbbbf6a6795868d5d5f860e4e8f163aa7441cb8139cce4ce352dbbfb9c5a07",
+          "masks": "6ae5e409d3f26f27030a57c74fd762d2a49f23453041363d4c6063e16573a0cd",
+          "scores": "37b0e58ddc9e3bf61dae5d0f9a1bce6f5b6893e6fe400a3955196c3266146aa9"
+        },
+        "packet_sha256": "0b4392cfb307036396b341f0faf54a1a3abe932790ee77389fe1d3fd95063b22",
+        "trigger_packet_count": 0,
+        "seconds": 0.8921102000022074
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-auth-service_delay_1",
+      "opaque_handle": "87443a2d6d14434c",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "51f75f718be57dbd208fb3bbdb9e11aa01624728ea2da927dbe5be4e16007316",
+        "output_hashes": {
+          "L": "473b98fd338bf4f05d2e7e9cbeaac2bf3a972141327bcea649b392b9a82658ad",
+          "O": "4d2844163c70e4a99967b4500d3f31990bd402f718eaeb613759e6b50aa6bfbb",
+          "diffusion": "83dd9f16f3dde6f90ca4953539b4f749804f1b251baea213a62bde150722a447",
+          "local_max": "cd3288f2ce7e5345bc980f9eb156f29ed722e671f319a1fe370cee39781a2a5b",
+          "baro": "e7573ec97f4bd3296f4744bfa817b5aabe55be676420b7d1e0b2a7ab3a793014"
+        },
+        "packet_sha256": "0790ad633b88ada698a7d3dae24dbec27659e3c10807c7ad9e63e9865c2f01b4",
+        "seconds": 0.09171510000305716
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "449679b08de2abb1317756e51a69186bca2168f7370bc923cd3749438f8797fb",
+        "output_hashes": {
+          "predictions": "a8ecc8cc407bb2797593f4da6be82847f112c6b73e409fcf2581e6b18292b438",
+          "errors": "a59d104a3037152125d510c1291706c9d2086ebd18a31d93e0c4a9cff133f072",
+          "residuals": "259a2c6694408f107708cadae5bb6d1e046ffecc005d3df76959883d9377c5a0",
+          "masks": "153e901238f75c3ce95c43572922658d33866271c413669ad4c86b947bdc975a",
+          "scores": "20899e51f1d0bc44706c5dd7f7bb66b3d77e74b9fcfeed7089d1454e06701fda"
+        },
+        "packet_sha256": "2f629e248c07836fa578522c4bb80df583af1fead6b20ca26ab0288e9cd2c479",
+        "trigger_packet_count": 1,
+        "seconds": 0.9320883000036702
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-auth-service_delay_2",
+      "opaque_handle": "24851f5149e4321a",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "20e866f3a7ab7a8e788f12e6080e2462b882161d4904d1620850c3bb26de54cf",
+        "output_hashes": {
+          "L": "31b3120d2fae084cd0df28c9fccd72db0e7532d0a5b1ee72682a57d28627521b",
+          "O": "29d2131a01605e73214f2dd787e235a7ab7036af6047ce2990ab2ba657940a33",
+          "diffusion": "df135d5fd1a87ddd7b27c4ec8b9c97eca16d8856de5df16054bb9e16cee8742c",
+          "local_max": "666adb54e15dd9ff932450ff6051fe55e13980a823df1993a90bb85b4c571e82",
+          "baro": "3f4d6e860284614dffd6d0073e39ef78453bd78425b7a5d35179e79221e18315"
+        },
+        "packet_sha256": "59cce935c1e91a6d3c6075afb00f00216a7b96b5b9b3fc7b9b6d5bb979cc7511",
+        "seconds": 0.0825914000015473
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "178c77bf59e80ea9ed36a9cb30cfdb9a8d17c0ccea5945ed345ed3286705955e",
+        "output_hashes": {
+          "predictions": "d0e3b7c167de94de4b9b0cf86d4f0c0a64ffc8b8aff7e3b49f2e419d928b2762",
+          "errors": "ccebdf70dfcc7c11f9bdd4fe3b7a373f55145c95168186989f179bcd193517e1",
+          "residuals": "a6c58fef8800f28645362cf069766189a1b68bf035eb50227cfc33ebd3025e5a",
+          "masks": "beb79cb85ab463ccd7f6d0f618d47ba85f3d99478faabb2249716ffc4c8c2616",
+          "scores": "1af76b76bb7e3c1cd1f97929d15dc330fd4f1817a52a04d83a4a60695e11793e"
+        },
+        "packet_sha256": "fe3edfc95480b038ddba9782a2dba619362a59302b69c2defbcfcad64d6e35c0",
+        "trigger_packet_count": 2,
+        "seconds": 0.8619595000054687
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-auth-service_delay_3",
+      "opaque_handle": "549b2f655fc55fd1",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "01fed69a575d9c8ab94fb7fbada197ce4ff03080f536e9c9000c246dfc97d508",
+        "output_hashes": {
+          "L": "9758f1e244fa932ff315ffbd1ff6709bc319f52e3d5e1700c2d02ad1175e52e7",
+          "O": "f4eab54d0e7e1da27f170c18e8510670bb87d40d4212567a9326ceaecb9ccc88",
+          "diffusion": "1aa140478c74fcf271245ee2b29e72e04567fae1513ecf01fcc31524b9437c69",
+          "local_max": "61ea18025c7e26b998689775e785b189e29a5d8d4a8a7783a87453347a3f6fd1",
+          "baro": "d20c75ee6d92da434f19040d6ee750e64193b4b5fde1e95b17edc20c14f74ce9"
+        },
+        "packet_sha256": "60aa27d226b865b00bbc95cbbf20619eee4927affb70e6c33c49419413599f0c",
+        "seconds": 0.08765309999580495
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "5ed4ea7ed7a889c800854430bf46067fee54d7526d52c98b099920563f4f8639",
+        "output_hashes": {
+          "predictions": "1c49686546bbff8b3ba5479305a71acef27eb17afcd5ef897dd8b2ce915ff3de",
+          "errors": "83a2d6e884727c99f87298de5c3c1844560c30984978e17afb0b33d939702553",
+          "residuals": "45e8493ee4bc64cb18c968e6776bcddf44926066ec8fcacdaac7a109fba43de2",
+          "masks": "675229663b49d58ef529764b2c533bef27db476574a3d2dd9c873361de0d8227",
+          "scores": "23d25c7f292b359894c1d4ca44c50d0b7d27038cb161f26c8dbdb64b99494b4b"
+        },
+        "packet_sha256": "fb3a16d7ab63914ed3963f28631550703d13e9d1585823a73c1c796ef7536509",
+        "trigger_packet_count": 0,
+        "seconds": 0.8896636999998009
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_disk_1",
+      "opaque_handle": "4bdb62f38b122bbc",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "6c2c53b6ec4e0efd336226481f22a3587f2087f738f243b50e8bb30984826e4a",
+        "output_hashes": {
+          "L": "b8e6092ee52652642f18f0ea4e0672b0e217e41dec7b9ea876eb9881c9915448",
+          "O": "34fdbcca138a848c323e2265ed274127e31556282ef77fc7509aa60cad9a2bd1",
+          "diffusion": "8a10539a12349095f4c4a22d1642ae61a66c61439cb22a05ca44d4f1fbc7861b",
+          "local_max": "46c49999b28ba9e9882d4a7beb8b4b5be21c19fc4901c9db63162145c1b21c35",
+          "baro": "9ac9f4e351201115a55f506d7fc4f34a9d1a610afe9b7e2a391e083265cd45e3"
+        },
+        "packet_sha256": "9fa2889de3820d0ffe043c7867629059b888d43680b07dc8ddb50b1866ca9310",
+        "seconds": 0.0877563999965787
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "5d7d12382cd1cedf06021bcdf80b251df34be2538bd95b9e2036c2fe1d3d4b91",
+        "output_hashes": {
+          "predictions": "774b1e7adc5869920ef15aeb50ea178eec6deadb26415570bc638498f8e6c6ce",
+          "errors": "5a9ce2391c8cc53f5954204bc45cce23dfd79a631cde0c7a95692ce8a976136c",
+          "residuals": "d72e9067e6dcbb57d96657d531e827fa2032280cd64e8f3f98df1d490f41ea7c",
+          "masks": "578e24c1a033a8f3378061f1cc062271c33bdd2dc3813ba4d65a4a60360c62ed",
+          "scores": "822d2cd6b42958245a3b0bd300e036a915e50db27fc236f719d046194a3ac4ba"
+        },
+        "packet_sha256": "7b559dcd0dc34f8666682741dbf90adf03c140800861fec288c5b0ae52809a6a",
+        "trigger_packet_count": 3,
+        "seconds": 0.912462799999048
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_disk_2",
+      "opaque_handle": "b0a2dcc878eeefa3",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "23b0797b5a37dec84f5b1070158a48f49899b17906a1234f0b8c5af4fda55157",
+        "output_hashes": {
+          "L": "1149c9222965efc4f8e7a897d2829fcd0a4ee501e24984c842a92e973ef4ab24",
+          "O": "7bcc2dcb61b8fdd0de0dec6a174b2fc334b04c8091c281bd495f9c13b0a47598",
+          "diffusion": "cdd3aa61bc6b4848f6467d440f493eddd103ebc0c6a77b1a0200799a6e3726e1",
+          "local_max": "408bc43bd18a25e9a0ebafa51cf9813aa7f96ddf93b57f1db3c22b3980c1c05c",
+          "baro": "af7d7de3cb14af6a796d6cdaaefa5a94a1c1bc72438c6438778d3d736c1d2bac"
+        },
+        "packet_sha256": "3ddd9d32540473d4bc72eacfd63c27f7648e0e4671ef049cf8672f60496a591f",
+        "seconds": 0.06465440000465605
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "56a7460027679c03257dc9443e1e0a13574f02411f4ce441c88f8f82630fc80d",
+        "output_hashes": {
+          "predictions": "d45e97ddddd187c16d687fb843941e62c213d6763d85b5f5a1d50ce7298f9775",
+          "errors": "f3c67031152376825b6033a387a419a05846d1b883d9f064be73212eba314cf5",
+          "residuals": "06cb2b2ec7ef21e18ac6e819953c0ff65f40175c0b8fa4c1abcd87b18164cb59",
+          "masks": "11db0183db0f01022ed76ea382b7ee551d7f8cc95ca41ea7e50b1db300fac96c",
+          "scores": "6c5c20e4dd3dc2b34e3b3de56bdc1d1af6f3e810210525de680430f04389ae2a"
+        },
+        "packet_sha256": "aebc422de3c504b83a9ee19ac3e4f7f60c801917d47750bcd33e48c21c8cfa09",
+        "trigger_packet_count": 4,
+        "seconds": 0.6843889000010677
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_disk_3",
+      "opaque_handle": "9b847bd8f23c07af",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "a270454182038002380648f692cd487302f5242fc5bcb5d7a304f8c8c7c1aee0",
+        "output_hashes": {
+          "L": "e5b65e2c9a76b094b18a51cf721ddd3b663239dea937c9fd962ecf12392ef4b8",
+          "O": "75497d27cc031aa4e02836c4a00acc6cc637234f649d4ccc176f7659036b79c2",
+          "diffusion": "827be69dde2b8dba739577381dea42fa79e96cd4bde42d1e1de60ebe64188482",
+          "local_max": "82b7783fa7f7ecdddb13be7a453cfc6b52f280c77d4327410ce0b0e70e61541c",
+          "baro": "e356d8d78382a623555b038c31117cc116fb70426f1d2685cbaa29cf4afc0492"
+        },
+        "packet_sha256": "06f895bf5c99ddbf6c618ddfb26397798c290ac255007737b774a2b588b1508a",
+        "seconds": 0.0894142000033753
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "eae88066829b54765fbb32f64ea1a3fbadb31dbad6c0742b68497a8518179628",
+        "output_hashes": {
+          "predictions": "9877b10fd77ab5af5edd82b5e392738e69fe4e68f1f3db53075bd1e6a7e5d98f",
+          "errors": "6f095fcc60ec2828b3a74aca170aa69fe332a9df7bea464bb31aa8d0a841597a",
+          "residuals": "094de9eb2532d0475854311ca56049057e3de492bde5753902f59f6e1a8b4cec",
+          "masks": "13820a2d9e6fee1feedc87f47429c9601d1034b4ea2739586bcbe6a5dc740c90",
+          "scores": "2a55704d711f10657e9834f16c564a10fee7bf81399b234374841c71f9a36fdc"
+        },
+        "packet_sha256": "4683959811745a3dd87b9d65bc5bd06f4ff7d6dc87ba196d3a076a6f3962967a",
+        "trigger_packet_count": 4,
+        "seconds": 0.7344479000021238
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_loss_1",
+      "opaque_handle": "cea480a087995c2a",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "d1c187326cb7b0aa2f4c14472b04f4d0d0a390795425a3c4dbdf0886c9636c71",
+        "output_hashes": {
+          "L": "49857106a7cf3af6efe6c5ead2463601f7415c3dd93d59ffe6e27e1762ff98df",
+          "O": "ff11d974e92cf98b362a0b9efd95a8d9fa526a12451b476fd73f77c5ec5d1cf4",
+          "diffusion": "09294329e289a840060947d8d958b27374fdea073f9ead262e057b4a20bd1805",
+          "local_max": "ed934d9232601f3cfd0ec124e4dbd987e45b43380d3880432d55a822880c8a46",
+          "baro": "82e1f8f8836637a73bff27226327952bd7e2052036d493932886ef503b65bbf5"
+        },
+        "packet_sha256": "8492c6c494df77e8147ebf76a6ee88aa872320c970668091f7c8b507edf14275",
+        "seconds": 0.09205839999776799
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "dd51f47fa4e9c881061fb9cbd6f1055fc40ce2488d8a31d55baefd125e175e04",
+        "output_hashes": {
+          "predictions": "be4387c5fe5b95609504b607a6c7e76a9c12a4878611401c479eef3ee8fc6138",
+          "errors": "fa58db50b153bc308f324a946a3d345d6e7b115f14d5fa6b764d431e21ca20a2",
+          "residuals": "13871e2e87d81040379cc6f5b4eca1d5b58ae72cba3d0262d867b052279db56c",
+          "masks": "22851af5618d182579732d3ba0c79ebecd3ebd6526778b77555df350d24a816d",
+          "scores": "a89fde555b6d3a81a69f977a86f6341a027dd2502f9f3910cb47439c8c57a434"
+        },
+        "packet_sha256": "cb89b278bc980ed12c2e6ccec5c54747ae6e2c6815759fa8b74604503ffa7e9c",
+        "trigger_packet_count": 3,
+        "seconds": 0.971521200001007
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_loss_2",
+      "opaque_handle": "f900792c9a1f5622",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "345854da660c753ba915e716d733b0329d8a745dc5d7a3e309e7041e7a9756cb",
+        "output_hashes": {
+          "L": "4b98960ba7f8b06c8a74d70f4d0e05d093d5e29c2cde9ccb41beb9ec2e8e4d16",
+          "O": "a9ec1d1333dc7ff2fbc7b5dd4b34f963da9e31ef0b7c6255d57132b20696f87e",
+          "diffusion": "20251ccdf6ec6d1f5282c3db60875d5bfc8988e82ef76613266469516faeee96",
+          "local_max": "b83fcac3ccebdfa32625fcc5aad3c18d00f669163400d6af03fb0785645d262d",
+          "baro": "ba108e67e39d45bc67211a158d1a295b98858eb9151e8738c9a12f3a577a1ffd"
+        },
+        "packet_sha256": "659221385a9016b98cf6536ed6115a5d73910101153e49a22fa9272663360e31",
+        "seconds": 0.07138910000503529
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "4384629283abaf68b521f6f0cf1cd4ebeb153e682708fa64d1eb6ed6c1e549bb",
+        "output_hashes": {
+          "predictions": "1b356147155ee95f9f35c0658fedf7320ce8efe8aa94b9682c8f9cc7c7887d9e",
+          "errors": "967cca9f67b3597ae5c4000da0d779b9f893bc522a56d779b0a66285bb45211f",
+          "residuals": "e73ca82a8109fa9a8cd1d8685cb3e071a62f90b1c236ed8fa34da8a04dbc0841",
+          "masks": "67e94dde7ab6db746ea11978158f213f850a7c5459ef582b33f9231384b20f41",
+          "scores": "cbb1cfbc31f7791bb321632b2bb620fdada5cd835096ad4e6f5f4b17b2f51f8a"
+        },
+        "packet_sha256": "c0178e7838abfc363c0b71951afcf3ebe46d7b43f8497f72149bb8fdd971e8f4",
+        "trigger_packet_count": 3,
+        "seconds": 0.7093692000053125
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-order-service_loss_3",
+      "opaque_handle": "9d1464b4fb8a49c0",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "b6c38109b92c3476478eff07beac440ea49c79fe266058d6acb9ddbc249507ac",
+        "output_hashes": {
+          "L": "9d6a3081d30d618153ae45772960e5254de112f713072cc1d51da4b9651b6312",
+          "O": "66486edb6251e72b675d3b4bab1dea653aedd5941a4ad1499eb5a9887c119dad",
+          "diffusion": "9d7227eed0aba8e326b49b5d1f402766ce11305b88c2691b15579e500a52f38f",
+          "local_max": "dc4c307a0ddb7a99e323b7b6f6a13b0c1effdbaa110b9b283eedd8436af775c3",
+          "baro": "f819668319dfa9721af77584f4fee967aa4025f213c92db1575f4a26d29346ac"
+        },
+        "packet_sha256": "3e03d0cd3960e5218ef0592b94979f3d1e763fcd167bf95062d6832f2ca559c8",
+        "seconds": 0.06855340000765864
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "f0b9038b3fffae14fea1ca7de20bc9ee05a7c46693ea4aac009a14c7bf4c9eaa",
+        "output_hashes": {
+          "predictions": "2cd27254b16195ced57430b2aabe730c868c0f05aa02035d6d77c9a57f2d0561",
+          "errors": "0647583af371d8ece7233379737180a37779598363cedf48ec771dc4610268fa",
+          "residuals": "df087887fb147c7a779eb72c2a9783c5adcc6d84a6878ff60ba3dfe00ac7cc0c",
+          "masks": "ad84bb3da458e4fc60955ba4fc050d938b3aefb2a7b2b1064a2b62a1d923c8ac",
+          "scores": "db6c6433fc37bdbac91e1651ba58111473bbc4abcfeae68da43335b240059f49"
+        },
+        "packet_sha256": "8e7e64653a49862ec9d6fdb546a00ce0807930ded1da85f5e58d6403c7c21b3f",
+        "trigger_packet_count": 1,
+        "seconds": 0.6988748000003397
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_mem_1",
+      "opaque_handle": "58e365eed32084b4",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "62027f1b88fadb5b2342757c45e46633024e89d11437738a70e7c60b2a287ce5",
+        "output_hashes": {
+          "L": "89cf50f40708a80a2c2c89a6fcf41a130dfd924ec1fd53e15923959fbead1b09",
+          "O": "71a711eb24d435dbcf5457e46030c214d90e33891ce74fd0a5c9817b49cb72bc",
+          "diffusion": "300814280622ca5986da7e8801dedd4e8fced480611e3f84469a00181a224d7b",
+          "local_max": "e7895af371c7dfb07cef131a7a7b98a78b2b2a60d21f918b5c258cd83100c8cc",
+          "baro": "374d36731f4c943f15e4217e382e56330859f255dc3f7733835a16eb524cefa0"
+        },
+        "packet_sha256": "e70a6bc266051a1e7eaec7d4d895259ebd7b8e0e4660eb0e4b62c698eec50d81",
+        "seconds": 0.08886390000407118
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "b493868fd0bf0897a57950bba9551a05dfa75da65bb077689190adac6dada032",
+        "output_hashes": {
+          "predictions": "a02dcf3134ab734cb7ceec0e1f27d2c6d1314a5bc253b8a4c8e5e1cd2d61911c",
+          "errors": "c51aa3de24599ea94e4719b52c1ab17f24a73bdf6e2136f5b2e0cdcd5b1532ca",
+          "residuals": "122e291bacb0c5bc9fce31e95dc033755cba345d877487b258ba371afdf85630",
+          "masks": "e98f1c08f884270fd16b7ddcf9ec1c202dbcedb14451114fd32152a15e74501b",
+          "scores": "c7676fe56c33f4ffb9cd3ea74631de7683c52ef84898ec12946e1a541eb8d5c4"
+        },
+        "packet_sha256": "c3b29ad843d54a7ba641b5f8e03b5eb500fb6def832151503a922a6e97000068",
+        "trigger_packet_count": 3,
+        "seconds": 0.990795599995181
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_mem_2",
+      "opaque_handle": "15fa2ad3a7eecebd",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "298c4acf59d63430137defaa46ec35b7210878489caedc618a0cc8b0e5cc8431",
+        "output_hashes": {
+          "L": "ea0618193d875b4fa7ba85b6e3d973e28d999d199eece7907f824deb3e3b2642",
+          "O": "4887c774be1a9760b3ffc6b302789a8f6f03f7d1df8024a17f5f929ab75107e6",
+          "diffusion": "ed0d3581c0c2930630672b310369a53dd1a511317efb261d5a44a2b58c315db7",
+          "local_max": "b08f25f8c056eb6e14f67b8d6a4698c1d6ecd832be5bfe970231ebc48706b273",
+          "baro": "1fcb5712a6f64dd6084b72be023da3fbab2cfaed0e12922ec0dbed1ed36e86fc"
+        },
+        "packet_sha256": "cc4e21bf3cc6e034f98fe88b4edddbfc356a0b858828ec059ee66765a3e43a22",
+        "seconds": 0.10003069999220315
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "425056ab5378bd6d15ab6a79ca6578ae2fb1e6afcd948266b3cba2eb238d0f8a",
+        "output_hashes": {
+          "predictions": "2d2eb52b9b181fa08fba03b9c76f318c3860c87e99922e9fe9d6613b2d80ac75",
+          "errors": "a97ae7efa94f098937e95ab3e7467c366f71be5c88b5a663e496a61b8063fa37",
+          "residuals": "7916e4f0079a3fcefabbfdcd434fe8d8068d2a3bb51a0d3848b53c1f2940a759",
+          "masks": "0c3414c49d24beabd0e4ee40162fb8f75560d8e61a8ee09a4d8e28780f8c3169",
+          "scores": "7524b8d659aa983d122d06a05dd3c9b311baa43ee5a48a22cdb0a8eb8aad3b97"
+        },
+        "packet_sha256": "4789830bebc2c3c9f80c736aea984b13de575be717e27beaba8e2687569c2b27",
+        "trigger_packet_count": 0,
+        "seconds": 0.9507096000015736
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_mem_3",
+      "opaque_handle": "c60cff817fc2d5cf",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "f6e86f5b2277de8f0654e557027da65c7c32733e51b154438eeb80d4e3ce04a2",
+        "output_hashes": {
+          "L": "bf8f993736ad19dfcc908d38d63a0e2bf0622dd2b8378bd7ae29e9445495ddbf",
+          "O": "61284574e391403071efa727169b519d204025dd71d89d5fb72801373b06e225",
+          "diffusion": "62e9b35d73b3b05ae8bbaa69291339853b24d73ddf54e4115c2a9a559740d0a2",
+          "local_max": "ef049ee9fbe52bb33845b83a3284fecc3fee82b5b850ebf089beba2543faad37",
+          "baro": "def5c7ebe3540f73730abd2465d6a284478bfcdfd4d1fe0b5aae6ad2951a4a49"
+        },
+        "packet_sha256": "afb7dc64a689574ee1381dc54ae7142b7cf978d131a38acea8d5c506dbd95f62",
+        "seconds": 0.10024870000779629
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "7c72bb888eb3f357f0c7f076d6f857109a0014c7b463dbf035e222d9afd22adf",
+        "output_hashes": {
+          "predictions": "97362d647bab6e6c2a8d73176adb4eec88f66e27d80193ea30018e2f68c6b742",
+          "errors": "b04df55ffd2f564a22e32341c6c9cdd1204fb085bfedfcd8cf20285fec1334e4",
+          "residuals": "71fe932c4436fb281d8fa4218b02f72d2074ecae446ce5ca249fe129178a9554",
+          "masks": "a3d379e990d4c08396883a9e92d8862453a20e2d2803fb293fe32dc74a8249c1",
+          "scores": "0c393c4c093d4e9fd963d0f507f160128c3fc6c054d1088cfc6761e67830bd82"
+        },
+        "packet_sha256": "f6b0d6657361293cf2d2aa62a3f569005926c394436c190f81a9f99b3741e9f9",
+        "trigger_packet_count": 3,
+        "seconds": 1.0401852000068175
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_socket_1",
+      "opaque_handle": "0f1447a5823d8a23",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "6e509499d13c3ef8b07bd0b2f41aad6db5301ea34cc42d3fad990e0df58e4a3d",
+        "output_hashes": {
+          "L": "05332ae1873920af5908a93a671efdf3bbefad28707d8299fd4feb74a5c3cfa4",
+          "O": "7c0929626159a70daf6d26655f6e7b76e67f10b35614d2b41e34beb12c6b4b7e",
+          "diffusion": "349bbb4a0e38b4f496a75bd021bfa0247d979a0a4d8cbb4816bdbf4cede9e45e",
+          "local_max": "7669ff26d10eacfd03177e04ba6e10bf053f993494cb342f692a5166103a6cd9",
+          "baro": "4e09c973940330c54ddd8775d7b882e337fea7a940f7fabb9b3c883bddb4858d"
+        },
+        "packet_sha256": "56fa096894c47bc7cdb88e94958c3690c0c7b16415771325c885c646fb849530",
+        "seconds": 0.10804869999992661
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "4062bfb316f210ef2e6ea7a5b2caee29a130ee09d1df2d13be72ec61cebedd72",
+        "output_hashes": {
+          "predictions": "ca3804909b33bd677cebd032314efe3e4c2969d64afad1150f7a2af864c3497a",
+          "errors": "e0fc8369307e769dad477af75385083915b74623d48ad3107c973cc97f868390",
+          "residuals": "6ddac787cd4ff968eb2f0bbdd36cb1d8509a3cfeef80f687c81bc6d0b25bac21",
+          "masks": "c4646473468b77e2b20754297c48900acfa393449ba7484ca61a559255f8464c",
+          "scores": "bb3a14464e735fad41830cc81bb1252b457e97b4a9fdd2d65ff698137578df09"
+        },
+        "packet_sha256": "f3f65449734d7d95cdf87339f9ce6f743b268700c81916e9a1353cc03d26fa5d",
+        "trigger_packet_count": 4,
+        "seconds": 1.2437770999968052
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_socket_2",
+      "opaque_handle": "5bf54b9f116a5fa1",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "466b4b6c5e52387bcd92dfdf41ef8e4453920103bfc2de07dbd23a2348afba10",
+        "output_hashes": {
+          "L": "58ce974fa16808d1387c37d4f319aec5a27e3ce327aa86a7158c389429f222a9",
+          "O": "f843ff4497499d9d9d7ff0ac47287876fb19cb42d5cd3c3b35de12e0b484336f",
+          "diffusion": "b0e1b511a0ff8eed6543482a1bd1c85b18c073795ffb70a9e97f0fa788c0b10d",
+          "local_max": "d7c31997dd481b0594dfe9e0eeabb82848686e7bdc0a2881d65f715c6438a7de",
+          "baro": "3f9fc5842c7a7e7377b061b5d7620346b9c2c44701e1168513099f561bfbd8c4"
+        },
+        "packet_sha256": "7ffa8339253e71274d8a9dd9c7e16751cf34ddf989ded8162b52c6e0e9da5aa5",
+        "seconds": 0.0903318000055151
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "ee8934d260b96ebcb6a0defa99e2f8efe4ea0d0458ece2803bf00f539b66582f",
+        "output_hashes": {
+          "predictions": "076dd7754fb9d9e6942a5647bdbd6e835584a949b4f56e2b906fa9a6e1e55dc1",
+          "errors": "d07e43e7a02507e622430b06436432b2f9f07b46688c8dbcd5e207838f1d1cdf",
+          "residuals": "8f021db83d02cfe2d66736b7d19572013fb8ca9e5d9491612debb8d7649f99bd",
+          "masks": "c7f5ec6a6cd18030a7db54530ffaf9d911c832088406925dfb1d2c549af803a4",
+          "scores": "0d6ba684655a3d8c4893cea8298d9a487b4911130900e99b7a88761123fec86a"
+        },
+        "packet_sha256": "f5e8b9cd49682668e9e916035bbdd8b474044fa6ad26512f3f4e1d53de9c9d99",
+        "trigger_packet_count": 0,
+        "seconds": 0.9807517000008374
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-route-service_socket_3",
+      "opaque_handle": "47f193d58b233d8a",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "6087bed225cb9fe238b8b8d8d09417f862fc37944157f07c36c4127f9fdd6e66",
+        "output_hashes": {
+          "L": "e1dbc12c8c7337cb0a4f2bf17e226a239325e1acfb5d5b7453000e5cc3a568c8",
+          "O": "0b2ae9636d664855f86fb6679ff03b1179ddf4cee28287f91cdf913f2acd1227",
+          "diffusion": "987df31d8f5c5b63c6aa6bbc023bac525bd41e3e93e0fa63ce4549e66063c2a8",
+          "local_max": "7475b6b593bd58bd94066391fcfc02cf75431bbb08ab4d16fe3708168dc1083d",
+          "baro": "708b7b22bd98889c40149dc62f512651fe10bd912d61cdbf7b0f968f6ad299ca"
+        },
+        "packet_sha256": "1b10514e0e3c03e07c76b9babbcda059cd3bd69adb1625ab63b36f1e3bc57dda",
+        "seconds": 0.1118892000085907
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "753695b5d14156d0701d439b6d163a3d217336229681d8b1d89d24a7b6bbf2f3",
+        "output_hashes": {
+          "predictions": "447fa0d2e19b6816a3a4c91c0e1767d8be6048f62b4979ae9988670270d03f19",
+          "errors": "a12531f18b69cbf66919d7e8fc5d22f0001af985720a4e220b73ac8fd8732304",
+          "residuals": "b64c11a6a5b77332d66a5481332dc1f2934299c95b86d56e28ba719134d0e8ce",
+          "masks": "fa96e1bda005900e0823cf017d9a5d15656b1f80e56e64bdfdd9d9851a7baac7",
+          "scores": "e0dbc5e8202e3f4bea4a7d54f66691927d843dbb0eabf9de2d1fdb6950419817"
+        },
+        "packet_sha256": "302c46a16096a96e2fce1e4b9701a8e97be9577895bafd01746de40ef5ab0983",
+        "trigger_packet_count": 5,
+        "seconds": 1.0916112999984762
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_cpu_1",
+      "opaque_handle": "f13a01ab09a3962b",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "2e48a83d5a87b64f717d43ee94302ac7a19857d59bb3cece2a9ea0075861cf01",
+        "output_hashes": {
+          "L": "bddb84575d616916213b3388c00954f6430ab7c361ce69149e671f0131b87879",
+          "O": "fe460396038461e423720ab0def8a5af9bd847381d847dcbcc1cce6fe2f702c1",
+          "diffusion": "16b872239c9c1a1ba437558555e512dec7448adee897a180da9cd97e42276555",
+          "local_max": "99f6fdc485c93d19e0be4c06150afe504c414bb58317064f5f87382fece28398",
+          "baro": "e3ce4b3d6b4f81121a8afd30ae26e61865242df53832d052f69172226415755e"
+        },
+        "packet_sha256": "c85c629e2e0c1b3eb33dc33cb972aa2b324cf01d81df1f37e893bdfe2af7693b",
+        "seconds": 0.09826529999554623
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "b026b9621500220d998349a5bb5b36030a49fa9b798164e64af9ff88cb414420",
+        "output_hashes": {
+          "predictions": "a9ba7efb81fab848e795527087a2522fc92d03285ef7d29b3b251d51f8ebbf09",
+          "errors": "65aa54a8a23fed4469924a4448ed7d3506ef683a05a52e2bb8215ae27854d660",
+          "residuals": "75c9a79a301041723306c05f3e880e7d0250229b3f13a33919a046fa34a1bc36",
+          "masks": "bc67bc4c220f54bf39237361949273f4163832c9997aba89e059cc6e2879aefe",
+          "scores": "914ee1ede6ec420c591b82bbc5496b437caf2e41b83c87baeadc9419a1c87d4d"
+        },
+        "packet_sha256": "58cdddbfb15570044d6ac758a44b692ac074f81604e6701ab8574d83795c6af9",
+        "trigger_packet_count": 3,
+        "seconds": 1.0788549999997485
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_cpu_2",
+      "opaque_handle": "b4f7da80e26ff729",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "b332636e8b6a162928bd6133b240b744556d047d91f88c7e7d2c7a1239512a24",
+        "output_hashes": {
+          "L": "6e3540b619469b138efc1b200475b5dcff01f27752521ca52009bdc55a48ed5a",
+          "O": "6360a11c31aaca8255d755aa4252224cfa4145c2627ba5b848350b99846f409e",
+          "diffusion": "0b1bfbc2f65db4508af8fbbb8b8e5388bdfad86dd776b4616c0a9ae5cfba760c",
+          "local_max": "af0141a6cc7e0616f0b3065fbc445f2309daf03d15a4d2d9ac8ceedf0bd4327e",
+          "baro": "ba1a5e354b9c554773ab67919ce8ba3b3cf3d02efb4936810dd5a299d35c8bec"
+        },
+        "packet_sha256": "b4867a82a610e0fcc97546476311d0ccf163fe99196c9df06462eb7af0b7fa06",
+        "seconds": 0.09747849999985192
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "b13c3967b16fcfbdaee1b7c8529a915c8f801efa126621e9373dcf7dc3e24b4e",
+        "output_hashes": {
+          "predictions": "a78272924018ccfbd6aa804e2bb84fbd215c573dd2b85ae3225fabedba3e6fce",
+          "errors": "de80cc906a4722f3a4ed29b7ab758ce09cad1bc9c6ad9d7fc2cd56f1511d53eb",
+          "residuals": "d6386c32185cc523e448161aacd07a1098fa364e95da82888f4c3c0b0b02e94d",
+          "masks": "86728099dd5d660c99a5f9a00fd1e0343d176fd08e2a4554aff7617f851b387c",
+          "scores": "7d513e71e4618dc40edcc680300e5375ec931d076821b734fc879dfa0e32da16"
+        },
+        "packet_sha256": "2aa47863f15a5ca0e2e6cfe212b2256ce4b83f2cd7216f3854b25f698a87cabc",
+        "trigger_packet_count": 3,
+        "seconds": 1.0593470000021625
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_cpu_3",
+      "opaque_handle": "8fe6a000483edc0e",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "c8f6db3c75cf8d1cff1e8d83ac1678711a0a029d5f50040157ad02db9797d5cc",
+        "output_hashes": {
+          "L": "0f91bfde99de0101d58fa778c6fcf8347c1ab5b34a845e0ae7445f66e2a8b66e",
+          "O": "0232a2484d52c759adddce321204e8594a7592d911d1dda1760d7c09d96f594a",
+          "diffusion": "21d2994561a471f1e3797b506f2632b4b973623b1953f51a93eb6d49a3ca5d57",
+          "local_max": "d12fddaca12883eb76ce607a829a93a08a26f76f9bb8f58083fc1b2fd2ae1274",
+          "baro": "35ab4aa8d208295889c56d4afef0dbf33e7888f2d65042434fde79828f93a206"
+        },
+        "packet_sha256": "200dd5987b67f0025abde756618f954efa5a4e121e13d31d8051f96504e0b379",
+        "seconds": 0.10179079999215901
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "6b33ea199a229dfe09f0b1f2c5335995d059212cb7b78b2987775f66097b1764",
+        "output_hashes": {
+          "predictions": "f878948fac006fb296d934cb707b708c56f795f6f73a6be831c26c4624057560",
+          "errors": "47d8eab3d5f32f94f9c73a177e9ba9bebd1e05ea934e51e3f0b62b262eee124d",
+          "residuals": "edb80c863ff6ca8fbc387d195478efcd5b40355b8e10d841917a6f0be0dc4626",
+          "masks": "4a27a29b6b7b3b590afc53bb7f6ffa5aef4001de9de1574f88cc4c3dc98cb795",
+          "scores": "7d8053f76fe2c29f3c676ff409e77c3a2d5e16b22a262a6bf62c261caeb04b63"
+        },
+        "packet_sha256": "432ecaa70df4c3794a5a50b9d2b8989e74c354c0625ed67815dfc978398171c1",
+        "trigger_packet_count": 3,
+        "seconds": 1.057085599997663
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_delay_1",
+      "opaque_handle": "8534e6237bee1618",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "4ebcc9194ae8741d6bdad00c6e787da32d56f02b5896960ff444aea06dbd2371",
+        "output_hashes": {
+          "L": "c1358782c40d51f3eb8f943248f8457909181d21ae1431712012aaedde106c20",
+          "O": "169cab64f8e987f3ec65acd0b731d175f062bab778f3052f173d87f27de12af6",
+          "diffusion": "2f9e130356856df332dec0dac1139d310aa9fcc98f8466dfd52b44c855e8f85c",
+          "local_max": "65e9ea47d617e786e009b588d3072c036a9ddc2de7e5b9aaeecbf318aacf3779",
+          "baro": "381e798bc0e6a44ed8673824a4fd09b1253887b0042d6af75ba1ad45af68e2b4"
+        },
+        "packet_sha256": "e58ebbe963ee954a7c0648322d80840ba1cd8d83975690015e05b89bd12f05b0",
+        "seconds": 0.09491419998812489
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "bb6ddf2e71f1982a43a077305be628eab0b9d83acf0eb1ab33fd5c1eda8df142",
+        "output_hashes": {
+          "predictions": "f6479f4529443f93495aeb2207eba68c78b898d8400b2600e993120ab116e3ce",
+          "errors": "056f5e6d0978b42650fdf5c5a4da992d27fa88fa44edd41d08283cd7fed75b5a",
+          "residuals": "5776cf499b5d5c4ddf1d4a8b87abd2eb4762d4bbd322d55d8f9a684687797313",
+          "masks": "95cfe487688ad6e43cb65bfd2b50e985aa75c61fe4ce6b87be1ce70c71471dbd",
+          "scores": "9d565fb0ba3e5a546161ab22d38591c7e1f3e15dd94449eba558817dc330a613"
+        },
+        "packet_sha256": "b3f3299b4b093dbb8abc0ad7d26c821463cc935ea53a7a3a8fd3da01940b26f4",
+        "trigger_packet_count": 3,
+        "seconds": 1.0528455000021495
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_delay_2",
+      "opaque_handle": "84c4c18e60502036",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "f83e07b44da8878cce29cbff6df50639726909297ac73dac78661ba160c4ca5d",
+        "output_hashes": {
+          "L": "2fd4fa25eb7162e5b4f1112bf854211e9e444b0e1d9d63b1d1b5995c08b60c7f",
+          "O": "bbabc8c932c06ff12dde4a54adf0293ce506e2c0e818c5f4ff45683ae63b2029",
+          "diffusion": "fd8b76a3a13ba86311d9448428bab920683b4bb526471dd96370b3042a5e463b",
+          "local_max": "3e6a720ec66432d5fd4841b6ad7fe08fa50822b831205ae512055864e7973ac4",
+          "baro": "f2d6d25aadcb373822800ab50ad90074d130eb83077726600b3eb1a3c4011499"
+        },
+        "packet_sha256": "6723148da7ddc1339e1750733f07f8a9ef9bcbdd7de90c63ea29148e0d1139c2",
+        "seconds": 0.09581250000337604
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "4223efc1f94495930ff0b014f460c8a7c39c520bff41e3cd3dd4df98766d49cc",
+        "output_hashes": {
+          "predictions": "10c16168f49ca3c9401485d9c34c0b9018f721dd13426151e0bf63decc8f175e",
+          "errors": "1e9a4126c4a50f05da2a055987863651a9755ca115ea97dea6c9df84dd6c05cc",
+          "residuals": "31b68048ad9c0893af6d57243968389ff97d070c9a30cb84c7df3c289484fc9e",
+          "masks": "f5699cec51e1447ab6277823eb02eb12ff7324372a3519d6f2ac2c207ac5c31e",
+          "scores": "d16e5c85da4459deb99ced5c14d29b9d3664e30d7c04529e4abebf00cf2e8b86"
+        },
+        "packet_sha256": "09a007d7668d2404695aaa00aa7e97a1f57c8f614c1942b850ff1acc425a59fa",
+        "trigger_packet_count": 3,
+        "seconds": 1.0343934999982594
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-train-service_delay_3",
+      "opaque_handle": "0868b9b567cd44c8",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "7cdf31584257e46d207ab723c95a4dbc0877fbbd79ffe73d5f054cde85fe30cb",
+        "output_hashes": {
+          "L": "5b6024ad52290687d156b7284b7c0adea10b167b2e7bf30730f190ed0ee14928",
+          "O": "3f5e8f027adbdaf75cfa6096c1ed2fbce4587782a1eef5ce9a06c2876bcdfbfa",
+          "diffusion": "12509fb923ed1cd55f9a879f5df3e769d5e5cc6867b0b78c62ff05ef87db2b55",
+          "local_max": "6290a7fb13e41fa08db49a3d496162cf351ebed25afefb8b84f7dc9c2cc8594e",
+          "baro": "a49ed61480e4698c01abdf0b334a27987719217158810958f32fd0194abec3ab"
+        },
+        "packet_sha256": "c32c2248b57594fa4a14875e3fc0699a1f4096de6fd9b1781b0ea8954622be6c",
+        "seconds": 0.10402060000342317
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "d325b564d87c5001221ec43ef4d35285648e892591e5d0018f77d5a0d95c387d",
+        "output_hashes": {
+          "predictions": "1d0f931aa83cd07e268bbe8645ea83e9ade46c910228eac433e907be00b1e148",
+          "errors": "f2d62501ce971620b53db5e72364456d5dfbee15cb111ac9d433487484449440",
+          "residuals": "385d938f5e1251387cd7ffbf48423c0a3a87064b63084e6d1b2524d7dd504c36",
+          "masks": "967cdf1506cb8639f442080d55d8298665ea569b866226527f86c5f81518c0d6",
+          "scores": "b3acd97a851d37e93741af32dc7dc187384871a5e6c193347f7f5a290acb3cc5"
+        },
+        "packet_sha256": "99dfc2d0c9921e43fbb6a07676ce0df8ae6b6d15b54580cb0d023a1d91ff56cc",
+        "trigger_packet_count": 3,
+        "seconds": 1.0201652999967337
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_disk_1",
+      "opaque_handle": "27afdc4e5ac07b32",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "40173d2063fd02ecb2fe539fdcdeb01bb3da43d16fc95aa65f2c107c79ae46d3",
+        "output_hashes": {
+          "L": "275d4443ccf74dc5e5183d143b3183785e1453bc622e3d0afc3ec672f76abda9",
+          "O": "6643d1b9cc504741fa5702702eeda8acbdbdbd95111ce09162903b06fb0c9caf",
+          "diffusion": "f8a43db9ccdf7c91cdc9871c48ed5fc9a699c119d3bfc31e4a1a22e81ae9790b",
+          "local_max": "cc341b417a071ec11a0df7c5fd21427ee2ab0feb3eaa9be300c732fb8ca340f9",
+          "baro": "7ef7a71fc7e6032ae27c0728ebbc1b1b7f400f6d2553a3128c8ddb76be04f4f0"
+        },
+        "packet_sha256": "0db90335cf837ec5fee72ab0f30a10c0f455e2d6f4d4a44c35298388b544742c",
+        "seconds": 0.09829230001196265
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "a1169849cf15403c29cb06c53632513c738db73444c9100c3189350fad9fbb15",
+        "output_hashes": {
+          "predictions": "cb76d6d3749fa7160ad137c639b9fd2abfae632753b021dea790f0157b4dba16",
+          "errors": "86882157360e7120a7584e4f58bc209d936452adcd5dc388ab64dc49fae3880b",
+          "residuals": "19efb55b6d85636311c829dda22783d41b74dec3e2c150674f7af622669ed9e6",
+          "masks": "8ae8d0535567e01077db7d817ef9db789e07253b90318c3d6975f74e73e1ffad",
+          "scores": "fe7abe77904fc94dc6d16aa3e7b8102a284b46f40c81755a8f84d946813c4ce4"
+        },
+        "packet_sha256": "9e1e45d368b710209ae5fe7343bd2e6e40240afc4c4922326699668fce1f95bf",
+        "trigger_packet_count": 4,
+        "seconds": 1.0133330000098795
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_disk_2",
+      "opaque_handle": "757b880ecadc87f4",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "177894e1b3e85ff1afeb231c7a333ec19dd631077e18523c0eff5e22563538f7",
+        "output_hashes": {
+          "L": "da28770c7a09bf57b48fb4d494c0342964bad2c1737a273040f203c9f00e57db",
+          "O": "c521a674e60e66fcc86455daec17e4fb2cdb476ebc3c3d46b4560438a63f9090",
+          "diffusion": "1abdd1723dc3bac80d9dbbb6f0c920d7104ab63424477ab286b9b31ff1b620e5",
+          "local_max": "3f828dac7c15c8e1d0baa83f6fa5c82bf3b9d96c8b7dd842337beb8ad619455e",
+          "baro": "785acd91708c40dea68c24c57182021ffbcf18c2a1ad2edd5fc74eff97bff38c"
+        },
+        "packet_sha256": "ab9f3da638c563d5d315d4c8487c08ca46319b175a5062247c0542fec89eb459",
+        "seconds": 0.06867849999980535
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "6d4c8bdcb0d01d70f23f6e90309fb7b5cd508cab9a092792a915f128ea142483",
+        "output_hashes": {
+          "predictions": "8ad570c387e6dac86d6a481185a128bcd710e06ccb1b1cfbf29dadcbb35bf413",
+          "errors": "a88a1a20f208cf9c1a2871af51dc9763260000ea4ab62c068a555001f6a395a2",
+          "residuals": "ade565f96ca92da58c9a68058af487063ce0ab61cb1503cdf7448197da5390ac",
+          "masks": "80b3c4e7d9e59b0e374a0a8da8847c0be8e3ce0945615a1441628f5371f994a9",
+          "scores": "4b508ab30b4d03faf9368ed7395fda91058e01010632859b604e7943cd76251c"
+        },
+        "packet_sha256": "33e8427de8a641c28196dd4b69f9a05fffd91ad2d99deb8d97ef17d19b348b77",
+        "trigger_packet_count": 3,
+        "seconds": 0.7958362999925157
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_disk_3",
+      "opaque_handle": "3b90d794c8506cef",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "01d4b5619a6dd62679f384022a3946849311282b4a8b650df9d615b329da45d0",
+        "output_hashes": {
+          "L": "d463bf5565e2c84b44827bb55b82874014f69d55c20a46a2b3234ae4892e6489",
+          "O": "dab2bcbab862b72a620021a8e38e16aa14de3ebdf1441f9ecc98276c9c510102",
+          "diffusion": "031d4e78a7054c8eb4661562da56629faf55ed44c6707571215dadcd693dba66",
+          "local_max": "6ec372a274888b13dbf06e01ad252cbaa4773d03f3cb0000dee9ae08ae6c0a3c",
+          "baro": "8c5fd418ce1bfd1060b2adcd71b52aaa8990cbfd17e32d960f2c5b9ec441f165"
+        },
+        "packet_sha256": "1a629ad66a66debd206014c16dab4e99f2259ea029a3dd8b178a0989b93f8d8d",
+        "seconds": 0.07099039999593515
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "c4575690c22ac34ea5283594ff913c4f4f3f58adc4054ee372a5f41d960c9365",
+        "output_hashes": {
+          "predictions": "e59296a86d394207dc53cb711d34510516fb058d92e64441f708d4530fd06269",
+          "errors": "fe64f129b5663ccb55d75f929bf36f0638c6da8b59d8bc7628c5b3abc91f9053",
+          "residuals": "bdf02a51b9101014de548f54a70fe96db41f23f6b98b1dc99f90126bd4b57db5",
+          "masks": "ef9d233f9b3d4f83d97177bf1269243866b170b22a08785fc821f7d05f617b1f",
+          "scores": "5d2b9e772c3b16551ecc3ea9878985fd71c1fade2ff85a3a3b4fb0824fcb0e49"
+        },
+        "packet_sha256": "b85aad7f4caba85bb487f6ab5ffe2d28dc87fbee260f4246f7d40254301e3684",
+        "trigger_packet_count": 3,
+        "seconds": 0.7830874999926891
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_loss_1",
+      "opaque_handle": "dd8536efed49ca5a",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "64f5533095fe0c47a89d14b6c2b7449606804935611d08ae0d087fb3b9f6e5b9",
+        "output_hashes": {
+          "L": "2091b8f27ac87575f1af13d42cc65c411352d6d684a746b1169f846dd5f61f95",
+          "O": "b29950328b837c684072ce00d96e68d65a6d239fd4ed73d9d29e7948450f9ee0",
+          "diffusion": "b3fdfb7a2ec9ac79dcf2018d2272710f62bee8006973f83fe33e58669aaf4b41",
+          "local_max": "69c1c3f19afab31d1105708c6766e2e7c10dbed61098cafea86be35e070e8ebd",
+          "baro": "eeff317d1e73764f61d0095986910c6cb705b890594641cb01da3365f0f0a1fe"
+        },
+        "packet_sha256": "dc691ba10b4892d94dc938b7576bf11a483ac2ccac1a174eb0678c54ccfac68c",
+        "seconds": 0.09114190000400413
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "109cd588612bbd17522505bb169c0209aead52ff2baee506cba81d82d4fe428b",
+        "output_hashes": {
+          "predictions": "6d7822f6b6f557a405972a30607dc4836dfacc6150be9a4916621cc8dca7bc26",
+          "errors": "11e3a46bc32e462d89b87774a9cfd0c3c24ace6947203610e076d23da5a4d302",
+          "residuals": "1987451ae0b41c2ff836d7a90ea5b4078f6b8064e9671bca0559f6ed2e75e789",
+          "masks": "29ae3c536eab18de6812908463fcb3c72df6275dadc656a30b4efa096ee689f8",
+          "scores": "b7f7693e065444edf0a66c9f2ea92c8aebb9162b0ee677b64ddf1d57bcc04db6"
+        },
+        "packet_sha256": "676add353a4c6c6774007caae243ae039ee43c91b87c567eded9ba5b86f3ed54",
+        "trigger_packet_count": 3,
+        "seconds": 0.965241199999582
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_loss_2",
+      "opaque_handle": "b493b6b9e7b01687",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "918bd2a8860b1cd35c7e7b62ef4e017b5103c7582616db3fd94089206b1848b4",
+        "output_hashes": {
+          "L": "7a85db4da559cb4b6d7f5f73d60d5eff7dc41ba0331042c2094ec021c1925282",
+          "O": "12db1c24384ace13d1c366db7c3e26f6c92d64aa0fa33543a8fed427c07b309c",
+          "diffusion": "b5bb0591f9a03f17950831c437df5147cd1469a93ecd6092bb45605ade51a964",
+          "local_max": "364035c2aabfa460387606e8c5f40fb358b22dd933582261558c0fd322d48a46",
+          "baro": "399889c9111fda248fd34847f333c4aae778febe16148dc8e0f63f0b59070872"
+        },
+        "packet_sha256": "64805ef84a453e6a1e7cba105ea55e4783267b066f586461aa3e4b4f05ad270f",
+        "seconds": 0.09507190001022536
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "65f6d4da09a6856d3e647cd3908365d41f27b9eaa9fb7bae3783ad12d7a56a6c",
+        "output_hashes": {
+          "predictions": "000e12fe72c1f10f896e51d4f3b3d13fc2cb3c2b421b217dc645fe6b46f0165a",
+          "errors": "8b3943fe3c59d65bceeedada6bbad7114ef83f149dedf929cc765d89a00d0e35",
+          "residuals": "062782e6090757357d10c7c9c81a183b43d49a3b588ca2be6ebc4c8044d7d09e",
+          "masks": "3708ae3ee0fe042875d243b43c0a67ef109b1fca50a464fb1dedf2ad9daf8211",
+          "scores": "913d0d2bb9f926a08624ef7d61f41bb77bae679d45247cfe579794e291a65f90"
+        },
+        "packet_sha256": "1024834777d469bacf658cf349adda8568c16bd4dae07e1077138ed60f1c9680",
+        "trigger_packet_count": 3,
+        "seconds": 0.9417685999942478
+      },
+      "status": "EXACT_MATCH"
+    },
+    {
+      "development_id": "re2tt_ts-travel-service_loss_3",
+      "opaque_handle": "7138fe1fe1ddf617",
+      "C1": {
+        "status": "EXACT_MATCH",
+        "input_sha256": "16c19fec5caa98f2e1e280fee448e786af528b2e931996f9b413b243e76bd0db",
+        "output_hashes": {
+          "L": "e388659f8837151671272b8d8f91bfbfd6a8ba986b0e1cb3d2ae969d01dbd8a4",
+          "O": "1a5da4c7673367d2f26d247faa6654d9058a02965f0ba163caa9219326d03b15",
+          "diffusion": "9499bebf1944c56ecd4ceae970ba7bc25dae74e8d4b33a32b29c76d830194e27",
+          "local_max": "c70562973d54ed0135bf99f6ee06ff52eeb634ca75ae600b5c6ab45a20651ac5",
+          "baro": "926398efa7bdda779c08f85a1d60a1eb68ca2283eff263cd0a8ad7f233ef9f68"
+        },
+        "packet_sha256": "f41cbbd21fab0e3be4270e4dcba53d1633164cee53a8ff5b0b09003b5c68f1b0",
+        "seconds": 0.09900299999571871
+      },
+      "C5_G_MTL": {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "efb1241f7eecd686971d5141b1d0be4d9587584c3fc7630e2b8695292fe46af0",
+        "output_hashes": {
+          "predictions": "4373d979e5072da5fcbb04dc2a9f53434d18fe35baa0fcfd225b76830a26aa40",
+          "errors": "750337fc34f44bd295011669cc72d85f676b837beef33b11b46b55cf9e56af54",
+          "residuals": "806f049e949278cffbb5480d9ca0580f260d8a155f64cb92b8c99f9c275679c7",
+          "masks": "2a96f1103e4ee1b5c3a1224c24f8fa12807aeb4f5e1cdd5f838dfca061d0e0e0",
+          "scores": "d21c395b8fc34a0aed1d0b02a9d3c42d2ab9961cdcf8bc3bb0994130b1ea1a94"
+        },
+        "packet_sha256": "6813317114441a2046ac45ca8c80fe24b2a1722c6da85f5f1766ac2f8ba6015b",
+        "trigger_packet_count": 4,
+        "seconds": 1.016642699993099
+      },
+      "status": "EXACT_MATCH"
+    }
+  ],
+  "major_mode_smoke": {
+    "predeclared_case": "re2tt_ts-auth-service_cpu_3",
+    "results": [
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "672b8ef68cc3375b694a2abf5f2d315a39d9a325888896a4d75ec4c9de71baf9",
+          "errors": "70ac9ea5285b2d4ccfe65443fffe8efeecc55978c0feb643de9536ffaa8d7063",
+          "residuals": "47cbbbf6a6795868d5d5f860e4e8f163aa7441cb8139cce4ce352dbbfb9c5a07",
+          "masks": "6ae5e409d3f26f27030a57c74fd762d2a49f23453041363d4c6063e16573a0cd",
+          "scores": "37b0e58ddc9e3bf61dae5d0f9a1bce6f5b6893e6fe400a3955196c3266146aa9"
+        },
+        "packet_sha256": "0b4392cfb307036396b341f0faf54a1a3abe932790ee77389fe1d3fd95063b22",
+        "trigger_packet_count": 0,
+        "seconds": 1.0781397000100696
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "G-MT",
+        "sealed_config_index": 5,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "c42936840afbb6c4503794c8f622d3d3f2bd971affe753cb39b64165a343b7a8",
+          "errors": "1987cc6332defe12d2da6ca4f222c8ed55b6d6c1e034c14184412712a755181c",
+          "residuals": "3f6b9603cc103f39c570a5884ccff9f31c75ee171fe1950c638f954987f2e537",
+          "masks": "e45f2a70f34e02c357736c069a6666ec6ad91dd4d51eaa71d22842e51ff3db73",
+          "scores": "ebf2720993e8446b6a661de389454536c63b933796f94eb4a2356f36f656963a"
+        },
+        "packet_sha256": "9e8f1489a16afb214b8b190c5777a407be00aca4c29d1ece01b9278550b16c28",
+        "trigger_packet_count": 0,
+        "seconds": 0.925592699990375
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "L-MTL",
+        "sealed_config_index": 8,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "ca37e2877d6f6f65ddad2c25c790a2e11a3820ccffe02ebafe2860cc244a8e01",
+          "errors": "708957a513c62e0736730cfdee5b7261a85c0259ace0023957fc34bf573b36cc",
+          "residuals": "a545c86931e4845559aaa84aeb1d217e9a4a2a04d070d0a2dea6b88e911291d7",
+          "masks": "6ae5e409d3f26f27030a57c74fd762d2a49f23453041363d4c6063e16573a0cd",
+          "scores": "4c205257c9201d407047bb03540d4cd72d9cc2a9f66f2d2b212819b0fb77843d"
+        },
+        "packet_sha256": "0d9c158c8117da842461f8029e25408528cb3ac5d0dfee95fa60a12d51f0c415",
+        "trigger_packet_count": 2,
+        "seconds": 0.9241421000042465
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "L-MT",
+        "sealed_config_index": 11,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "d5c11216a10faabde2f740085663fc933796729a9d5516a20aa125e9ffcf329d",
+          "errors": "0c9ab844215bb44217f174544f32f092dd9b2fffa66f677f12acc9f52b6e679b",
+          "residuals": "22188a091760bb7616cee68551f2b8401f33af3f768e9cdbb0458e8bd4e798cc",
+          "masks": "e45f2a70f34e02c357736c069a6666ec6ad91dd4d51eaa71d22842e51ff3db73",
+          "scores": "f20778ce1d65f5a7ab5ab312202036d4907fd27b5b0c276b3eb128ed81f3e50b"
+        },
+        "packet_sha256": "5a93e92583eb73553f0bac1ef7b74b4108a4dff82d67375073b8b0ea860c2e94",
+        "trigger_packet_count": 2,
+        "seconds": 0.8751368000084767
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "ALL-MTL",
+        "sealed_config_index": 14,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "944da826ba31ade68d0a1b5805a6305e7a29209eff67de8a7b2d8c4064293027",
+          "errors": "d4a125e7e4b02ee7edf580e651419dd6c581db164882b85ef26bd554172d3b1f",
+          "residuals": "f65164cf6e149367bcaf2347c294dab7ab3dd99f4a1ceeab6b625b4162f88e7e",
+          "masks": "6ae5e409d3f26f27030a57c74fd762d2a49f23453041363d4c6063e16573a0cd",
+          "scores": "3199975009db16e292dfdc7492e18aa43332042efcfb56a77835720d640122fa"
+        },
+        "packet_sha256": "860481f9d0f53f3f80d7fb970d1f1b3455163923a2e210d81d1d5f10c8e77e35",
+        "trigger_packet_count": 0,
+        "seconds": 1.2568861999898218
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "ALL-MT",
+        "sealed_config_index": 17,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "predictions": "d2bfb9df86e9fd2c585b9c326b4bbd5e90068f636d23e55bd2557dc125f5bed0",
+          "errors": "9559c5eb31d3e2ff5f3ff530486ce917e98f7ec4288df8947accba03c71c2100",
+          "residuals": "d009c8408d12ab764510ddcc14c25b6bc92c333f4aa0832507da5c6a74a4eb93",
+          "masks": "e45f2a70f34e02c357736c069a6666ec6ad91dd4d51eaa71d22842e51ff3db73",
+          "scores": "3199975009db16e292dfdc7492e18aa43332042efcfb56a77835720d640122fa"
+        },
+        "packet_sha256": "b2e5442054984b864b576c631750b3766a2b8350df9fc6a59162ec4e88994476",
+        "trigger_packet_count": 0,
+        "seconds": 1.0334991000127047
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "TV-MTL",
+        "sealed_config_index": 2,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "scores": "4faa3c9620cf678fd74f33e9fc91617a561e7e16c3e87b7082473e7a11ce9ffb"
+        },
+        "packet_sha256": "e2c392fe6969b9bbb7e945fb3e85b4382c65519884e01e18d424fd1c00565730",
+        "trigger_packet_count": 1,
+        "seconds": 1.0078375000011874
+      },
+      {
+        "status": "EXACT_MATCH",
+        "detector_id": "TV-MT",
+        "sealed_config_index": 5,
+        "input_sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+        "output_hashes": {
+          "scores": "9cbf6f27db1ddc4dd30c8be4f1359809a0835b44f90bcfb66c55fd1804b4cf30"
+        },
+        "packet_sha256": "aa731ea799d198582168a010c2ceabf3d019b2ac1f468eeab95b7166f4d8d46d",
+        "trigger_packet_count": 0,
+        "seconds": 0.8263291000039317
+      }
+    ]
+  },
+  "r_control": {
+    "status": "EXACT_MATCH",
+    "opaque_handle": "45e43770afa33cef",
+    "draws": 256,
+    "proposals_per_draw": 10600,
+    "proposal_attempts": 2713600,
+    "accepted": 1121147,
+    "rejections": {
+      "insufficient_edges": 0,
+      "shared_endpoint": 506146,
+      "existing_edge": 983045,
+      "component_partition": 103262
+    },
+    "scores_sha256": "e02f35903004e4797fb7b811cf777e5d06fdc936a7e9277bd39634eacab20a05",
+    "interpretation": "registered finite perturbation mobility only; not a mixing/spectrum/path/kernel/centrality proof"
+  },
+  "raw_cache_equivalence": {
+    "status": "EXACT_RAW_CACHE_MATCH",
+    "entries": {
+      "c1": {
+        "identity_key": "9a00bc3364da4d72500ef5122faf092674c9dc2cda84be7b4567626384ee9605",
+        "data_sha256": "37dcfa88e8ea243704350a3f831f261e24716eeb9a9974e87e439044316e9b5f",
+        "manifest_sha256": "705021dd566e88f6307befe81d61262613e8b687ebc1a95430cfff0133e19827",
+        "reused": false
+      },
+      "c5": {
+        "identity_key": "2b38b3f08a70bc3f4dfc22916ee212aa53a70c85e52c019cc45e6429dd8eb487",
+        "data_sha256": "44c1e66edeea81c0e86408d17a0bfb0e1eddc2e2e57bcff2be26bd254432847b",
+        "manifest_sha256": "e3779bb80069dc62c645cd2ff667111363d9c46f76e32950a5739fc5f50fc911",
+        "reused": false
+      }
+    }
+  },
+  "repeat_reproducibility": {
+    "status": "EXACT_REPEAT",
+    "C1_packet_sha256": "2a6e3b7ec5fd27de07cf88881b8c557f99937b1f4d5730a64158cd87a54388b4",
+    "C5_packet_sha256": "0b4392cfb307036396b341f0faf54a1a3abe932790ee77389fe1d3fd95063b22"
+  },
+  "packet_artifacts": [
+    {
+      "path": "results/task-f/f03-release-development-validation/packets/45e43770afa33cef-c1.json",
+      "sha256": "b5467f91e9b236468726555668ce62b46ffe7d848df4c45e598ffbd64465e2ce",
+      "bytes": 116814
+    },
+    {
+      "path": "results/task-f/f03-release-development-validation/packets/45e43770afa33cef-c5-G-MTL.json",
+      "sha256": "951bb295247a2125154306a5ecab8c557318be1b55f3052c17937212651f84ba",
+      "bytes": 23962
+    }
+  ],
+  "failures": [],
+  "failure_policy": "all 30 planned cases retained; no silent skip or healthy-zero substitution",
+  "firewall": {
+    "final60_opened": false,
+    "ground_truth_passed_to_core": false,
+    "packet_oracle_fields": false,
+    "validation_inputs": "registered development30 sealed numeric artifacts only"
+  },
+  "resources": {
+    "wall_seconds": 104.8332597999979,
+    "process_cpu_seconds": 96.953125,
+    "logical_cpu_count": 16,
+    "memory_measurement": "UNAVAILABLE"
+  },
+  "status": "PASS"
+}

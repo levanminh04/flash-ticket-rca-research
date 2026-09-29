@@ -1,0 +1,202 @@
+{
+  "schema": "TD13-TASK-F-PUBLIC-LOADER-SMOKE-CONTRACT-v1",
+  "run_id": "f02-public-loader-smoke",
+  "scope": "ONE PREDECLARED DEVELOPMENT SMOKE; RAW PUBLIC TELEMETRY; FINAL60 FORBIDDEN",
+  "status": "PLANNED",
+  "case": "re2tt_ts-auth-service_cpu_3",
+  "opaque_handle": "45e43770afa33cef",
+  "smoke_rule": "one minimum-issued-opaque-handle case per development cell",
+  "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+  "frozen_manifest_file_sha256": "1eea15ce3541f4cd29c8ca08abf6dc99f7a670eccae0b944562c991954bb017f",
+  "frozen_manifest_canonical_sha256": "0b58eef965617d46e2593c2fb3f9aa4932b93340d7d9bc9e6037496bdd2237f8",
+  "source_relationship": [
+    {
+      "path": "scripts/task_e/loader.py",
+      "execution_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "current_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "utf8_snapshot_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "classification": "EXECUTION_BYTES_EXACT"
+    },
+    {
+      "path": "scripts/task_e/replay.py",
+      "execution_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "current_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "utf8_snapshot_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "classification": "EXECUTION_BYTES_EXACT"
+    }
+  ],
+  "source_files": [
+    {
+      "path": "tests/task_f/run_public_loader_smoke.py",
+      "sha256": "ccd826248f4abfca03bf63f6302fff0b6e393c6b917ea8d17b972ce568a83cce",
+      "bytes": 15511,
+      "role": "public-loader-validation-runner"
+    },
+    {
+      "path": "configs/task-f-td13-frozen-release.json",
+      "sha256": "1eea15ce3541f4cd29c8ca08abf6dc99f7a670eccae0b944562c991954bb017f",
+      "bytes": 13292,
+      "role": "frozen-release-manifest"
+    },
+    {
+      "path": "configs/task-e-td13-development.json",
+      "sha256": "d39a150b61696bd38c178682561bf4e45f39103463323f4acef0b38b00d84c60",
+      "bytes": 5179,
+      "role": "development-only-registry"
+    },
+    {
+      "path": "results/task-e/e27-019-development-loader-audit/case-audits/45e43770afa33cef.json",
+      "sha256": "b735750bb67bf0a4983bc003d5afd836db7f6a910104d460c8ce548bb44c8e09",
+      "bytes": 885344,
+      "role": "controller-only-case-audit"
+    },
+    {
+      "path": "results/task-e/e27-019-development-loader-audit/source-manifest.json",
+      "sha256": "65b07426480eb1432a4680cdfe03f0033d45d92e032977648120d84cf41b4c18",
+      "bytes": 400842,
+      "role": "historical-execution-source-manifest"
+    },
+    {
+      "path": "scripts/task_e/loader.py",
+      "sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "bytes": 24856,
+      "role": "exact-qualified-task-e-loader"
+    },
+    {
+      "path": "scripts/task_e/replay.py",
+      "sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "bytes": 12842,
+      "role": "exact-qualified-task-e-replay"
+    },
+    {
+      "path": "results/task-e/e27-019-development-loader-audit/intermediates/45e43770afa33cef/c1_primary.npz",
+      "sha256": "479442ec0e7ac37f4ddcb67ab3e0855ee8b3e78123bdd90f3e565e6fb5926ba9",
+      "bytes": 57618,
+      "role": "sealed-c1-numeric-input"
+    },
+    {
+      "path": "results/task-e/e27-033-c1-development-full/predictions/45e43770afa33cef.npz",
+      "sha256": "dc09fb6688a9e4d9c5e73208fd384a2c9baf9b878fc16647a893bfc9dbe80a36",
+      "bytes": 14907,
+      "role": "sealed-c1-local-output"
+    },
+    {
+      "path": "results/task-e/e27-033-c1-development-full/predictions/45e43770afa33cef-observed-local6.npz",
+      "sha256": "c7813202b1f3417646f01c54f194aa9fb8b8b2d06217f3016ba763ef1a6467c3",
+      "bytes": 2059,
+      "role": "sealed-c1-graph-output"
+    },
+    {
+      "path": "results/task-e/e27-035-c5-development-full/predictions/primary/45e43770afa33cef/numeric-input.npz",
+      "sha256": "eb09ba4edaa7fe4dde2e6e83a420360765bdadfa66b40b8aaa924fb7e9346ea8",
+      "bytes": 218583,
+      "role": "sealed-c5-numeric-input"
+    },
+    {
+      "path": "results/task-e/e27-035-c5-development-full/predictions/primary/45e43770afa33cef/predictions.npz",
+      "sha256": "26ae0482e736f7489223d73d92707e6b5d30d91824e860cd2b03607ac04771d0",
+      "bytes": 21680988,
+      "role": "sealed-c5-output"
+    },
+    {
+      "path": "src/rca/__init__.py",
+      "sha256": "aa508cafdd5c653fed133bd0bfdfa798d0efa6f1d0454f48adc92490c9c9de8e",
+      "bytes": 811,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/cache.py",
+      "sha256": "dca7e6606c83677a73f526b764c90d74431ec85380927093e903171e5299a288",
+      "bytes": 9032,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/comparators.py",
+      "sha256": "581b725bf279bbd6686da73521db4158f941fa924703a8851b4ee4aaba41aa36",
+      "bytes": 5343,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/contracts.py",
+      "sha256": "3846ce13d10843da4fa0d3f72a2b9dee1600d99eeef5e103c8862b0cb1436555",
+      "bytes": 14051,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/detection.py",
+      "sha256": "20fb9f1d00e5f462373e2f172aaab95ccb98f2b9ac98b30dcc2629d32338d4d0",
+      "bytes": 23593,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/observation.py",
+      "sha256": "3383fd3625e8782d3729e872420070c05ebf13ca53790d6a54c47b51080ba1a1",
+      "bytes": 15583,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/packet.py",
+      "sha256": "74f2ff65261f46c8b7777f682e9dbc443e967e416dfa037d44374002f9fadbca",
+      "bytes": 10233,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/pipeline.py",
+      "sha256": "401243c9178f8c26a9c4742e6827904d3e2758e00d73e00e2a09019de31f34cc",
+      "bytes": 19164,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/ranking.py",
+      "sha256": "b634b763a7fc571ef0a7a6ebba046a0e8bdd6bc0265bc59d88370893e2164780",
+      "bytes": 17569,
+      "role": "task-f-release-source"
+    },
+    {
+      "path": "src/rca/release.py",
+      "sha256": "4bea6ef72313740e7a80f0cdb6caeb6baa561d483dc28ea7725da5216efc3be4",
+      "bytes": 8436,
+      "role": "task-f-release-source"
+    }
+  ],
+  "raw_input_files": [
+    {
+      "path": "datasets/rcaeval/task-e-development/re2tt_ts-auth-service_cpu_3/metrics.parquet",
+      "sha256": "59f696a169b59f783e9b9c335c0ffd5c311411d108be385db24c940a77a8b84a",
+      "bytes": 927318,
+      "role": "verified-public-metrics"
+    },
+    {
+      "path": "datasets/rcaeval/task-e-development/re2tt_ts-auth-service_cpu_3/traces.parquet",
+      "sha256": "5ea47f49f3dbbdcb1dbdff5c7041254f280b1b0dfe016d6f91e81de3a909d0a1",
+      "bytes": 21185689,
+      "role": "verified-public-traces"
+    },
+    {
+      "path": "datasets/rcaeval/task-e-development/re2tt_ts-auth-service_cpu_3/logs.parquet",
+      "sha256": "baae33c651b1bc7ebc384cfaffc4a9a7ab79db82d338ee3732bcf9a52473b973",
+      "bytes": 3548142,
+      "role": "verified-public-logs"
+    }
+  ],
+  "release_code_identity": {
+    "src/rca/__init__.py": "aa508cafdd5c653fed133bd0bfdfa798d0efa6f1d0454f48adc92490c9c9de8e",
+    "src/rca/cache.py": "dca7e6606c83677a73f526b764c90d74431ec85380927093e903171e5299a288",
+    "src/rca/comparators.py": "581b725bf279bbd6686da73521db4158f941fa924703a8851b4ee4aaba41aa36",
+    "src/rca/contracts.py": "3846ce13d10843da4fa0d3f72a2b9dee1600d99eeef5e103c8862b0cb1436555",
+    "src/rca/detection.py": "20fb9f1d00e5f462373e2f172aaab95ccb98f2b9ac98b30dcc2629d32338d4d0",
+    "src/rca/observation.py": "3383fd3625e8782d3729e872420070c05ebf13ca53790d6a54c47b51080ba1a1",
+    "src/rca/packet.py": "74f2ff65261f46c8b7777f682e9dbc443e967e416dfa037d44374002f9fadbca",
+    "src/rca/pipeline.py": "401243c9178f8c26a9c4742e6827904d3e2758e00d73e00e2a09019de31f34cc",
+    "src/rca/ranking.py": "b634b763a7fc571ef0a7a6ebba046a0e8bdd6bc0265bc59d88370893e2164780",
+    "src/rca/release.py": "4bea6ef72313740e7a80f0cdb6caeb6baa561d483dc28ea7725da5216efc3be4"
+  },
+  "command": "$env:PYTHONPATH='src;.'; .\\.venv\\Scripts\\python.exe -u tests/task_f/run_public_loader_smoke.py --mode run --run-dir results/task-f/f02-public-loader-smoke",
+  "firewall": {
+    "final60_enumerated": false,
+    "final60_loaded": false,
+    "root_fault_tau_passed_to_core": false,
+    "tau_use": "controller-only loader window argument; absent from admitted observation and packet"
+  },
+  "contract_sha256": "0027a21db684f5c2dda994e016616959d239f34d88c820f6c6f9860c0ea7baf4"
+}

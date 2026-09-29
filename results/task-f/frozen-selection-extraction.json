@@ -1,0 +1,86 @@
+{
+  "schema": "TD13-F-FROZEN-SELECTION-EXTRACTION-v1",
+  "created_utc": "2026-09-28T17:41:49.1636650Z",
+  "scope": "MACHINE EXTRACTION FROM SEALED TASK E DEVELOPMENT OUTPUTS; NO RESELECTION; NO FINAL60 ACCESS",
+  "status": "PASS",
+  "extractor": "src/rca/release.py::verify_frozen_release",
+  "manifest": {
+    "path": "configs/task-f-td13-frozen-release.json",
+    "file_sha256": "18484bc4bb0c1d19e8f6936f12d8365a8ad69e16fffa2bf6ce5968189f0561e5",
+    "canonical_sha256": "444406473da6e322579902958da5910133d3ad4c996f1aa170fe4dd2cc8d3570"
+  },
+  "identity": {
+    "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "dataset_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "development_scope": "development30",
+    "declared_reference_hashes_verified": 41
+  },
+  "authoritative_sources": {
+    "c1_local": {
+      "path": "results/task-e/e27-033-c1-development-full/local-selection.json",
+      "sha256": "56788385674498914eac874572a8fcce671e1c253ed282ff511d2f2fdfd6c266"
+    },
+    "c1_selection": {
+      "path": "results/task-e/e27-033-c1-development-full/selection.json",
+      "sha256": "b573102a18763eecd235ca2450438e265c2404c990a0180be6164af9806ea754"
+    },
+    "c1_execution_plan": {
+      "path": "results/task-e/e27-033-c1-development-full/observed-execution-plan.json",
+      "sha256": "8caf08bec235927e2eb590e4a80effb23316f2cd6c0e59e35b74bf8ff0f3d1e1"
+    },
+    "c5_lambda": {
+      "path": "results/task-e/e27-035-c5-development-full/lambda-selection.json",
+      "sha256": "919c40ea168b545cf4419547c2470084a6b5d0061729376da284b4763cf7dac2"
+    },
+    "c5_selection": {
+      "path": "results/task-e/e27-035-c5-development-full/c5-selection.json",
+      "sha256": "4e56b27a2e044774f2fc4021f64a7d093f66dfaeb0c9dd019955d53f246f343c"
+    },
+    "c5_prediction_seal": {
+      "path": "results/task-e/e27-035-c5-development-full/predictions-seal.json",
+      "sha256": "b2d01f6de1d584b35d27a5f6ff9ab9ecfbe26eb018e70e4ac717e5b422d634bf"
+    }
+  },
+  "extracted": {
+    "c1": {
+      "selected_local_index": 6,
+      "local": {"floor": 0.01, "pool": "q90", "fusion": "availablemean"},
+      "selected_ppr_index": 4,
+      "primary_ppr": {"operator": "ppr", "direction": "undirected", "damping": 0.5},
+      "selected_diffusion_index": 6,
+      "secondary_diffusion": {"operator": "diffusion", "direction": "undirected", "damping": 0.85}
+    },
+    "c5": {
+      "selected_lambda": 10.0,
+      "detectors": [
+        {"id": "G-MTL", "status": "VALID", "q": 0.95, "threshold": 5300.844353103079},
+        {"id": "L-MTL", "status": "VALID", "q": 0.95, "threshold": 221694927196937.78},
+        {"id": "ALL-MTL", "status": "VALID", "q": 0.95, "threshold": 4361.702127659585},
+        {"id": "TV-MTL", "status": "VALID", "q": 0.95, "threshold": 2.4051748014087467e24},
+        {"id": "G-MT", "status": "VALID", "q": 0.95, "threshold": 4361.702127659583},
+        {"id": "L-MT", "status": "VALID", "q": 0.95, "threshold": 158890826408975.88},
+        {"id": "ALL-MT", "status": "VALID", "q": 0.95, "threshold": 4361.702127659583},
+        {"id": "TV-MT", "status": "VALID", "q": 0.95, "threshold": 1.16504925625623e24}
+      ]
+    }
+  },
+  "checks": {
+    "all_declared_reference_hashes": "PASS",
+    "c1_local_sources_agree": "PASS",
+    "c1_canaries": "PASS",
+    "c5_lambda_sources_agree": "PASS",
+    "c5_eight_valid_q095_thresholds": "PASS",
+    "development_registry_not_used_as_selection": "PASS",
+    "no_sensitivity_primary_substitution": "PASS",
+    "mandatory_comparator_roster": "PASS",
+    "task_f_implementation_source_identity": "PASS",
+    "qualified_development_loader_execution_bytes": "PASS",
+    "qualified_integrated_adapter_execution_bytes_and_receipts": "PASS",
+    "final_split_not_materialized": "PASS"
+  },
+  "interpretation": {
+    "development_registry": "search/split contract only; it still says selection=NOT RUN",
+    "sensitivities": "diagnostic limitation evidence only",
+    "final_split": "referenced by canonical protocol/version only; no final IDs, telemetry, labels, graphs, features or predictions materialized"
+  }
+}

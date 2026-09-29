@@ -1,0 +1,61 @@
+{
+  "schema": "TD13-TASK-F-PUBLIC-LOADER-SMOKE-v1",
+  "scope": "RAW PUBLIC DEVELOPMENT TELEMETRY TO TASK F PACKET; NOT EFFICACY; FINAL60 FORBIDDEN",
+  "status": "PASS",
+  "failures": [],
+  "firewall": {
+    "final60_opened": false,
+    "oracle_metadata_passed_to_core": false,
+    "absolute_case_path_in_packet": false,
+    "absolute_epoch_in_packet": false
+  },
+  "run_id": "f04-qualified-public-loader-and-integrated-smoke",
+  "contract_sha256": "bb7890b84b3d479ea47ebe5ad9e5633213fbd950a57e5123def1e272c13195c5",
+  "case_selection": "predeclared first registry smoke identity; not score-selected",
+  "opaque_handle": "45e43770afa33cef",
+  "source_relationship": [
+    {
+      "path": "scripts/task_e/loader.py",
+      "execution_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "current_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "utf8_snapshot_sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff",
+      "classification": "EXECUTION_BYTES_EXACT"
+    },
+    {
+      "path": "scripts/task_e/replay.py",
+      "execution_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "current_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "utf8_snapshot_sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99",
+      "classification": "EXECUTION_BYTES_EXACT"
+    }
+  ],
+  "raw_source_hashes": {
+    "metrics": "59f696a169b59f783e9b9c335c0ffd5c311411d108be385db24c940a77a8b84a",
+    "traces": "5ea47f49f3dbbdcb1dbdff5c7041254f280b1b0dfe016d6f91e81de3a909d0a1",
+    "logs": "baae33c651b1bc7ebc384cfaffc4a9a7ab79db82d338ee3732bcf9a52473b973"
+  },
+  "C1": {
+    "numeric_bundle": "EXACT_MATCH_TO_SEALED_E",
+    "L_O": "EXACT_MATCH_TO_SEALED_E",
+    "packet_sha256": "46a7278f4092a53b50e82421d0d1eb65e11e5542cc9aff60bb9d04fb9d7adf11"
+  },
+  "C5_G_MTL": {
+    "numeric_bundle": "EXACT_MATCH_TO_SEALED_E",
+    "predictions_residuals_scores": "EXACT_MATCH_TO_SEALED_E",
+    "packet_sha256": "b220e372a289358c7315f9eef3ba966d139b19eacc641eca04949aa8527dc8a0"
+  },
+  "C5_L_MTL_INTEGRATED": {
+    "sealed_equivalence_endpoints": [
+      630,
+      1125
+    ],
+    "integrated_scores": "EXACT_MATCH_TO_SEALED_E",
+    "frozen_full_threshold_trigger_endpoints": [
+      630,
+      1125
+    ],
+    "trigger_packets": "VALID_AND_CONTROLLER_CLOCK_FIREWALL_PASS"
+  },
+  "qualified_loader_boundary": "PASS; adapter binds exact Task E execution bytes and receipts before admission",
+  "wall_seconds": 21.660815600000205
+}
