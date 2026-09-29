@@ -1,0 +1,109 @@
+{
+  "schema": "TD13-TASK-F-RCD-CORRECTIVE-CONTRACT-v2",
+  "run_id": "f08-qualified-rcd-boundary-repair",
+  "scope": "BOUNDED SYNTHETIC RCD QUALIFICATION ONLY; NO DEVELOPMENT TELEMETRY OR FINAL60",
+  "status": "PLANNED",
+  "td_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+  "frozen_manifest": {
+    "path": "configs/task-f-td13-frozen-release-v2.json",
+    "sha256": "3832410587a746f9c93d6a1101a12e287bbfc4bf7093205d8d5383f51b3b94d9"
+  },
+  "predecessor_release": {
+    "commit": "e70f40f5549574ac4518436cc476087f8cf2d9f6",
+    "manifest": {
+      "path": "configs/task-f-td13-frozen-release.json",
+      "sha256": "18484bc4bb0c1d19e8f6936f12d8365a8ad69e16fffa2bf6ce5968189f0561e5"
+    }
+  },
+  "source_files": [
+    {
+      "path": "src/rca/__init__.py",
+      "sha256": "3baa7753048bf4010d914791e8bdaa55fb2b0dc256726f556603e742ff22c8e8",
+      "bytes": 1122,
+      "role": "corrective-source"
+    },
+    {
+      "path": "src/rca/comparators.py",
+      "sha256": "e753e1c850e9868c7036d2a21b7a9d00d48f20a54d536e9087f94a94f8bf43cd",
+      "bytes": 5535,
+      "role": "corrective-source"
+    },
+    {
+      "path": "src/rca/qualified_rcd.py",
+      "sha256": "1c80e2ec8a3c90582836198a9c48713633780766f0f859db508b2af7ac786937",
+      "bytes": 11912,
+      "role": "corrective-source"
+    },
+    {
+      "path": "scripts/task_e/rcd_runtime.py",
+      "sha256": "fcf98f16595db0b8ce3b87b0f37b94aa0baf1d6d147c085ad3b608bac6737539",
+      "bytes": 10629,
+      "role": "corrective-source"
+    },
+    {
+      "path": "tests/task_f/prepare_development_validation.py",
+      "sha256": "8519a131653e6eb01fe515b4bdff58f931df362f483907ace2c81d9d9fe3d90e",
+      "bytes": 15443,
+      "role": "corrective-source"
+    },
+    {
+      "path": "tests/task_f/run_rcd_boundary_smoke.py",
+      "sha256": "a1221285d90db328356fc716a8ef42bded8d0523f9e9cf99168c598fd58fca4d",
+      "bytes": 9936,
+      "role": "corrective-source"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "results/task-e/e27-018-rcd-real-qualification/run-contract.json",
+      "sha256": "5e0f4e4b90f9a654411a5a2edd8d22c56275080e6020a1f8d31a03e8b095d408",
+      "bytes": 11805,
+      "role": "immutable-qualification-evidence"
+    },
+    {
+      "path": "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json",
+      "sha256": "8238a708c315b3c0ce0c59aeff6622489c96e4a33bcb60f0222bca1eab2ec123",
+      "bytes": 157229,
+      "role": "immutable-qualification-evidence"
+    },
+    {
+      "path": "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
+      "sha256": "7dcab2e14efa3552bde3d8c00696b9c5b6e17894547f363640e5b9bc0ef45969",
+      "bytes": 550350,
+      "role": "immutable-qualification-evidence"
+    },
+    {
+      "path": "results/task-f/f06-final-rcd-boundary/rcd-boundary-smoke.json",
+      "sha256": "1eccc958c3aa5ff6409b8dd297affb4e5c35cb573241332b977adb4e044d4fb7",
+      "bytes": 3569,
+      "role": "immutable-qualification-evidence"
+    }
+  ],
+  "registered_parameters": {
+    "bins": 5,
+    "seeds": [
+      420,
+      421,
+      422
+    ],
+    "gamma": 5,
+    "localized": true,
+    "dk_select_useful": false,
+    "dataset": null
+  },
+  "expected_interpreter": "environments/task-e/rcd39/Scripts/python.exe; Python 3.9",
+  "command": "$env:PYTHONPATH='src;.'; .\\environments\\task-e\\rcd39\\Scripts\\python.exe -u tests/task_f/run_rcd_boundary_smoke.py --run-dir results/task-f/f08-qualified-rcd-boundary-repair",
+  "firewall": {
+    "development_telemetry_loaded": false,
+    "final60_enumerated_or_loaded": false,
+    "labels_or_root_fault_loaded": false
+  },
+  "repository_state": {
+    "P_branch": "codex/rca-research-program",
+    "P_head": "f3d6cb3ec6dde9f6fa01db0d1d52fdcad221ef64",
+    "W_branch": "main",
+    "W_head": "e70f40f5549574ac4518436cc476087f8cf2d9f6",
+    "working_tree_identity": "per-file SHA256 in source_files and frozen_manifest"
+  },
+  "contract_sha256": "31417688a71f1fddd43df005d1f9b6aeb669adb457c54ab8a8ccd13a340e3119"
+}

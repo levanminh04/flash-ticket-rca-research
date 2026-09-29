@@ -22,6 +22,7 @@ P = Path(r"D:\Project\flash-ticket-platform")
 TD = P / "docs/research-rca/task-d-method-and-experiment-specification.md"
 REGISTRY = W / "configs/task-e-td13-development.json"
 MANIFEST = W / "configs/task-f-td13-frozen-release.json"
+V2_MANIFEST = W / "configs/task-f-td13-frozen-release-v2.json"
 AUDITS = W / "results/task-e/e27-019-development-loader-audit/case-audits"
 C1 = W / "results/task-e/e27-033-c1-development-full"
 C5 = W / "results/task-e/e27-035-c5-development-full"
@@ -101,9 +102,75 @@ def load_json(path: Path):
     return json.loads(path.read_text(encoding="utf-8-sig"))
 
 
+def create_rcd_corrective_contract(run_dir: Path) -> int:
+    """Prepare a new bounded attempt using pinned evidence, not telemetry."""
+    if run_dir.exists():
+        raise SystemExit("Never overwrite an existing Task F corrective attempt")
+    manifest = load_json(V2_MANIFEST)
+    if manifest["implementation"]["release_id"] != "TASK-F-TD13-v2":
+        raise SystemExit("Expected Task F v2 successor release")
+    source_files = [
+        reference(W / relative, "corrective-source")
+        for relative in (
+            "src/rca/__init__.py",
+            "src/rca/comparators.py",
+            "src/rca/qualified_rcd.py",
+            "scripts/task_e/rcd_runtime.py",
+            "tests/task_f/prepare_development_validation.py",
+            "tests/task_f/run_rcd_boundary_smoke.py",
+        )
+    ]
+    input_files = [
+        reference(W / relative, "immutable-qualification-evidence")
+        for relative in (
+            "results/task-e/e27-018-rcd-real-qualification/run-contract.json",
+            "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json",
+            "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
+            "results/task-f/f06-final-rcd-boundary/rcd-boundary-smoke.json",
+        )
+    ]
+    contract = {
+        "schema": "TD13-TASK-F-RCD-CORRECTIVE-CONTRACT-v2",
+        "run_id": run_dir.name,
+        "scope": "BOUNDED SYNTHETIC RCD QUALIFICATION ONLY; NO DEVELOPMENT TELEMETRY OR FINAL60",
+        "status": "PLANNED",
+        "td_sha256": EXPECTED_TD,
+        "frozen_manifest": {"path": relative(V2_MANIFEST), "sha256": sha(V2_MANIFEST)},
+        "predecessor_release": manifest["predecessor_release"],
+        "source_files": source_files,
+        "input_files": input_files,
+        "registered_parameters": next(row["primary"] for row in manifest["comparators"] if row["id"] == "RCD-RCAEval-adapted-TD12"),
+        "expected_interpreter": "environments/task-e/rcd39/Scripts/python.exe; Python 3.9",
+        "command": (
+            "$env:PYTHONPATH='src;.'; .\\environments\\task-e\\rcd39\\Scripts\\python.exe -u "
+            f"tests/task_f/run_rcd_boundary_smoke.py --run-dir {relative(run_dir)}"
+        ),
+        "firewall": {
+            "development_telemetry_loaded": False,
+            "final60_enumerated_or_loaded": False,
+            "labels_or_root_fault_loaded": False,
+        },
+        "repository_state": {
+            "P_branch": git_value(P, "branch", "--show-current"),
+            "P_head": git_value(P, "rev-parse", "HEAD"),
+            "W_branch": git_value(W, "branch", "--show-current"),
+            "W_head": git_value(W, "rev-parse", "HEAD"),
+            "working_tree_identity": "per-file SHA256 in source_files and frozen_manifest",
+        },
+    }
+    contract["contract_sha256"] = hashlib.sha256(canonical(contract)).hexdigest()
+    run_dir.mkdir(parents=True)
+    with (run_dir / "run-contract.json").open("x", encoding="utf-8", newline="\n") as stream:
+        json.dump(contract, stream, indent=2, ensure_ascii=False, allow_nan=False)
+        stream.write("\n")
+    print(json.dumps({"run_id": run_dir.name, "contract_sha256": contract["contract_sha256"]}))
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--run-dir", required=True)
+    parser.add_argument("--rcd-only", action="store_true")
     arguments = parser.parse_args()
     run_dir = Path(arguments.run_dir).resolve()
     try:
@@ -114,6 +181,8 @@ def main() -> int:
         raise SystemExit("Never overwrite an existing Task F validation attempt")
     if sha(TD) != EXPECTED_TD:
         raise SystemExit("Frozen TD-v1.3 hash drift; validation contract not created")
+    if arguments.rcd_only:
+        return create_rcd_corrective_contract(run_dir)
 
     registry = load_json(REGISTRY)
     development_ids = list(registry["development_ids"])

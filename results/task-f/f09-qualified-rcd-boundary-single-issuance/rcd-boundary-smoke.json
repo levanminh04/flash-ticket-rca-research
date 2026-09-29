@@ -1,0 +1,148 @@
+{
+  "schema": "TD13-TASK-F-RCD-BOUNDARY-SMOKE-v2",
+  "scope": "SYNTHETIC BOUNDED RUNTIME QUALIFICATION; NO DEVELOPMENT RERUN; FINAL60 FORBIDDEN",
+  "method": "RCD-RCAEval-adapted-TD12",
+  "status": "PASS",
+  "runs": [
+    {
+      "fixture": "separated-shift",
+      "input_sha256": "7a3bc85b7296317d98ef8fb8711e92c1bb1bb07591f65dc0b7cf0414d08c2bf8",
+      "seed": 420,
+      "bins": 5,
+      "result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "SUCCESS",
+        "ranks": [
+          "m000"
+        ],
+        "reason": null,
+        "error": null,
+        "unknown_metric_keys": []
+      },
+      "repeat_exact": true,
+      "f06_result_exact": true
+    },
+    {
+      "fixture": "identical-halves",
+      "input_sha256": "34746b04b79fdfd0b63c6b3c936d26cba5b5594ef33b4f69f01c835bf161184e",
+      "seed": 420,
+      "bins": 5,
+      "result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "SUCCESS",
+        "ranks": [],
+        "reason": null,
+        "error": null,
+        "unknown_metric_keys": []
+      },
+      "valid_empty_is_success": true,
+      "f06_result_exact": true
+    },
+    {
+      "fixture": "unqualified-callable",
+      "input_sha256": "7a3bc85b7296317d98ef8fb8711e92c1bb1bb07591f65dc0b7cf0414d08c2bf8",
+      "result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "FAILURE",
+        "ranks": null,
+        "reason": "unqualified_rcd_runner",
+        "error": null
+      },
+      "failure_visible": true
+    },
+    {
+      "fixture": "tampered-or-forged-qualified-handle",
+      "input_sha256": "7a3bc85b7296317d98ef8fb8711e92c1bb1bb07591f65dc0b7cf0414d08c2bf8",
+      "identity_result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "FAILURE",
+        "ranks": null,
+        "reason": "unqualified_rcd_runner",
+        "error": null
+      },
+      "function_result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "FAILURE",
+        "ranks": null,
+        "reason": "unqualified_rcd_runner",
+        "error": null
+      },
+      "forged_handle_result": {
+        "method": "RCD-RCAEval-adapted-TD12",
+        "seed": 420,
+        "bins": 5,
+        "status": "FAILURE",
+        "ranks": null,
+        "reason": "unqualified_rcd_runner",
+        "error": null
+      },
+      "failure_visible": true
+    }
+  ],
+  "failures": [],
+  "firewall": {
+    "development_telemetry_loaded": false,
+    "final60_opened": false,
+    "labels_or_root_fault_loaded": false
+  },
+  "run_id": "f09-qualified-rcd-boundary-single-issuance",
+  "contract_sha256": "1289987792d6d69fb1aad102b4bd7d34500b6d1a262f87966a2c6a703de5f5de",
+  "qualified_runtime": {
+    "python": "3.9.13 (tags/v3.9.13:6de2ca5, May 17 2022, 16:36:42) [MSC v.1929 64 bit (AMD64)]",
+    "executable_name": "python.exe",
+    "qualification_run_id": "e27-018-rcd-real-qualification",
+    "qualification_receipt_sha256": "8238a708c315b3c0ce0c59aeff6622489c96e4a33bcb60f0222bca1eab2ec123",
+    "source_manifest_sha256": "f63c6224168d82613ef0a0b1d7c99f18fc94613895b4346528a3a80ba29b2c68",
+    "packages": {
+      "Pillow": "9.5.0",
+      "causal-learn": "0.1.2.3",
+      "colorama": "0.4.6",
+      "contourpy": "1.0.7",
+      "cycler": "0.11.0",
+      "decorator": "5.1.1",
+      "fonttools": "4.39.4",
+      "graphviz": "0.20.1",
+      "importlib-resources": "5.12.0",
+      "joblib": "1.2.0",
+      "kiwisolver": "1.4.4",
+      "matplotlib": "3.7.1",
+      "networkx": "2.5",
+      "numpy": "1.23.5",
+      "packaging": "23.1",
+      "pandas": "2.0.1",
+      "patsy": "0.5.3",
+      "pydot": "1.4.2",
+      "pyparsing": "3.0.9",
+      "python-dateutil": "2.8.2",
+      "pytz": "2023.3",
+      "scikit-learn": "1.2.2",
+      "scipy": "1.10.1",
+      "six": "1.16.0",
+      "statsmodels": "0.14.0",
+      "threadpoolctl": "3.1.0",
+      "tqdm": "4.65.0",
+      "tzdata": "2023.3",
+      "zipp": "3.15.0"
+    },
+    "upstream_original_sha256": "e6a7df13e4f3256b45da0713b07b6bf41fb9178333e31397701ab2f08872f628",
+    "adaptation_patch_sha256": "472685d2513a47cefce36640d9de3e21769923f85de48f7cf6feec43e2ae8838",
+    "patched_rcd_sha256": "036946005d53e5c6a11e2a4b5c099f2194ab104f15df8fd74d74668827278393",
+    "release_sha256": "c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d"
+  },
+  "completed_rcd_development_evidence": {
+    "path": "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
+    "sha256": "7dcab2e14efa3552bde3d8c00696b9c5b6e17894547f363640e5b9bc0ef45969",
+    "interpretation": "sealed bounded reuse; the 270-config development campaign was not rerun"
+  },
+  "wall_seconds": 1.6464302000000002
+}

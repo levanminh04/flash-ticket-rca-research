@@ -1,15 +1,25 @@
 from __future__ import annotations
 
+import copy
+import json
+import sys
 import unittest
+from pathlib import Path
 from unittest import mock
 
 import numpy as np
 import pandas as pd
+import rca.qualified_rcd as rcd_boundary
 
 from rca.comparators import RCD_ADAPTED, rcd_run
 from rca.observation import ObservationError, public_c5_observation
+from rca.qualified_rcd import (
+    QualifiedRcdRunner,
+    RcdQualificationError,
+    _verify_evidence_identity,
+)
 
-from _helpers import pipeline, qualified_adapter, synthetic_c1
+from _helpers import W, pipeline, qualified_adapter, synthetic_c1
 
 
 class PublicBoundaryAndComparatorTests(unittest.TestCase):
@@ -40,7 +50,7 @@ class PublicBoundaryAndComparatorTests(unittest.TestCase):
         self.assertEqual(len(adapter.identity["source_sha256"]), 3)
         self.assertEqual(len(adapter.identity["receipt_sha256"]), 3)
 
-    def test_04_rcd_boundary_requires_registered_contract_and_preserves_output(self):
+    def test_04_rcd_forwards_registered_parameters_after_admission(self):
         frame = pd.DataFrame(
             {
                 "time": np.arange(600, dtype=np.float64),
@@ -54,7 +64,12 @@ class PublicBoundaryAndComparatorTests(unittest.TestCase):
             calls.append((data.copy(), inject_time, kwargs))
             return {"ranks": ["n1::latency", "n0::cpu"]}
 
-        result = rcd_run(frame, seed=420, bins=5, upstream_rcd=upstream)
+        # This isolates forwarding only. The real pinned factory is exercised
+        # by the Python 3.9 bounded smoke, not by this patched unit test.
+        with mock.patch("rca.comparators.qualified_callable", return_value=upstream):
+            result = rcd_run(frame, seed=420, bins=5, qualified_rcd=object())
+            wrong_seed = rcd_run(frame, seed=999, bins=5, qualified_rcd=object())
+            wrong_bins = rcd_run(frame, seed=420, bins=9, qualified_rcd=object())
         self.assertEqual(result["method"], RCD_ADAPTED)
         self.assertEqual(result["status"], "SUCCESS")
         self.assertEqual(result["ranks"], ["n1::latency", "n0::cpu"])
@@ -63,14 +78,81 @@ class PublicBoundaryAndComparatorTests(unittest.TestCase):
         self.assertEqual(calls[0][2]["gamma"], 5)
         self.assertTrue(calls[0][2]["localized"])
         self.assertFalse(calls[0][2]["dk_select_useful"])
+        self.assertEqual(calls[0][2]["bins"], 5)
+        self.assertIsNone(calls[0][2]["dataset"])
+        self.assertEqual(wrong_seed["reason"], "unregistered_seed_or_bins")
+        self.assertEqual(wrong_bins["reason"], "unregistered_seed_or_bins")
+
+    def test_04a_rcd_rejects_plain_lambda_and_fake_callable(self):
+        frame = pd.DataFrame({"time": np.arange(600), "n0::cpu": np.ones(600)})
+
+        def plain(*args, **kwargs):
+            return {"ranks": ["n0::cpu"]}
+
+        class Fake:
+            def __call__(self, *args, **kwargs):
+                return {"ranks": ["n0::cpu"]}
+
+        for candidate in (plain, lambda *args, **kwargs: {"ranks": []}, Fake(), None):
+            with self.subTest(candidate=type(candidate).__name__):
+                result = rcd_run(frame, qualified_rcd=candidate)
+                self.assertEqual(result["status"], "FAILURE")
+                self.assertEqual(result["reason"], "unqualified_rcd_runner")
+        fake_handle = object.__new__(QualifiedRcdRunner)
         self.assertEqual(
-            rcd_run(frame, upstream_rcd=None)["reason"],
-            "unqualified_upstream_callable",
+            rcd_run(frame, qualified_rcd=fake_handle)["reason"],
+            "unqualified_rcd_runner",
         )
-        self.assertEqual(
-            rcd_run(frame, seed=999, upstream_rcd=upstream)["reason"],
-            "unregistered_seed_or_bins",
+
+    def test_04b_rcd_rejects_intact_forged_handle_without_factory(self):
+        frame = pd.DataFrame({"time": np.arange(600), "n0::cpu": np.ones(600)})
+        handle = object.__new__(QualifiedRcdRunner)
+        function = lambda *args, **kwargs: {"ranks": []}
+        identity = json.dumps({"executable": str(Path(sys.executable).resolve())})
+        object.__setattr__(handle, "_function", function)
+        object.__setattr__(handle, "_identity", identity)
+        self.assertFalse(hasattr(rcd_boundary, "_ISSUED"))
+        self.assertEqual(rcd_run(frame, qualified_rcd=handle)["reason"], "unqualified_rcd_runner")
+        object.__setattr__(handle, "_identity", identity + " ")
+        self.assertEqual(rcd_run(frame, qualified_rcd=handle)["reason"], "unqualified_rcd_runner")
+
+    def test_04c_rcd_rejects_wrong_source_patch_and_receipt_identity(self):
+        manifest = json.loads((W / "configs/task-f-td13-frozen-release-v2.json").read_text(encoding="utf-8"))
+        row = next(row for row in manifest["comparators"] if row["id"] == RCD_ADAPTED)
+        report = json.loads(
+            (W / "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json").read_text(encoding="utf-8")
         )
+        _verify_evidence_identity(row, report["provenance"])
+        for field in ("upstream_revision", "original_lineage_revision", "source_manifest_sha256", "patch_sha256", "original_rcd_sha256", "patched_rcd_sha256"):
+            changed = copy.deepcopy(row)
+            changed[field] = "0" * 64
+            with self.subTest(field=field), self.assertRaises(RcdQualificationError):
+                _verify_evidence_identity(changed, report["provenance"])
+        changed = copy.deepcopy(row)
+        changed["qualification_report"]["sha256"] = "0" * 64
+        with self.assertRaises(RcdQualificationError):
+            _verify_evidence_identity(changed, report["provenance"])
+        changed = copy.deepcopy(report["provenance"])
+        changed["patch_sha256"] = "0" * 64
+        with self.assertRaises(RcdQualificationError):
+            _verify_evidence_identity(row, changed)
+
+    def test_04d_rcd_input_output_and_failure_contract(self):
+        frame = pd.DataFrame({"time": np.arange(600), "n0::cpu": np.ones(600)})
+        with mock.patch("rca.comparators.qualified_callable", return_value=lambda *a, **k: {"ranks": []}):
+            self.assertEqual(rcd_run(frame, qualified_rcd=object())["status"], "SUCCESS")
+            self.assertEqual(rcd_run(frame, qualified_rcd=object())["ranks"], [])
+            bad = frame.copy()
+            bad.loc[2, "n0::cpu"] = np.inf
+            self.assertEqual(rcd_run(bad, qualified_rcd=object())["reason"], "nonfinite_after_imputation")
+            self.assertEqual(rcd_run({"time": []}, qualified_rcd=object())["reason"], "malformed_input")
+        for output, reason in (({"ranks": ["n0::cpu", "n0::cpu"]}, "duplicate_metric_rank"), ({"ranks": [None]}, "unparseable_metric_rank")):
+            with mock.patch("rca.comparators.qualified_callable", return_value=lambda *a, **k: output):
+                self.assertEqual(rcd_run(frame, qualified_rcd=object())["reason"], reason)
+        with mock.patch("rca.comparators.qualified_callable", return_value=mock.Mock(side_effect=RuntimeError("sensitive"))):
+            failed = rcd_run(frame, qualified_rcd=object())
+        self.assertEqual(failed["reason"], "upstream_exception")
+        self.assertEqual(failed["error"], "RuntimeError")
 
     def test_05_early_trigger_is_retained_as_insufficient_history(self):
         adapter = qualified_adapter()

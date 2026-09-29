@@ -1,16 +1,16 @@
 """Frozen contextual comparator boundaries required by TD-v1.3.
 
 These are separate complete-method comparators.  In particular, Local-MAX-MT
-is not the C1 ``L`` arm.  RCD requires an explicitly injected callable from the
-qualified pinned environment; there is no fallback ranking or generic import.
+is not the C1 ``L`` arm.  RCD requires an issued qualified runner; there is no
+fallback ranking or generic import.
 """
 
 from __future__ import annotations
 
-from collections.abc import Callable
-
 import numpy as np
+import pandas as pd
 
+from .qualified_rcd import QualifiedRcdRunner, qualified_callable
 from .ranking import _channel_types, local_scores
 
 
@@ -75,8 +75,8 @@ def local_max_scores(blocks, block_masks):
     }
 
 
-def rcd_run(dataframe, seed=420, bins=5, *, upstream_rcd: Callable | None):
-    """Execute the qualified bare RCD callable on an opaque 600-row frame."""
+def rcd_run(dataframe, seed=420, bins=5, *, qualified_rcd: QualifiedRcdRunner | None):
+    """Execute an issued pinned RCD runner on an opaque 600-row frame."""
 
     def failure(reason, message=None):
         return {
@@ -89,10 +89,13 @@ def rcd_run(dataframe, seed=420, bins=5, *, upstream_rcd: Callable | None):
             "error": message,
         }
 
-    if not callable(upstream_rcd):
-        return failure("unqualified_upstream_callable")
-    if seed not in (420, 421, 422) or bins not in (3, 5, 7):
+    upstream_rcd = qualified_callable(qualified_rcd)
+    if upstream_rcd is None:
+        return failure("unqualified_rcd_runner")
+    if type(seed) is not int or type(bins) is not int or seed not in (420, 421, 422) or bins not in (3, 5, 7):
         return failure("unregistered_seed_or_bins")
+    if not isinstance(dataframe, pd.DataFrame):
+        return failure("malformed_input")
     if "time" not in dataframe.columns or dataframe.columns.duplicated().any():
         return failure("missing_time_or_duplicate_columns")
     columns = [column for column in dataframe.columns if column != "time"]

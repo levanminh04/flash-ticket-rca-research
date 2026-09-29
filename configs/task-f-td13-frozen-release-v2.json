@@ -1,0 +1,304 @@
+{
+  "schema_version": "TD13-F-FROZEN-RELEASE-v2",
+  "manifest_kind": "task-f-frozen-release",
+  "release_status": "HUMAN_FROZEN_METHOD__TASK_F_CORRECTIVE_RELEASE_CANDIDATE",
+  "predecessor_release": {
+    "commit": "e70f40f5549574ac4518436cc476087f8cf2d9f6",
+    "manifest": {"path": "configs/task-f-td13-frozen-release.json", "sha256": "18484bc4bb0c1d19e8f6936f12d8365a8ad69e16fffa2bf6ce5968189f0561e5"}
+  },
+  "implementation": {
+    "release_id": "TASK-F-TD13-v2",
+    "package_root": "src/rca",
+    "callable_boundary": "rca.pipeline.FrozenRcaPipeline.run_public_c1 / run_public_c5",
+    "data_adapter_boundary": "rca.adapters.QualifiedTelemetryAdapter verifies exact Task E bundle/replay bytes and qualification receipts; dataset discovery, absolute clocks, paths, and evaluator metadata remain controller-side",
+    "rcd_qualification_boundary": "rca.qualified_rcd.load_qualified_rcd issues an immutable runner only after v2 release, pinned Task E source/patch/environment and qualification receipt checks; rca.comparators.rcd_run rejects unissued callables",
+    "source_manifest_algorithm": "sha256(canonical JSON array of the ordered source_files records)",
+    "source_manifest_sha256": "129de4d2ef146ed1277e7c87be458d63b40f14d0fdb13341d3b8632c6909c1d3",
+    "source_files": [
+      {"path": "src/rca/__init__.py", "sha256": "3baa7753048bf4010d914791e8bdaa55fb2b0dc256726f556603e742ff22c8e8", "bytes": 1122},
+      {"path": "src/rca/adapters.py", "sha256": "fc92ef2ff2bcb9b02b47cf5de0ea421c589b38df6c791a386349b40c41aa341d", "bytes": 9085},
+      {"path": "src/rca/cache.py", "sha256": "dca7e6606c83677a73f526b764c90d74431ec85380927093e903171e5299a288", "bytes": 9032},
+      {"path": "src/rca/comparators.py", "sha256": "e753e1c850e9868c7036d2a21b7a9d00d48f20a54d536e9087f94a94f8bf43cd", "bytes": 5535},
+      {"path": "src/rca/contracts.py", "sha256": "3846ce13d10843da4fa0d3f72a2b9dee1600d99eeef5e103c8862b0cb1436555", "bytes": 14051},
+      {"path": "src/rca/detection.py", "sha256": "20fb9f1d00e5f462373e2f172aaab95ccb98f2b9ac98b30dcc2629d32338d4d0", "bytes": 23593},
+      {"path": "src/rca/observation.py", "sha256": "da4c5dcf3df0c131cdc9aacb9834519f7acdfc075320921167cb0c28e65ec5c3", "bytes": 19415},
+      {"path": "src/rca/packet.py", "sha256": "5dfa41b6cfa57e5b19760a9000f9d5f64df863bfa3b60c3d1b7d87821c8e79fc", "bytes": 10376},
+      {"path": "src/rca/pipeline.py", "sha256": "fe967f86bc1862622453a76bb325e8ddb6e76feb1cd6d740a0f2a99c4ac51683", "bytes": 25479},
+      {"path": "src/rca/qualified_rcd.py", "sha256": "dec82562855b6bf03bb4ef6a84e583fd83603c3011800b91eaec050979ed9430", "bytes": 12166},
+      {"path": "src/rca/ranking.py", "sha256": "b634b763a7fc571ef0a7a6ebba046a0e8bdd6bc0265bc59d88370893e2164780", "bytes": 17569},
+      {"path": "src/rca/release.py", "sha256": "4bea6ef72313740e7a80f0cdb6caeb6baa561d483dc28ea7725da5216efc3be4", "bytes": 8436}
+    ],
+    "qualified_development_loader": {
+      "adapter_id": "TASK-F-TD13-EXACT-TASK-E-BUNDLE-ADAPTER-v1",
+      "scope": "DEVELOPMENT_QUALIFIED__PRE_G_REQUALIFICATION_REQUIRED",
+      "source_files": [
+        {
+          "path": "scripts/task_e/loader.py",
+          "sha256": "c2baf79a3fbc1509d33a6fe70767aa5b4864e0be041dd647367b3d0a4e68bfff"
+        },
+        {
+          "path": "scripts/task_e/replay.py",
+          "sha256": "2e64adb7cf5e527c7e6ea2d0750ef71d3ede8df67e6de4390d12ccffc699ee99"
+        },
+        {
+          "path": "scripts/task_e/input_adapters.py",
+          "sha256": "1e4bda1303141a0a7182d5d40ef9a8a12f907d3b74523efdf3a12444199fdcfe"
+        }
+      ],
+      "qualification_receipts": [
+        {
+          "path": "results/task-f/f02-public-loader-smoke/public-loader-smoke.json",
+          "sha256": "74d219874f2cea9ea1bed38ed89af4286426a9dae92243b3ba6d3916f354b704",
+          "role": "C1/C5 raw-development bundle and numeric-output equivalence"
+        },
+        {
+          "path": "results/task-e/e27-038-integrated-development/execution.json",
+          "sha256": "d697b0d9a091f56aedc88a6ddab78938d31235685f56e5e431f8316be5aabed4",
+          "role": "completed integrated-development execution receipt"
+        },
+        {
+          "path": "results/task-e/e27-038-integrated-development/run-contract.json",
+          "sha256": "af71ec6e73760c0f613206f058691cca73ef6260c7a0f1748e8f6f21e1b71d01",
+          "role": "integrated source/config identity"
+        }
+      ],
+      "relationship_to_execution": "loader/replay/input-adapter bytes exact to completed Task E contracts",
+      "boundary": "numeric bundle conversion from already admitted raw telemetry; no dataset roster or final-split materialization",
+      "pre_g_requirement": "qualify final-scope source ingestion and adapter relationship without opening final outcomes"
+    }
+  },
+  "td": {
+    "path": "P/docs/research-rca/task-d-method-and-experiment-specification.md",
+    "sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "human_freeze_decisions": [
+      "RCA-062",
+      "RCA-063"
+    ]
+  },
+  "dataset": {
+    "name": "RCAEval RE2 TrainTicket public telemetry",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "development_scope": "development30",
+    "development_case_count": 30,
+    "development_ids_digest": {
+      "algorithm": "sha256(newline-joined ordered IDs plus final newline)",
+      "sha256": "71481fea8ee690a51581d504a64e88f00e201f65bcdddb602cb5a2606af35a91"
+    },
+    "development_registry_ref": {
+      "path": "configs/task-e-td13-development.json",
+      "sha256": "d39a150b61696bd38c178682561bf4e45f39103463323f4acef0b38b00d84c60",
+      "interpretation": "registered development search/split contract; selection results are not stored here"
+    }
+  },
+  "split": {
+    "rule_id": "TD-v1.3-section-3-RE2-TT30-development-60-final",
+    "version": "TD-v1.3",
+    "provenance": "P/docs/research-rca/task-d-method-and-experiment-specification.md section 3 and W/task-d/task-d-exposure-ledger.md",
+    "final_split_contract_ref": "P/docs/research-rca/task-d-method-and-experiment-specification.md section 3",
+    "final_materialization": "FORBIDDEN_IN_TASK_F",
+    "final_metadata_or_case_ids_in_this_manifest": false
+  },
+  "exposure_ledger": {
+    "path": "task-d/task-d-exposure-ledger.md",
+    "sha256": "efe88b39d1c3ccbd305b5929ba074508f54c3b569132833afd45251e6c0defd3",
+    "status": "HISTORICAL_TT90_OUTCOME_EXPOSURE_DISCLOSED__PROSPECTIVE_NEW_PROTOCOL_CONTRAST_NOT_UNTOUCHED"
+  },
+  "selections": {
+    "c1": {
+      "source_path": "results/task-e/e27-033-c1-development-full/selection.json",
+      "source_sha256": "b573102a18763eecd235ca2450438e265c2404c990a0180be6164af9806ea754",
+      "local_source": {
+        "path": "results/task-e/e27-033-c1-development-full/local-selection.json",
+        "sha256": "56788385674498914eac874572a8fcce671e1c253ed282ff511d2f2fdfd6c266"
+      },
+      "execution_plan_source": {
+        "path": "results/task-e/e27-033-c1-development-full/observed-execution-plan.json",
+        "sha256": "8caf08bec235927e2eb590e4a80effb23316f2cd6c0e59e35b74bf8ff0f3d1e1"
+      },
+      "run_contract": {
+        "path": "results/task-e/e27-033-c1-development-full/run-contract.json",
+        "sha256": "dc3c87ab29cc57ee0b7f45aea2619a15e39edc673a61e031a547396199169f4f"
+      },
+      "prediction_seal": {
+        "path": "results/task-e/e27-033-c1-development-full/local-stage-seal.json",
+        "sha256": "79ad41fc02377946d42b80232ba37483bc2e03d93675c9e80424cfcd74934f40"
+      },
+      "local": {
+        "floor": 0.01,
+        "pool": "q90",
+        "fusion": "availablemean",
+        "temporal": "q90",
+        "cap": null,
+        "include_logs": false
+      },
+      "primary_ppr": {
+        "operator": "ppr",
+        "direction": "undirected",
+        "damping": 0.5
+      },
+      "secondary_diffusion": {
+        "operator": "diffusion",
+        "direction": "undirected",
+        "alpha": 0.85
+      },
+      "zero_local_mass": "common all-tie/no-evidence; no uniform PPR fallback",
+      "tie_scores": "round to 12 decimals before deterministic tie intervals"
+    },
+    "c5": {
+      "lambda_source": "results/task-e/e27-035-c5-development-full/lambda-selection.json",
+      "lambda_source_sha256": "919c40ea168b545cf4419547c2470084a6b5d0061729376da284b4763cf7dac2",
+      "selection_source": "results/task-e/e27-035-c5-development-full/c5-selection.json",
+      "selection_source_sha256": "4e56b27a2e044774f2fc4021f64a7d093f66dfaeb0c9dd019955d53f246f343c",
+      "summary_source": {
+        "path": "results/task-e/e27-035-c5-development-full/c5-summary.json",
+        "sha256": "bdf98053c313e1ba41f0146113cc61684d6ae3dd051dc1a09159935dc6c460fd"
+      },
+      "prediction_seal": {
+        "path": "results/task-e/e27-035-c5-development-full/predictions-seal.json",
+        "sha256": "b2d01f6de1d584b35d27a5f6ff9ab9ecfbe26eb018e70e4ac717e5b422d634bf"
+      },
+      "integrated_trigger_hook": {
+        "path": "results/task-e/e27-035-c5-development-full/integrated-trigger-hook.json",
+        "sha256": "04dcd91a2dafa358064ab8bb09d17cd6de555513e3b4841d3989e4771c6610d8"
+      },
+      "run_contract": {
+        "path": "results/task-e/e27-035-c5-development-full/run-contract.json",
+        "sha256": "cbcdff14c799c6be6fe4ef6c509d74365d4426a0b23f73236f87182a1dad0628"
+      },
+      "selected_lambda": 10.0,
+      "profile": {
+        "bin_seconds": 5,
+        "warmup_seconds": 180,
+        "fit_bins": 24,
+        "calibration_bins": 12,
+        "lag": 1,
+        "min_fit_rows": 18,
+        "min_calibration_rows": 9,
+        "input_relative_floor": 0.01,
+        "input_absolute_fallback": 1e-12,
+        "residual_floor": 0.01,
+        "event_streak": 3,
+        "refractory_seconds": 300,
+        "strict_trigger": "score > threshold"
+      },
+      "detectors": [
+        {"id": "G-MTL", "arm": "G", "modalities": "MTL", "status": "VALID", "q": 0.95, "threshold": 5300.844353103079},
+        {"id": "L-MTL", "arm": "L", "modalities": "MTL", "status": "VALID", "q": 0.95, "threshold": 221694927196937.78},
+        {"id": "ALL-MTL", "arm": "ALL", "modalities": "MTL", "status": "VALID", "q": 0.95, "threshold": 4361.702127659585},
+        {"id": "TV-MTL", "arm": "TV", "modalities": "MTL", "status": "VALID", "q": 0.95, "threshold": 2.4051748014087467e24},
+        {"id": "G-MT", "arm": "G", "modalities": "MT", "status": "VALID", "q": 0.95, "threshold": 4361.702127659583},
+        {"id": "L-MT", "arm": "L", "modalities": "MT", "status": "VALID", "q": 0.95, "threshold": 158890826408975.88},
+        {"id": "ALL-MT", "arm": "ALL", "modalities": "MT", "status": "VALID", "q": 0.95, "threshold": 4361.702127659583},
+        {"id": "TV-MT", "arm": "TV", "modalities": "MT", "status": "VALID", "q": 0.95, "threshold": 1.16504925625623e24}
+      ],
+      "arms": {
+        "forecast": ["G", "L", "ALL"],
+        "secondary_spatial": "TV",
+        "modalities": ["MTL", "MT"]
+      }
+    }
+  },
+  "r_control": {
+    "chains": 256,
+    "proposals_per_edge": 200,
+    "proposal_count": "200 * max(1, edge_count) per independent chain",
+    "seed_contract": "first 64 bits, big-endian, of SHA256('TD12|R|opaque_handle|representation|draw_index'); NumPy PCG64",
+    "directed_invariants": ["per-node in-degree", "per-node out-degree", "exact weak-component vertex partition"],
+    "undirected_invariants": ["per-node degree", "exact connected-component vertex partition"],
+    "rejections": ["loop", "duplicate", "existing proposed edge", "component-partition violation"],
+    "degeneracy": "isolates and unswitchable graphs remain planned draws; every rejected proposal is a self-transition",
+    "nonclaims": ["spectrum", "paths", "kernel", "centrality", "Markov-chain stationarity", "mixing"]
+  },
+  "comparators": [
+    {
+      "id": "Local-MAX-MT",
+      "role": "mandatory contextual graph-free baseline distinct from C1 L",
+      "adapter": "src/rca/comparators.py"
+    },
+    {
+      "id": "BARO-RANK-adapted-TD12",
+      "role": "mandatory contextual adapted BARO component baseline",
+      "adapter": "src/rca/comparators.py",
+      "lineage_revision": "e35f4ec1095e5cac891d52de9ad18a5b32a37ec8",
+      "fidelity": "absolute temporal MAX over metric deviations then service MAX; adaptation, not full upstream BARO"
+    },
+    {
+      "id": "RCD-RCAEval-adapted-TD12",
+      "role": "mandatory contextual adapted RCD baseline",
+      "adapter": "src/rca/comparators.py",
+      "upstream_revision": "7600283af1ea5e2e9fff6f07124951d0e989de42",
+      "original_lineage_revision": "373882c6982db7a999ec1ff99ea54c644a48b409",
+      "source_manifest_sha256": "f63c6224168d82613ef0a0b1d7c99f18fc94613895b4346528a3a80ba29b2c68",
+      "patch_sha256": "472685d2513a47cefce36640d9de3e21769923f85de48f7cf6feec43e2ae8838",
+      "original_rcd_sha256": "e6a7df13e4f3256b45da0713b07b6bf41fb9178333e31397701ab2f08872f628",
+      "patched_rcd_sha256": "036946005d53e5c6a11e2a4b5c099f2194ab104f15df8fd74d74668827278393",
+      "qualification_report": {
+        "path": "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json",
+        "sha256": "8238a708c315b3c0ce0c59aeff6622489c96e4a33bcb60f0222bca1eab2ec123"
+      },
+      "qualification_contract": {
+        "path": "results/task-e/e27-018-rcd-real-qualification/run-contract.json",
+        "sha256": "5e0f4e4b90f9a654411a5a2edd8d22c56275080e6020a1f8d31a03e8b095d408"
+      },
+      "primary": {"bins": 5, "seeds": [420, 421, 422], "gamma": 5, "localized": true, "dk_select_useful": false, "dataset": null}
+    }
+  ],
+  "provenance": {
+    "integrated_development": {
+      "path": "results/task-e/e27-038-integrated-development/integrated-results.json",
+      "sha256": "2bd64082f30f7a356bc5b6e69ecd9f12346946a36e73c33ed3a14a0167181b18"
+    },
+    "rcd_development": {
+      "path": "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
+      "sha256": "7dcab2e14efa3552bde3d8c00696b9c5b6e17894547f363640e5b9bc0ef45969"
+    },
+    "sensitivities": [
+      {"path": "results/task-e/e27-036-c1-development-sensitivity/c1-sensitivity.json", "sha256": "0e955b12ad6977a9b2ce7f7b80db211c6e3c87aebe45250bb673227befd3648b", "role": "diagnostic limitation only"},
+      {"path": "results/task-e/e27-037-c5-development-sensitivity/sensitivity-summary.json", "sha256": "3af4aed5b0ad72c3b0f0654b76932239130fb3f47625ad1ab0ee0e20f2b55659", "role": "diagnostic limitation only"}
+    ],
+    "closure": [
+      {"path": "results/task-e/development-preflight-report.md", "sha256": "641a931ec904b0bf6d6f3dafa38fbb150f8661ea677d272d477edf1eff5aca52"},
+      {"path": "results/task-e/development-preflight-adjudication.json", "sha256": "2895c84d90ba114a34ca5f428552a09998c2fdb7929a4d8461993be1ae1658b3"},
+      {"path": "results/task-e/final-numerical-review.md", "sha256": "b3db269a2f31910eb84a39aff5637ec55e74df430884946d7a97b24eb2451aef"},
+      {"path": "results/task-e/final-leakage-review.md", "sha256": "115aeffd40256c462d6216070db3c854441ce7c2b740ecf90acec68c531267a0"},
+      {"path": "results/task-e/final-scientific-review.md", "sha256": "5c4f41465961140590819938bacd1ef6ea42ef3bbf8bc9781c5fa676126ea593"}
+    ],
+    "source_identity_policy": "Task E receipts are historical execution evidence; documented line-ending/packaging-only differences are not semantic drift; old receipts are immutable"
+  },
+  "evaluator": {
+    "version": "TD-v1.3 sections 7-8 evaluator contract",
+    "location": "outside src/rca model-facing path",
+    "ground_truth_opening": "only after sealed predictions/packets",
+    "root_absent": "evaluator-side zero outcome; core must not append or repair a root"
+  },
+  "packet": {
+    "schema_version": "TD13-F-DIAGNOSIS-PACKET-v1",
+    "score_meaning": "suspicion/diagnostic utility; not root probability or causal truth",
+    "oracle_fields_forbidden": ["ground-truth root", "fault label", "answer contents", "root presence", "injected fault identity", "absolute case path", "tau", "evaluator-only fields", "final outcome labels", "hindsight explanation"]
+  },
+  "limitations": [
+    "C1 observed PPR did not exceed local-only on development30; Phase 1 patterns are post-hoc and must not become isolate/degree/reachability/travel-loss/auth gating.",
+    "C1 Phase 1 found all 17/17 local-rank1 cases retained rank1; the hypothesis that PPR generally harms already-strong local evidence was not supported.",
+    "Observed trace dependency is not a causal graph and selected damping 0.5 is a development selection, not a theorem or external optimum.",
+    "R mobility gates certify only the registered finite perturbation procedure, not mixing or preservation of spectral/path/centrality properties.",
+    "C5 preserves the 1e-12 absolute input-scale fallback. Zero median and zero IQR bypass relative-floor variants; affected channels can dominate numeric objectives and thresholds.",
+    "Lag3 retained affected scaler identities while L-MTL recovered strongly, so the 1e-12 fallback alone does not explain the primary L collapse; this is a real but non-decisive limitation.",
+    "G/L/ALL use common targets but different effective context/capacity; G-versus-L is not identifiable as a pure graph-structure effect.",
+    "All sensitivity artifacts are diagnostic only and do not replace the frozen primary configuration.",
+    "Public benchmark evidence is historically exposed and development-selected; final60 remains a new-protocol holdout, not an untouched benchmark.",
+    "FlashTicket target-system controlled transfer/validation has not been executed in Task F.",
+    "Historical Task D review used three distinct agents for five roles; five independently identified reviewers remain not factually certified."
+  ],
+  "prohibited_runtime_rules": [
+    "isolate gating",
+    "degree gating",
+    "reachability gating",
+    "travel x loss special case",
+    "auth special case",
+    "lag3 as primary",
+    "replacement of the 1e-12 fallback",
+    "any rule learned from Phase 1 or Phase 2 outcome patterns"
+  ],
+  "selection_policy": "NO_RESELECTION_IN_TASK_F",
+  "final60_policy": "REFERENCE_SPLIT_CONTRACT_ONLY__NO_ENUMERATION_DOWNLOAD_LOAD_GRAPH_FEATURE_PREDICTION_OR_LABEL_ACCESS"
+}

@@ -10,6 +10,7 @@ from .observation import C1Observation, C5Observation, ObservationError
 from .packet import PacketValidationError, validate_packet
 from .pipeline import FrozenRcaPipeline
 from .release import ReleaseVerificationError, verify_frozen_release
+from .qualified_rcd import QualifiedRcdRunner, RcdQualificationError, load_qualified_rcd
 
 __all__ = [
     "C1Observation",
@@ -21,8 +22,11 @@ __all__ = [
     "ObservationError",
     "PacketValidationError",
     "QualifiedTelemetryAdapter",
+    "QualifiedRcdRunner",
+    "RcdQualificationError",
     "ReleaseVerificationError",
     "load_frozen_config",
+    "load_qualified_rcd",
     "validate_packet",
     "verify_frozen_release",
 ]

@@ -89,7 +89,19 @@ class FreezeReleaseTests(unittest.TestCase):
     def test_10_release_manifest_pins_the_complete_implementation(self):
         implementation = self.raw["implementation"]
         rows = implementation["source_files"]
-        self.assertEqual(implementation["release_id"], "TASK-F-TD13-v1")
+        self.assertEqual(implementation["release_id"], "TASK-F-TD13-v2")
+        self.assertEqual(self.raw["schema_version"], "TD13-F-FROZEN-RELEASE-v2")
+        self.assertEqual(
+            self.raw["predecessor_release"],
+            {
+                "commit": "e70f40f5549574ac4518436cc476087f8cf2d9f6",
+                "manifest": {
+                    "path": "configs/task-f-td13-frozen-release.json",
+                    "sha256": "18484bc4bb0c1d19e8f6936f12d8365a8ad69e16fffa2bf6ce5968189f0561e5",
+                },
+            },
+        )
+        self.assertEqual(sha(W / "configs/task-f-td13-frozen-release.json"), self.raw["predecessor_release"]["manifest"]["sha256"])
         self.assertEqual(
             {row["path"] for row in rows},
             {path.relative_to(W).as_posix() for path in (W / "src/rca").glob("*.py")},
@@ -107,6 +119,16 @@ class FreezeReleaseTests(unittest.TestCase):
             hashlib.sha256(material).hexdigest(),
             implementation["source_manifest_sha256"],
         )
+
+    def test_10a_v2_changes_no_scientific_selection_or_split(self):
+        previous = load_json(W / "configs/task-f-td13-frozen-release.json")
+        for field in ("td", "dataset", "split", "exposure_ledger", "selections", "r_control", "evaluator", "packet", "selection_policy", "final60_policy", "prohibited_runtime_rules"):
+            with self.subTest(field=field):
+                self.assertEqual(self.raw[field], previous[field])
+        self.assertEqual(self.raw["comparators"][0:2], previous["comparators"][0:2])
+        rcd_new = dict(self.raw["comparators"][2])
+        rcd_new.pop("qualification_contract")
+        self.assertEqual(rcd_new, previous["comparators"][2])
 
     def test_11_manifest_rejects_wrong_td(self):
         changed = copy.deepcopy(self.raw)

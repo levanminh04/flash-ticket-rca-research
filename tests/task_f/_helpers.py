@@ -10,7 +10,7 @@ import numpy as np
 
 W = Path(__file__).resolve().parents[2]
 P = Path(r"D:\Project\flash-ticket-platform")
-MANIFEST = W / "configs" / "task-f-td13-frozen-release.json"
+MANIFEST = W / "configs" / "task-f-td13-frozen-release-v2.json"
 HANDLE = "96538c0c0d6a11d8"
 
 

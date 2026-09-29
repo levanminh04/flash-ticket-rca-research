@@ -19,11 +19,12 @@ import numpy as np
 import pandas as pd
 
 from rca.comparators import RCD_ADAPTED, rcd_run
-from scripts.task_e.rcd_runtime import load_pinned_rcd
+from rca.qualified_rcd import QualifiedRcdRunner, load_qualified_rcd
 
 
 W = Path(__file__).resolve().parents[2]
-QUALIFICATION = W / "results/task-e/e27-018-rcd-real-qualification"
+P = Path(r"D:\Project\flash-ticket-platform")
+MANIFEST = W / "configs/task-f-td13-frozen-release-v2.json"
 
 
 def sha(path: Path) -> str:
@@ -70,18 +71,26 @@ def verify_contract(run_dir: Path) -> dict:
     contract["contract_sha256"] = supplied
     if supplied != expected:
         raise RuntimeError("Task F run contract digest mismatch")
-    source = next(
-        row
-        for row in contract["source_files"]
-        if row["path"] == "tests/task_f/run_rcd_boundary_smoke.py"
-    )
-    if source["sha256"] != sha(Path(__file__)):
-        raise RuntimeError("RCD boundary runner changed after run-contract creation")
+    if contract.get("schema") != "TD13-TASK-F-RCD-CORRECTIVE-CONTRACT-v2":
+        raise RuntimeError("RCD corrective run-contract schema mismatch")
+    if contract.get("run_id") != run_dir.name:
+        raise RuntimeError("RCD corrective run-contract ID mismatch")
+    if contract["frozen_manifest"] != {
+        "path": "configs/task-f-td13-frozen-release-v2.json",
+        "sha256": sha(MANIFEST),
+    }:
+        raise RuntimeError("RCD corrective manifest identity mismatch")
+    if contract["td_sha256"] != sha(P / "docs/research-rca/task-d-method-and-experiment-specification.md"):
+        raise RuntimeError("RCD corrective TD identity mismatch")
+    for row in contract["source_files"]:
+        if sha(W / row["path"]) != row["sha256"]:
+            raise RuntimeError("RCD corrective source drift: " + row["path"])
     references = {row["path"]: row for row in contract["input_files"]}
     for relative in (
         "results/task-e/e27-018-rcd-real-qualification/run-contract.json",
         "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json",
         "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
+        "results/task-f/f06-final-rcd-boundary/rcd-boundary-smoke.json",
     ):
         row = references[relative]
         if sha(W / relative) != row["sha256"]:
@@ -103,7 +112,7 @@ def main() -> int:
         raise SystemExit("Never overwrite an existing RCD boundary attempt")
     started = time.perf_counter()
     receipt = {
-        "schema": "TD13-TASK-F-RCD-BOUNDARY-SMOKE-v1",
+        "schema": "TD13-TASK-F-RCD-BOUNDARY-SMOKE-v2",
         "scope": "SYNTHETIC BOUNDED RUNTIME QUALIFICATION; NO DEVELOPMENT RERUN; FINAL60 FORBIDDEN",
         "method": RCD_ADAPTED,
         "status": "FAIL",
@@ -120,19 +129,37 @@ def main() -> int:
         contract = verify_contract(run_dir)
         receipt["run_id"] = contract["run_id"]
         receipt["contract_sha256"] = contract["contract_sha256"]
-        loaded = load_pinned_rcd(QUALIFICATION, W)
+        qualified = load_qualified_rcd(workspace_root=W, project_root=P, manifest_path=MANIFEST)
         shifted = fixture_frame(True)
         identical = fixture_frame(False)
-        first = rcd_run(shifted, seed=420, bins=5, upstream_rcd=loaded.rcd)
-        second = rcd_run(shifted, seed=420, bins=5, upstream_rcd=loaded.rcd)
-        empty = rcd_run(identical, seed=420, bins=5, upstream_rcd=loaded.rcd)
-        unqualified = rcd_run(shifted, seed=420, bins=5, upstream_rcd=None)
+        first = rcd_run(shifted, seed=420, bins=5, qualified_rcd=qualified)
+        second = rcd_run(shifted, seed=420, bins=5, qualified_rcd=qualified)
+        empty = rcd_run(identical, seed=420, bins=5, qualified_rcd=qualified)
+        unqualified = rcd_run(shifted, seed=420, bins=5, qualified_rcd=lambda *a, **k: {"ranks": ["m000"]})
+        previous = load_json(W / "results/task-f/f06-final-rcd-boundary/rcd-boundary-smoke.json")
+        previous_by_fixture = {row["fixture"]: row["result"] for row in previous["runs"]}
         if first != second or first["status"] != "SUCCESS" or first["ranks"] != ["m000"]:
             raise AssertionError("Qualified shifted RCD boundary is not exact/deterministic")
         if empty["status"] != "SUCCESS" or empty["ranks"] != []:
             raise AssertionError("Valid empty RCD ranking was not preserved as SUCCESS")
-        if unqualified["status"] != "FAILURE" or unqualified["reason"] != "unqualified_upstream_callable":
+        if unqualified["status"] != "FAILURE" or unqualified["reason"] != "unqualified_rcd_runner":
             raise AssertionError("Unqualified RCD boundary did not fail explicitly")
+        if first != previous_by_fixture["separated-shift"] or empty != previous_by_fixture["identical-halves"]:
+            raise AssertionError("Corrective qualified RCD ranking changed relative to f06")
+        original_identity = qualified._identity
+        object.__setattr__(qualified, "_identity", original_identity + " ")
+        tampered_identity = rcd_run(shifted, seed=420, bins=5, qualified_rcd=qualified)
+        object.__setattr__(qualified, "_identity", original_identity)
+        original_function = qualified._function
+        object.__setattr__(qualified, "_function", lambda *a, **k: {"ranks": ["m000"]})
+        tampered_function = rcd_run(shifted, seed=420, bins=5, qualified_rcd=qualified)
+        object.__setattr__(qualified, "_function", original_function)
+        forged_handle = object.__new__(QualifiedRcdRunner)
+        object.__setattr__(forged_handle, "_identity", original_identity)
+        object.__setattr__(forged_handle, "_function", original_function)
+        forged_result = rcd_run(shifted, seed=420, bins=5, qualified_rcd=forged_handle)
+        if any(row["reason"] != "unqualified_rcd_runner" for row in (tampered_identity, tampered_function, forged_result)):
+            raise AssertionError("Tampered qualified runner was accepted")
         receipt["runs"] = [
             {
                 "fixture": "separated-shift",
@@ -141,6 +168,7 @@ def main() -> int:
                 "bins": 5,
                 "result": first,
                 "repeat_exact": True,
+                "f06_result_exact": True,
             },
             {
                 "fixture": "identical-halves",
@@ -149,6 +177,7 @@ def main() -> int:
                 "bins": 5,
                 "result": empty,
                 "valid_empty_is_success": True,
+                "f06_result_exact": True,
             },
             {
                 "fixture": "unqualified-callable",
@@ -156,16 +185,26 @@ def main() -> int:
                 "result": unqualified,
                 "failure_visible": True,
             },
+            {
+                "fixture": "tampered-or-forged-qualified-handle",
+                "input_sha256": frame_sha(shifted),
+                "identity_result": tampered_identity,
+                "function_result": tampered_function,
+                "forged_handle_result": forged_result,
+                "failure_visible": True,
+            },
         ]
         receipt["qualified_runtime"] = {
             "python": sys.version,
             "executable_name": Path(sys.executable).name,
-            "qualification_run_id": loaded.provenance["run_id"],
-            "packages": loaded.provenance["packages"],
-            "upstream_original_sha256": loaded.provenance["original_rcd_sha256"],
-            "adaptation_patch_sha256": loaded.provenance["patch_sha256"],
-            "patched_rcd_sha256": loaded.provenance["patched_rcd_sha256"],
-            "framework_init_executed": loaded.provenance["framework_init_executed"],
+            "qualification_run_id": qualified.identity["qualification_run_id"],
+            "qualification_receipt_sha256": qualified.identity["qualification_receipt_sha256"],
+            "source_manifest_sha256": qualified.identity["source_manifest_sha256"],
+            "packages": qualified.identity["packages"],
+            "upstream_original_sha256": qualified.identity["original_rcd_sha256"],
+            "adaptation_patch_sha256": qualified.identity["patch_sha256"],
+            "patched_rcd_sha256": qualified.identity["patched_rcd_sha256"],
+            "release_sha256": qualified.identity["release_sha256"],
         }
         receipt["completed_rcd_development_evidence"] = {
             "path": "results/task-e/e27-041-rcd-development-recovery/rcd-development-results.json",
