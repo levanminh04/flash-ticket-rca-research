@@ -1,0 +1,81 @@
+{
+  "schema": "PRE-G-RUN-CONTRACT-v2",
+  "status": "CORRECTION_REGISTERED_BEFORE_REQUALIFICATION",
+  "authorized_by": "P:docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md",
+  "gate": "Task F corrective closure to PRE-G metadata-level readiness only",
+  "method": {
+    "td_v1_3_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "frozen_task_f_v2_manifest": "configs/task-f-td13-frozen-release-v2.json",
+    "frozen_task_f_v2_manifest_sha256": "c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d",
+    "official_repo_id": "phamquiluan/RCAEval",
+    "official_revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "local_metadata_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb"
+  },
+  "allowed_checks": [
+    "Pinned local metadata identity; exclude explicit label/outcome columns and treat case IDs only as opaque source locators/repetition groups despite possible encoded service/fault tokens",
+    "Official dataset revision and object LFS identity using metadata API only",
+    "Frozen Task F adapter source/receipt identity and synthetic or development interface compatibility",
+    "Three registered RCD seeds 420, 421, 422: controller-only owner mapping, unknown-key coverage, worst-tie padding, failed-seed zero, per-seed metric mean, and seal-before-evaluator synthetic or development tests",
+    "Independent adversarial review of the PRE-G evidence and claim boundary"
+  ],
+  "prohibited": [
+    "Opening or downloading raw final60 telemetry",
+    "Reading final60 row-level telemetry, label/root-fault files, or outcomes",
+    "Generating final60 predictions or scores",
+    "Running Task G campaign or changing frozen TD/Task E/Task F source, configuration, or evaluation policy"
+  ],
+  "permitted_result": "PASS_METADATA_ONLY_WITH_LIMITATIONS or BLOCKED; never RAW_FINAL_SCOPE_VALIDATED",
+  "unresolved_after_metadata_only_pass": [
+    "Actual final raw bytes, rows, schema/clock/join and adapter behavior are unvalidated",
+    "Metadata case IDs can encode service/fault tokens; this gate does not claim a zero-oracle-information identity layer",
+    "Task G and final60 access require separate explicit authorization",
+    "Five-distinct-independent-reviewer historical certification remains OPEN"
+  ],
+  "corrective_authority": "P:docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md#corrective-authorization--30092026; RCA-068–070",
+  "corrective_registered_at_utc": "2026-09-30T08:55:22.457138+00:00",
+  "historical_registered_contract": {
+    "sha256": "722e4f249d22b9afea3bf02f0e76bf794cf8eee6c65693ccbfb5739bd763754f",
+    "raw_utf8": "{\n  \"schema\": \"PRE-G-RUN-CONTRACT-v1\",\n  \"status\": \"REGISTERED_BEFORE_QUALIFICATION\",\n  \"authorized_by\": \"P:docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md\",\n  \"gate\": \"Task F corrective closure to PRE-G metadata-level readiness only\",\n  \"method\": {\n    \"td_v1_3_sha256\": \"34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971\",\n    \"frozen_task_f_v2_manifest\": \"configs/task-f-td13-frozen-release-v2.json\",\n    \"frozen_task_f_v2_manifest_sha256\": \"c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d\",\n    \"official_repo_id\": \"phamquiluan/RCAEval\",\n    \"official_revision\": \"afeacb11bcc94dadfd1c8f483ee4377b2b8b614e\",\n    \"local_metadata_sha256\": \"c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb\"\n  },\n  \"allowed_checks\": [\n    \"Pinned local metadata identity; exclude explicit label/outcome columns and treat case IDs only as opaque source locators/repetition groups despite possible encoded service/fault tokens\",\n    \"Official dataset revision and object LFS identity using metadata API only\",\n    \"Frozen Task F adapter source/receipt identity and synthetic or development interface compatibility\",\n    \"Three registered RCD seeds 420, 421, 422: controller-only owner mapping, unknown-key coverage, worst-tie padding, failed-seed zero, per-seed metric mean, and seal-before-evaluator synthetic or development tests\",\n    \"Independent adversarial review of the PRE-G evidence and claim boundary\"\n  ],\n  \"prohibited\": [\n    \"Opening or downloading raw final60 telemetry\",\n    \"Reading final60 row-level telemetry, label/root-fault files, or outcomes\",\n    \"Generating final60 predictions or scores\",\n    \"Running Task G campaign or changing frozen TD/Task E/Task F source, configuration, or evaluation policy\"\n  ],\n  \"permitted_result\": \"PASS_METADATA_ONLY_WITH_LIMITATIONS or BLOCKED; never RAW_FINAL_SCOPE_VALIDATED\",\n  \"unresolved_after_metadata_only_pass\": [\n    \"Actual final raw bytes, rows, schema/clock/join and adapter behavior are unvalidated\",\n    \"Metadata case IDs can encode service/fault tokens; this gate does not claim a zero-oracle-information identity layer\",\n    \"Task G and final60 access require separate explicit authorization\",\n    \"Five-distinct-independent-reviewer historical certification remains OPEN\"\n  ]\n}\n"
+  },
+  "historical_initial_readiness_receipt_sha256": "a0ede00849843321f3a76dfc22d2cc5eedcd187e7d08acfc4f1baa3160e54c73",
+  "corrective_findings": [
+    {
+      "id": "PG-ADV-01",
+      "before": "Caller reclassified synthetic output as QUALIFIED_CORE_RUN and recomputed its JSON hash; verifier/default evaluator accepted it.",
+      "correction": "Verify exact current-interpreter issuance from the registered qualified triplet; caller qualification hashes are insufficient."
+    },
+    {
+      "id": "PG-ADV-02",
+      "before": "HF_ENDPOINT pointed the default client at a fake metadata server; output still claimed OFFICIAL_HF_API.",
+      "correction": "Pin and verify HTTPS official endpoint; injected test API cannot claim official evidence."
+    }
+  ],
+  "source_test_sha256_before_corrective_checks": {
+    "scripts/pre_g/source_qualification.py": "2be3c583bbbb864de4256de4ede56171c29c53cad08ab45579add6567d12ccec",
+    "scripts/pre_g/controller_contract.py": "21418bfd83ae8de9e5fd5a003253b17d123d6e360573e4c4dfdc97964759c6ee",
+    "tests/pre_g/test_source_qualification.py": "90111018bc3a3fa80915a8464a3ac12f16f783bbd45e0a4d858b7de74c066fc5",
+    "tests/pre_g/test_controller_contract.py": "15a57299f87b3a3241ef8d9fedeb73cb97335423525b9ca1476cd3ada6a18801"
+  },
+  "validation_plan": {
+    "pre_g": "W/.venv/Scripts/python.exe -B; unittest discover tests/pre_g",
+    "task_f": "W/.venv/Scripts/python.exe -B; unittest discover tests/task_f; frozen verifier v2",
+    "task_e_regression": "W/.venv/Scripts/python.exe -B; tests/task_e/test_math.py and test_firewall.py",
+    "rcd_runtime": "W/environments/task-e/rcd39/Scripts/python.exe -B; synthetic 600-row fixture only; no report-writer script",
+    "official_metadata": "Pinned metadata projection and official descriptors only; aggregate/digest output",
+    "independent_review": "Separate read-only reviewers for corrective boundaries and frozen Task F readiness"
+  },
+  "outside_scope_byte_snapshot": {
+    "P/README.md": "3646cb1b6e8da832e8b9513fd8318d749f7f5f6788b5d3223eda7f5a9a662274",
+    "W/src/rca/.idea/.gitignore": "1bfdece3645ed8ed356030f22cc2004dc3f401ff060ac3d24de811c3bcd82e16",
+    "W/src/rca/.idea/copilot.data.migration.agent.xml": "4805746a1cdb6ef089ec7c0e198e13992034e08b83ed95122ed605ca99c39653",
+    "W/src/rca/.idea/copilot.data.migration.ask.xml": "4141162ea613208b5edb1247c22a4a65cd628315167af551cefa7ae42a2c4076",
+    "W/src/rca/.idea/copilot.data.migration.ask2agent.xml": "65753465e271eed78cc36dce8b8a00ed3c8fc75eeeb3e2b1fde04a51bcd786c6",
+    "W/src/rca/.idea/copilot.data.migration.edit.xml": "bb7a167dd77a22fb8fdfb5668df96453bbfb4dd99c0d499fc740b8e0bd73e30c",
+    "W/src/rca/.idea/misc.xml": "892a47fd18fdc6311c10ab0f10f1351adfd1dfd6c0f6d0e827aecea553fdf6fa",
+    "W/src/rca/.idea/modules.xml": "15b1a183fabb36d3b399734ab043a46cc1aed5de2dc64eae5785671a51cd6db1",
+    "W/src/rca/.idea/rca.iml": "c96ea0b5b29abb7d5807671dd208fd63f63694dd236335d2fe8c074e89e94aa6",
+    "W/src/rca/.idea/vcs.xml": "d87ca0035a110307375417fe8abc47ad7e49246f435ee430acdd0196e6e1a0a6",
+    "W/src/rca/.idea/workspace.xml": "51dbfd592c858743712fc97458134671ecfb0fa0678ebffcc1700458b55fae16"
+  },
+  "gate_disposition": "Assessment only: no Task G campaign or final raw/label/outcome authorization is created by correction."
+}

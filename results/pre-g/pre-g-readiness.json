@@ -1,0 +1,177 @@
+{
+  "schema": "PRE-G-READINESS-RECEIPT-v2",
+  "recorded_at_utc": "2026-09-30T09:01:06.879576+00:00",
+  "status": "PASS_METADATA_ONLY_WITH_LIMITATIONS",
+  "claim_boundary": "Corrective PRE-G metadata/synthetic scope PASS; ready to request Minh authorization for Task G entry validation; raw validation, durable label separation and campaign authorization remain OPEN.",
+  "authorization": "P:docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md",
+  "registered_contract": {
+    "path": "results/pre-g/pre-g-run-contract.json",
+    "sha256": "07cca0a168c7db8952d0e77216e74b370b919bcf91d1586db0e183bee60edd31"
+  },
+  "frozen_inputs": {
+    "td_v1_3_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "task_f_v2_manifest_sha256": "c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d",
+    "metadata_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb"
+  },
+  "source_metadata": {
+    "status": "PASS_METADATA_ONLY",
+    "api_provenance": "OFFICIAL_HF_API",
+    "repo_id": "phamquiluan/RCAEval",
+    "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e",
+    "projected_metadata_columns": [
+      "case",
+      "dataset",
+      "repetition",
+      "has_logs",
+      "has_traces"
+    ],
+    "development_cases": 30,
+    "final_cases": 60,
+    "final_cells": 20,
+    "planned_final_telemetry_objects": 180,
+    "official_object_identity_sha256": "2b51110896bf23f6f2264e85458b814c1cd7871c50e047d814aeda3943b32d94",
+    "total_official_bytes_declared": 1309388082,
+    "per_case_ids_or_paths_disclosed": false,
+    "download_api_invoked_by_qualifier": false,
+    "raw_final_parquet_opened_by_qualifier": false,
+    "explicit_label_or_outcome_columns_requested": false,
+    "adapter_scope": "DEVELOPMENT_ONLY",
+    "raw_final_bytes_schema_rows_or_join_validated": false,
+    "api_endpoint": "https://huggingface.co",
+    "implicit_authentication_disabled": true,
+    "endpoint_override_probe": {
+      "HF_ENDPOINT": "LOOPBACK_FAKE_DESCRIPTOR_SERVER",
+      "fake_server_requests": 0,
+      "result": "Pinned official HTTPS endpoint used; source aggregate and identity digest unchanged"
+    }
+  },
+  "controller": {
+    "status": "PASS_SYNTHETIC_DEVELOPMENT_CONTRACT_ONLY",
+    "registered_seeds": [
+      420,
+      421,
+      422
+    ],
+    "registered_primary_bins": 5,
+    "checks": [
+      "Exact registered seeds 420/421/422 and bins=5 on equal deep copies; genuine frozen QualifiedRcdRunner required",
+      "First owning service, unknown-key coverage, one worst tie; failed seed zero; arithmetic mean of all three per-seed metrics",
+      "Qualified seals require exact canonical output issued by the registered triplet in the current interpreter",
+      "Synthetic scope promotion plus JSON rehash, private sealer output, and copied qualification with altered ranks/owners/input/candidates are rejected before scoring",
+      "Explicit synthetic fixture flag cannot bypass qualified issuance; same-interpreter JSON roundtrip remains valid",
+      "Fresh-interpreter qualified seal is rejected; durable cross-process Task G provenance remains unimplemented"
+    ],
+    "python_3_9_qualified_runner_synthetic_smoke": {
+      "status": "PASS",
+      "interpreter": "environments/task-e/rcd39/Scripts/python.exe",
+      "fixture": "600-row numeric synthetic frame only; time=0..599; m000..m005 are two 300-point modular series, with +30 only in the m000 query half; no dataset object or label",
+      "input_digest_rule": "SHA256 of contiguous little-endian float64 six-metric matrix in column order, excluding the checked 0..599 time grid",
+      "seal_valid": true,
+      "qualification_scope": "QUALIFIED_CORE_RUN",
+      "seed_statuses_in_order": [
+        "SUCCESS",
+        "SUCCESS",
+        "SUCCESS"
+      ]
+    },
+    "durable_prediction_seal_persisted_before_final_labels": false,
+    "final_scope_controller_or_evaluator_run": false,
+    "corrective_runtime_smoke": {
+      "scope": "SYNTHETIC_RUNTIME_ONLY",
+      "interpreter": "environments/task-e/rcd39/Scripts/python.exe",
+      "python": "3.9.13",
+      "input_sha256": "bf31e332132401bf4bdc298393960e1f6ce0b3119b942f307d205302665d074f",
+      "prediction_sha256": "07163733b01464cf4fc69733faa18b0997929aa7527afbc65b1b8a960a9e6f15",
+      "qualification_sha256": "38253ebbfaa53bdad20b66e655ade3fade363fdd9ef71ee2ab6df722ab4fac04",
+      "seed_statuses_in_order": [
+        "SUCCESS",
+        "SUCCESS",
+        "SUCCESS"
+      ],
+      "seal_valid": true,
+      "serialized_copy_valid_in_same_interpreter": true,
+      "input_unchanged": true,
+      "evaluated": false
+    }
+  },
+  "validation": {
+    "pre_g_unittest": "25/25 PASS; .venv Python 3.12; -B",
+    "task_f_regression_unittest": "70/70 PASS; independent Task F reviewer; .venv Python 3.12; -B",
+    "task_e_math_firewall_regression": "34/34 PASS; independent Task F reviewer; -B",
+    "frozen_release_verifier": "PASS; 44 path/SHA references",
+    "governance_audit": "PASS; one approved-impact-map warning",
+    "historical_prior_turn_task_e_closure_hash_audit": "5468 source/config/result hashes match; no raw final access; preserved factual audit from prior review"
+  },
+  "new_source_sha256": {
+    "scripts/pre_g/source_qualification.py": "2be3c583bbbb864de4256de4ede56171c29c53cad08ab45579add6567d12ccec",
+    "scripts/pre_g/controller_contract.py": "21418bfd83ae8de9e5fd5a003253b17d123d6e360573e4c4dfdc97964759c6ee",
+    "tests/pre_g/test_source_qualification.py": "90111018bc3a3fa80915a8464a3ac12f16f783bbd45e0a4d858b7de74c066fc5",
+    "tests/pre_g/test_controller_contract.py": "15a57299f87b3a3241ef8d9fedeb73cb97335423525b9ca1476cd3ada6a18801"
+  },
+  "limitations_and_open_gates": [
+    "Metadata case IDs may encode service/fault tokens; they stay opaque controller locators, not zero-oracle-information proof.",
+    "No raw final60 telemetry, explicit final labels/root-fault files, final outcomes/predictions/scores were opened or produced.",
+    "Official LFS descriptors establish remote object identity only; raw bytes/schema/clock/joins/features and final adapter compatibility remain unvalidated.",
+    "Task F adapter remains DEVELOPMENT_QUALIFIED__PRE_G_REQUALIFICATION_REQUIRED; metadata PASS is not raw source_identity_verified.",
+    "Issued seal qualification is current-interpreter only. A copied qualified seal in a fresh interpreter fails closed; Task G durable provenance remains OPEN.",
+    "Evaluator verifies before using/scoring root_index, but root_index is an argument already supplied by the caller; this does not prove label-open ordering.",
+    "Closure issuance and source checks protect ordinary callers, not hostile runtime modification in the same interpreter.",
+    "Historical E1 all-90 outcome exposure and formal five-distinct-independent-reviewer OPEN status remain.",
+    "Readiness assessment is not Task G authorization, raw final-scope validation, final efficacy, scientific gate approval or FlashTicket validation."
+  ],
+  "authorization_decisions": [
+    "RCA-064",
+    "RCA-065",
+    "RCA-066",
+    "RCA-067",
+    "RCA-068",
+    "RCA-069",
+    "RCA-070"
+  ],
+  "historical_initial_receipt": {
+    "sha256": "a0ede00849843321f3a76dfc22d2cc5eedcd187e7d08acfc4f1baa3160e54c73",
+    "raw_utf8": "{\n  \"schema\": \"PRE-G-READINESS-RECEIPT-v1\",\n  \"recorded_at_utc\": \"2026-09-29T14:45:39Z\",\n  \"status\": \"PASS_METADATA_ONLY_WITH_LIMITATIONS\",\n  \"claim_boundary\": \"Approved PRE-G scope complete; neither raw final-scope validation nor Task G authorization\",\n  \"authorization\": \"P:docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md\",\n  \"registered_contract\": {\n    \"path\": \"results/pre-g/pre-g-run-contract.json\",\n    \"sha256\": \"722e4f249d22b9afea3bf02f0e76bf794cf8eee6c65693ccbfb5739bd763754f\"\n  },\n  \"frozen_inputs\": {\n    \"td_v1_3_sha256\": \"34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971\",\n    \"task_f_v2_manifest_sha256\": \"c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d\",\n    \"metadata_sha256\": \"c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb\"\n  },\n  \"source_metadata\": {\n    \"status\": \"PASS_METADATA_ONLY\",\n    \"api_provenance\": \"OFFICIAL_HF_API\",\n    \"repo_id\": \"phamquiluan/RCAEval\",\n    \"revision\": \"afeacb11bcc94dadfd1c8f483ee4377b2b8b614e\",\n    \"projected_metadata_columns\": [\"case\", \"dataset\", \"repetition\", \"has_logs\", \"has_traces\"],\n    \"development_cases\": 30,\n    \"final_cases\": 60,\n    \"final_cells\": 20,\n    \"planned_final_telemetry_objects\": 180,\n    \"official_object_identity_sha256\": \"2b51110896bf23f6f2264e85458b814c1cd7871c50e047d814aeda3943b32d94\",\n    \"total_official_bytes_declared\": 1309388082,\n    \"per_case_ids_or_paths_disclosed\": false,\n    \"download_api_invoked_by_qualifier\": false,\n    \"raw_final_parquet_opened_by_qualifier\": false,\n    \"explicit_label_or_outcome_columns_requested\": false,\n    \"adapter_scope\": \"DEVELOPMENT_ONLY\",\n    \"raw_final_bytes_schema_rows_or_join_validated\": false\n  },\n  \"controller\": {\n    \"status\": \"PASS_SYNTHETIC_DEVELOPMENT_CONTRACT_ONLY\",\n    \"registered_seeds\": [420, 421, 422],\n    \"registered_primary_bins\": 5,\n    \"checks\": [\n      \"Exact three-seed call order on equal deep-copied synthetic input\",\n      \"Issued qualified RCD runner required and frozen comparator invoked directly\",\n      \"Metric rank to first owning service, unknown-key coverage, and worst-tie padding\",\n      \"Failed seed scores zero; headline is arithmetic mean of all three per-seed metrics\",\n      \"Synthetic caller-supplied results remain unqualified and cannot be evaluated by default\",\n      \"Prediction seal checked before evaluator-only root and nonfinite vector shortcuts\"\n    ],\n    \"python_3_9_qualified_runner_synthetic_smoke\": {\n      \"status\": \"PASS\",\n      \"interpreter\": \"environments/task-e/rcd39/Scripts/python.exe\",\n      \"fixture\": \"600-row numeric synthetic frame only; time=0..599; m000..m005 are two 300-point modular series, with +30 only in the m000 query half; no dataset object or label\",\n      \"input_digest_rule\": \"SHA256 of contiguous little-endian float64 six-metric matrix in column order, excluding the checked 0..599 time grid\",\n      \"seal_valid\": true,\n      \"qualification_scope\": \"QUALIFIED_CORE_RUN\",\n      \"seed_statuses_in_order\": [\"SUCCESS\", \"SUCCESS\", \"SUCCESS\"]\n    },\n    \"durable_prediction_seal_persisted_before_final_labels\": false,\n    \"final_scope_controller_or_evaluator_run\": false\n  },\n  \"validation\": {\n    \"pre_g_unittest\": \"21/21 PASS\",\n    \"task_f_regression_unittest\": \"70/70 PASS\",\n    \"frozen_release_verifier\": \"PASS; 44 path/SHA references\"\n  },\n  \"new_source_sha256\": {\n    \"scripts/pre_g/source_qualification.py\": \"ec328812745d5a4bfe21c35286404b5a569503ca5f51f1f0754118bf21cf4e12\",\n    \"scripts/pre_g/controller_contract.py\": \"70d0f693708c60918da12252719f1716b481709b3e486ec40c9802fee86c0a65\",\n    \"tests/pre_g/test_source_qualification.py\": \"72145e22aad7c24492d9e8a2786ca021ac1e8596b48f8939e4bfcde188454670\",\n    \"tests/pre_g/test_controller_contract.py\": \"202d21f2e610496e61fe3c837565295cde9a320eb5bf8c76050ff7496ce4f084\"\n  },\n  \"limitations_and_open_gates\": [\n    \"Metadata case IDs structurally encode possible service/fault tokens; the qualifier treats them as opaque locators, but this is not a zero-oracle-information proof.\",\n    \"No explicit final label field, root-fault file, outcome, prediction, or raw telemetry row was opened in this PRE-G invocation.\",\n    \"Official LFS descriptors are not local raw byte, schema, clock, join, feature, or final adapter validation.\",\n    \"The frozen Task F telemetry adapter remains development-qualified; actual final raw compatibility and source audit remain OPEN.\",\n    \"The PRE-G in-memory seal is not a durable Task G prediction/label separation receipt; persistence and evaluator opening order remain OPEN.\",\n    \"Task G campaign and final60 raw/labels/outcomes require separate explicit authorization; no final efficacy claim exists.\",\n    \"The historical five-distinct-independent-reviewer certification remains OPEN / NOT FACTUALLY CERTIFIED.\"\n  ]\n}\n",
+    "disposition": "Initial PASS was challenged by adversarial review BLOCKED on PG-ADV-01 and PG-ADV-02; preserved as history, not current qualification."
+  },
+  "corrective_findings": [
+    {
+      "id": "PG-ADV-01",
+      "state": "FACT",
+      "before": "BLOCKED: unissued synthetic output could claim qualified provenance after rehash",
+      "after": "CLOSED_BY_IMPLEMENTATION_AND_INDEPENDENT_PROBES; current-interpreter issuance only"
+    },
+    {
+      "id": "PG-ADV-02",
+      "state": "FACT",
+      "before": "BLOCKED: default API could follow HF_ENDPOINT to fake source while claiming official provenance",
+      "after": "CLOSED_BY_ENDPOINT_PIN_AND_INDEPENDENT_LOOPBACK_PROBE"
+    }
+  ],
+  "independent_reviews": [
+    {
+      "reviewer": "/root/pre_g_fix_review",
+      "scope": "Two corrective boundaries; separate read-only agent, not five-reviewer certification",
+      "verdict": "PASS_METADATA_ONLY_WITH_LIMITATIONS",
+      "evidence": "25 tests PASS; unissued/rehash/private-sealer/copied-qualified/fresh-interpreter rejection; real endpoint override probe zero fake requests and official digest match"
+    },
+    {
+      "reviewer": "/root/task_f_rereview",
+      "scope": "Frozen Task F v2 re-review; no mutation or campaign",
+      "verdict": "PASS_FROZEN_TASK_F_WITH_LIMITATIONS",
+      "evidence": "70 tests PASS; verifier44; regression34; 12 source hashes/10 f09 references/11 v1-v2 scientific fields exact; genuine Python3.9 synthetic runtime and forged-handle rejection"
+    }
+  ],
+  "task_g_readiness": {
+    "state": "FACT",
+    "assessment": "READY_FOR_MINH_AUTHORIZATION_OF_G_ENTRY_VALIDATION_ONLY",
+    "task_g_authorized": false,
+    "final_campaign_ready": false,
+    "required_before_campaign": [
+      "Explicit Minh authorization and accepted exact campaign scope/limitations",
+      "Actual-use raw source identity, schema/clock/joins/window/masks and adapter admission at the authorized gate",
+      "Durable prediction receipt and trusted cross-process provenance, verified before evaluator label opening",
+      "Independent validity check of actual G controller/firewall before campaign"
+    ],
+    "five_distinct_reviewers": "OPEN / NOT FACTUALLY CERTIFIED"
+  }
+}

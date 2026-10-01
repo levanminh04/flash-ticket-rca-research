@@ -1,0 +1,956 @@
+{
+  "actual_conversion_binding": {
+    "actual_whole_diagnostic_artifact_capacity": "OPEN_NOT_MEASURED_OR_PROVED",
+    "audit": {
+      "bytes": 22546162,
+      "path": "results/task-g/g32-final-bridge-readiness/cache/actual-conversion-attempt-1790813816560279700/conversion-audit.json",
+      "sha256": "e191fc4ef00e2162577fb1216883415750ec76c9f728fa07b6a0a668b78d857d"
+    },
+    "case_records": 60,
+    "checkpoint_manifest_sha256": "e087ce257f16c9b24e1e4997ebc4ebd3d31180dd9e2245387e1c1365649a978d",
+    "context": {
+      "anchor": {
+        "algorithm": "HMAC-SHA256",
+        "domain": "FlashTicketRca/TD13/G32/BRIDGE-READINESS/v1",
+        "key_sha256": "ea4568d86bbfba9178c17ee00cfc8aa5f53ca6ce6077e65ee3ac6336a4667271",
+        "run_id": "g32-final-bridge-readiness",
+        "trust_mode": "HOST_TRUSTED"
+      },
+      "config_sha256": "2b8a2a73376b32378b4ffe8964be0c69fd9f767149d6f03a83ced9a6c3df8849",
+      "contract_sha256": "283dd2e6a19fea77960810bb581be7331f206680730457bf585ffdc39d283412",
+      "entry_bindings_sha256": "fcd675264efe71af1596e170903bc979478a24ed8a3e5ce0c49efa090659404d",
+      "environment_sha256": "a21e6b7072706044404f435b2afb4d6b6f940f35ef7b5ce475d906348c2d52bd",
+      "frozen_inputs_sha256": "a6489f9a09ef167c861f0240b39987bd974ad94b2f865d63c0414a78fa1a80b3",
+      "permissions": {
+        "development30_timing_only": true,
+        "final_answers": false,
+        "final_campaign": false,
+        "final_labels": false,
+        "final_outcomes": false,
+        "final_predictions": false,
+        "final_root_fault": false,
+        "final_tau_metadata": false,
+        "readiness_host_key_generation": true,
+        "synthetic_development_conversion_readiness": true,
+        "synthetic_evaluation": true,
+        "tau_only_input_audit": true,
+        "telemetry_final60_conversion_only": true,
+        "telemetry_final60_new_acquisition": false
+      },
+      "permissions_sha256": "8e97355d792bf4d1d858bdacbc50cdf213f469dc5e8262a5a43b28fa870b1be0",
+      "resource_policy_sha256": "1a49dee1c7219e7344551370ccac255ae59a08f3dfe5be21ebcab0f229bc8b93",
+      "source_snapshot_sha256": "9dcd64e4e3b7461ed6e6ce78538c17bf0ed19735623536f28a4ebac29953ea4a"
+    },
+    "conversion_log": {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/actual-conversion-attempt01.log",
+      "sha256": "7e2da99efc58e73b3c246c3d75a2dc77633ed2639af6a0f8192256e37398bcd8"
+    },
+    "known_tau_full_window_cases": 60,
+    "maximum_conversion_wall_seconds": 515.0910331999985,
+    "maximum_integrated360_conversion_wall_seconds": 504.3566413000008,
+    "maximum_json_numeric_input_upper_bound_bytes": 8105876,
+    "maximum_numeric_input_binary_bytes": 1790285,
+    "modality_coverage_open_ordinals": [
+      45
+    ],
+    "objects_reused": 180,
+    "per_profile_counts": {
+      "c1": {
+        "NUMERIC_INPUT_AVAILABLE": 60
+      },
+      "c3_c1": {
+        "OPERATION_COUNTS_AND_SANITIZED_LOG_SUPPORT": 60
+      },
+      "c3_integrated360": {
+        "OPERATION_COUNTS_AND_SANITIZED_LOG_SUPPORT": 60
+      },
+      "c5": {
+        "NUMERIC_INPUT_AVAILABLE": 60
+      },
+      "integrated360": {
+        "NUMERIC_INPUT_AVAILABLE": 60
+      },
+      "rcd": {
+        "NUMERIC_INPUT_AVAILABLE": 60
+      }
+    },
+    "root_integrity_verification": {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/actual-conversion-verification.json",
+      "sha256": "e37c14b5126d3121012501aec4f921fcca7a7c999c5e316450612d15d2643fd6"
+    },
+    "scope": "ACTUAL_TELEMETRY_CONVERSION_ONLY__NO_MODEL_OR_ACTUAL_TRUTH",
+    "total_conversion_wall_seconds": 1195.5079695000022
+  },
+  "attempt_history": [
+    {
+      "phase": "read_only_inspection",
+      "reason": "Long combined source outputs truncated; reread smaller chunks; truncated text never counted complete."
+    },
+    {
+      "phase": "read_only_inspection",
+      "reason": "One inventory search ran in P instead of W; corrected W read, no mutation."
+    },
+    {
+      "phase": "read_only_inspection",
+      "reason": "JSON reporting probe default cp1252 UnicodeEncodeError; retried with explicit UTF-8, no model or truth."
+    },
+    {
+      "event": "Turn interruption",
+      "reason": "source/provenance agents usage limit; reviewer network permission revoked",
+      "resolution": "Resumed same checkpoints and sources; no reset/rewrite/history removal"
+    },
+    {
+      "event": "Source isolated serialization tests",
+      "failures": 2,
+      "reason": "MappingProxy catalog needed recursive detached projection",
+      "resolution": "Corrected source serialization; numerical method unchanged"
+    },
+    {
+      "event": "Provenance/evaluator isolated tests attempt01",
+      "reason": "Three assertions used old frozen evaluator field names",
+      "resolution": "Aligned tests to frozen API; attempt01 log retained; method unchanged"
+    },
+    {
+      "event": "Combined G32 tests attempt01",
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt01.log",
+      "resolution": "Added independent test path bootstrap; no mathematical change",
+      "result": "IMPORT_ERROR source test bootstrap;41 tests completed +1 loader error",
+      "sha256": "223bdfedbca397f721d72111a6978ba480380aca8ff779f3cdc4f3f329a6ea3b"
+    },
+    {
+      "event": "Combined G32 tests attempt02",
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt02.log",
+      "reason_for_retry": "Repair documented import harness error",
+      "result": "PASS67/67 test items",
+      "sha256": "1aa38e34a9a46576661d84db0883f3438c077d55c7d037d3682433e416c18962"
+    },
+    {
+      "event": "Read-only inventory/reporting errors",
+      "reason": "Wrong-root rg/GetContent paths, truncated large combined outputs, cp1252 report encoding, reviewer wrong function name or None status",
+      "resolution": "Correct canonical paths, chunked complete reads and UTF8; no source/model mutation from failed probes"
+    },
+    {
+      "event": "Independent review corrections before qualification",
+      "findings": [
+        "Domain/projection/permission interface mismatch",
+        "Missing frozen graph_hash public symbol",
+        "Double-remap sanitized metric key",
+        "Universe-relative vN identity ambiguity",
+        "Shallow nested diagnostic completeness",
+        "Partial C5/integrated/missing-source failures not preserved",
+        "Registered development deadline key mismatch"
+      ],
+      "resolution": "Corrected only approved G32 files; regression evidence bound above"
+    },
+    {
+      "changed_functions": [
+        "_controller_evidence",
+        "_read_actual",
+        "audit_actual_conversion",
+        "_sanitize_query_log",
+        "_catalog_status"
+      ],
+      "development_numeric_AST_unchanged": true,
+      "event": "Post-development controller-only refinements",
+      "reason": "Independent TD source review rejected blanket log-message redaction as inferred requirement; restore sanitized meaning and checkpoint/perprofile counts",
+      "synthetic_C1_deadline": "Uses newly measured common C1 timeout instead of auxiliary900"
+    },
+    {
+      "event": "Read-only reviewer shape probe",
+      "reason": "Literal newline SyntaxError",
+      "resolution": "Correct heredoc; no model/data mutation"
+    },
+    {
+      "event": "Read-only root reporting probes after continuation",
+      "reason": "Missing cache-not-found probe; mixed P/W relative path; truncated governance script output",
+      "resolution": "Read correct absolute paths in bounded chunks; no data/model mutation"
+    },
+    {
+      "event": "Combined current G32 tests attempt03",
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt03.log",
+      "reason": "Invocation mistakenly used default Python3.9 instead of registered W/.venv Python3.12.10",
+      "resolution": "No source correction; retained failure and reissued exact suite under registered runtime",
+      "result": "56tests/30errors including subtests; sole exception zip(strict) TypeError",
+      "sha256": "79d9dd4b1087a41506dde1d017fa153939acaee935e25de1a05cbe16b197f85e"
+    },
+    {
+      "event": "Combined current G32 tests attempt04",
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt04.log",
+      "reason_for_retry": "Correct known interpreter invocation error, no outcome selection",
+      "result": "72/72PASS15.254s",
+      "sha256": "da4949f7f55d2cf85b2b527fa680e98f3f9b84c097ff55d40dc319d43e23455c"
+    },
+    {
+      "event": "Independent AST equivalence probe",
+      "reason": "Initial helper looked up imported _unpack as defined function",
+      "resolution": "Full module AST/dependency comparison PASS, no models or source mutation"
+    },
+    {
+      "event": "Continuation P document reads",
+      "reason": "Combined tool output truncated; not counted as new full read",
+      "resolution": "Governing documents were fully read earlier; use bounded chunks for later diffs, preserve entire historical bodies"
+    },
+    {
+      "event": "G32 key ACL hardening",
+      "reason": "Read-only inspection found inherited CodexSandboxUsers/capability access",
+      "resolution": "Protected only authorized G32 readiness key for current user/SYSTEM/Administrators; key bytes/hash unchanged; before/after ACL retained"
+    },
+    {
+      "event": "Preconversion review snapshot binding attempt01",
+      "reason": "Reviewer appended wire clarification/livecontext after first reported hash; exacthash assertion stopped before any contract/copy mutation",
+      "resolution": "Bind final confirmed stable review6485 snapshot; ACL operation already complete, key not recreated"
+    },
+    {
+      "event": "Second continuation after usage interruption",
+      "reason": "User requested continuity; provenance capacity subagent usage failure after supplying findings",
+      "resolution": "Live actual conversion driver continued; percase checkpoints/context/hash/order checked, no restart or lost outcomes"
+    },
+    {
+      "event": "Independent actual checkpoint reporting probes",
+      "reason": "Canonical copied registration byte digest differed from pretty raw; string declaration treated boolean; unknown one-case log-reference OPEN initially asserted absent",
+      "resolution": "Raw283dd snapshot preserved, JSON semantics equality checked, schema and missing-observation counts corrected; no source/model mutation or favorable rerun"
+    }
+  ],
+  "authorization": {
+    "decisions": [
+      "RCA-079",
+      "RCA-080",
+      "RCA-081",
+      "RCA-082",
+      "RCA-083"
+    ],
+    "immutable_snapshot_path": "results/task-g/g32-final-bridge-readiness/cache/authorization-decision-snapshot.md",
+    "owner": "Le Van Minh",
+    "source": "P/docs/research-rca/RESEARCH-DECISIONS.md",
+    "source_sha256": "53e4174aef90dea61d2e2d7a8696990bcdf4789fff86a4e051638d784a45622e"
+  },
+  "authorized_doc_initial_sha256": {
+    "P/docs/research-rca/CURRENT-STATE.md": "c7a1ccb08460dcbba53249b754d2f539166b7ec997b44eb2d48b46f778ef64fe",
+    "P/docs/research-rca/RESEARCH-DECISIONS.md": "18a6ba3778d227dcab7a3cd65303db7ed37478a84bb6b300f63a685e5c9c87be",
+    "P/docs/research-rca/task-g-handoff.md": "19b0ec6f4dff8103408ca5605353d5f66ba44f5ad6f2f8a36f363dd3206a3188"
+  },
+  "development_inputs": {
+    "cache_fields": [
+      "adj",
+      "channel_types",
+      "query",
+      "ref"
+    ],
+    "contract_path": "results/task-f/f05-final-development-validation/run-contract.json",
+    "contract_sha256": "1ae559dcfdbde7cf45b6c249797a1161ba9a8791ec13368007415b3682737d92",
+    "expected_cases": 30,
+    "no_case_audit_or_labels_read": true,
+    "numeric_inventory_sha256": "2db903286747d0e7e1fe52eddc118f4cd19ce94d4d449570f3b50ccbe854be6f"
+  },
+  "development_timing_binding": {
+    "C5_RCD_seal_excluded": true,
+    "bytes": 161222335,
+    "cases": 30,
+    "derived_common_C1_timeout_seconds": 363.5044049999851,
+    "matched_arms": 180,
+    "maximum_case_wall_seconds": 36.35044049999851,
+    "path": "results/task-g/g32-final-bridge-readiness/cache/development-attempt-1790811530197938600/timing.json",
+    "physical_cold_cache_io_independently_measured": false,
+    "registered_context": {
+      "anchor": {
+        "algorithm": "HMAC-SHA256",
+        "domain": "FlashTicketRca/TD13/G32/BRIDGE-READINESS/v1",
+        "key_sha256": "ea4568d86bbfba9178c17ee00cfc8aa5f53ca6ce6077e65ee3ac6336a4667271",
+        "run_id": "g32-final-bridge-readiness",
+        "trust_mode": "HOST_TRUSTED"
+      },
+      "config_sha256": "2b8a2a73376b32378b4ffe8964be0c69fd9f767149d6f03a83ced9a6c3df8849",
+      "contract_sha256": "82dda12c08f6ea20c9e324905338fa4c9739868186d54a790070865732232705",
+      "entry_bindings_sha256": "fcd675264efe71af1596e170903bc979478a24ed8a3e5ce0c49efa090659404d",
+      "environment_sha256": "a21e6b7072706044404f435b2afb4d6b6f940f35ef7b5ce475d906348c2d52bd",
+      "frozen_inputs_sha256": "a6489f9a09ef167c861f0240b39987bd974ad94b2f865d63c0414a78fa1a80b3",
+      "permissions": {
+        "development30_timing_only": true,
+        "final_answers": false,
+        "final_campaign": false,
+        "final_labels": false,
+        "final_outcomes": false,
+        "final_predictions": false,
+        "final_root_fault": false,
+        "final_tau_metadata": false,
+        "readiness_host_key_generation": true,
+        "synthetic_development_conversion_readiness": true,
+        "synthetic_evaluation": true,
+        "tau_only_input_audit": true,
+        "telemetry_final60_conversion_only": true,
+        "telemetry_final60_new_acquisition": false
+      },
+      "permissions_sha256": "8e97355d792bf4d1d858bdacbc50cdf213f469dc5e8262a5a43b28fa870b1be0",
+      "resource_policy_sha256": "af6e9269bcf4674a6d3452ce52ee7eb33d09347fb5eec73a906eba8f2472d969",
+      "source_snapshot_sha256": "662cf59b4a811dcb45e2803e38872633d949fffde85738dba0dc2010a7a78c87"
+    },
+    "reuse_basis": "AST equivalence of DEV factory/materialize/worker/timing helpers; independent30numeric-input and checkpoint verification",
+    "sha256": "490d837a39600f80f34c0f04359b25c9e0e7566612c0f1a3da1aabbf9f3758a0",
+    "source_v1_copy": "results/task-g/g32-final-bridge-readiness/cache/registered-source-v1"
+  },
+  "domain": "FlashTicketRca/TD13/G32/BRIDGE-READINESS/v1",
+  "entry_bindings": {
+    "contract_sha256": "33d3a0e297b6bf0f2f8493c50ec5b5442a7bf7b2b0c68b24f495c33c760512be",
+    "independent_entry_review_sha256": "7fc8711a9e05f536d8f0112031edd13172941a2fc6c82a165054c69118f47210",
+    "receipt_sha256": "570da401927a71b618a40d0a043354d326ccfd4920d47f6fd72dcc0eba928f34"
+  },
+  "environment": {
+    "RCD_python": "3.9.13",
+    "RCD_qualification_identity_sha256": "38253ebbfaa53bdad20b66e655ade3fade363fdd9ef71ee2ab6df722ab4fac04",
+    "dependency_installation": false,
+    "main_python": "3.12.10",
+    "packages": {
+      "huggingface-hub": "1.32.0",
+      "numpy": "2.5.3",
+      "pandas": "3.0.6",
+      "pyarrow": "25.0.1"
+    }
+  },
+  "frozen_inputs": {
+    "metadata_sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "task_f_v2_manifest_sha256": "c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d",
+    "td_v1_3_sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971"
+  },
+  "g31_bindings": {
+    "contract_sha256": "97a1d9f5a212a476a9f5e20a83ea0ed695102c6efcd2c856334c2af555da6174",
+    "receipt_sha256": "13100235f5020d7ac7e5ef25aa1cf2a116bb08779ed564cffd207a92ab658d7b"
+  },
+  "impact_map": {
+    "P": [
+      "docs/research-rca/RESEARCH-DECISIONS.md",
+      "docs/research-rca/task-g-handoff.md",
+      "docs/research-rca/CURRENT-STATE.md"
+    ],
+    "W": [
+      "scripts/task_g/final_source.py",
+      "scripts/task_g/final_campaign.py",
+      "scripts/task_g/final_provenance.py",
+      "scripts/task_g/final_evaluation.py",
+      "tests/task_g/test_final_source.py",
+      "tests/task_g/test_final_campaign.py",
+      "tests/task_g/test_final_provenance.py",
+      "tests/task_g/test_final_evaluation.py",
+      "results/task-g/g32-final-bridge-readiness/run-contract.json",
+      "results/task-g/g32-final-bridge-readiness/readiness.json",
+      "results/task-g/g32-final-bridge-readiness/independent-final-bridge-review.md"
+    ],
+    "generated_cache_root": "results/task-g/g32-final-bridge-readiness/cache",
+    "host_key_relative_to_local_app_data": "FlashTicketRca/task-g-trust/g32-final-bridge-readiness/issuer.key"
+  },
+  "implementation_choices": {
+    "candidate_identity": "s+24hex SHA256 literal equality controller only; development vN timing only",
+    "equal_endpoint_integrated_reuse": "Deterministic exact observation/ranker result reused across detectors with every trigger retained",
+    "missing_costs": "null with explicit coverage; no imputed0",
+    "scientific_array_encoding": "Lossless typed base64 envelopes preserve NaN masks; finite canonical JSON",
+    "semantic_log_excerpts": "Sanitized untrusted controller evidence retains diagnostic text; known identifiers/clocks/paths/credentials/assigned closed fields redacted; exact hash+original-row sampling; unavailable coverage explicit"
+  },
+  "independent_preconversion_review": {
+    "path": "results/task-g/g32-final-bridge-readiness/cache/preconversion-independent-review.md",
+    "scope": "PASS_AUTHORIZED_ACTUAL_CONVERSION_AND_BOUNDED_SYNTHETIC_ONLY__CAPACITY_ACTUAL_UNMEASURED_OPEN",
+    "sha256": "6485f326aad61657638eecfe717c0e7e55b3126befa9c44adaa82ca85a3abbfb",
+    "source_test_snapshot": {
+      "scripts/task_g/final_campaign.py": "62e1e4bbee870097ebd870670332fe7e3ed986e746b8049bcb46ef5ef3216e9d",
+      "scripts/task_g/final_evaluation.py": "bbecfbd23325c28da33bfa571c80810a99a294ca464d55e3f66036e326cea07d",
+      "scripts/task_g/final_provenance.py": "ab36ac12f78a277320e64d9f29c9121848a7cb164e89fd57379c2f5e6334be5c",
+      "scripts/task_g/final_source.py": "08f647de94b49d1f61c1d7589e8d464892dfaabb163cee98742002d775efc9dc",
+      "tests/task_g/test_final_campaign.py": "77a83fca89fbaa5aec174b7e625e3fae48d16e9e3ed5aa2d7fdc6abdb069cf86",
+      "tests/task_g/test_final_evaluation.py": "348c851c6b6a845ca6d3a50ca48e3bd903c8368889249ea099fb65aed6f7648b",
+      "tests/task_g/test_final_provenance.py": "06235ff2f13e51d272b83160b15208124584e353aaf7b6aa7a3b2e16d177d385",
+      "tests/task_g/test_final_source.py": "a74616d3a9a0e7f3b23b9ecf7845995cf3dee2ea3678cd4da66d2ee4270492b9"
+    }
+  },
+  "initial_git": {
+    "P": " M README.md\n M docs/research-rca/ARTIFACT-MAP.md\n M docs/research-rca/CURRENT-STATE.md\n M docs/research-rca/RESEARCH-DECISIONS.md\n?? docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md\n?? docs/research-rca/pre-g-readiness.md\n?? docs/research-rca/task-g-handoff.md\n",
+    "W": " M .gitignore\n?? results/pre-g/pre-g-independent-review.md\n?? results/pre-g/pre-g-readiness.json\n?? results/pre-g/pre-g-run-contract.json\n?? results/task-g/g30-entry-validation/entry-contract.json\n?? results/task-g/g30-entry-validation/entry-validation.json\n?? results/task-g/g30-entry-validation/independent-entry-review.md\n?? results/task-g/g31-campaign-readiness/independent-campaign-readiness-review.md\n?? results/task-g/g31-campaign-readiness/readiness.json\n?? results/task-g/g31-campaign-readiness/run-contract.json\n?? scripts/pre_g/controller_contract.py\n?? scripts/pre_g/source_qualification.py\n?? scripts/task_g/campaign.py\n?? scripts/task_g/campaign_provenance.py\n?? scripts/task_g/campaign_source.py\n?? scripts/task_g/controller.py\n?? scripts/task_g/evaluation.py\n?? scripts/task_g/provenance.py\n?? scripts/task_g/source_admission.py\n?? src/rca/.idea/.gitignore\n?? src/rca/.idea/copilot.data.migration.agent.xml\n?? src/rca/.idea/copilot.data.migration.ask.xml\n?? src/rca/.idea/copilot.data.migration.ask2agent.xml\n?? src/rca/.idea/copilot.data.migration.edit.xml\n?? src/rca/.idea/misc.xml\n?? src/rca/.idea/modules.xml\n?? src/rca/.idea/rca.iml\n?? src/rca/.idea/vcs.xml\n?? tests/pre_g/test_controller_contract.py\n?? tests/pre_g/test_source_qualification.py\n?? tests/task_g/test_campaign.py\n?? tests/task_g/test_campaign_provenance.py\n?? tests/task_g/test_campaign_source.py\n?? tests/task_g/test_controller.py\n?? tests/task_g/test_evaluation.py\n?? tests/task_g/test_provenance.py\n?? tests/task_g/test_source_admission.py\n"
+  },
+  "limitations": [
+    "Historical TT90 exposure retained.",
+    "Five-distinct-independent-reviewer certification OPEN / NOT FACTUALLY CERTIFIED.",
+    "Task F remains development qualified; G32 does not alter F release.",
+    "FlashTicket validation not performed.",
+    "Host HMAC trust is not independent attestation.",
+    "No readiness result can authorize campaign.",
+    "Actual ordinal45 has zero reference-window log rows; retained missing observation, not all-modalities-complete.",
+    "Actual complete diagnostics artifact size and whole60 RAM policy remain OPEN; per-case128MiB bound and input sizes do not certify future campaign capacity.",
+    "Actual integrated360 conversion maximum504.3566413s measured; C5/RCD/integrated numeric runtime not measured on actual60.",
+    "Physical cold disk cache IO not independently established; measured hash/read duration is recorded honestly."
+  ],
+  "permissions": {
+    "development30_timing_only": true,
+    "final_answers": false,
+    "final_campaign": false,
+    "final_labels": false,
+    "final_outcomes": false,
+    "final_predictions": false,
+    "final_root_fault": false,
+    "final_tau_metadata": false,
+    "readiness_host_key_generation": true,
+    "synthetic_development_conversion_readiness": true,
+    "synthetic_evaluation": true,
+    "tau_only_input_audit": true,
+    "telemetry_final60_conversion_only": true,
+    "telemetry_final60_new_acquisition": false
+  },
+  "phase": "FINAL_BRIDGE_READINESS_ONLY",
+  "prepared_conditions": {
+    "C5_detector_ids": [
+      "G-MTL",
+      "L-MTL",
+      "ALL-MTL",
+      "TV-MTL",
+      "G-MT",
+      "L-MT",
+      "ALL-MT",
+      "TV-MT"
+    ],
+    "RCD_bins": 5,
+    "RCD_seeds": [
+      420,
+      421,
+      422
+    ],
+    "R_draws": 256,
+    "method_selection_or_retuning": false,
+    "planned_final_cases": 60,
+    "planned_final_cells": 20,
+    "rankers": [
+      "primary",
+      "secondary"
+    ],
+    "scientific_objects": {
+      "comparators": [
+        {
+          "adapter": "src/rca/comparators.py",
+          "id": "Local-MAX-MT",
+          "role": "mandatory contextual graph-free baseline distinct from C1 L"
+        },
+        {
+          "adapter": "src/rca/comparators.py",
+          "fidelity": "absolute temporal MAX over metric deviations then service MAX; adaptation, not full upstream BARO",
+          "id": "BARO-RANK-adapted-TD12",
+          "lineage_revision": "e35f4ec1095e5cac891d52de9ad18a5b32a37ec8",
+          "role": "mandatory contextual adapted BARO component baseline"
+        },
+        {
+          "adapter": "src/rca/comparators.py",
+          "id": "RCD-RCAEval-adapted-TD12",
+          "original_lineage_revision": "373882c6982db7a999ec1ff99ea54c644a48b409",
+          "original_rcd_sha256": "e6a7df13e4f3256b45da0713b07b6bf41fb9178333e31397701ab2f08872f628",
+          "patch_sha256": "472685d2513a47cefce36640d9de3e21769923f85de48f7cf6feec43e2ae8838",
+          "patched_rcd_sha256": "036946005d53e5c6a11e2a4b5c099f2194ab104f15df8fd74d74668827278393",
+          "primary": {
+            "bins": 5,
+            "dataset": null,
+            "dk_select_useful": false,
+            "gamma": 5,
+            "localized": true,
+            "seeds": [
+              420,
+              421,
+              422
+            ]
+          },
+          "qualification_contract": {
+            "path": "results/task-e/e27-018-rcd-real-qualification/run-contract.json",
+            "sha256": "5e0f4e4b90f9a654411a5a2edd8d22c56275080e6020a1f8d31a03e8b095d408"
+          },
+          "qualification_report": {
+            "path": "results/task-e/e27-018-rcd-real-qualification/rcd-fixture-report.json",
+            "sha256": "8238a708c315b3c0ce0c59aeff6622489c96e4a33bcb60f0222bca1eab2ec123"
+          },
+          "role": "mandatory contextual adapted RCD baseline",
+          "source_manifest_sha256": "f63c6224168d82613ef0a0b1d7c99f18fc94613895b4346528a3a80ba29b2c68",
+          "upstream_revision": "7600283af1ea5e2e9fff6f07124951d0e989de42"
+        }
+      ],
+      "dataset": {
+        "development_case_count": 30,
+        "development_ids_digest": {
+          "algorithm": "sha256(newline-joined ordered IDs plus final newline)",
+          "sha256": "71481fea8ee690a51581d504a64e88f00e201f65bcdddb602cb5a2606af35a91"
+        },
+        "development_registry_ref": {
+          "interpretation": "registered development search/split contract; selection results are not stored here",
+          "path": "configs/task-e-td13-development.json",
+          "sha256": "d39a150b61696bd38c178682561bf4e45f39103463323f4acef0b38b00d84c60"
+        },
+        "development_scope": "development30",
+        "name": "RCAEval RE2 TrainTicket public telemetry",
+        "revision": "afeacb11bcc94dadfd1c8f483ee4377b2b8b614e"
+      },
+      "evaluator": {
+        "ground_truth_opening": "only after sealed predictions/packets",
+        "location": "outside src/rca model-facing path",
+        "root_absent": "evaluator-side zero outcome; core must not append or repair a root",
+        "version": "TD-v1.3 sections 7-8 evaluator contract"
+      },
+      "exposure_ledger": {
+        "path": "task-d/task-d-exposure-ledger.md",
+        "sha256": "efe88b39d1c3ccbd305b5929ba074508f54c3b569132833afd45251e6c0defd3",
+        "status": "HISTORICAL_TT90_OUTCOME_EXPOSURE_DISCLOSED__PROSPECTIVE_NEW_PROTOCOL_CONTRAST_NOT_UNTOUCHED"
+      },
+      "final60_policy": "REFERENCE_SPLIT_CONTRACT_ONLY__NO_ENUMERATION_DOWNLOAD_LOAD_GRAPH_FEATURE_PREDICTION_OR_LABEL_ACCESS",
+      "packet": {
+        "oracle_fields_forbidden": [
+          "ground-truth root",
+          "fault label",
+          "answer contents",
+          "root presence",
+          "injected fault identity",
+          "absolute case path",
+          "tau",
+          "evaluator-only fields",
+          "final outcome labels",
+          "hindsight explanation"
+        ],
+        "schema_version": "TD13-F-DIAGNOSIS-PACKET-v1",
+        "score_meaning": "suspicion/diagnostic utility; not root probability or causal truth"
+      },
+      "prohibited_runtime_rules": [
+        "isolate gating",
+        "degree gating",
+        "reachability gating",
+        "travel x loss special case",
+        "auth special case",
+        "lag3 as primary",
+        "replacement of the 1e-12 fallback",
+        "any rule learned from Phase 1 or Phase 2 outcome patterns"
+      ],
+      "r_control": {
+        "chains": 256,
+        "degeneracy": "isolates and unswitchable graphs remain planned draws; every rejected proposal is a self-transition",
+        "directed_invariants": [
+          "per-node in-degree",
+          "per-node out-degree",
+          "exact weak-component vertex partition"
+        ],
+        "nonclaims": [
+          "spectrum",
+          "paths",
+          "kernel",
+          "centrality",
+          "Markov-chain stationarity",
+          "mixing"
+        ],
+        "proposal_count": "200 * max(1, edge_count) per independent chain",
+        "proposals_per_edge": 200,
+        "rejections": [
+          "loop",
+          "duplicate",
+          "existing proposed edge",
+          "component-partition violation"
+        ],
+        "seed_contract": "first 64 bits, big-endian, of SHA256('TD12|R|opaque_handle|representation|draw_index'); NumPy PCG64",
+        "undirected_invariants": [
+          "per-node degree",
+          "exact connected-component vertex partition"
+        ]
+      },
+      "selection_policy": "NO_RESELECTION_IN_TASK_F",
+      "selections": {
+        "c1": {
+          "execution_plan_source": {
+            "path": "results/task-e/e27-033-c1-development-full/observed-execution-plan.json",
+            "sha256": "8caf08bec235927e2eb590e4a80effb23316f2cd6c0e59e35b74bf8ff0f3d1e1"
+          },
+          "local": {
+            "cap": null,
+            "floor": 0.01,
+            "fusion": "availablemean",
+            "include_logs": false,
+            "pool": "q90",
+            "temporal": "q90"
+          },
+          "local_source": {
+            "path": "results/task-e/e27-033-c1-development-full/local-selection.json",
+            "sha256": "56788385674498914eac874572a8fcce671e1c253ed282ff511d2f2fdfd6c266"
+          },
+          "prediction_seal": {
+            "path": "results/task-e/e27-033-c1-development-full/local-stage-seal.json",
+            "sha256": "79ad41fc02377946d42b80232ba37483bc2e03d93675c9e80424cfcd74934f40"
+          },
+          "primary_ppr": {
+            "damping": 0.5,
+            "direction": "undirected",
+            "operator": "ppr"
+          },
+          "run_contract": {
+            "path": "results/task-e/e27-033-c1-development-full/run-contract.json",
+            "sha256": "dc3c87ab29cc57ee0b7f45aea2619a15e39edc673a61e031a547396199169f4f"
+          },
+          "secondary_diffusion": {
+            "alpha": 0.85,
+            "direction": "undirected",
+            "operator": "diffusion"
+          },
+          "source_path": "results/task-e/e27-033-c1-development-full/selection.json",
+          "source_sha256": "b573102a18763eecd235ca2450438e265c2404c990a0180be6164af9806ea754",
+          "tie_scores": "round to 12 decimals before deterministic tie intervals",
+          "zero_local_mass": "common all-tie/no-evidence; no uniform PPR fallback"
+        },
+        "c5": {
+          "arms": {
+            "forecast": [
+              "G",
+              "L",
+              "ALL"
+            ],
+            "modalities": [
+              "MTL",
+              "MT"
+            ],
+            "secondary_spatial": "TV"
+          },
+          "detectors": [
+            {
+              "arm": "G",
+              "id": "G-MTL",
+              "modalities": "MTL",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 5300.844353103079
+            },
+            {
+              "arm": "L",
+              "id": "L-MTL",
+              "modalities": "MTL",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 221694927196937.78
+            },
+            {
+              "arm": "ALL",
+              "id": "ALL-MTL",
+              "modalities": "MTL",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 4361.702127659585
+            },
+            {
+              "arm": "TV",
+              "id": "TV-MTL",
+              "modalities": "MTL",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 2.4051748014087467e+24
+            },
+            {
+              "arm": "G",
+              "id": "G-MT",
+              "modalities": "MT",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 4361.702127659583
+            },
+            {
+              "arm": "L",
+              "id": "L-MT",
+              "modalities": "MT",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 158890826408975.88
+            },
+            {
+              "arm": "ALL",
+              "id": "ALL-MT",
+              "modalities": "MT",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 4361.702127659583
+            },
+            {
+              "arm": "TV",
+              "id": "TV-MT",
+              "modalities": "MT",
+              "q": 0.95,
+              "status": "VALID",
+              "threshold": 1.16504925625623e+24
+            }
+          ],
+          "integrated_trigger_hook": {
+            "path": "results/task-e/e27-035-c5-development-full/integrated-trigger-hook.json",
+            "sha256": "04dcd91a2dafa358064ab8bb09d17cd6de555513e3b4841d3989e4771c6610d8"
+          },
+          "lambda_source": "results/task-e/e27-035-c5-development-full/lambda-selection.json",
+          "lambda_source_sha256": "919c40ea168b545cf4419547c2470084a6b5d0061729376da284b4763cf7dac2",
+          "prediction_seal": {
+            "path": "results/task-e/e27-035-c5-development-full/predictions-seal.json",
+            "sha256": "b2d01f6de1d584b35d27a5f6ff9ab9ecfbe26eb018e70e4ac717e5b422d634bf"
+          },
+          "profile": {
+            "bin_seconds": 5,
+            "calibration_bins": 12,
+            "event_streak": 3,
+            "fit_bins": 24,
+            "input_absolute_fallback": 1e-12,
+            "input_relative_floor": 0.01,
+            "lag": 1,
+            "min_calibration_rows": 9,
+            "min_fit_rows": 18,
+            "refractory_seconds": 300,
+            "residual_floor": 0.01,
+            "strict_trigger": "score > threshold",
+            "warmup_seconds": 180
+          },
+          "run_contract": {
+            "path": "results/task-e/e27-035-c5-development-full/run-contract.json",
+            "sha256": "cbcdff14c799c6be6fe4ef6c509d74365d4426a0b23f73236f87182a1dad0628"
+          },
+          "selected_lambda": 10.0,
+          "selection_source": "results/task-e/e27-035-c5-development-full/c5-selection.json",
+          "selection_source_sha256": "4e56b27a2e044774f2fc4021f64a7d093f66dfaeb0c9dd019955d53f246f343c",
+          "summary_source": {
+            "path": "results/task-e/e27-035-c5-development-full/c5-summary.json",
+            "sha256": "bdf98053c313e1ba41f0146113cc61684d6ae3dd051dc1a09159935dc6c460fd"
+          }
+        }
+      },
+      "split": {
+        "final_materialization": "FORBIDDEN_IN_TASK_F",
+        "final_metadata_or_case_ids_in_this_manifest": false,
+        "final_split_contract_ref": "P/docs/research-rca/task-d-method-and-experiment-specification.md section 3",
+        "provenance": "P/docs/research-rca/task-d-method-and-experiment-specification.md section 3 and W/task-d/task-d-exposure-ledger.md",
+        "rule_id": "TD-v1.3-section-3-RE2-TT30-development-60-final",
+        "version": "TD-v1.3"
+      },
+      "td": {
+        "human_freeze_decisions": [
+          "RCA-062",
+          "RCA-063"
+        ],
+        "path": "P/docs/research-rca/task-d-method-and-experiment-specification.md",
+        "sha256": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971"
+      }
+    }
+  },
+  "prequalification_review": {
+    "path": "results/task-g/g32-final-bridge-readiness/cache/prequalification-review.md",
+    "scope": "Independent technical review for permitted readiness only; no human/five-reviewer/final qualification",
+    "sha256": "4c7aed5c27ff4bd7eebdeed53fdfdfa81ad7d5dcc1d1b12e2fd0dad46f186889",
+    "source_test_snapshot": {
+      "scripts/task_g/final_campaign.py": "a0ba93d984870277478c113799d969a291210eed835b0bb821ce80baf7dcfc8f",
+      "scripts/task_g/final_evaluation.py": "bbecfbd23325c28da33bfa571c80810a99a294ca464d55e3f66036e326cea07d",
+      "scripts/task_g/final_provenance.py": "ab36ac12f78a277320e64d9f29c9121848a7cb164e89fd57379c2f5e6334be5c",
+      "scripts/task_g/final_source.py": "bbba3461bcd4a4c85b0815258aa852f8d7b0696b4051720ebbba30ae7cac74e5",
+      "tests/task_g/test_final_campaign.py": "77a83fca89fbaa5aec174b7e625e3fae48d16e9e3ed5aa2d7fdc6abdb069cf86",
+      "tests/task_g/test_final_evaluation.py": "348c851c6b6a845ca6d3a50ca48e3bd903c8368889249ea099fb65aed6f7648b",
+      "tests/task_g/test_final_provenance.py": "06235ff2f13e51d272b83160b15208124584e353aaf7b6aa7a3b2e16d177d385",
+      "tests/task_g/test_final_source.py": "10ae9b8f320b22e179e8801f20536c2ee0c66680062f312a55bcb8aa88317ce4"
+    }
+  },
+  "protected_sha256": {
+    "P/README.md": "3646cb1b6e8da832e8b9513fd8318d749f7f5f6788b5d3223eda7f5a9a662274",
+    "P/docs/evidence/project-direction/2026-09-29-rca-pre-g-authorization.md": "79469874623d057eff812b06b1abb8f461c2935d556794e86f5092bf8db16064",
+    "P/docs/research-rca/ARTIFACT-MAP.md": "889241ef4f54c71361f0e4aa603832e6f98a57cc4a9e15efe3388e1a99663962",
+    "P/docs/research-rca/pre-g-readiness.md": "7b9096751f3aab5a541f9596a4408e50f8f8c9dd4a7ddff0182b739a24dfb82b",
+    "P/docs/research-rca/task-d-method-and-experiment-specification.md": "34fd73f6a84dc6b45834bd7fd4cc7b86e19e54f1011de99735631f027ee18971",
+    "P/docs/research-rca/task-f-handoff.md": "653e87741fe9c8b7b34d6e3b9da0f33db661e071a2e98eea07922707fc99c24f",
+    "W/configs/task-f-td13-frozen-release-v2.json": "c46b870bccdae1198292abc5850a83a3fa7e7f702286ceeaa07258074391801d",
+    "W/configs/task-f-td13-frozen-release.json": "18484bc4bb0c1d19e8f6936f12d8365a8ad69e16fffa2bf6ce5968189f0561e5",
+    "W/results/pre-g/pre-g-independent-review.md": "1bd6500c3289e5787fdae014966243b581ac5f36d8cbe5a25fa232bdc9392611",
+    "W/results/pre-g/pre-g-readiness.json": "d7cd108c4fdb5880210934d5a0a371ad49ee0bac50c8ba2d85274d2c94710f28",
+    "W/results/pre-g/pre-g-run-contract.json": "07cca0a168c7db8952d0e77216e74b370b919bcf91d1586db0e183bee60edd31",
+    "W/results/task-g/g30-entry-validation/entry-contract.json": "33d3a0e297b6bf0f2f8493c50ec5b5442a7bf7b2b0c68b24f495c33c760512be",
+    "W/results/task-g/g30-entry-validation/entry-validation.json": "570da401927a71b618a40d0a043354d326ccfd4920d47f6fd72dcc0eba928f34",
+    "W/results/task-g/g30-entry-validation/independent-entry-review.md": "7fc8711a9e05f536d8f0112031edd13172941a2fc6c82a165054c69118f47210",
+    "W/results/task-g/g31-campaign-readiness/independent-campaign-readiness-review.md": "9d2d1fd99b584788e15484b90d9297333fe4e2add3cd1a61a972e51fe3e747d7",
+    "W/results/task-g/g31-campaign-readiness/readiness.json": "13100235f5020d7ac7e5ef25aa1cf2a116bb08779ed564cffd207a92ab658d7b",
+    "W/results/task-g/g31-campaign-readiness/run-contract.json": "97a1d9f5a212a476a9f5e20a83ea0ed695102c6efcd2c856334c2af555da6174",
+    "W/scripts/pre_g/controller_contract.py": "21418bfd83ae8de9e5fd5a003253b17d123d6e360573e4c4dfdc97964759c6ee",
+    "W/scripts/pre_g/source_qualification.py": "2be3c583bbbb864de4256de4ede56171c29c53cad08ab45579add6567d12ccec",
+    "W/scripts/task_g/campaign.py": "dfa9cb8edb5a24276070f16b6e301001bd0a7dfdb08df6c9130a7bdd653450fa",
+    "W/scripts/task_g/campaign_provenance.py": "7d465adae0c1068feed47328a15b6284308a9a251cf8b3aeeb98e3526318a94b",
+    "W/scripts/task_g/campaign_source.py": "c62fe034c5f0130367a37e0187516b3ae3fe042f1179ad9c2d6add7eeaf285b0",
+    "W/scripts/task_g/controller.py": "68f1de8ab70b80224b760aa3fcc02999f7136f1f23d740fcf60cf30805bc0c8f",
+    "W/scripts/task_g/evaluation.py": "d499d2627748460b428c8da6c2e909c3604d69c531676981d4a13741b023c107",
+    "W/scripts/task_g/provenance.py": "a31dd3389482bf2eabb3a17969de6c9dd11450db12d6e284c0f0e1e9efad65ff",
+    "W/scripts/task_g/source_admission.py": "785d452f4b969ff9bc2d9774595c0a39d40a2b7af79880d6f26e3e635eec8ce6",
+    "W/src/rca/.idea/.gitignore": "1bfdece3645ed8ed356030f22cc2004dc3f401ff060ac3d24de811c3bcd82e16",
+    "W/src/rca/.idea/copilot.data.migration.agent.xml": "4805746a1cdb6ef089ec7c0e198e13992034e08b83ed95122ed605ca99c39653",
+    "W/src/rca/.idea/copilot.data.migration.ask.xml": "4141162ea613208b5edb1247c22a4a65cd628315167af551cefa7ae42a2c4076",
+    "W/src/rca/.idea/copilot.data.migration.ask2agent.xml": "65753465e271eed78cc36dce8b8a00ed3c8fc75eeeb3e2b1fde04a51bcd786c6",
+    "W/src/rca/.idea/copilot.data.migration.edit.xml": "bb7a167dd77a22fb8fdfb5668df96453bbfb4dd99c0d499fc740b8e0bd73e30c",
+    "W/src/rca/.idea/misc.xml": "892a47fd18fdc6311c10ab0f10f1351adfd1dfd6c0f6d0e827aecea553fdf6fa",
+    "W/src/rca/.idea/modules.xml": "15b1a183fabb36d3b399734ab043a46cc1aed5de2dc64eae5785671a51cd6db1",
+    "W/src/rca/.idea/rca.iml": "c96ea0b5b29abb7d5807671dd208fd63f63694dd236335d2fe8c074e89e94aa6",
+    "W/src/rca/.idea/vcs.xml": "d87ca0035a110307375417fe8abc47ad7e49246f435ee430acdd0196e6e1a0a6",
+    "W/src/rca/.idea/workspace.xml": "51dbfd592c858743712fc97458134671ecfb0fa0678ebffcc1700458b55fae16",
+    "W/src/rca/__init__.py": "3baa7753048bf4010d914791e8bdaa55fb2b0dc256726f556603e742ff22c8e8",
+    "W/src/rca/adapters.py": "fc92ef2ff2bcb9b02b47cf5de0ea421c589b38df6c791a386349b40c41aa341d",
+    "W/src/rca/cache.py": "dca7e6606c83677a73f526b764c90d74431ec85380927093e903171e5299a288",
+    "W/src/rca/comparators.py": "e753e1c850e9868c7036d2a21b7a9d00d48f20a54d536e9087f94a94f8bf43cd",
+    "W/src/rca/contracts.py": "3846ce13d10843da4fa0d3f72a2b9dee1600d99eeef5e103c8862b0cb1436555",
+    "W/src/rca/detection.py": "20fb9f1d00e5f462373e2f172aaab95ccb98f2b9ac98b30dcc2629d32338d4d0",
+    "W/src/rca/observation.py": "da4c5dcf3df0c131cdc9aacb9834519f7acdfc075320921167cb0c28e65ec5c3",
+    "W/src/rca/packet.py": "5dfa41b6cfa57e5b19760a9000f9d5f64df863bfa3b60c3d1b7d87821c8e79fc",
+    "W/src/rca/pipeline.py": "fe967f86bc1862622453a76bb325e8ddb6e76feb1cd6d740a0f2a99c4ac51683",
+    "W/src/rca/qualified_rcd.py": "dec82562855b6bf03bb4ef6a84e583fd83603c3011800b91eaec050979ed9430",
+    "W/src/rca/ranking.py": "b634b763a7fc571ef0a7a6ebba046a0e8bdd6bc0265bc59d88370893e2164780",
+    "W/src/rca/release.py": "4bea6ef72313740e7a80f0cdb6caeb6baa561d483dc28ea7725da5216efc3be4",
+    "W/tests/pre_g/test_controller_contract.py": "15a57299f87b3a3241ef8d9fedeb73cb97335423525b9ca1476cd3ada6a18801",
+    "W/tests/pre_g/test_source_qualification.py": "90111018bc3a3fa80915a8464a3ac12f16f783bbd45e0a4d858b7de74c066fc5",
+    "W/tests/task_g/test_campaign.py": "939c6073254d0141fa149c0ec720d4a6475d5bf1b69854ae9ef27883295de4cf",
+    "W/tests/task_g/test_campaign_provenance.py": "5aee0478070e22368a58265a608e7213a2023160fdf11609ed1e9f8acf25c37c",
+    "W/tests/task_g/test_campaign_source.py": "663f511781f29d2b8aee42d53bd4235db76e215dbd0781d224c75ffc6b9e5c77",
+    "W/tests/task_g/test_controller.py": "55f3a89ca484d3b7dc3f8231827a60c4095a07bb491cdbe9b28884203284a073",
+    "W/tests/task_g/test_evaluation.py": "7d6408b45e539703a64f2a7deb6331a27b1370672b39b780ae35d7100d13bd5a",
+    "W/tests/task_g/test_provenance.py": "bbb2941fad3408d50b7b766324e83ff9644ff188c270d2252ada8e7b8f001efa",
+    "W/tests/task_g/test_source_admission.py": "29723b84ba3c8395b481855c5ee79fa5506f017f36b92b81c41376c23e2eb61e"
+  },
+  "qualification_gate": {
+    "actual_conversion_verification": "PASS_CONVERSION_ONLY_WITH_ONE_MISSING_LOG_REFERENCE_RECORD",
+    "five_distinct_reviewers": "OPEN_NOT_FACTUALLY_CERTIFIED",
+    "human_campaign_approval": "OPEN",
+    "independent_prequalification": "PASS_FOR_AUTHORIZED_BOUNDED_READINESS_WITH_EXPLICIT_OPEN_ITEMS",
+    "synthetic_bridge_verification": "DETERMINED_ONLY_BY_FIXED_DURABLE_READINESS_RECEIPT__REGISTRATION_IS_NOT_RESULT"
+  },
+  "readiness_execution": {
+    "actual_final_evaluation": false,
+    "actual_final_models": false,
+    "numeric_synthetic_cases": 3,
+    "orchestration_fixture_scope": "SYNTHETIC_ONLY_UNQUALIFIED",
+    "same_template60_numeric_recomputations": false
+  },
+  "registered_at_utc": "2026-09-30T17:00:39.023852+00:00",
+  "registration_lineage": [
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-initial.json",
+      "purpose": "Original exact pre-implementation registration preserved unchanged",
+      "sha256": "d7d469d45fbee720b3ab9ffac499c5d5894ad88095c8f328111eb1b910de189e"
+    },
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-stable-before-review-binding.json",
+      "purpose": "Stable source/key registration before immutable independent prequalification binding",
+      "sha256": "a06f7156e2fcafb64659335763d0dea6cf229cf125f9af6d25eedb12b188f438"
+    },
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-development-execution.json",
+      "purpose": "Exact stable DEV30 execution registration before controller-only sanitizer/audit/SYN-deadline corrections",
+      "sha256": "82dda12c08f6ea20c9e324905338fa4c9739868186d54a790070865732232705"
+    },
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-post-controller-fixes.json",
+      "purpose": "Controller-only fixes and independently matching development timeout before final combined evidence/review binding",
+      "sha256": "b0d5b967bcacbf3fdccaf81f1d451595d79959f2558a917f1a03df5e3f0bb7e6"
+    },
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-preconversion-evidence.json",
+      "purpose": "Current test evidence before independent preconversion review binding",
+      "sha256": "cd3f549388fc60ce2f816372615b350bbeeadee7d93d1b380c3c04b1edf6b6df"
+    },
+    {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/registration-actual-conversion-execution.json",
+      "purpose": "Exact registered actual60 conversion-only execution context; preserved before synthetic qualification registration",
+      "sha256": "283dd2e6a19fea77960810bb581be7331f206680730457bf585ffdc39d283412"
+    }
+  ],
+  "resource_policy": {
+    "G31_timeout_historical_only": 879.9910279999995,
+    "R_generation_included": true,
+    "actual_complete_diagnostic_artifact_bound": "OPEN_MODEL_OUTPUT_NOT_MEASURED__STRUCTURAL_SERIALIZATION_BOUND_PENDING",
+    "actual_conversion_cost_scope": "Separate measured controller conversion/support; not actual model timing, not replacement for common frozen C1 DEV timeout",
+    "auxiliary_numeric_worker_deadline_seconds": 900,
+    "common_L_O_R_timeout_seconds": 363.5044049999851,
+    "development_timing_infrastructure_deadline_seconds": 900,
+    "failures_and_attempts_preserved": true,
+    "numeric_threads": 1,
+    "secondary_reuses_same_realized_undirected_graphs": true,
+    "thread_environment": {
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1"
+    },
+    "timeout_status": "MEASURED_MATCHING_G32_C1_DEVELOPMENT30_ONLY__AUXILIARY900_INFRASTRUCTURE_BOUND_NOT_ACTUAL_QUALIFICATION",
+    "worker_count": 1
+  },
+  "run_id": "g32-final-bridge-readiness",
+  "schema": "TD13-G32-BRIDGE-READINESS-CONTRACT-v1",
+  "source_test_snapshot_before_qualification": {
+    "scripts/task_g/final_campaign.py": "62e1e4bbee870097ebd870670332fe7e3ed986e746b8049bcb46ef5ef3216e9d",
+    "scripts/task_g/final_evaluation.py": "bbecfbd23325c28da33bfa571c80810a99a294ca464d55e3f66036e326cea07d",
+    "scripts/task_g/final_provenance.py": "ab36ac12f78a277320e64d9f29c9121848a7cb164e89fd57379c2f5e6334be5c",
+    "scripts/task_g/final_source.py": "08f647de94b49d1f61c1d7589e8d464892dfaabb163cee98742002d775efc9dc",
+    "tests/task_g/test_final_campaign.py": "77a83fca89fbaa5aec174b7e625e3fae48d16e9e3ed5aa2d7fdc6abdb069cf86",
+    "tests/task_g/test_final_evaluation.py": "348c851c6b6a845ca6d3a50ca48e3bd903c8368889249ea099fb65aed6f7648b",
+    "tests/task_g/test_final_provenance.py": "06235ff2f13e51d272b83160b15208124584e353aaf7b6aa7a3b2e16d177d385",
+    "tests/task_g/test_final_source.py": "a74616d3a9a0e7f3b23b9ecf7845995cf3dee2ea3678cd4da66d2ee4270492b9"
+  },
+  "status": "REGISTERED_STABLE_BRIDGE_FOR_DISTINCT_SYNTHETIC_DURABLE_QUALIFICATION_ONLY__ACTUAL_CAMPAIGN_CLOSED",
+  "synthetic_truth_plan": {
+    "path": "results/task-g/g32-final-bridge-readiness/cache/synthetic-truth-plan.json",
+    "scope": "ARTIFICIAL_BOUNDARY_FIXTURES_ONLY__PREDECLARED_BEFORE_COMPUTATION",
+    "sha256": "da64a63e18540d73c97a27ac73a2048d0daf8e71435fcf58d8a7bcdba5a8542a"
+  },
+  "tau_permission_interpretation": "tau_only_input_audit permits solely pinned inject_time projection for controller input windows; final_tau_metadata=false denies unrestricted truth/evaluation access. No root/fault/answer field.",
+  "tau_source": {
+    "path": "datasets/rcaeval/metadata/cases.parquet",
+    "projection": [
+      "case",
+      "dataset",
+      "repetition",
+      "inject_time"
+    ],
+    "roster_projection": [
+      "case",
+      "dataset",
+      "repetition",
+      "has_logs",
+      "has_traces"
+    ],
+    "sha256": "c49a288920dbba2e8e724679a14636d5c7eb2b45426bba14007ef79a6c0ab1bb",
+    "timestamp_unit": "UNIX_SECONDS_METADATA_INJECT_TIME"
+  },
+  "trust_anchor": {
+    "algorithm": "HMAC-SHA256",
+    "domain": "FlashTicketRca/TD13/G32/BRIDGE-READINESS/v1",
+    "key_sha256": "ea4568d86bbfba9178c17ee00cfc8aa5f53ca6ce6077e65ee3ac6336a4667271",
+    "run_id": "g32-final-bridge-readiness",
+    "trust_mode": "HOST_TRUSTED"
+  },
+  "trust_anchor_acl_evidence": {
+    "allowed_principals": "CURRENT_USER_SYSTEM_ADMINISTRATORS",
+    "key_secret_printed": false,
+    "path": "results/task-g/g32-final-bridge-readiness/cache/readiness-key-acl.json",
+    "protected": true,
+    "sha256": "09dfc2693f7ab0011d87254fcc20587682a8e39c659f674bde3ffe11452160ac"
+  },
+  "validation_evidence": {
+    "combined_current_tests": {
+      "interpreter": "W/.venv/Scripts/python.exe3.12.10",
+      "passed_test_items": 72,
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt04.log",
+      "scope": "PURPOSEFUL_SYNTHETIC_UNIT_BOUNDARY_AND_INTEGRATION",
+      "sha256": "da4949f7f55d2cf85b2b527fa680e98f3f9b84c097ff55d40dc319d43e23455c"
+    },
+    "combined_source_v1_tests": {
+      "passed_test_items": 67,
+      "path": "results/task-g/g32-final-bridge-readiness/cache/g32-combined-unit-attempt02.log",
+      "sha256": "1aa38e34a9a46576661d84db0883f3438c077d55c7d037d3682433e416c18962"
+    },
+    "frozen_f_verifier": {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/frozen-f-verifier.json",
+      "sha256": "3f0eaa416e8c541d0d65a6024e6664e6aad876719713666f7377832154984d10",
+      "verified_reference_files": 44
+    },
+    "regression_summary": {
+      "path": "results/task-g/g32-final-bridge-readiness/cache/regression-summary.json",
+      "sha256": "de0edb3658b1db02f498a74caa946c2385766fea420a8e921df6da0ff4b0d991"
+    },
+    "source_sanitizer_tests": {
+      "passed_test_items": 31,
+      "path": "results/task-g/g32-final-bridge-readiness/cache/source-unit-sanitizer-attempt01-tool-capture.json",
+      "sha256": "f4b269dcd4bdb19cc39c2c4179fc6855a62c5b63fc77c3aa98523d6b06c168d4"
+    }
+  },
+  "validation_questions": [
+    "Is actual tau independently pinned and do required clocks/units/half-open300/300 and C5 prefixes match without leaking tau to C5?",
+    "Does source preserve literal universe/mapping/missingness/failures and keep locators/oracles out of worker wire?",
+    "Do distinct synthetic fixtures satisfy analytic metadata/permutation/prefix/future guards?",
+    "Are full C1 evidence/operator/control and C5 state/masks/model/residual/provenance present?",
+    "Are cost components measured or explicitly missing, with timeout matched to stable workload?",
+    "Does fresh durable verification reject tamper/missing/duplicate/stale/source/config/anchor drift before lazy synthetic callback?",
+    "Do locked ties/draw/seed means/trigger regimes and50k conditional uncertainty match known outcomes?",
+    "Do F verifier and scoped PRE-G/G30/G31/E regressions pass without protected-byte drift?"
+  ]
+}
